@@ -3,13 +3,13 @@
 Generell info om ePROMS
 
 ### Start-guide
-[Lenke til start guid] (https://github.com/HemitSystemutvikling/ePROM/edit/master/Startguid.md)
+[Startguid] (https://github.com/HemitSystemutvikling/ePROM/blob/master/Startguid.md)
 
 ### Selvbetjeningsløsning
-Lenke til start guid
+[Brukerdokumentasjon av selvbetjeneingsløsning] (https://github.com/HemitSystemutvikling/ePROM/blob/master/Brukerdokumentasjon%20av%20selvbetjeneingsløsning.md)
 
 ### Integrasjonsguid
-Lenke til start guid
+[Integrasjonsguid] (https://github.com/HemitSystemutvikling/ePROM/blob/master/Integrasjonsguid.md)
 
 ### Utfylling av skjema
-Lenke til start guid
+[Utfylling av skjema] (https://github.com/HemitSystemutvikling/ePROM/blob/master/Utfylling%20av%20skjema.md)
