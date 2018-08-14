@@ -3,7 +3,7 @@
 Generell info om ePROMS
 
 ### Start-guide
-[Lenke til start guid] (start.md)
+[Lenke til start guid] (Startguid.md)
 
 ### Selvbetjeningsløsning
 Lenke til start guid
