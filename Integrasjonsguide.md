@@ -1,31 +1,44 @@
 # ePROMS Integrasjonsguide 
 ### v1.13
 
-(Gjelder v2.0 av PROMS \n
-Sist oppdatert 06.08.2018)
+*Gjelder v2.0 av PROMS*
 
-Innhold
-GENERELT	3
-Pasientløsning PROMS	3
-Testpersoner	3
-Distribusjonsregler:	3
-BESTILLING AV SKJEMA	5
-Bestilling klient-side	6
-Bestilling server-side	8
-Feilsituasjoner	10
-Mottak av status for bestillingen	11
-RETUR AV UTFYLT SKJEMA	12
-Mottak	13
-SENDE MELDING SOM SMS	14
-Sende melding klient-side	15
-Sende melding server-side	16
-Feilsituasjoner	17
-SENDE MELDING SOM EPOST	18
-Sende melding klient-side	19
-Sende melding server-side	21
-Feilsituasjoner	22
-SENDE MELDING TIL INNBYGGER	23
-Sende melding klient-side	24
-Sende melding server-side	25
-Feilsituasjoner	27
+*Sist oppdatert 06.08.2018*
+
+### Innhold
+
+
+# GENERELT
+
+## Pasientløsning PROMS
+For å se / fylle ut de bestilte skjemaene kan man finne de igjen i pasientløsningen:
+
+[https://proms2.hemit.org/Proms](https://proms2.hemit.org/Proms)
+
+Her finner man alle skjema som er bestilt og man kan f.eks. teste innsending av skjemaer. Pålogging med BankID eller engangskode.
+
+
+## Testpersoner
+PROMS i testmiljøet integrerer med Helsenorge og Digipost sine testmiljøer. For å teste integrasjonen mellom PROMS, Helsenorge og Digipost har vi tilgang til fødselsnummer med BankID. Midlertidig tilgang til disse fås ved henvendelse til Hemit.
+
+
+## Distribusjonsregler
+Vha. parameteren **DistributionRule** kan man bestemme hvordan pasientskjemaet skal distribueres til pasienten. Varslingskanalene er definert i parameteren **NotificationChannel**
+
+Default **DistributionRule** er *Basic* og betyr at PROMS først sjekker om pasienten er tilgjengelig på Helsenorge. Hvis ikke sjekkes det om pasienten har sikker digital postkasse. Hvis **DistributionRule** er satt til *AllowUnsecure* sjekkes det om pasienten er registrert i Difi Kontaktregister med epostadresse eller mobilnummer. Hvis **DistributionRule** er satt til *NoDistribution* sendes det ikke ut varsling til pasienten. Dette kan benyttes hvis Bestillersystemet skal gi engangskode til pasienten. *BasicOrPaper* og *AllowUnsecureOrPaper* er samme som hhv *Basic* og *AllowUnsecure*, men med papir som siste utvei. *PaperOnly* sender kun på papir.
+
+### DistributionRule
+0 = Basic
+1 = AllowUnsecure
+2 = NoDistribution
+3 = BasicOrPaper
+4 = AllowUnsecureOrPaper
+5 = PaperOnly
+
+### NotificationChannel
+0 = None
+1 = Helsenorge
+2 = DigitalMailbox
+3 = Unsecure
+4 = PhysicalMailbox
 
