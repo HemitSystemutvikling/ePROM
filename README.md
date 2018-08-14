@@ -3,14 +3,14 @@
 Generell info om ePROMS
 
 ### Start-guide
-[Startguid](Startguid)
+[Startguide](Startguide)
 
 
 ### Selvbetjeningsløsning
 [Brukerdokumentasjon av selvbetjeneingsløsning](Brukerdokumentasjon%20av%20selvbetjeneingsløsning)
 
 ### Integrasjonsguid
-[Integrasjonsguid](Integrasjonsguid)
+[Integrasjonsguide](Integrasjonsguide)
 
 ### Utfylling av skjema
 [Utfylling av skjema](Utfylling%20av%20skjema)
