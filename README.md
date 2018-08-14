@@ -7,10 +7,10 @@ Generell info om ePROMS
 
 
 ### Selvbetjeningsløsning
-[Brukerdokumentasjon av selvbetjeneingsløsning](https://github.com/HemitSystemutvikling/ePROM/blob/master/Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning.md)
+[Brukerdokumentasjon av selvbetjeneingsløsning](Brukerdokumentasjon%20av%20selvbetjeneingsløsning)
 
 ### Integrasjonsguid
-[Integrasjonsguid](https://github.com/HemitSystemutvikling/ePROM/blob/master/Integrasjonsguid.md)
+[Integrasjonsguid](Integrasjonsguid)
 
 ### Utfylling av skjema
-[Utfylling av skjema](https://github.com/HemitSystemutvikling/ePROM/blob/master/Utfylling%20av%20skjema.md)
+[Utfylling av skjema](Utfylling%20av%20skjema)
