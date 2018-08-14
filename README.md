@@ -7,7 +7,7 @@ Generell info om ePROMS
 
 
 ### Selvbetjeningsløsning
-[Brukerdokumentasjon av selvbetjeneingsløsning](Brukerdokumentasjon%20av%20selvbetjeneingsløsning)
+[Brukerdokumentasjon av selvbetjeningsløsning](Brukerdokumentasjon%20av%20selvbetjeningsløsning)
 
 ### Integrasjonsguid
 [Integrasjonsguide](Integrasjonsguide)
