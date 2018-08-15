@@ -4,12 +4,15 @@
 
 *Sist oppdatert 05.01.2017*
 
-Implementer integrasjon mot PROMS i hht PROMS - Integrasjonsguide
+##Hvordan komme igang med ePROM
+
+Implementere integrasjon mot PROMS i hht PROMS - Integrasjonsguide
 -	Utsending av skjemabestilling
 -	Mottak av skjemabestilling
 
 Vurder skjema som skal benyttes. Fellesskjema / opprette egne skjema
 -	Informasjonstekst til pasienten som skal følge skjemabestillinger
+- [Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
 Registeret må registreres som bestillersystem i PROMS. Dette må gjøres av Hemit.
 -	Kontaktinformasjon
