@@ -1,11 +1,10 @@
-# ePROMS Integrasjonsguide 
-### v1.13
+# ePROMS Integrasjonsguide v1.13
 
 *Gjelder v2.0 av PROMS*
 
 *Sist oppdatert 06.08.2018*
 
-### Innhold
+### Innholdsfortegnelse
 
 
 # GENERELT
@@ -86,3 +85,105 @@ function placeFormOrder() {
 
 [https://proms2.hemit.org/PromsWebApi/api/v2/formorder]
 
+**Parametere - Inn**
+* apiKey - ApiKey of the end user system placing the order
+* formId - The form to place an order for
+* nationalId  - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
+* expiryDate - The expiry date of the order
+* reminderDate - Optional. The date to send a reminder for the order. If not set or NULL, no reminder will be sent
+* metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an stringified JSON object (ex. JSON.stringify({ age: 76 }))
+* dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
+* distributionRule - Optional. The rule used when deciding how to notify the patient { Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly }. Tallverdien kan sendes. Default: Basic. 
+
+
+**Parametere – Ut**
+I tillegg til alle inn-parametre:
+* id – The id of this form order
+* singleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution
+* loginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
+* notificationChannel – The preferred channel used to notify the patient about the form order { None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }. The actual channel used is first known when PROMS performs the callback, notifying about the status.
+
+**Metode**
+
+POST
+
+
+## Bestilling server-side
+
+**API**
+
+Tilgjenglig som NuGet pakke
+
+NuGet repository: https://hemit.myget.org/F/hemitpublic/api/v3/index.json
+
+Navn: Hemit.Proms.Integration
+
+**Eksempelkode (C#)**
+```javascript
+[HttpPost]
+public JsonResult OrderPromsForm(Guid formId)
+{
+    var form = _context.FormService.GetForm(formId);
+    var patient = _context.PatientInRegistryService.GetByFormGuid(formId);
+
+    var promsFormId = _formTypeToPromsFormIdMapping[(FormType) form.FormTypeId];
+
+    var result = Api.CreateFormOrderV2(
+        ConfigurationManager.AppSettings["PromsApiBaseUrl"],
+        ConfigurationManager.AppSettings["PromsApiKey"],
+        promsFormId,
+        patient.DecryptedPID,
+        DateTime.Now.AddDays(7),
+        DateTime.Now.AddDays(6),
+        GetMetadata(promsFormId, form, patient)
+        false,
+        DistributionRule.AllowUnsecure);
+
+    if (result.HasErrors)
+    {
+        Response.StatusCode = result.ErrorStatusCode.Value;
+        Response.Write(result.ErrorJson);
+        return null;
+    }
+
+    _promsFormOrderService.Add(result.FormOrderId, form.Id, form.ReshId);
+
+    return Json(new { 
+loginUrl = result.LoginUrl,
+singleUseCode = result.SingleUseCode,
+notificationChannel = result.NotificationChannel.ToString() });
+}
+```
+
+**Parametere - Inn**
+* promsApiBaseUrl - The base URL of the PROMS API
+* apiKey - ApiKey of the end user system placing the order
+* formId - The form to place an order for
+* nationalId - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
+* expiryDate - The expiry date of the order
+* reminderDate - The date to send a reminder for the order. If NULL, no reminder will be sent
+* metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an anonymous object (ex. new { age = 23 }).
+* dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
+* distributionRule - Optional. The rule used when deciding how to notify the patient 
+{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly }. Tallverdien kan sendes. Default: Basic
+
+
+promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+
+**Parametere – Ut**
+* CreateFormOrderResult
+  * FormOrderId – The id of this form order
+  * SingleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution
+  * LoginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
+  * NotificationChannel – The channel used to notify the patient about the form order { None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }. The actual channel used is first known when PROMS performs the callback, notifying about the status.
+
+
+### Feilsituasjoner
+
+Hvis responsen resulterer i "id": "00000000-0000-0000-0000-000000000000" er det ikke generert noe bestilling. Dette skjer hvis fødselsnummeret ikke eksisterer.
+Ellers kan følgende feilsituasjoner oppstå:
+* BadRequest("The ordered form is not Published")
+* BadRequest($"No form with id='{formOrder.formId}' exists")
+* BadRequest($"The ordered form needs to be signed. This is not possible when using DistributionRule = 'NoDistribution'.")
+* BadRequest($"Form with id='{formOrder.formId}' is not paper enabled")
+ 
