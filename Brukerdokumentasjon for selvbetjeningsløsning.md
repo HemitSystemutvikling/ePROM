@@ -7,13 +7,13 @@
 ## Hovedmeny
 Dashboard for ePROM. Trykk på PROMS Administrasjon eller Hovedmeny øverst til venstre for å komme hit fra hvilken som helst side
  
-![admin1](admin1.png)
+![admin1](img/admin1.png)
 
 
 ## Skjemakatalog
 Oversikt over tilgjengelige skjema og mulighet for å administrere eksisterende og opprette nye skjema.
 
-![admin2](admin2.png)
+![admin2](img/admin2.png)
 
 Skjema som er tilgjengelige for alle bestillersystemer ligger under Felles, Skjema som kun er tilgjengelig for eget bestillersystem ligger under Mine. Mulig å søke opp Skjema ved å skrive inn hele eller deler av navnet.
 
@@ -35,7 +35,7 @@ Forklaring aksjoner
 Oversikt over tilgjengelige Informasjon til pasienten og mulighet for å administrere eksisterende og opprette nye Informasjon til pasienten.
 Informasjon til pasienten er tekst som vises i ønskede skjema (se Informasjon til pasienten kobling)
 
-![admin3](admin3.png)
+![admin3](img/admin3.png)
 
 Informasjon til pasienten som er tilgjengelige for alle bestillersystemer ligger under Felles, Informasjon til pasienten som kun er tilgjengelig for eget bestillersystem ligger under Mine. Mulig å søke opp Informasjon til pasienten ved å skrive inn hele eller deler av navnet. Informasjon til pasienten er primært tenkt brukt til tekst av type disclaimer/ansvarsfraskrivelse og kan gjerne være standardisert tekst som kan gjenbrukes på flere skjema
 
@@ -43,12 +43,12 @@ Informasjon til pasienten som er tilgjengelige for alle bestillersystemer ligger
 ## Informasjon til pasienten kobling
 Oversikt over hvilken Informasjon til pasienten de ulike Skjema er koblet mot.
 
-![admin4](admin4.png)
+![admin4](img/admin4.png)
 
 
 ### Informasjon til pasienten kobling - ny
 
-![admin5](admin5.png)
+![admin5](img/admin5.png)
 Velg Skjema og Informasjon til pasienten som skal kobles sammen (dvs. hvilken Informasjon til pasienten som skal vises i hvilket Skjema)
 
 
