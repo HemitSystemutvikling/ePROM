@@ -4,6 +4,7 @@
 
 *Sist oppdatert 05.01.2017*
 
+
 ## Hovedmeny
 Dashboard for ePROM. Trykk på PROMS Administrasjon eller Hovedmeny øverst til venstre for å komme hit fra hvilken som helst side
  
@@ -31,6 +32,7 @@ Forklaring aksjoner
 *	Last ned filer – Laster ned en zip-fil med filer for bruk i bestillersystemet. Inneholder skjemadefinisjon og ressursfiler (xsd og resx filer)
 
 
+
 ## Informasjon til pasienten
 Oversikt over tilgjengelige Informasjon til pasienten og mulighet for å administrere eksisterende og opprette nye Informasjon til pasienten.
 Informasjon til pasienten er tekst som vises i ønskede skjema (se Informasjon til pasienten kobling)
@@ -40,10 +42,12 @@ Informasjon til pasienten er tekst som vises i ønskede skjema (se Informasjon t
 Informasjon til pasienten som er tilgjengelige for alle bestillersystemer ligger under Felles, Informasjon til pasienten som kun er tilgjengelig for eget bestillersystem ligger under Mine. Mulig å søke opp Informasjon til pasienten ved å skrive inn hele eller deler av navnet. Informasjon til pasienten er primært tenkt brukt til tekst av type disclaimer/ansvarsfraskrivelse og kan gjerne være standardisert tekst som kan gjenbrukes på flere skjema
 
 
+
 ## Informasjon til pasienten kobling
 Oversikt over hvilken Informasjon til pasienten de ulike Skjema er koblet mot.
 
 ![admin4](img/admin4.png)
+
 
 
 ### Informasjon til pasienten kobling - ny
@@ -52,3 +56,35 @@ Oversikt over hvilken Informasjon til pasienten de ulike Skjema er koblet mot.
 Velg Skjema og Informasjon til pasienten som skal kobles sammen (dvs. hvilken Informasjon til pasienten som skal vises i hvilket Skjema)
 
 
+
+## Bestillersystemer
+Info om eget bestillersystem
+
+![admin6](img/admin6.png)
+
+API nøkkel brukes av bestillersystem ved skjemabestilling for å identifisere seg selv
+API base URL angir url til mottakssystemet for bestillersystemet
+
+
+
+### Bestillersystemer - Endre
+
+![admin7](img/admin7.png)
+Telefon er telefonnummeret til kontaktperson for bestillersystemet. Sendes med til mottaker av bestillingen (pasienten)
+
+E-post er e-post adressen til kontaktperson for bestillersystemet. Sendes med til mottaker av bestillingen (pasienten)
+
+Trykk på Generer for å generere en ny API nøkkel. Denne må i tilfelle også samtidig endres i bestillersystemet. Trykk på Slett for å fjerne API nøkkel og gjøre det umulig for bestillersystemet å sende inn flere skjemabestillinger. Generes ny API nøkkel kan bestillersystemet sende inn skjemabestillinger ingjen.
+
+
+
+## Skjemastatistikk
+Viser oversikt over antall skjemabestillinger og antall utfylte skjema per skjematype. Mulig å søke på statistikk for periode basert på dato
+![admin8](img/admin8.png)
+
+
+
+## Brukeradministrasjon
+Oversikt over brukere. Mulig å administrere bestillersystemets egne brukere
+
+![admin9](img/admin9.png)
