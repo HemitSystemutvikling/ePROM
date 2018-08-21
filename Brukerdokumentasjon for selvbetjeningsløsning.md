@@ -16,7 +16,7 @@ Oversikt over tilgjengelige skjema og mulighet for å administrere eksisterende 
 
 ![admin2](img/admin2.png)
 
-Skjema som er tilgjengelige for alle bestillersystemer ligger under Felles, Skjema som kun er tilgjengelig for eget bestillersystem ligger under Mine. Mulig å søke opp Skjema ved å skrive inn hele eller deler av navnet.
+Skjema som er tilgjengelige for alle bestillersystemer ligger under *Felles*, Skjema som kun er tilgjengelig for eget bestillersystem ligger under *Mine*. Mulig å søke opp Skjema ved å skrive inn hele eller deler av navnet.
 
 Id brukes av bestillersystem ved skjemabestilling for å angi hvilket skjema som skal bestilles.
 
