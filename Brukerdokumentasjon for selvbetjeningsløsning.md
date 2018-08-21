@@ -53,6 +53,7 @@ Oversikt over hvilken *Informasjon til pasienten* de ulike Skjema er koblet mot.
 ### Skjemainformasjon - Opprett ny kobling
 
 ![admin5](img/admin5.png)
+
 Velg Skjema og *Informasjon til pasienten* som skal kobles sammen (dvs. hvilken *Informasjon til pasienten* som skal vises i hvilket Skjema)
 
 
@@ -70,6 +71,7 @@ API base URL angir url til mottakssystemet for bestillersystemet
 ### Bestillersystemer - Endre
 
 ![admin7](img/admin7.png)
+
 *Telefon* er telefonnummeret til kontaktperson for bestillersystemet. Sendes med til mottaker av bestillingen (pasienten)
 
 *E-post* er e-post adressen til kontaktperson for bestillersystemet. Sendes med til mottaker av bestillingen (pasienten)
