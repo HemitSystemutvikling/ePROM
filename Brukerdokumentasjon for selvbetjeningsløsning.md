@@ -43,17 +43,17 @@ Oversikt over tilgjengelige *Informasjon til pasienten* og mulighet for å admin
 
 
 
-## Informasjon til pasienten kobling
+## Skjemainformasjon
 Oversikt over hvilken *Informasjon til pasienten* de ulike Skjema er koblet mot.
 
 ![admin4](img/admin4.png)
 
 
 
-### Informasjon til pasienten kobling - ny
+### Skjemainformasjon - Opprett ny kobling
 
 ![admin5](img/admin5.png)
-Velg Skjema og *Informasjon til pasienten* som skal kobles sammen (dvs. hvilken Informasjon til pasienten som skal vises i hvilket Skjema)
+Velg Skjema og *Informasjon til pasienten* som skal kobles sammen (dvs. hvilken *Informasjon til pasienten* som skal vises i hvilket Skjema)
 
 
 
