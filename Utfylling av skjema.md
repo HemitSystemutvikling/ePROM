@@ -1,6 +1,7 @@
 # Utfylling av skjema v0.1
 
 *Gjelder v2.0 av PROMS*
+
 *Sist oppdatert 23.08.2018*
 
 ## Innhold
@@ -21,6 +22,7 @@ Når alle obligatoriske spørsmål er besvart leverer man skjema og man får kvi
 Hvis det oppstår kommunikasjonssvikt mot Helsenorge vil det ikke være mulig å fylle ut og levere skjemaet. Feilmelding vises:
 
 ![Utfylling2](img/utfylling2.png)
+
 
 ### Digital Postkasse
 Hvis pasienten ikke er DigitaltAktiv på Helsenorge når POMRSskjemaet sendes ut får man tilgang til skjemaet via Digital Postkasse.
