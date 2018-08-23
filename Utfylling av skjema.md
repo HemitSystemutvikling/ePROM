@@ -5,11 +5,11 @@
 *Sist oppdatert 23.08.2018*
 
 ## Innhold
-[Helsenorge](#Helsenorge)
+[Helsenorge](#helsenorge)
 
-[Digital Postkasse](#Digital%20Postkasse)
+[Digital Postkasse](#digital-postkasse)
 
-[Pålogging](#Pålogging)
+[Pålogging](#pålogging)
 
 
 
