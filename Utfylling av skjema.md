@@ -5,9 +5,12 @@
 *Sist oppdatert 23.08.2018*
 
 ## Innhold
-Helsenorge
-Digital Postkasse
-Pålogging
+[Helsenorge](#Helsenorge)
+
+[Digital Postkasse](#Digital%20Postkasse)
+
+[Pålogging](#Pålogging)
+
 
 
 ### Helsenorge
