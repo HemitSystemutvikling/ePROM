@@ -4,6 +4,13 @@
 
 *Sist oppdatert 21.08.2018*
 
+[Skjemakatalog](#skjemakatalog)
+
+[Informasjon til pasienten](#informasjon-til-pasienten)
+
+[Skjemainformasjon](#skjemainformasjon)
+
+[Bestillersystemer](#bestillersystemer)
 
 ## Hovedmeny
 Dashboard for ePROM. Trykk på PROMS Administrasjon eller Hovedmeny øverst til venstre for å komme hit fra hvilken som helst side
