@@ -12,6 +12,11 @@
 
 [Bestillersystemer](#bestillersystemer)
 
+[Skjemastatistikk](#skjemastatistikk)
+
+[Brukeradministrasjon](#brukeradministrasjon)
+
+
 ## Hovedmeny
 Dashboard for ePROM. Trykk på PROMS Administrasjon eller Hovedmeny øverst til venstre for å komme hit fra hvilken som helst side
  
