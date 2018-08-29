@@ -1,6 +1,4 @@
-# Startguid
-
-*Gjelder ePROM v2.0*
+# Startguide
 
 *Sist oppdatert 21.08.2018*
 
