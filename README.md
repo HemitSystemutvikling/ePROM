@@ -1,4 +1,4 @@
-# ePROM
+# ePROM v2.0
 
 Generell info om ePROMS
 
