@@ -4,13 +4,23 @@
 
 ### Innholdsfortegnelse
 
-[GENERELT](GENERELT)
+[GENERELT](#GENERELT)
 
-[BESTILLING AV SKJEMA](BESTILLING%20AV%20SKJEMA)
+[BESTILLING AV SKJEMA](#BESTILLING%20AV%20SKJEMA)
+
+[Bestilling klient-side](#bestilling-klient-side)
+
+[RETUR AV UTFYLT SKJEMA](#RETUR%20AV%20UTFYLT%20SKJEMA)
+
+[SENDE MELDING SOM SMS](#SENDE%20MELDING%20SOM%20SMS)
+
+[SENDE MELDING SOM EPOST](#SENDE%20MELDING%20SOM%20EPOST)
+
+[SENDE MELDING TIL INNBYGGER](#SENDE%20MELDING%20TIL%20INNBYGGER)
 
 # GENERELT
 
-## Pasientløsning PROMS
+## Pasientløsning ePROM
 For å se / fylle ut de bestilte skjemaene kan man finne de igjen i pasientløsningen:
 
 [https://proms2.hemit.org/Proms](https://proms2.hemit.org/Proms)
@@ -19,13 +29,13 @@ Her finner man alle skjema som er bestilt og man kan f.eks. teste innsending av 
 
 
 ## Testpersoner
-PROMS i testmiljøet integrerer med Helsenorge og Digipost sine testmiljøer. For å teste integrasjonen mellom PROMS, Helsenorge og Digipost har vi tilgang til fødselsnummer med BankID. Midlertidig tilgang til disse fås ved henvendelse til Hemit.
+ePROM i testmiljøet integrerer med Helsenorge og Digipost sine testmiljøer. For å teste integrasjonen mellom ePROM, Helsenorge og Digipost har vi tilgang til fødselsnummer med BankID. Midlertidig tilgang til disse fås ved henvendelse til Hemit.
 
 
 ## Distribusjonsregler
 Vha. parameteren **DistributionRule** kan man bestemme hvordan pasientskjemaet skal distribueres til pasienten. Varslingskanalene er definert i parameteren **NotificationChannel**
 
-Default **DistributionRule** er *Basic* og betyr at PROMS først sjekker om pasienten er tilgjengelig på Helsenorge. Hvis ikke sjekkes det om pasienten har sikker digital postkasse. Hvis **DistributionRule** er satt til *AllowUnsecure* sjekkes det om pasienten er registrert i Difi Kontaktregister med epostadresse eller mobilnummer. Hvis **DistributionRule** er satt til *NoDistribution* sendes det ikke ut varsling til pasienten. Dette kan benyttes hvis Bestillersystemet skal gi engangskode til pasienten. *BasicOrPaper* og *AllowUnsecureOrPaper* er samme som hhv *Basic* og *AllowUnsecure*, men med papir som siste utvei. *PaperOnly* sender kun på papir.
+Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasienten er tilgjengelig på Helsenorge. Hvis ikke sjekkes det om pasienten har sikker digital postkasse. Hvis **DistributionRule** er satt til *AllowUnsecure* sjekkes det om pasienten er registrert i Difi Kontaktregister med epostadresse eller mobilnummer. Hvis **DistributionRule** er satt til *NoDistribution* sendes det ikke ut varsling til pasienten. Dette kan benyttes hvis Bestillersystemet skal gi engangskode til pasienten. *BasicOrPaper* og *AllowUnsecureOrPaper* er samme som hhv *Basic* og *AllowUnsecure*, men med papir som siste utvei. *PaperOnly* sender kun på papir.
 
 ### DistributionRule
 ```
@@ -46,10 +56,12 @@ Default **DistributionRule** er *Basic* og betyr at PROMS først sjekker om pasi
 4 = PhysicalMailbox
 ```
 
+
 # BESTILLING AV SKJEMA
 
 Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
-Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for PROMS
+Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
+
 
 ## Bestilling klient-side
 
@@ -188,3 +200,19 @@ Ellers kan følgende feilsituasjoner oppstå:
 * BadRequest($"The ordered form needs to be signed. This is not possible when using DistributionRule = 'NoDistribution'.")
 * BadRequest($"Form with id='{formOrder.formId}' is not paper enabled")
  
+
+# RETUR AV UTFYLT SKJEMA
+
+
+
+# SENDE MELDING SOM SMS
+
+
+
+# SENDE MELDING SOM EPOST
+
+
+
+# SENDE MELDING TIL INNBYGGER
+
+
