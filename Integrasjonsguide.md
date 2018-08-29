@@ -4,7 +4,7 @@
 
 ### Innholdsfortegnelse
 
-[GENERELT](#GENERELT)
+[GENERELT](#denerelt)
 
 [BESTILLING AV SKJEMA](#bestilling-av-skjema)
 
@@ -106,7 +106,7 @@ function placeFormOrder() {
 * reminderDate - Optional. The date to send a reminder for the order. If not set or NULL, no reminder will be sent
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an stringified JSON object (ex. JSON.stringify({ age: 76 }))
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
-* distributionRule - Optional. The rule used when deciding how to notify the patient { Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly }. Tallverdien kan sendes. Default: Basic. 
+* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly }```. Tallverdien kan sendes. Default: Basic. 
 
 
 **Parametere – Ut**
@@ -114,7 +114,7 @@ I tillegg til alle inn-parametre:
 * id – The id of this form order
 * singleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution
 * loginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
-* notificationChannel – The preferred channel used to notify the patient about the form order { None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }. The actual channel used is first known when PROMS performs the callback, notifying about the status.
+* notificationChannel – The preferred channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }```. The actual channel used is first known when PROMS performs the callback, notifying about the status.
 
 **Metode**
 
