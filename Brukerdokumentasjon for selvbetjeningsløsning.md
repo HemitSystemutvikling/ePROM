@@ -1,4 +1,4 @@
-# Brukerdokumentasjon for selvbetjeningsløsning v0.1
+# Brukerdokumentasjon for selvbetjeningsløsning
 
 *Gjelder v2.0 av PROMS*
 
