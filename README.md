@@ -9,7 +9,7 @@ Generell info om ePROM
 ### Selvbetjeningsløsning
 [Brukerdokumentasjon for selvbetjeningsløsning](Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning)
 
-### Integrasjonsguid
+### Integrasjonsguide
 [Integrasjonsguide](Integrasjonsguide)
 
 ### Utfylling av skjema
