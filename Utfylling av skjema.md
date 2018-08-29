@@ -1,4 +1,4 @@
-# Utfylling av skjema v0.1
+# Utfylling av skjema
 
 *Gjelder v2.0 av PROMS*
 
