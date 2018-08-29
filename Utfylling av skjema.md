@@ -1,7 +1,5 @@
 # Utfylling av skjema
 
-*Gjelder v2.0 av PROMS*
-
 *Sist oppdatert 23.08.2018*
 
 ## Innhold
@@ -14,7 +12,7 @@
 
 
 ### Helsenorge
-Hvis pasienten er DigitaltAktiv på Helsenorge når PROMSskjemaet sendes ut får man tilgang til skjemaet via Helsenorge.
+Hvis pasienten er DigitaltAktiv på Helsenorge når pasientskjemaet sendes ut får man tilgang til skjemaet via Helsenorge.
 
 Når man åpner skjemaet via Helsenorge får man mulighet til å lagre skjemaet. Hvis man ikke ønsker å fylle ut alle spørsmålene i skjemaet kan man lagre skjema med de spørsmålene som er utfylt og åpne skjemaet ved en senere anledning og fortsette med utfyllingen. 
 
@@ -28,7 +26,7 @@ Hvis det oppstår kommunikasjonssvikt mot Helsenorge vil det ikke være mulig å
 
 
 ### Digital Postkasse
-Hvis pasienten ikke er DigitaltAktiv på Helsenorge når POMRSskjemaet sendes ut får man tilgang til skjemaet via Digital Postkasse.
+Hvis pasienten ikke er DigitaltAktiv på Helsenorge når pasientskjemaet sendes ut får man tilgang til skjemaet via Digital Postkasse.
 
 Når man åpner skjemaet får man litt informasjon om Helsenorge og Personlig Helsearkiv.
 
