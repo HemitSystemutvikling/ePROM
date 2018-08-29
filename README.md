@@ -1,6 +1,6 @@
 # ePROM v2.0
 
-Generell info om ePROMS
+Generell info om ePROM
 
 ### Start-guide
 [Startguide](Startguide)
