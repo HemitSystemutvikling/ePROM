@@ -206,13 +206,13 @@ API-kallet for bestilling av skjema er i v2 endret slik at man får respons med 
 **URL for Web API kall**
 ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
 
-Web API må være tilgjenglig på URL: https://<ApiBaseUrl>/api/PromsFormOrder
+Web API må være tilgjenglig på URL: https://<ApiBaseUrl>/api/PromsFormOrder 
 F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/)
 
 **Parametere - Inn**
 * apiKey – ApiKey of the end user system placing the order
 * formOrderId – The Id of the formOrder
-* formOrderStatus – Status of the formOrder { Ordered | Error }
+* formOrderStatus – Status of the formOrder ```{ Ordered | Error }```
   * Ordered – The formOrder was successful
   * Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
 
@@ -247,13 +247,14 @@ Bestillersystemet må implementere en service som mottar skjemadataene.
 ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
 
 Web API må være tilgjenglig på URL: https://<ApiBaseUrl>/api/PromsFormOrder
+
 F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder)
 
 **Parametere - Inn**
 * apiKey – ApiKey of the end user system placing the order
 * formOrderId – The Id of the formOrder
 * formData - The form data of returned form
-* formOrderStatus – Status of the returned formOrder { Completed | Expired }
+* formOrderStatus – Status of the returned formOrder ```{ Completed | Expired }```
 * timestamp – Date and time when the form was submitted
 
 **Parametere - Ut**
@@ -280,6 +281,7 @@ NB! formData sendes som stringified JSON-object
 # SENDE MELDING SOM SMS
 
 Hvis man har behov for å sende korte beskjeder til pasienten kan man sende dette som SMS via ePROM.
+
 **Det er viktig at dette er ikke-sensitiv informasjon.**
 
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
@@ -388,7 +390,7 @@ Hvis man har behov for å sende informasjon til pasienten kan man sende dette so
 
 Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 
-Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for PROMS
+Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
  
 ### Sende melding klient-side
@@ -513,11 +515,10 @@ Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet f
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - The channel used to notify the patient about the form order 
-{ None | Helsenorge | DigitalMailbox | Unsecure } Tallverdien kan sendes.
+* notificationChannel - The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure }``` Tallverdien kan sendes.
 
 **Parametere – Ut**
-* notificationChannel – The channel used to notify the patient about the form order { None | Helsenorge | DigitalMailbox | Unsecure }
+* notificationChannel – The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure }```
 
 **Metode**
 
@@ -583,15 +584,14 @@ notificationChannel = result.NotificationChannel });
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - The channel used to notify the patient about the form order 
-{ None | Helsenorge | DigitalMailbox | Unsecure } Tallverdien kan sendes.
+* notificationChannel - The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure }``` Tallverdien kan sendes.
 
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
 **Parametere – Ut**
 * SendMessageToCitizenResult
- * notificationChannel – The channel used to notify the patient about the form order { None | Helsenorge | DigitalMailbox | Unsecure }
+ * notificationChannel – The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure }```
 
 
 ### Feilsituasjoner
