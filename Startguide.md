@@ -1,4 +1,4 @@
-# ePROM Startguid v0.1
+# Startguid v0.1
 
 *Gjelder ePROM v2.0*
 
