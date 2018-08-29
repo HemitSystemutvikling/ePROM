@@ -110,6 +110,7 @@ function placeFormOrder() {
 
 
 **Parametere – Ut**
+
 I tillegg til alle inn-parametre:
 * id – The id of this form order
 * singleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution
@@ -206,7 +207,8 @@ API-kallet for bestilling av skjema er i v2 endret slik at man får respons med 
 **URL for Web API kall**
 ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
 
-Web API må være tilgjenglig på URL: https://<ApiBaseUrl>/api/PromsFormOrder 
+Web API må være tilgjenglig på URL: https://```<ApiBaseUrl>```/api/PromsFormOrder
+
 F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/)
 
 **Parametere - Inn**
@@ -246,7 +248,7 @@ Bestillersystemet må implementere en service som mottar skjemadataene.
 **URL for Web API kall**
 ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
 
-Web API må være tilgjenglig på URL: https://<ApiBaseUrl>/api/PromsFormOrder
+Web API må være tilgjenglig på URL: https://```<ApiBaseUrl>```/api/PromsFormOrder
 
 F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder)
 
