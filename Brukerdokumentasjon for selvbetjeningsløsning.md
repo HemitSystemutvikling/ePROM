@@ -1,4 +1,4 @@
-# ePROM Brukerdokumentasjon for selvbetjeningsløsning v0.1
+# Brukerdokumentasjon for selvbetjeningsløsning v0.1
 
 *Gjelder v2.0 av PROMS*
 
