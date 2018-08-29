@@ -1,7 +1,5 @@
 # Brukerdokumentasjon for selvbetjeningsløsning
 
-*Gjelder v2.0 av PROMS*
-
 *Sist oppdatert 21.08.2018*
 
 [Skjemakatalog](#skjemakatalog)
