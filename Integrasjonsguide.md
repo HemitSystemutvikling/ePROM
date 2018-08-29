@@ -201,6 +201,41 @@ Ellers kan følgende feilsituasjoner oppstå:
 * BadRequest($"Form with id='{formOrder.formId}' is not paper enabled")
  
 
+### Mottak av status for bestillingen
+API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
+
+**URL for Web API kall**
+ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
+
+Web API må være tilgjenglig på URL: https://<ApiBaseUrl>/api/PromsFormOrder
+F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder)
+
+**Parametere - Inn**
+* apiKey – ApiKey of the end user system placing the order
+* formOrderId – The Id of the formOrder
+* formOrderStatus – Status of the formOrder { Ordered | Error }
+  * Ordered – The formOrder was successful
+  * Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
+
+**Parametere - Ut**
+* success – true if the request was processed successfully, otherwise false
+
+For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.PromsFormOrderRequest* for parameter inn og *Hemit.Proms.Integration.PromsFormOrderResponse* for parameter ut
+
+**Metode**
+
+PUT
+
+Eksempel request fra Proms (JSON)
+```
+{
+    "apiKey" : "",
+    "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
+    "formOrderStatus" : "Ordered"
+}
+```
+
+
 # RETUR AV UTFYLT SKJEMA
 
 
