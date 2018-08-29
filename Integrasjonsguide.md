@@ -1,6 +1,4 @@
-# ePROMS Integrasjonsguide
-
-*Gjelder v2.0 av PROMS*
+# Integrasjonsguide
 
 *Sist oppdatert 29.08.2018*
 
