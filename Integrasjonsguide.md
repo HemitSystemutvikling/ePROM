@@ -4,7 +4,7 @@
 
 ### Innholdsfortegnelse
 
-[GENERELT](#denerelt)
+[GENERELT](#generelt)
 
 [BESTILLING AV SKJEMA](#bestilling-av-skjema)
 
@@ -177,8 +177,7 @@ notificationChannel = result.NotificationChannel.ToString() });
 * reminderDate - The date to send a reminder for the order. If NULL, no reminder will be sent
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an anonymous object (ex. new { age = 23 }).
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
-* distributionRule - Optional. The rule used when deciding how to notify the patient 
-{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly }. Tallverdien kan sendes. Default: Basic
+* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly }```. Tallverdien kan sendes. Default: Basic
 
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
@@ -188,7 +187,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
   * FormOrderId – The id of this form order
   * SingleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution
   * LoginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
-  * NotificationChannel – The channel used to notify the patient about the form order { None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }. The actual channel used is first known when PROMS performs the callback, notifying about the status.
+  * NotificationChannel – The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }```. The actual channel used is first known when PROMS performs the callback, notifying about the status.
 
 
 ### Feilsituasjoner
@@ -208,7 +207,7 @@ API-kallet for bestilling av skjema er i v2 endret slik at man får respons med 
 ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
 
 Web API må være tilgjenglig på URL: https://<ApiBaseUrl>/api/PromsFormOrder
-F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder)
+F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/)
 
 **Parametere - Inn**
 * apiKey – ApiKey of the end user system placing the order
