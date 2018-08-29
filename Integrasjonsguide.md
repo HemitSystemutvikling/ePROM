@@ -238,10 +238,147 @@ Eksempel request fra Proms (JSON)
 
 # RETUR AV UTFYLT SKJEMA
 
+Når pasienten har fylt ut et skjema sendes skjemaet tilbake til Bestillersystemet.
+
+Bestillersystemet må implementere en service som mottar skjemadataene.
+
+### Mottak
+
+**URL for Web API kall**
+ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
+
+Web API må være tilgjenglig på URL: https://<ApiBaseUrl>/api/PromsFormOrder
+F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder)
+
+**Parametere - Inn**
+* apiKey – ApiKey of the end user system placing the order
+* formOrderId – The Id of the formOrder
+* formData - The form data of returned form
+* formOrderStatus – Status of the returned formOrder { Completed | Expired }
+* timestamp – Date and time when the form was submitted
+
+**Parametere - Ut**
+* success – true if the request was processed successfully, otherwise false
+
+For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.PromsFormOrderRequest* for parameter inn og *Hemit.Proms.Integration.PromsFormOrderResponse* for parameter ut
+
+**Metode**
+
+PUT
+
+Eksempel request fra Proms (JSON)
+NB! formData sendes som stringified JSON-object
+```
+{
+    "apiKey" : "",
+    "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
+    "formData" : '{"HealthGeneral":1,"HealthLimitingActivities":1,"HealthLimitingFloors":1,"PhysicalHealthLessDone":1,"PhysicalHealthLimitingActivity":1,"EmotionalIssuesLessDone":1,"EmotionalIssuesLimitingActivity":1,"LastFourWeeksPain":2,"LastFourWeeksRelaxed":2,"LastFourWeeksSurplusOfEnergy":2,"LastFourWeeksDepressed":2,"LastFourWeeksSocial":1}',
+    "formOrderStatus" : "Completed"
+}
+```
 
 
 # SENDE MELDING SOM SMS
 
+Hvis man har behov for å sende korte beskjeder til pasienten kan man sende dette som SMS via ePROM.
+**Det er viktig at dette er ikke-sensitiv informasjon.**
+
+Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
+
+### Sende melding klient-side
+
+**Eksempelkode (javascript)**
+```javascript
+function sendUnsecureMessageSms() {
+    var url = 'https://proms2.hemit.org/PromsWebApi/api/unsecuremessagesms; // Demo server
+    var apiKey = ""; // The ApiKey for your system
+    var smsText = " En ikkeSensitivMelding som ikke er sensitiv "; // Message
+    var nationalId = "26073941651"; // the national ID of the patient (Norsk fødselsnummer or D-nummer)
+    var phoneNumber = ""; // The mobile number if provided
+
+    $.ajax({
+        url: url,
+        type: "POST",
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify({ apiKey, smsText, nationalId, phoneNumber }),
+        success: function (data) {
+            alert("success: " + data.Success);
+        },
+        error: function () {
+            alert("Error!");
+        }
+    });
+}
+```
+
+**URL for Web API kall**
+
+[https://proms2.hemit.org/PromsWebApi/api/unsecuremessagesms](https://proms2.hemit.org/PromsWebApi/api/unsecuremessagesms)
+
+**Parametere - Inn**
+* apiKey - ApiKey of the end user system placing the order
+* smsText – Nonsensitive message to be sent
+* nationalId  - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
+* phoneNumber - Optional. The mobile number if provided
+One of the parameters nationalId or phoneNumber must be provided.
+
+
+**Parametere – Ut**
+* success – true or false, whether sending message was ok
+
+**Metode**
+
+POST
+
+
+### Sende melding server-side
+
+**API**
+
+Tilgjenglig som NuGet pakke
+
+NuGet repository: [https://hemit.myget.org/F/hemitpublic/api/v3/index.json](https://hemit.myget.org/F/hemitpublic/api/v3/index.json)
+
+Navn: Hemit.Proms.Integration
+
+**Eksempelkode (C#)**
+```
+[HttpPost]
+public JsonResult SendUnsecureMessageSms(string nationalId)
+{
+    var promsApiBaseUrl = ConfigurationManager.AppSettings["PromsApiBaseUrl"];
+    var smsText = "En ikkeSensitivMelding som ikke er sensitiv";
+    var apiKey = ConfigurationManager.AppSettings["PromsApiKey"];
+    var response = Api.SendUnsecureMessageSms(promsApiBaseUrl, apiKey, smsText, nationalId);
+    if (result.HasErrors)
+    {
+        Response.StatusCode = result.ErrorStatusCode.Value;
+        Response.Write(result.ErrorJson);
+        return null;
+    }
+
+    return Json(new {success = response.Success});
+}
+```
+
+**Parametere - Inn**
+* apiKey - ApiKey of the end user system placing the order
+* smsText – Nonsensitive message to be sent
+* nationalId  - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
+* phoneNumber - Optional. The mobile number if provided
+* One of the parameters nationalId or phoneNumber must be provided.
+
+promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+
+**Parametere – Ut**
+* SendUnsecureMessageSmsResult
+  * success – true og false, whether sending message was ok
+ 
+### Feilsituasjoner
+
+**Følgende feilsituasjoner kan oppstå:**
+* BadRequest($"apiKey '{message.apiKey}' doesn't exists")
+* BadRequest("Either nationalId or phoneNumber must be specified")
 
 
 # SENDE MELDING SOM EPOST
