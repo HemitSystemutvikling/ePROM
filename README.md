@@ -1,6 +1,6 @@
 # ePROM
 
-Designskisse for ePROM
+### Designskisse
 [Designskisse](Designskisse)
 
 ### Start-guide
