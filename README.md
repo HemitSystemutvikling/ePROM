@@ -1,6 +1,7 @@
 # ePROM
 
 Generell info om ePROM
+![Proms_design](img/Proms_design.png)
 
 ### Start-guide
 [Startguide](Startguide)
