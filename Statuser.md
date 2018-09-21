@@ -1,4 +1,6 @@
-### MRS
+### PROMS Admin i MRS
+Registeransvarlig har tilgang til et Admingrensesnitt for PROMs i MRS.
+![MRS PROMS Admin](img/mrs.png)
 
 ### Beskrivelse av PROMS bestillinger i MRS
 I et MRS register er en oversikt over utførte PROMS-bestillinger tilgjengelig for nedlasting til excel ved å klikke på knappen "Last ned alle bestillinger til excel (råformat)". Her følger en beskrivelse av råformatet.
