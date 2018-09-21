@@ -4,6 +4,9 @@
 * CreatedFormId = når PROMS kommer tilbake fra pasient er dette skjema GUIDen den fikk
 * Code =  koden som ble generert for å logge seg ved utfylling av skjema
 
+#UniqueId# = internt ID for å forhindre dobbeltbestillinger, trenger ikke tenke på denne
+
+
 ### OrderStatus:
 * 0 = bestilt
 * 1 = besvart
@@ -25,10 +28,8 @@ Mottaker er varslet via kanalen:
 * 0 = pasient har ikke fått beskjed, det vil si engangskode eller feilet bestilling
 * 1 = helsenorge
 * 2 = digital postkasse
-* 3 = fysisk brev
-* 4 = usikker kanal, epost eller sms
-
-UniqueId = internt ID for å forhindre dobbeltbestillinger, trenger ikke tenke på denne
+* 3 = usikker kanal, epost eller sms
+* 4 = fysisk brev
 
 ### DistributionRule:
 * 0 = *default* - varsling via sikker kanal, helsenorge eller digital postkasse
