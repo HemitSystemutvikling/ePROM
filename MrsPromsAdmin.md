@@ -1,12 +1,17 @@
 ### PROMS Admin i MRS
 Registeransvarlig har tilgang til et Admingrensesnitt for PROMs i MRS.
 
-![MRS PROMS Admin](img/mrs_proms_admin.png)
+![MRS PROMS Admin](img/mrs_proms_admin1.png)
 
 Her kan man sette hvilke PROMS-skjema som skal være aktive for utsending og samtidig sette utløpstid og purretid som skal være gjeldende for registeret. Default er 30 dagers utlåpstid og 15 dagers purretid.
 
-### Beskrivelse av PROMS bestillinger i MRS
-I et MRS register er en oversikt over utførte PROMS-bestillinger tilgjengelig for nedlasting til excel ved å klikke på knappen "Last ned alle bestillinger til excel (råformat)". Her følger en beskrivelse av råformatet.
+![PROMS Bestillinger](img/mrs_proms_admin2.png)
+
+Lista med PROMS-bestillinger kan filtreres på skjema, tidspunkt og status. Lista viser diverse informasjon om bestillingene, f.eks. bestillingstidspunkt og tidspunkt for når bestillingen er besvart eller utgått. Status kan være **Bestilt**, **Besvart**, **Utgått** eller **Feilet**. I-ikonet viser hvilken kanal varslingen er sendt til mottaker.
+
+
+### Datadump av PROMS bestillinger
+PROMS-bestillingene er tilgjengelig for nedlasting til Excel (datadump) ved å klikke på knappen *Last ned alle bestillinger til excel (råformat)*. Datadumpen inneholder følgende:
 
 * **Id** =  GUID til bestillingerskjema
 * **TargetFormId** =  GUID til registerskjemaet bestillingen er koblet til
