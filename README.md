@@ -14,3 +14,6 @@
 
 ### Utfylling av skjema
 [Utfylling av skjema](Utfylling%20av%20skjema)
+
+### Administrasjon av PROMS i MRS
+[Administrasjon av PROMS i MRS](MrsPromsAdmin)
