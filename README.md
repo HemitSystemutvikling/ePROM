@@ -1,10 +1,10 @@
 # ePROM
 
-Generell info om ePROM
-
 ### Start-guide
 [Startguide](Startguide)
 
+### Designskisse
+[Designskisse](Designskisse)
 
 ### Selvbetjeningsløsning
 [Brukerdokumentasjon for selvbetjeningsløsning](Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning)
