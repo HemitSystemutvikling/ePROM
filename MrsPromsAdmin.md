@@ -1,6 +1,9 @@
 ### PROMS Admin i MRS
 Registeransvarlig har tilgang til et Admingrensesnitt for PROMs i MRS.
-![MRS PROMS Admin](img/mrs.png)
+
+![MRS PROMS Admin](img/mrs_proms_admin.png)
+
+Her kan man sette hvilke PROMS-skjema som skal være aktive for utsending og samtidig sette utløpstid og purretid som skal være gjeldende for registeret. Default er 30 dagers utlåpstid og 15 dagers purretid.
 
 ### Beskrivelse av PROMS bestillinger i MRS
 I et MRS register er en oversikt over utførte PROMS-bestillinger tilgjengelig for nedlasting til excel ved å klikke på knappen "Last ned alle bestillinger til excel (råformat)". Her følger en beskrivelse av råformatet.
@@ -12,12 +15,14 @@ I et MRS register er en oversikt over utførte PROMS-bestillinger tilgjengelig f
 * **Code** = engangskode generert for pålogging
 * **UniqueId** = internt ID for å forhindre dobbeltbestillinger, trenger ikke tenke på denne
 
+
 ### OrderStatus:
 Statuskoder for en bestilling:
 * 0 = bestilt
 * 1 = besvart
 * 2 = utgått
 * 3 = feilet
+
 
 ### ErrorCode:
 Feilkoder som kan oppstå ved en bestillingen:
@@ -30,6 +35,7 @@ Feilkoder som kan oppstå ved en bestillingen:
 * 6 = pasient er død
 * 7 = Feil fra PROMS server (bør ikke skje)
 
+
 ### NotificationChannel
 Mottaker er varslet via en av følgende kanaler:
 * 0 = pasient har ikke fått beskjed, det vil si engangskode eller feilet bestilling
@@ -37,6 +43,7 @@ Mottaker er varslet via en av følgende kanaler:
 * 2 = digital postkasse
 * 3 = usikker kanal, epost eller sms
 * 4 = fysisk brev
+
 
 ### DistributionRule:
 Pasientskjemaet er distribuert med en av følgende regler:
