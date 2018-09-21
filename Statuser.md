@@ -3,10 +3,11 @@
 ### Beskrivelse av PROMS bestillinger i MRS
 I et MRS register er en oversikt over utførte PROMS-bestillinger tilgjengelig for nedlasting til excel ved å klikke på knappen "Last ned alle bestillinger til excel (råformat)". Her følger en beskrivelse av råformatet.
 
-* **TargetFormId** =  GUID til bestillingerskjema
+* **Id** =  GUID til bestillingerskjema
+* **TargetFormId** =  GUID til registerskjemaet bestillingen er koblet til
 * **TargetFormTypeId** =  1 er hovedskjema, 2 er oppfølgingsskjema
-* **CreatedFormId** = når PROMS kommer tilbake fra pasient er dette skjema GUIDen den fikk
-* **Code** =  koden som ble generert for å logge seg ved utfylling av skjema
+* **CreatedFormId** = GUID på pasientskjemaet når det er besvart av pasient
+* **Code** = engangskode generert for pålogging
 * **UniqueId** = internt ID for å forhindre dobbeltbestillinger, trenger ikke tenke på denne
 
 ### OrderStatus:
