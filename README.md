@@ -3,7 +3,8 @@
 ### Start-guide
 [Startguide](Startguide)
 
-### Designskisse
+### Skisser
+[Overordnetskisse](Overordnetskisse)
 [Designskisse](Designskisse)
 
 ### Selvbetjeningsløsning
