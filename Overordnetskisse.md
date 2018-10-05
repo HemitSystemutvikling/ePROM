@@ -1,4 +1,4 @@
 
 ## Overordnetskisse for ePROM
 
-![eProm](img/eProm.png)
+![eprom](img/eprom.png)
