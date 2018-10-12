@@ -12,6 +12,8 @@
 
 [RETUR AV UTFYLT SKJEMA](#retur-av-utfylt-skjema)
 
+[SKJEMA SOM KREVER SIGNATUR](#skjema-som-krever-signatur)
+
 [SENDE MELDING SOM SMS](#sende-melding-som-sms)
 
 [SENDE MELDING SOM EPOST](#sende-melding-som-epost)
@@ -278,6 +280,32 @@ NB! formData sendes som stringified JSON-object
     "formOrderStatus" : "Completed"
 }
 ```
+
+
+# SKJEMA SOM KREVER SIGNATUR
+
+## Bestilling ##
+Skjema som krever signatur bestilles av Bestillersystem på vanlig måte (se [BESTILLING AV SKJEMA](#bestilling-av-skjema)). For å angi at et skjema krever signatur huker må det hukes av for dette i skjemadesigneren (under *Avansert innstilling*) i ePROM Selvbetjeningsmodul: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/):
+
+![Må signeres](img/esignering1.png)
+
+NB! Skjema som skal signeres kan ikke bestilles med engangskode. Pasienten **må** logge inn med BankId ved utfylling.
+
+## Utfylling ##
+Skjema som krever signatur fylles ut på samme måte som andre skjema av pasienten. Ved levering trykker pasienten på knappen *Signér og levere* i stedet for *Levere* som for andre skjema. Pasienten blir da tatt gjennom signeringsstegene før skjemaet blir levert.
+
+![Signér og levere](img/esignering2.png)
+
+## Mottak ##
+Skjema som krever signatur leveres tilbake til Bestillersystem på vanlig måte (se [RETUR AV UTFYLT SKJEMA](#retur-av-utfylt-skjema)), men med en ekstra parameter *signedFormId*. Dette er en id som kan brukes av Bestillersystem for å laste ned det signerte dokumentet.
+
+NB! Bestillersystem er ansvarlig for at det signerte dokumentet blir lastet ned og at det blir oppbevart på en sikker måte. Det signerte dokumentet vil være tilgjengelig for nedlasting gjennom ePROM i mimimun 30 dager.
+
+### Nedlastint av det signerte dokumentet ###
+Get request mot: ```<ApiBaseUrl>```/api/ExternalDocument/```<SignedFormId>```
+Send med ApiKey i request headeren:
+    Header name: authorization
+    Header value: Basic ```<ApiKey>```
 
 
 # SENDE MELDING SOM SMS
