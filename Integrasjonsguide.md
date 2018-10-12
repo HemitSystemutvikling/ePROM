@@ -299,7 +299,7 @@ Skjema som krever signatur fylles ut på samme måte som andre skjema av pasient
 ## Mottak ##
 Skjema som krever signatur leveres tilbake til Bestillersystem på vanlig måte (se [RETUR AV UTFYLT SKJEMA](#retur-av-utfylt-skjema)), men med en ekstra parameter *signedFormId*. Dette er en id som kan brukes av Bestillersystem for å laste ned det signerte dokumentet. Det signerte dokumentet er en PDF-fil av det utfyllte skjemaet samt en elektronisk signatur.
 
-*NB! Bestillersystem er ansvarlig for at det signerte dokumentet blir lastet ned og at det blir oppbevart på en sikker måte. Det signerte dokumentet vil være tilgjengelig for nedlasting gjennom ePROM i mimimun 30 dager.*
+*NB! Bestillersystem er ansvarlig for at det signerte dokumentet blir lastet ned og at det blir oppbevart på en sikker måte. Det signerte dokumentet vil være tilgjengelig for nedlasting gjennom ePROM i minimum 30 dager.*
 
 ### Nedlasting av det signerte dokumentet ###
 GET request mot: ```<PromsApiBaseUrl>```/ExternalDocument/```<SignedFormId>```
@@ -309,7 +309,7 @@ GET request mot: ```<PromsApiBaseUrl>```/ExternalDocument/```<SignedFormId>```
 **Send med ApiKey i request headeren**
 ```
 Header name: authorization
-Header value: Basic ```<ApiKey>```
+Header value: Basic <ApiKey>
 ```
 
 # SENDE MELDING SOM SMS
