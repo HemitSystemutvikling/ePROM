@@ -1,7 +1,8 @@
 ## Oversikt over teskter brukt til SMS og Epost
 
 ### Tekst i SMS
-Du har mottatt pasientskjema på {promsPublicWebBaseUrl}. Data brukes til å forbedre helsetjenesten. Hilsen Nasjonal pasientrapportering.
+> Du har mottatt pasientskjema på https://pasientrapportering.nhn.no/proms. Data brukes til å forbedre helsetjenesten. Hilsen 
+> Nasjonal pasientrapportering.
 
 
 ## Tekst i Epost
