@@ -29,5 +29,5 @@ https://www.kvalitetsregistre.no/nasjonal-pasientrapportering
 Hilsen,
 Nasjonal pasientrapportering
 
-{GetLogo()}
 ```
+![Logo](img/logo_kvalitetsregister.png)
