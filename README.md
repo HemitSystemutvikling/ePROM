@@ -10,6 +10,9 @@
 
 ### Selvbetjeningsløsning
 [Brukerdokumentasjon for selvbetjeningsløsning](Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning)
+[Skjemainformasjon Helsenorge](img/skjemainformasjon_helsenorge.png)
+[Skjemainformasjon Digipost](img/skjemainformasjon_digipost.png)
+
 
 ### Integrasjonsguide
 [Integrasjonsguide](Integrasjonsguide)
