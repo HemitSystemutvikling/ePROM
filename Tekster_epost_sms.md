@@ -1,11 +1,8 @@
-## Oversikt over teskter brukt til SMS og Epost
+## Pasientskjema via Epost og SMS
 
-### Tekst i SMS
+### Pasientskjema sendt via SMS
 
-```javascript
-Du har mottatt pasientskjema på https://pasientrapportering.nhn.no/proms. 
-Data brukes til å forbedre helsetjenesten. Hilsen Nasjonal pasientrapportering.
-```
+![SMS](img/eprom_sms.png)
 
 ## Pasientskjema sendt via Epost
 
