@@ -2,6 +2,8 @@
 
 ### Pasientskjema sendt via SMS
 
+Eksempel på pasientskjema sendes til pasient som SMS:
+
 ![SMS](img/eprom_sms.png)
 
 ## Pasientskjema sendt via Epost
