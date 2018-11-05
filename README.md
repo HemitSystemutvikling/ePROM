@@ -13,7 +13,7 @@
 
 [Administrasjon av Skjemainformasjon](AdminSkjemainformasjon)
 
-[Pasientskjema via epost sms](PasientskjemaViaEpostSms)
+[Pasientskjema via epost og sms](PasientskjemaViaEpostSms)
 
 ### Integrasjonsguide
 [Integrasjonsguide](Integrasjonsguide)
