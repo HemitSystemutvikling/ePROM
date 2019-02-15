@@ -82,13 +82,17 @@ function placeFormOrder() {
     var metadata = JSON.stringify({ age: 76 });
     var dontStoreCompletedFormInPha = false;
     var distributionRule = "Basic"; 
-
+    var mustBeSigned = false;
+    var signingText = null;
+    var physicalAddress = null;
+    var textInPdf = null;
+    
     $.ajax({
         url: url,
         type: "POST",
         contentType: "application/json;charset=utf-8",
         headers: { "Authorization": "Basic " + apiKey },
-        data: JSON.stringify({ formId, nationalId, expiryDate, reminderDate, metadata, dontStoreCompletedFormInPha, distributionRule }),
+        data: JSON.stringify({ formId, nationalId, expiryDate, reminderDate, metadata, dontStoreCompletedFormInPha, distributionRule,  mustBeSigned, signingText, physicalAddress, textInPdf }),
         success: function (data) {
             alert("formOrderId: " + data.id + "\nsingleUseCode: " + data.singleUseCode + "\nloginUrl: " + data.loginUrl + "\npreferred notificationChannel: " + data.notificationChannel);
         },
@@ -111,7 +115,28 @@ function placeFormOrder() {
 * reminderDate - Optional. The date to send a reminder for the order. If not set or NULL, no reminder will be sent
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an stringified JSON object (ex. JSON.stringify({ age: 76 }))
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
-* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes. Default: Basic. 
+* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes. Default: Basic
+* mustBeSigned - Optional. Whether the form must be signed
+* signingText - Optional. The text displyed for signing
+* physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used. PhysicalAddress is a JSON object in the following format:
+```
+{
+    fullName: "Test Testesen",
+    addressLine1: "Testeveien 1",
+    postalCode: "1234",
+    postalPlace: "Testestad"
+}
+```
+* textInPdf - Optional. Text to insert at given positions in pdf version of the form
+```
+{
+    page: 3,
+    top: 200,
+    left: 70,
+    size: 12,
+    text: "Text to insert"
+}
+```
 
 
 **Parametere – Ut**
@@ -156,7 +181,11 @@ public JsonResult OrderPromsForm(Guid formId)
         DateTime.Now.AddDays(6),
         GetMetadata(promsFormId, form, patient)
         false,
-        DistributionRule.AllowUnsecure);
+        DistributionRule.AllowUnsecure,
+        false,
+        null,
+        null,
+        null);
 
     if (result.HasErrors)
     {
@@ -184,6 +213,10 @@ notificationChannel = result.NotificationChannel.ToString() });
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an anonymous object (ex. new { age = 23 }).
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
 * distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes. Default: Basic
+* mustBeSigned - Optional. Whether the form must be signed
+* signingText - Optional. The text displyed for signing
+* physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
+* textInPdf - Optional. Text to insert at given positions in pdf version of the form
 
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
