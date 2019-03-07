@@ -1,8 +1,8 @@
 ## Finn ID på en Proms-bestilling i MRS
 
-I forbindelse med feilsøking på spesifikke pasientskjema i ePROM tengs ID på selve proms-bestillingen.
+I forbindelse med feilsøking på spesifikke pasientskjema i ePROM er det behov for å finnes ID på selve proms-bestillingen.
 
-Hvis man vet hvilket MRS-skjemaet asom proms-bestillingen er bestilt på kan man finne bestillingsID på følgende måte: 
+Hvis man vet hvilket MRS-skjema, som proms-bestillingen er bestilt på, kan man finne bestillingsID på følgende måte: 
 
 * Finn Id på Hovedskjemaet som prom er bestilt på.
 * Under PROMS-fanen:
