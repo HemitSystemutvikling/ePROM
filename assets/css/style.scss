@@ -7,9 +7,6 @@
     padding: 2rem 3rem;
 }
 
-.page-header > a {
-    display: none;
-}
-.page-header > h2 {
+.page-header > a, .page-header > h2 {
     display: none;
 }
