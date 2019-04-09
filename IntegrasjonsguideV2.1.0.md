@@ -1,6 +1,6 @@
-# Integrasjonsguide
+# Integrasjonsguide v2.1
 
-*Sist oppdatert 12.10.2018*
+*Sist oppdatert 08.04.2019*
 
 ### Innholdsfortegnelse
 
