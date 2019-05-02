@@ -6,6 +6,8 @@
 ### Skisser
 [Overordnetskisse](Overordnetskisse)
 
+[Overordnetskisse papir](Overordnetskisse%20papir)
+
 [Designskisse](Designskisse)
 
 ### Selvbetjeningsløsning
