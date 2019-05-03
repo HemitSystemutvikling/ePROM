@@ -170,8 +170,6 @@ public JsonResult OrderPromsForm(Guid formId)
         GetMetadata(promsFormId, form, patient)
         false,
         DistributionRule.AllowUnsecure,
-        false,
-        null,
         null);
 
     if (result.HasErrors)
@@ -200,8 +198,6 @@ notificationChannel = result.NotificationChannel.ToString() });
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an anonymous object (ex. new { age = 23 }).
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
 * distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes. Default: Basic
-* mustBeSigned - Optional. Whether the form must be signed
-* signingText - Optional. The text displyed for signing
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
 
 
@@ -225,7 +221,7 @@ Ellers kan følgende feilsituasjoner oppstå:
 * BadRequest($"Form with id='{formOrder.formId}' is not paper enabled")
  
 
-### Mottak av status for bestillingen
+### Mottak av status for bestillingen (V2)
 API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
 
 **URL for Web API kall**
@@ -281,7 +277,10 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](
 * formOrderId – The Id of the formOrder
 * formData - The form data of returned form
 * formOrderStatus – Status of the returned formOrder ```{ Completed | Expired }```
+* signedFormId – The Id of the signed form if form has been signed
 * timestamp – Date and time when the form was submitted
+* scannedPaperId – The Id of the scanned paper form if form distributed as paper
+* formDataWarnings – A list for form data of returned form with validate warnings
 
 **Parametere - Ut**
 * success – true if the request was processed successfully, otherwise false
@@ -299,7 +298,11 @@ NB! formData sendes som stringified JSON-object
     "apiKey" : "",
     "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
     "formData" : '{"HealthGeneral":1,"HealthLimitingActivities":1,"HealthLimitingFloors":1,"PhysicalHealthLessDone":1,"PhysicalHealthLimitingActivity":1,"EmotionalIssuesLessDone":1,"EmotionalIssuesLimitingActivity":1,"LastFourWeeksPain":2,"LastFourWeeksRelaxed":2,"LastFourWeeksSurplusOfEnergy":2,"LastFourWeeksDepressed":2,"LastFourWeeksSocial":1}',
-    "formOrderStatus" : "Completed"
+    "formOrderStatus" : "Completed",
+    "signedFormId":"00000000-0000-0000-0000-000000000000",
+    "timestamp":"2019-05-03T00:00:00+02:00",
+    "scannedPaperId":"00000000-0000-0000-0000-000000000000",
+    "formDataWarnings":[{"fieldName":"Key","warning":"Value"},{"fieldName":"Key2","warning":"Value2"}]
 }
 ```
 
