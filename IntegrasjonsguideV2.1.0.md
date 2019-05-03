@@ -73,7 +73,7 @@ Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet f
 **Eksempelkode (javascript)**
 ```javascript
 function placeFormOrder() {
-    var url = 'https://proms2.hemit.org/PromsWebApi/api/v2/formorder'; // Demo server
+    var url = 'https://proms2.hemit.org/PromsWebApi/api/formorder'; // Demo server
     var apiKey = ""; // The ApiKey for your system
     var formId = "1bc5f9f0-2607-49eb-94f0-6af955bbd79a"; // RAND-12
     var nationalId = "26073941651"; // the national ID of the patient (Norsk fødselsnummer or D-nummer)
@@ -105,7 +105,7 @@ function placeFormOrder() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/PromsWebApi/api/v2/formorder]
+[https://proms2.hemit.org/PromsWebApi/api/formorder]
 
 **Parametere - Inn**
 * apiKey - ApiKey of the end user system placing the order
@@ -172,7 +172,7 @@ public JsonResult OrderPromsForm(Guid formId)
 
     var promsFormId = _formTypeToPromsFormIdMapping[(FormType) form.FormTypeId];
 
-    var result = Api.CreateFormOrderV2(
+    var result = Api.CreateFormOrder(
         ConfigurationManager.AppSettings["PromsApiBaseUrl"],
         ConfigurationManager.AppSettings["PromsApiKey"],
         promsFormId,
