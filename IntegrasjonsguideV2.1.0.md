@@ -85,14 +85,13 @@ function placeFormOrder() {
     var mustBeSigned = false;
     var signingText = null;
     var physicalAddress = null;
-    var textInPdf = null;
     
     $.ajax({
         url: url,
         type: "POST",
         contentType: "application/json;charset=utf-8",
         headers: { "Authorization": "Basic " + apiKey },
-        data: JSON.stringify({ formId, nationalId, expiryDate, reminderDate, metadata, dontStoreCompletedFormInPha, distributionRule,  mustBeSigned, signingText, physicalAddress, textInPdf }),
+        data: JSON.stringify({ formId, nationalId, expiryDate, reminderDate, metadata, dontStoreCompletedFormInPha, distributionRule,  mustBeSigned, signingText, physicalAddress }),
         success: function (data) {
             alert("formOrderId: " + data.id + "\nsingleUseCode: " + data.singleUseCode + "\nloginUrl: " + data.loginUrl + "\npreferred notificationChannel: " + data.notificationChannel);
         },
@@ -173,7 +172,6 @@ public JsonResult OrderPromsForm(Guid formId)
         DistributionRule.AllowUnsecure,
         false,
         null,
-        null,
         null);
 
     if (result.HasErrors)
@@ -205,7 +203,6 @@ notificationChannel = result.NotificationChannel.ToString() });
 * mustBeSigned - Optional. Whether the form must be signed
 * signingText - Optional. The text displyed for signing
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
-* textInPdf - Optional. Text to insert at given positions in pdf version of the form
 
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
