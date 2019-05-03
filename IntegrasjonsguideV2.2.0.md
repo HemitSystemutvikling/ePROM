@@ -10,9 +10,13 @@
 
 [Bestilling klient-side](#bestilling-klient-side)
 
+[Bestilling server-side](#bestilling-server-side)
+
 [BESTILLING AV SKJEMA v2](#bestilling-av-skjema-v2)
 
 [Bestilling klient-side v2](#bestilling-klient-side-v2)
+
+[Bestilling server-side v2](#bestilling-server-side-v2)
 
 [RETUR AV UTFYLT SKJEMA](#retur-av-utfylt-skjema)
 
