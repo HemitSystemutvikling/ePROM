@@ -126,17 +126,6 @@ function placeFormOrder() {
     postalCode: "1234",
     postalPlace: "Testestad"
 }
-```
-* textInPdf - Optional. Text to insert at given positions in pdf version of the form
-```
-{
-    page: 3,
-    top: 200,
-    left: 70,
-    size: 12,
-    text: "Text to insert"
-}
-```
 
 
 **Parametere – Ut**
