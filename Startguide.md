@@ -4,7 +4,7 @@
 
 ## Hvordan komme igang med ePROM
 
-Implementere integrasjon mot ePROM i hht [Integrasjonsguide v2.2](IntegrasjonsguideV2.2.0)
+Implementere integrasjon mot ePROM i hht Integrasjonsguiden
 -	Utsending av skjemabestilling
 -	Mottak av skjemabestilling
 
