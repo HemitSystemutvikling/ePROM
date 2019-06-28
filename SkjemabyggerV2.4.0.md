@@ -32,7 +32,7 @@ Dette vil for pasienten se slik ut:
 *I forbindelse med ditt opphold på St. Olavs hospital  ønsker vi at du svarer på noen spørsmål.*
 
 Metadatafeltet i skjemabestillingen vil da være:
-```
+```javascript
 JSON.stringify({ sykehusnavn: "St. Olavs hospital" })
 ```
 
@@ -42,7 +42,7 @@ Hvis de eksisterende komponentene i skjemabyggeren ikke tilbyr all funksjonalite
 
 **Eksempel**
 Kode for å legge inn et bilde av en figur der man kan trykke på forskjellige deler av den. Koden legges inn i "Egendefinert HTML/javascript" på skjemasiden
-```javascript
+```css
 <style>
 
     #painfigure > p {
@@ -55,6 +55,8 @@ Kode for å legge inn et bilde av en figur der man kan trykke på forskjellige d
         }
     }
 </style>
+```
+```javascript
 <script>
 (function () {
 
