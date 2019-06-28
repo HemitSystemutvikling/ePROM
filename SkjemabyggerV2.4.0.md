@@ -18,14 +18,14 @@ Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel 
 ## Informasjon til pasienten
 For å vise metadata i "Informasjon til pasienten" legger man inn denne teksten:
 
-[_METADATANAVN_]
+[\_METADATANAVN\_]
 
 
 **Eksempel**
 
 Man ønsker en tekst basert på hvilket sykehus pasienten var innlagt på. Dette kan legges inn i "Informasjon til pasienten":
 
-*I forbindelse med ditt opphold på [_SYKEHUSNAVN_] ønsker vi at du svarer på noen spørsmål.*
+*I forbindelse med ditt opphold på [\_SYKEHUSNAVN+_] ønsker vi at du svarer på noen spørsmål.*
 
 Dette vil for pasienten se slik ut:
 
