@@ -42,7 +42,7 @@ Hvis de eksisterende komponentene i skjemabyggeren ikke tilbyr all funksjonalite
 
 **Eksempel**
 Kode for å legge inn et bilde av en figur der man kan trykke på forskjellige deler av den. Koden legges inn i "Egendefinert HTML/javascript" på skjemasiden
-```
+```javascript
 <style>
 
     #painfigure > p {
