@@ -113,7 +113,7 @@ function placeFormOrder() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/PromsWebApi/api/formorder]
+https://proms2.hemit.org/PromsWebApi/api/formorder
 
 **Parametere - Inn**
 * apiKey - ApiKey of the end user system placing the order
@@ -123,7 +123,7 @@ function placeFormOrder() {
 * reminderDate - Optional. The date to send a reminder for the order. If not set or NULL, no reminder will be sent
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an stringified JSON object (ex. JSON.stringify({ age: 76 }))
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
-* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes. Default: Basic
+* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes, se [DistributionRule](#distributionrule). Default: Basic
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used. PhysicalAddress is a JSON object in the following format:
 ```
 {
@@ -206,7 +206,7 @@ notificationChannel = result.NotificationChannel.ToString() });
 * reminderDate - The date to send a reminder for the order. If NULL, no reminder will be sent
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an anonymous object (ex. new { age = 23 }).
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
-* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes. Default: Basic
+* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes, se [DistributionRule](#distributionrule). Default: Basic
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
@@ -275,7 +275,7 @@ function placeFormOrderV2() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/PromsWebApi/api/v2/formorder]
+https://proms2.hemit.org/PromsWebApi/api/v2/formorder
 
 **Parametere - Inn**
 * apiKey - ApiKey of the end user system placing the order
@@ -285,7 +285,7 @@ function placeFormOrderV2() {
 * reminderDate - Optional. The date to send a reminder for the order. If not set or NULL, no reminder will be sent
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an stringified JSON object (ex. JSON.stringify({ age: 76 }))
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
-* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes. Default: Basic
+* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes, se [DistributionRule](#distributionrule). Default: Basic
 * mustBeSigned - Optional. Whether the form must be signed
 * signingText - Optional. The text displyed for signing
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used. PhysicalAddress is a JSON object in the following format:
@@ -373,7 +373,7 @@ notificationChannel = result.NotificationChannel.ToString() });
 * reminderDate - The date to send a reminder for the order. If NULL, no reminder will be sent
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an anonymous object (ex. new { age = 23 }).
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
-* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes. Default: Basic
+* distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes, se [DistributionRule](#distributionrule). Default: Basic
 * mustBeSigned - Optional. Whether the form must be signed
 * signingText - Optional. The text displyed for signing
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
@@ -781,7 +781,7 @@ Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet f
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure }``` Tallverdien kan sendes.
+* notificationChannel - The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure }``` Tallverdien kan sendes, se [Notificationchannel](#notificationchannel).
 
 **Parametere – Ut**
 * notificationChannel – The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure }```
@@ -850,7 +850,7 @@ notificationChannel = result.NotificationChannel });
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure }``` Tallverdien kan sendes.
+* notificationChannel - The channel used to notify the patient about the form order ```{ None | Helsenorge | DigitalMailbox | Unsecure }``` Tallverdien kan sendes, se [Notificationchannel](#notificationchannel.
 
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
