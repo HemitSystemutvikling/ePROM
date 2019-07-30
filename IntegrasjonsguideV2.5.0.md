@@ -1,6 +1,6 @@
-# Integrasjonsguide v2.3
+# Integrasjonsguide v2.5
 
-*Sist oppdatert 22.05.2019*
+*Sist oppdatert 30.07.2019*
 
 ### Innholdsfortegnelse
 
@@ -93,13 +93,14 @@ function placeFormOrder() {
     var dontStoreCompletedFormInPha = false;
     var distributionRule = "Basic"; 
     var physicalAddress = null;
+    var testMode = false;
     
     $.ajax({
         url: url,
         type: "POST",
         contentType: "application/json;charset=utf-8",
         headers: { "Authorization": "Basic " + apiKey },
-        data: JSON.stringify({ formId, nationalId, expiryDate, reminderDate, metadata, dontStoreCompletedFormInPha, distributionRule, physicalAddress }),
+        data: JSON.stringify({ formId, nationalId, expiryDate, reminderDate, metadata, dontStoreCompletedFormInPha, distributionRule, physicalAddress, testMode }),
         success: function (data) {
             alert("formOrderId: " + data.id + "\nsingleUseCode: " + data.singleUseCode + "\nloginUrl: " + data.loginUrl + "\npreferred notificationChannel: " + data.notificationChannel);
         },
@@ -131,7 +132,8 @@ function placeFormOrder() {
     postalCode: "1234",
     postalPlace: "Testestad"
 }
-
+```
+* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
 **Parametere – Ut**
 
@@ -157,7 +159,7 @@ NuGet repository: https://hemit.myget.org/F/hemitpublic/api/v3/index.json
 Navn: Hemit.Proms.Integration
 
 **Eksempelkode (C#)**
-```javascript
+```cs
 [HttpPost]
 public JsonResult OrderPromsForm(Guid formId)
 {
@@ -176,7 +178,8 @@ public JsonResult OrderPromsForm(Guid formId)
         GetMetadata(promsFormId, form, patient)
         false,
         DistributionRule.AllowUnsecure,
-        null);
+        null,
+        false);
 
     if (result.HasErrors)
     {
@@ -205,7 +208,7 @@ notificationChannel = result.NotificationChannel.ToString() });
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
 * distributionRule - Optional. The rule used when deciding how to notify the patient ```{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }```. Tallverdien kan sendes. Default: Basic
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
-
+* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
@@ -252,13 +255,14 @@ function placeFormOrderV2() {
     var mustBeSigned = false;
     var signingText = null;
     var physicalAddress = null;
+    var testMode = false;
     
     $.ajax({
         url: url,
         type: "POST",
         contentType: "application/json;charset=utf-8",
         headers: { "Authorization": "Basic " + apiKey },
-        data: JSON.stringify({ formId, nationalId, expiryDate, reminderDate, metadata, dontStoreCompletedFormInPha, distributionRule,  mustBeSigned, signingText, physicalAddress }),
+        data: JSON.stringify({ formId, nationalId, expiryDate, reminderDate, metadata, dontStoreCompletedFormInPha, distributionRule,  mustBeSigned, signingText, physicalAddress, testMode }),
         success: function (data) {
             alert("formOrderId: " + data.id + "\nsingleUseCode: " + data.singleUseCode + "\nloginUrl: " + data.loginUrl + "\npreferred notificationChannel: " + data.notificationChannel);
         },
@@ -293,6 +297,7 @@ function placeFormOrderV2() {
     postalPlace: "Testestad"
 }
 ```
+* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
 
 **Parametere – Ut**
@@ -319,7 +324,7 @@ NuGet repository: https://hemit.myget.org/F/hemitpublic/api/v3/index.json
 Navn: Hemit.Proms.Integration
 
 **Eksempelkode (C#)**
-```javascript
+```cs
 [HttpPost]
 public JsonResult OrderPromsFormV2(Guid formId)
 {
@@ -340,7 +345,8 @@ public JsonResult OrderPromsFormV2(Guid formId)
         DistributionRule.AllowUnsecure,
         false,
         null,
-        null);
+        null,
+        false);
 
     if (result.HasErrors)
     {
@@ -371,7 +377,7 @@ notificationChannel = result.NotificationChannel.ToString() });
 * mustBeSigned - Optional. Whether the form must be signed
 * signingText - Optional. The text displyed for signing
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
-
+* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
