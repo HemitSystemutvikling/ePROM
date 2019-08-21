@@ -5,6 +5,7 @@
 ### Innholdsfortegnelse
 
 [GENERELT](#generelt)
+[Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
 [METADATA](#metadata)
 
