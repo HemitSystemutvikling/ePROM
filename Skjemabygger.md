@@ -5,13 +5,13 @@
 ### Innholdsfortegnelse
 
 [GENERELT](#generelt)
-[Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
 [METADATA](#metadata)
 
 [SPESIALTILPASNING](#spesialtilpasning)
 
 # GENERELT
+[Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
 # METADATA
 Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel til andre komponenter og for å vise informasjon spesifikk for en skjemabestilling i skjemaet. Metadata kan brukes både i selve skjemaet og i "Informasjon til pasienten" knyttet til skjemaet. Hvis samme metadatanavn benyttes i skjemaet og i "Informasjon til pasienten" vil dette erstattes av samme verdi.
