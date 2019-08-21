@@ -1,6 +1,6 @@
-# Skjemabygger v2.4
+# Skjemabygger
 
-*Sist oppdatert 28.06.2019*
+*Sist oppdatert 21.08.2019*
 
 ### Innholdsfortegnelse
 
