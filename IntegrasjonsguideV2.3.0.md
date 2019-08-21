@@ -1,4 +1,4 @@
-# Integrasjonsguide v2.3
+# Integrasjonsguide
 
 *Sist oppdatert 22.05.2019*
 
