@@ -13,6 +13,8 @@
 ### Selvbetjeningsløsning
 [Brukerdokumentasjon for selvbetjeningsløsning](Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning)
 
+[Skjemabygger](Skjemabygger)
+
 [Administrasjon av Skjemainformasjon](AdminSkjemainformasjon)
 
 [Pasientskjema via epost og sms](PasientskjemaViaEpostSms)
