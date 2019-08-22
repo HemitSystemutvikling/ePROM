@@ -24,11 +24,12 @@ Spørsmålene setter man opp med de forskjellige felttypene:
 - Tekstområde - brukes som informasjonstekst 
 - Metadata - brukes for å kunne motta metadata fra Bestillersystemet ved bestilling
 
-Noen av feltene kan vises på forskjellige måter. F.eks. så kan *Valgfelt* kan vises som radioknapper eller nedtreksmeny. *Tallfelt* kan vises som et inputfelt eller slider. 
+Noen av feltene kan vises på forskjellige måter. F.eks. så kan *Valgfelt* vises som radioknapper eller nedtreksmeny. *Tallfelt* kan vises som et inputfelt eller slider. 
+
 På hvert enkelt felt kan man også sette valideringsregler tilpasset felttypen.
 Det er også støtte for å legge inn logikk for skjuling og vising av felt.
 Det er et krav om at alle feltnavn må være unike.
-Skjemaet kan forhåndsvises underveis.
+Skjemaet kan forhåndsvises underveis ette at det er lagret.
 
 [Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
