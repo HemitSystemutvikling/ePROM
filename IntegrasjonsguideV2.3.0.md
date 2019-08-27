@@ -12,11 +12,11 @@
 
 [Bestilling server-side v2](#bestilling-server-side-v2)
 
-[(BESTILLING AV SKJEMA - Utgått)](#bestilling-av-skjema)
+[(BESTILLING AV SKJEMA - Utgått)](#bestilling-av-skjema---utgått)
 
-[(Bestilling klient-side - Utgått)](#bestilling-klient-side)
+[(Bestilling klient-side - Utgått)](#bestilling-klient-side---utgått)
 
-[(Bestilling server-side - Utgått)](#bestilling-server-side)
+[(Bestilling server-side - Utgått)](#bestilling-server-side---utgått)
 
 [PASIENTINITIERT BESTILLING AV SKJEMA](#pasientinitiert-bestilling-av-skjema)
 
@@ -275,13 +275,13 @@ Eksempel request fra Proms (JSON)
 }
 ```
 
-# (BESTILLING AV SKJEMA - Utgått)
+# BESTILLING AV SKJEMA - UTGÅTT
 
 Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
 
-## (Bestilling klient-side - Utgått)
+## Bestilling klient-side - UTGÅTT
 
 **Eksempelkode (javascript)**
 ```javascript
@@ -349,7 +349,7 @@ I tillegg til alle inn-parametre:
 POST
 
 
-## (Bestilling server-side - Utgått)
+## Bestilling server-side - UTGÅTT
 
 **API**
 
