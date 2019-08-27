@@ -20,7 +20,7 @@
 [Pasientskjema via epost og sms](PasientskjemaViaEpostSms)
 
 ### Integrasjonsguide
-[Integrasjonsguide](IntegrasjonsguideV2.3.0)
+[Integrasjonsguide](Integrasjonsguide)
 
 ### Utfylling av skjema
 [Utfylling av skjema](Utfylling%20av%20skjema)
