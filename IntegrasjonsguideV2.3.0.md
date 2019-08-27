@@ -6,11 +6,11 @@
 
 [GENERELT](#generelt)
 
-[BESTILLING AV SKJEMA](#bestilling-av-skjema)
+[~BESTILLING AV SKJEMA~ (Utgått)](#bestilling-av-skjema)
 
-[Bestilling klient-side](#bestilling-klient-side)
+[~Bestilling klient-side~ (Utgått)](#bestilling-klient-side)
 
-[Bestilling server-side](#bestilling-server-side)
+[~Bestilling server-side~ (Utgått)](#bestilling-server-side)
 
 [BESTILLING AV SKJEMA v2](#bestilling-av-skjema-v2)
 
@@ -72,13 +72,13 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 ```
 
 
-# BESTILLING AV SKJEMA
+# ~BESTILLING AV SKJEMA~ (Utgått)
 
 Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
 
-## Bestilling klient-side
+## ~Bestilling klient-side~ (Utgått)
 
 **Eksempelkode (javascript)**
 ```javascript
