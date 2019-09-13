@@ -90,7 +90,7 @@ API kall, GET request:
 ```
 
 Returnerer skjema metadata:
-```j
+```
 {
     "morgendose": 1,
     "kveldsdose": 5,
