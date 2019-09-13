@@ -41,14 +41,14 @@ string redirectUri = string.Format($"http://127.0.0.1:{browser.Port}");
 
 var options = new OidcClientOptions
 {
-	Authority = "https://helseid-sts.test.nhn.no/",
-	ClientId = "no.hemit.hild-dev",
-	RedirectUri = redirectUri,
-	Scope = "openid profile helseid://scopes/identity/pid helseid://scopes/identity/security_level hemit/hild-dev/*",
-	FilterClaims = false,
-	Browser = browser,
-	ClientSecret = "K6fIZ69LMlaGvput10FoAYWtsWvFU2pyM7zj8zvtiwRVvZHIR8WBU5j6Gc46kN8v",
-	Flow = OidcClientOptions.AuthenticationFlow.Hybrid
+    Authority = "https://helseid-sts.test.nhn.no/",
+    ClientId = "no.hemit.hild-dev",
+    RedirectUri = redirectUri,
+    Scope = "openid profile helseid://scopes/identity/pid helseid://scopes/identity/security_level hemit/hild-dev/*",
+    FilterClaims = false,
+    Browser = browser,
+    ClientSecret = "K6fIZ69LMlaGvput10FoAYWtsWvFU2pyM7zj8zvtiwRVvZHIR8WBU5j6Gc46kN8v",
+    Flow = OidcClientOptions.AuthenticationFlow.Hybrid
 };
 
 var oidcClient = new OidcClient(options);
@@ -74,7 +74,7 @@ API kall, GET request:
 ```
 
 Returnerer liste med skjemabestillinger:
-```json
+```
 [<FormOrderId1>, <FormOrderId2>, <FormOrderId3>, ...]
 ```
 
@@ -90,11 +90,11 @@ API kall, GET request:
 ```
 
 Returnerer skjema metadata:
-```json
+```j
 {
-	"morgendose": 1,
-	"kveldsdose": 5,
-	"...": "..."
+    "morgendose": 1,
+    "kveldsdose": 5,
+    "...": "..."
 }
 ```
 
@@ -111,11 +111,11 @@ API kall, PUT request:
 ```
 
 Data som skal levereres sendes med i body:
-```json
+```
 {
-	"vekt": 70,
-	"kommentar": "En liten kommentar fra pasienten",
-	"...": "..."
+    "vekt": 70,
+    "kommentar": "En liten kommentar fra pasienten",
+    "...": "..."
 }
 ```
 
