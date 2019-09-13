@@ -31,9 +31,40 @@ API'et tilbyr metoder for å hente ut alle skjemabestillinger av en gitt skjemat
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
 ## Autentisering
+API'et er beskyttet av OpenID Connect med hybrid-flyt slik at brukere kan holde på en pålogging over lengre tid, noe som feks er tilfelle når en mobil-app skal koble mot API'et.
 
+Eksempel (C#)
+```cs
+// create a redirect URI using an available port on the loopback address.
+// requires the OP to allow random ports on 127.0.0.1 - otherwise set a static port
+var browser = new SystemBrowser(7014);
+string redirectUri = string.Format($"http://127.0.0.1:{browser.Port}");
 
+var options = new OidcClientOptions
+{
+	Authority = "https://helseid-sts.test.nhn.no/",
+    ClientId = "no.hemit.hild-dev",
+    RedirectUri = redirectUri,
+    Scope = "openid profile helseid://scopes/identity/pid helseid://scopes/identity/security_level hemit/hild-dev/*",
+	FilterClaims = false,
+	Browser = browser,
+	ClientSecret = "K6fIZ69LMlaGvput10FoAYWtsWvFU2pyM7zj8zvtiwRVvZHIR8WBU5j6Gc46kN8v",
+	Flow = OidcClientOptions.AuthenticationFlow.Hybrid
+};
 
+var oidcClient = new OidcClient(options);
+
+// Log in to get access token
+var loginResult = await oidcClient.LoginAsync(new LoginRequest());
+var currentAccessToken = loginResult.AccessToken;
+
+// Create API client
+var epromApiClient = new HttpClient();
+epromApiClient.SetBearerToken(currentAccessToken)
+
+// Call API using the client
+var result = await epromApiClient.GetAsync(...);
+```
 
 ## Hent skjemabestillinger for skjematype
 Ved å sende med skjematypens FormId filtrerer man skjemabestillingene for den innloggede personen slik at FormOrderId til denne personens skjemabestillinger av gitte type blir hentet ut. API'et tilbyr ikke å hente ut alle skjemabestillinger for en person uavhengig av skjematypen.
