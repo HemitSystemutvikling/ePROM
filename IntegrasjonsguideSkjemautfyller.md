@@ -43,8 +43,8 @@ var options = new OidcClientOptions
 {
 	Authority = "https://helseid-sts.test.nhn.no/",
 	ClientId = "no.hemit.hild-dev",
-    RedirectUri = redirectUri,
-    Scope = "openid profile helseid://scopes/identity/pid helseid://scopes/identity/security_level hemit/hild-dev/*",
+	RedirectUri = redirectUri,
+	Scope = "openid profile helseid://scopes/identity/pid helseid://scopes/identity/security_level hemit/hild-dev/*",
 	FilterClaims = false,
 	Browser = browser,
 	ClientSecret = "K6fIZ69LMlaGvput10FoAYWtsWvFU2pyM7zj8zvtiwRVvZHIR8WBU5j6Gc46kN8v",
@@ -70,10 +70,14 @@ Ved å sende med skjematypens FormId filtrerer man skjemabestillingene for den i
 
 API kall, GET request:
 
+```
 *<API_ROOT>*/api/formorders?formId=*\<FormId>*
+```
 
 Returnerer liste med skjemabestillinger:
- [*\<FormOrderId1>*, *\<FormOrderId2>*, *\<FormOrderId3>*, *...*]
+```
+[*\<FormOrderId1>*, *\<FormOrderId2>*, *\<FormOrderId3>*, *...*]
+```
 
 ### Feilkoder
 400 BadRequest - FormId er ikke angitt
@@ -83,14 +87,18 @@ Ved å sende med skjemabestillingens FormOrderId kan man hente ut Metadata angit
 
 API kall, GET request:
 
+```
 *<API_ROOT>*/api/formorders/*\<FormOrderId>*
+```
 
 Returnerer skjema metadata:
+```
 {
 	"morgendose": 1,
 	"kveldsdose": 5,
 	"...": "..."
 }
+```
 
 ### Feilkoder
 404 NotFound - finner ikke skjemabestilling med angitt FormOrderId
@@ -100,17 +108,21 @@ Utfyllt skjema for en skjemabestillingen leveres ved å sende med skjemabestilli
 
 API kall, PUT request:
 
+```
 *<API_ROOT>*/api/formorders/*\<FormOrderId>*
+```
 
 Data som skal levereres sendes med i body:
+```
 {
 	"vekt": 70,
 	"kommentar": "En liten kommentar fra pasienten",
 	"...": "..."
 }
+```
 
 Returnerer status på levering:
-200 OK hvis leveringen gikks om den skulle
+200 OK hvis leveringen gikk om den skulle
 
 ### Feilkoder
 404 NotFound - finner ikke skjemabestilling med angitt FormOrderId
