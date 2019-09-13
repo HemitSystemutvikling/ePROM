@@ -69,14 +69,13 @@ var result = await epromApiClient.GetAsync(...);
 Ved å sende med skjematypens FormId filtrerer man skjemabestillingene for den innloggede personen slik at FormOrderId til denne personens skjemabestillinger av gitte type blir hentet ut. API'et tilbyr ikke å hente ut alle skjemabestillinger for en person uavhengig av skjematypen.
 
 API kall, GET request:
-
 ```
-*<API_ROOT>*/api/formorders?formId=*\<FormId>*
+<API_ROOT>/api/formorders?formId=<FormId>
 ```
 
 Returnerer liste med skjemabestillinger:
-```
-[*\<FormOrderId1>*, *\<FormOrderId2>*, *\<FormOrderId3>*, *...*]
+```json
+[<FormOrderId1>, <FormOrderId2>, <FormOrderId3>, ...]
 ```
 
 ### Feilkoder
@@ -86,13 +85,12 @@ Returnerer liste med skjemabestillinger:
 Ved å sende med skjemabestillingens FormOrderId kan man hente ut Metadata angitt i skjemabestillingen.
 
 API kall, GET request:
-
 ```
-*<API_ROOT>*/api/formorders/*\<FormOrderId>*
+<API_ROOT>/api/formorders/<FormOrderId>
 ```
 
 Returnerer skjema metadata:
-```
+```json
 {
 	"morgendose": 1,
 	"kveldsdose": 5,
@@ -109,11 +107,11 @@ Utfyllt skjema for en skjemabestillingen leveres ved å sende med skjemabestilli
 API kall, PUT request:
 
 ```
-*<API_ROOT>*/api/formorders/*\<FormOrderId>*
+<API_ROOT>/api/formorders/<FormOrderId>
 ```
 
 Data som skal levereres sendes med i body:
-```
+```json
 {
 	"vekt": 70,
 	"kommentar": "En liten kommentar fra pasienten",
