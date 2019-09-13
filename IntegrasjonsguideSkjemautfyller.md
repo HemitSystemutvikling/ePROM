@@ -22,11 +22,10 @@
 
 
 # GENERELT
-
+API'et er laget for å gi mulighet for bruke ePROM med 3dje-parts skjemautfyllere. 
 
 
 # HANDLINGER
-
 API'et tilbyr metoder for å hente ut alle skjemabestillinger av en gitt skjematype, hente ut data fra metadatafeltet til en gitt skjemabestilling og levere skjema.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
@@ -43,7 +42,7 @@ string redirectUri = string.Format($"http://127.0.0.1:{browser.Port}");
 var options = new OidcClientOptions
 {
 	Authority = "https://helseid-sts.test.nhn.no/",
-    ClientId = "no.hemit.hild-dev",
+	ClientId = "no.hemit.hild-dev",
     RedirectUri = redirectUri,
     Scope = "openid profile helseid://scopes/identity/pid helseid://scopes/identity/security_level hemit/hild-dev/*",
 	FilterClaims = false,
