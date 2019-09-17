@@ -1,5 +1,5 @@
 
-# Integrasjonsguide for skjemautfyller
+# Integrasjonsguide for skjemautfyller API
 
 *Sist oppdatert 13.09.2019*
 
