@@ -1,7 +1,7 @@
 
 # Integrasjonsguide for skjemautfyller API
 
-*Sist oppdatert 13.09.2019*
+*Sist oppdatert 23.09.2019*
 
 ### Innholdsfortegnelse
 
@@ -30,7 +30,7 @@ API'et tilbyr metoder for å hente ut alle skjemabestillinger av en gitt skjemat
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
 ## Autentisering
-API'et er beskyttet av OpenID Connect med hybrid-flyt slik at brukere kan holde på en pålogging over lengre tid, noe som feks er tilfelle når en mobil-app skal koble mot API'et.
+API'et er beskyttet av OpenID Connect med hybrid-flyt slik at brukere kan holde på en pålogging over lengre tid, noe som feks er tilfelle når en mobil-app skal koble mot API'et. Oppsett av klient som skal benytte APIet gjøres i HelseId admin-grensesnitt for aktuelle miljø. HelseId test ligger her: https://helseid-admin.test.nhn.no/home
 
 Eksempel (C#)
 ```cs
@@ -42,12 +42,12 @@ string redirectUri = string.Format($"http://127.0.0.1:{browser.Port}");
 var options = new OidcClientOptions
 {
     Authority = "https://helseid-sts.test.nhn.no/",
-    ClientId = "no.hemit.hild-dev",
+    ClientId = "no.hemit.promstestclient-dev",
+    ClientSecret = "426VsgzIbW8jpf4ha4cj8V2nTW9W8oKHUORlBvPrF1EFv4R8byJYvri1XXKG1R7T",
     RedirectUri = redirectUri,
-    Scope = "openid profile helseid://scopes/identity/pid helseid://scopes/identity/security_level hemit/hild-dev/*",
+    Scope = "openid profile helseid://scopes/identity/pid helseid://scopes/identity/security_level hemit:eprom.public.api/*",
     FilterClaims = false,
     Browser = browser,
-    ClientSecret = "K6fIZ69LMlaGvput10FoAYWtsWvFU2pyM7zj8zvtiwRVvZHIR8WBU5j6Gc46kN8v",
     Flow = OidcClientOptions.AuthenticationFlow.Hybrid
 };
 
