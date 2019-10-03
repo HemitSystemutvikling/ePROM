@@ -8,6 +8,8 @@
 
 [Overordnetskisse papir](Overordnetskisse%20papir)
 
+[Overordnetskisse pasientinitiert](Overordnetskisse%20pasientinitiert)
+
 [Designskisse](Designskisse)
 
 ### Selvbetjeningsløsning
