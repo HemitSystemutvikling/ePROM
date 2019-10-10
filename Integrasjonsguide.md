@@ -64,8 +64,15 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 ```
 
 ### NotificationChannel
+```
+0 = None
+1 = Helsenorge
+2 = DigitalMailbox
+3 = Unsecure
+4 = PhysicalMailbox
+```
 
-$mdFormatter$1$mdFormatter$
+
 # BESTILLING AV SKJEMA V2
 
 API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
