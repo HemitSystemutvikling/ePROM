@@ -296,8 +296,15 @@ For parameter inn og ut kan NuGet pakken *Hemit. Proms. Integration* benyttes. B
 PUT
 
 Eksempel request fra Proms (JSON)
+```
+{
+    "apiKey" : "",
+    "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
+    "notificationChannel" : "Helsenorge",
+    "formOrderStatus" : "Ordered"
+}
+```
 
-$mdFormatter$5$mdFormatter$
 # BESTILLING AV SKJEMA - UTGÅTT
 
 Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
@@ -484,8 +491,18 @@ URL for pasientbestilling av skjema blir tilgjengelig etter man har lagret skjem
 Det er også mulig å velge om man ønsker at skjema bestilt av pasient må signeres: Huk av "Skjema bestilt av pasient må signeres" under "Avansert innstilling". Forutsetter at "Signering støttes" (under "Avansert innstilling")  er valgt først.
 
 Ved retur av utfyllt skjema sendes pasientens personnummer og skjemaets ID sammen med skjemadataene. I tillegg får isPatientInitiated verdien 'true':
+```
+{
+    "...": "...",
+    "isPatientInitiated": true,
+    "patientInitiatedValues":
+    {
+        "formId": "1bc5f9f0-2607-49eb-94f0-6af955bbd79a",
+        "nationalId": "26073941651"
+    }
+}
+```
 
-$mdFormatter$10$mdFormatter$
 # RETUR AV UTFYLT SKJEMA
 
 Når pasienten har fylt ut et skjema sendes skjemaet tilbake til Bestillersystemet.
@@ -529,8 +546,20 @@ PUT
 
 Eksempel request fra Proms (JSON)
 NB! formData sendes som stringified JSON-object
+```
+{
+    "apiKey" : "",
+    "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
+    "formData" : '{"HealthGeneral":1,"HealthLimitingActivities":1,"HealthLimitingFloors":1,"PhysicalHealthLessDone":1,"PhysicalHealthLimitingActivity":1,"EmotionalIssuesLessDone":1,"EmotionalIssuesLimitingActivity":1,"LastFourWeeksPain":2,"LastFourWeeksRelaxed":2,"LastFourWeeksSurplusOfEnergy":2,"LastFourWeeksDepressed":2,"LastFourWeeksSocial":1}',
+    "formOrderStatus" : "Completed",
+    "signedFormId":"00000000-0000-0000-0000-000000000000",
+    "timestamp":"2019-05-03T00:00:00+02:00",
+    "scannedPaperId":"00000000-0000-0000-0000-000000000000",
+    "formDataWarnings":[{"fieldName":"Key","warning":"Value"},{"fieldName":"Key2","warning":"Value2"}]
+}
+```
 
-$mdFormatter$11$mdFormatter$
+
 # SKJEMA SOM KREVER SIGNATUR
 
 ## Bestilling ##
