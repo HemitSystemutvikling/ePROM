@@ -919,7 +919,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
 ### Feilsituasjoner
 
-Hvis responsen resulterer i ` ` ` "notificationChannel": "0" ` ` ` er det ikke sendt noe melding til innbygger. Dette skjer hvis ePROM ikke kan nå innbygger via helsenorge, digipost. Dette er også tilfelle hvis fødselsnummeret ikke eksisterer.
+Hvis responsen resulterer i `"notificationChannel": "0"` er det ikke sendt noe melding til innbygger. Dette skjer hvis ePROM ikke kan nå innbygger via helsenorge, digipost. Dette er også tilfelle hvis fødselsnummeret ikke eksisterer.
 
 Ellers kan følgende feilsituasjoner oppstå:
 
