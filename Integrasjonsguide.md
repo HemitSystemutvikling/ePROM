@@ -907,7 +907,7 @@ notificationChannel = result. NotificationChannel });
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - The channel used to notify the patient about the form order ` ` ` { None | Helsenorge | DigitalMailbox | Unsecure } ` ` ` Tallverdien kan sendes.
+* notificationChannel - The channel used to notify the patient about the form order ` { None | Helsenorge | DigitalMailbox | Unsecure } ` Tallverdien kan sendes.
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
@@ -915,7 +915,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
 * SendMessageToCitizenResult
 
- * notificationChannel – The channel used to notify the patient about the form order ` ` ` { None | Helsenorge | DigitalMailbox | Unsecure } ` ` `
+ * notificationChannel – The channel used to notify the patient about the form order ` { None | Helsenorge | DigitalMailbox | Unsecure } `
 
 ### Feilsituasjoner
 
