@@ -72,6 +72,15 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 4 = PhysicalMailbox
 ```
 
+### FormOrderStatus
+```
+0 = Completed
+1 = Expired
+2 = Ordered
+3 = Error
+4 = PhysicalMailReturned
+```
+
 
 # BESTILLING AV SKJEMA V2
 
