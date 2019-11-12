@@ -532,12 +532,12 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](
 * apiKey – ApiKey of the end user system placing the order
 * formOrderId – The Id of the formOrder
 * formData - The form data of returned form
-* formOrderStatus – Status of the returned formOrder ` { Completed | Expired } `
+* formOrderStatus – Status of the returned formOrder `{ Completed | Expired }`
 * signedFormId – The Id of the signed form if form has been signed
 * timestamp – Date and time when the form was submitted
 * scannedPaperId – The Id of the scanned paper form if form distributed as paper
 * formDataWarnings – A list for form data of returned form with validate warnings
-* notificationChannel - The channel used to notify the patient about the form order ` { None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox } `
+* notificationChannel - The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }`
 * isPatientInitiated -  If the order is initiated by a patient
 * patientInitiatedValues - Information about the patient initiated order
   + formId - The Id of the form ordered
@@ -872,11 +872,11 @@ Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet f
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - The channel used to notify the patient about the form order ` { None | Helsenorge | DigitalMailbox | Unsecure } ` Tallverdien kan sendes.
+* notificationChannel - The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` Tallverdien kan sendes.
 
 **Parametere – Ut**
 
-* notificationChannel – The channel used to notify the patient about the form order ` { None | Helsenorge | DigitalMailbox | Unsecure } `
+* notificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }`
 
 **Metode**
 
@@ -952,7 +952,7 @@ notificationChannel = result. NotificationChannel });
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - The channel used to notify the patient about the form order ` { None | Helsenorge | DigitalMailbox | Unsecure } ` Tallverdien kan sendes.
+* notificationChannel - The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` Tallverdien kan sendes.
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
@@ -960,7 +960,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
 * SendMessageToCitizenResult
 
- * notificationChannel – The channel used to notify the patient about the form order ` { None | Helsenorge | DigitalMailbox | Unsecure } `
+ * notificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }`
 
 ### Feilsituasjoner
 
