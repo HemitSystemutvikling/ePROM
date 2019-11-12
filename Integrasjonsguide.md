@@ -289,8 +289,8 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/]
 
 * apiKey – ApiKey of the end user system placing the order
 * formOrderId – The Id of the formOrder
-* notificationChannel – The actual channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }`.
-* formOrderStatus – Status of the formOrder ` { Ordered | Error } `
+* notificationChannel – The actual channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }`
+* formOrderStatus – Status of the formOrder `{ Ordered | Error }`
   + Ordered – The formOrder was successful
   + Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
 
