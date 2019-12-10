@@ -1,7 +1,5 @@
-# Release notes ePROM v2.6
+# Nytt i ePROM v2.6
 *Releasedato: 12.12.2019*
-
-## Nyheter 
 
 ### ePROM
 * Forhåndsvisning av brev i helsenorge.no og digipost gjøres tilgjenglig fra enheter utenfor helsenettet
