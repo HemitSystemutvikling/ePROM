@@ -1,4 +1,4 @@
-# Releasenotes ePROM v.2.6
+# Release notes ePROM v2.6
 *Releasedato: 12.12.2019*
 
 ## Nyheter 
