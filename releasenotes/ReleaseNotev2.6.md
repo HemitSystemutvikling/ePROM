@@ -1,20 +1,19 @@
 # Nytt i ePROM v2.6
-*Releasedato: 12.12.2019*
+*Dato: 12.12.2019*
 
 ### ePROM
 * Forhåndsvisning av brev i helsenorge.no og digipost gjøres tilgjenglig fra enheter utenfor helsenettet
 * Forhåndsvisning av skjema i ePROM gjøres tilgjenglig fra enheter utenfor helsenettet
 * Forhåndsvisning av skjema på mobil gjøres responsive
-* Spesifisere avsender i Skjemaoppgave-melding som sendes til helsenorge.no og Digipost. NB! Vil først ha effekt når helsenorge.no og Digipost endrer sine system
-*	Mulighet for å tilpasse innhold i varsling pr. SMS/epost og brev fra helsenorge.no og Digipost 
-*	Støtte for utsending av fysiske brev til innbygger via Digipost hvis mottaker ikke er på helsenorge.no  eller ikke har sikker digital post (Digipost eller eBOX) 
-* Innføre kryptering av metadata, samt kryptering av metadata som sendes med bestillingen
-*	Bedre tilbakemelding ved bestilling og feil i metadata
+* Spesifisere avsender i Skjemaoppgave-melding som sendes til helsenorge.no og Digipost. NB! For helsenorge.no først etter 28. januar
+*	Mulighet for å tilpasse innhold i varsling pr. SMS/epost og brev fra helsenorge.no og Digipost. NB! For helsenorge.no først etter 28. januar
+*	Støtte for utsending av fysiske brev til innbygger via Digipost hvis mottaker ikke er på helsenorge.no eller ikke har sikker digital post (Digipost eller eBoks) 
+* Innfører kryptering av metadata slik at man kan sende sensitive metadata med bestillingen
 
 ### ePROM Skjemabygger
-*	Sortering av svaralternativer
+*	Mulighet for bestemme sortering av svaralternativer for Valgfelt
 *	Støtte for klokkeslett på datofelt
-*	Legge inn validering av dato og tallfelt 
+*	Mulighet for å legge inn validering av dato og tallfelt 
 
 ### ePROM Admin
 *	Muliggjør at man kan skjule progressbar ved oppretting av skjema i eFORSK
