@@ -1,6 +1,6 @@
 # ePROM
 
-[Kostnader ved bruk av ePROM](Kostnader)
+[Kostnader ved bruk av ePROM](kostnader)
 
 ### Start-guide
 [Startguide](Startguide)
