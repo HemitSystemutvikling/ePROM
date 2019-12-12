@@ -9,19 +9,9 @@
 
 [BESTILLING AV SKJEMA v2](BestillingAvSkjemaV2)
 
-[BESTILLING AV SKJEMA v2](#bestilling-av-skjema-v2)
-
-[Bestilling klient-side v2](#bestilling-klient-side-v2)
-
-[Bestilling server-side v2](#bestilling-server-side-v2)
-
 --
 
-[(BESTILLING AV SKJEMA - Utgått)](#bestilling-av-skjema---utgått)
-
-[(Bestilling klient-side - Utgått)](#bestilling-klient-side---utgått)
-
-[(Bestilling server-side - Utgått)](#bestilling-server-side---utgått)
+[BESTILLING AV SKJEMA - Utgått](BestillingAvSkjemaV1)
 
 --
 
