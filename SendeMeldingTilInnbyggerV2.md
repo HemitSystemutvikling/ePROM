@@ -107,7 +107,8 @@ false);
     }
 
     return Json(new { 
-notificationChannel = result.NotificationChannel }); 
+notificationChannel = result.NotificationChannel,
+messageToCitizenId = result.messageToCitizenId}); 
 }
 ```
 
