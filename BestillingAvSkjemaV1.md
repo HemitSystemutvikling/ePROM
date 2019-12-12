@@ -1,4 +1,4 @@
-# BESTILLING AV SKJEMA - UTGÅTT
+# BESTILLING AV SKJEMA V1 - UTGÅTT
 
 Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
