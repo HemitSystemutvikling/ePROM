@@ -229,7 +229,7 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/]
 
 * success – true if the request was processed successfully, otherwise false
 
-For parameter inn og ut kan NuGet pakken *Hemit. Proms. Integration* benyttes. Bruk da *Hemit. Proms. Integration. PromsFormOrderRequest* for parameter inn og *Hemit. Proms. Integration. PromsFormOrderResponse* for parameter ut
+For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.PromsFormOrderRequest* for parameter inn og *Hemit.Proms.Integration.PromsFormOrderResponse* for parameter ut
 
 **Metode**
 
