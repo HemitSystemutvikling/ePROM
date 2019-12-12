@@ -1,4 +1,4 @@
-# SENDE MELDING TIL INNBYGGER
+# SENDE MELDING TIL INNBYGGER V2
 
 Hvis man har behov for å sende sensitiv informasjon til pasienten kan man sende dette via ePROM.
 
