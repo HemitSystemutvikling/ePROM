@@ -16,17 +16,15 @@
 
 [SKJEMA SOM KREVER SIGNATUR](SkjemaSomKreverSignatur)
 
+[SENDE MELDING TIL INNBYGGER V2](SendeMeldingTilInnbyggerV2)
+
+[(SENDE MELDING TIL INNBYGGER - Utgått)](SendeMeldingTilInnbyggerV1)
+
 --
 
 [SENDE MELDING SOM SMS](#sende-melding-som-sms)
 
 [SENDE MELDING SOM EPOST](#sende-melding-som-epost)
-
---
-
-[SENDE MELDING TIL INNBYGGER V2](#sende-melding-til-innbygger-v2)
-
-[(SENDE MELDING TIL INNBYGGER - Utgått)](#sende-melding-til-innbygger)
 
 # GENERELT
 
