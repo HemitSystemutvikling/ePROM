@@ -2,14 +2,14 @@
 
 *Sist oppdatert 27.08.2019*
 
-### Innholdsfortegnelse
+## Innholdsfortegnelse
 
 [SENDE MELDING SOM SMS](#sende-melding-som-sms)
 
 [SENDE MELDING SOM EPOST](#sende-melding-som-epost)
 
 
-# SENDE MELDING SOM SMS
+## SENDE MELDING SOM SMS
 
 Hvis man har behov for å sende korte beskjeder til pasienten kan man sende dette som SMS via ePROM.
 
@@ -120,7 +120,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
   + success – true og false, whether sending message was ok
 
  
-### Feilsituasjoner
+### Feilsituasjoner SMS
 
 **Følgende feilsituasjoner kan oppstå:**
 
@@ -128,7 +128,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 * BadRequest("Either nationalId or phoneNumber must be specified")
 
  
-# SENDE MELDING SOM EPOST
+## SENDE MELDING SOM EPOST
 
 Hvis man har behov for å sende informasjon til pasienten kan man sende dette som Epost via PROMs.
 
