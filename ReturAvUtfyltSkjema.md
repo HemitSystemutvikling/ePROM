@@ -1,5 +1,7 @@
 # RETUR AV UTFYLT SKJEMA
 
+*Sist oppdatert 27.08.2019*
+
 Når pasienten har fylt ut et skjema sendes skjemaet tilbake til Bestillersystemet.
 
 Bestillersystemet må implementere en service som mottar skjemadataene.
