@@ -1,5 +1,7 @@
 # SENDE MELDING TIL INNBYGGER V2
 
+*Sist oppdatert 12.12.2019*
+
 Hvis man har behov for å sende sensitiv informasjon til pasienten kan man sende dette via ePROM.
 
 Utsending av melding kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
