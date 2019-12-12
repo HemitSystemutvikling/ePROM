@@ -2,13 +2,21 @@
 
 *Sist oppdatert 12.12.2019*
 
+## Innholdsfortegnelse
+
+[Sende melding klient-side](#sende-melding-klient-side)
+
+[Sende melding server-side](#sende-melding-server-side)
+
+[Feilsituasjoner](#Feilsituasjoner)
+
 Hvis man har behov for å sende sensitiv informasjon til pasienten kan man sende dette via ePROM.
 
 Utsending av melding kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
-### Sende melding klient-side
+## Sende melding klient-side
 
 **URL for Web API kall**
 [https://proms2.hemit.org/PromsWebApi/api/messagetocitizen](https://proms2.hemit.org/PromsWebApi/api/messagetocitizen)
@@ -31,7 +39,7 @@ Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet f
 
 POST
 
-### Sende melding server-side
+## Sende melding server-side
 
 **API**
 
@@ -112,7 +120,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
  * notificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` 
 
-### Feilsituasjoner
+## Feilsituasjoner
 
 Hvis responsen resulterer i `"notificationChannel": "0"` er det ikke sendt noe melding til innbygger. Dette skjer hvis ePROM ikke kan nå innbygger via helsenorge, digipost. Dette er også tilfelle hvis fødselsnummeret ikke eksisterer.
 
