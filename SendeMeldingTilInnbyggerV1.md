@@ -1,6 +1,13 @@
-# SENDE MELDING TIL INNBYGGER
+# SENDE MELDING TIL INNBYGGER V1 - UTGÅTT
 
-*Sist oppdatert 27.08.2019*
+*Sist oppdatert 12.12.2019*
+
+### Innholdsfortegnelse
+
+[Sende melding klient-side](#sende-melding-klient-side)
+
+[Sende melding server-side](#sende-melding-server-side)
+
 
 Hvis man har behov for å sende sensitiv informasjon til pasienten kan man sende dette via ePROM.
 
