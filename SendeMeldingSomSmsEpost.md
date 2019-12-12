@@ -1,3 +1,7 @@
+# SENDE MELDING SOM SMS og EPOST
+
+*Sist oppdatert 27.08.2019*
+
 ### Innholdsfortegnelse
 
 [SENDE MELDING SOM SMS](#sende-melding-som-sms)
