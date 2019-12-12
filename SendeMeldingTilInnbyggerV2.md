@@ -10,11 +10,19 @@
 
 [Feilsituasjoner](#Feilsituasjoner)
 
+[Mottak av status for forsendelse](#mottak-av-status-for-forsendelse)
+
+
+API-kallet for å sende sensitiv informasjon er i v2 endret slik at man får respons med en gang, uten å vente på at forsendelsen har gått igjennom til Helsenorge/Digipost. Når forsendelsen er fullført (pasienten har fått beskjed og brevet er tilgjengelig) vil ePROM gjøre et kall mot Bestillersystemet med status for forsendelsen. Bestillersystemet må implementere en service som mottar dette kallet.
+
 Hvis man har behov for å sende sensitiv informasjon til pasienten kan man sende dette via ePROM.
 
 Utsending av melding kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
-
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
+
+NB!
+I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som del av HTTP header:
+`headers: {"Authorization": "Basic " + apiKey}` 
 
 ## Sende melding klient-side
 
@@ -54,7 +62,7 @@ Eksempelkode (C#)
 
 ``` 
 [HttpPost]
-public JsonResult SendMessageToCitizen(string nationalId, DocumentCollection documentCollection)
+public JsonResult SendMessageToCitizenV2(string nationalId, DocumentCollection documentCollection)
 {
 // <add key="PromsApiBaseUrl" value="http://mrsdev.helsemn.no/PromsWebApi/" />
 var promsApiBaseUrl = ConfigurationManager. AppSettings["PromsApiBaseUrl"]; 
@@ -80,7 +88,7 @@ var notificationPriorityList = new List<NotificationChannel>
 
 }; 
 
-    var result = Api.SendMessageToCitizen(
+    var result = Api.SendMessageToCitizenV2(
 
 promsApiBaseUrl, 
 apikey, 
@@ -99,8 +107,7 @@ false);
     }
 
     return Json(new { 
-
-notificationChannel = result. NotificationChannel }); 
+notificationChannel = result.NotificationChannel }); 
 }
 ```
 
@@ -134,4 +141,47 @@ Ellers kan følgende feilsituasjoner oppstå:
 * 400 BadRequest("Main document in MessageToCitizen is missing")
 * 400 BadRequest($"apiKey '{formOrder.apiKey}' doesn't exists")
 * 400 BadRequest($"No form with id='{formOrder.formId}' exists")
+
+
+## Mottak av status for forsendelse
+
+API-kallet for å sende sensitiv informasjon er i v2 endret slik at man får respons med en gang, uten å vente på at forsendelsen har gått igjennom til Helsenorge/Digipost. Når forsendelsen er fullført (pasienten har fått beskjed og brevet er tilgjengelig) vil ePROM gjøre et kall mot Bestillersystemet med status for forsendelsen. Bestillersystemet må implementere en service som mottar dette kallet.
+
+**URL for Web API kall**
+
+ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
+
+Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/MessageToCitizen
+
+F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/MessageToCitizen/](https://mrsdev.helsemn.no/PromsTestregisterServices/api/MessageToCitizen/)
+
+**Parametere - Inn**
+
+* apiKey – ApiKey of the end user system placing the order
+* formOrderId – The Id of the formOrder
+* notificationChannel – The actual channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
+* formOrderStatus – Status of the formOrder `{ Ordered | Error }` 
+  + Ordered – The formOrder was successful
+  + Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
+
+**Parametere - Ut**
+
+* success – true if the request was processed successfully, otherwise false
+
+For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.PromsFormOrderRequest* for parameter inn og *Hemit.Proms.Integration.PromsFormOrderResponse* for parameter ut
+
+**Metode**
+
+PUT
+
+Eksempel request fra Proms (JSON)
+
+``` 
+{
+    "apiKey" : "",
+    "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
+    "notificationChannel" : "Helsenorge",
+    "formOrderStatus" : "Ordered"
+}
+```
 
