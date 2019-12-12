@@ -8,6 +8,7 @@
 
 [Sende melding server-side](#sende-melding-server-side)
 
+[Feilsituasjoner](#Feilsituasjoner)
 
 Hvis man har behov for å sende sensitiv informasjon til pasienten kan man sende dette via ePROM.
 
