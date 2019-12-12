@@ -6,11 +6,16 @@
 
 [GENERELT](#generelt)
 
+
+[BESTILLING AV SKJEMA v2](BestillingAvSkjemaV2)
+
 [BESTILLING AV SKJEMA v2](#bestilling-av-skjema-v2)
 
 [Bestilling klient-side v2](#bestilling-klient-side-v2)
 
 [Bestilling server-side v2](#bestilling-server-side-v2)
+
+--
 
 [(BESTILLING AV SKJEMA - Utgått)](#bestilling-av-skjema---utgått)
 
@@ -18,15 +23,23 @@
 
 [(Bestilling server-side - Utgått)](#bestilling-server-side---utgått)
 
+--
+
 [PASIENTINITIERT BESTILLING AV SKJEMA](#pasientinitiert-bestilling-av-skjema)
+
+--
 
 [RETUR AV UTFYLT SKJEMA](#retur-av-utfylt-skjema)
 
 [SKJEMA SOM KREVER SIGNATUR](#skjema-som-krever-signatur)
 
+--
+
 [SENDE MELDING SOM SMS](#sende-melding-som-sms)
 
 [SENDE MELDING SOM EPOST](#sende-melding-som-epost)
+
+--
 
 [(SENDE MELDING TIL INNBYGGER - Utgått)](#sende-melding-til-innbygger)
 
