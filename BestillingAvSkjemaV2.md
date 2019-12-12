@@ -2,6 +2,13 @@
 
 *Sist oppdatert 12.12.2019*
 
+### Innholdsfortegnelse
+
+[Bestilling klient-side v2](#bestilling-klient-side-v2)
+
+[Bestilling server-side v2](#bestilling-server-side-v2)
+
+
 API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
 
 Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
