@@ -1,15 +1,14 @@
 # Integrasjonsguide
 
-*Sist oppdatert 10.10.2019*
+*Sist oppdatert 12.12.2019*
 
 ### Innholdsfortegnelse
 
 [GENERELT](#generelt)
 
-
 [BESTILLING AV SKJEMA V2](BestillingAvSkjemaV2)
 
-[BESTILLING AV SKJEMA V1 - Utgått](BestillingAvSkjemaV1)
+[(BESTILLING AV SKJEMA V1 - Utgått)](BestillingAvSkjemaV1)
 
 [PASIENTINITIERT BESTILLING AV SKJEMA](PasientinitiertBestillingAvSkjema)
 
@@ -25,9 +24,9 @@
 
 --
 
-[(SENDE MELDING TIL INNBYGGER - Utgått)](#sende-melding-til-innbygger)
-
 [SENDE MELDING TIL INNBYGGER V2](#sende-melding-til-innbygger-v2)
+
+[(SENDE MELDING TIL INNBYGGER - Utgått)](#sende-melding-til-innbygger)
 
 # GENERELT
 
