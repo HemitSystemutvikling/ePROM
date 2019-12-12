@@ -2,13 +2,16 @@
 
 *Sist oppdatert 12.12.2019*
 
-### Innholdsfortegnelse
+## Innholdsfortegnelse
 
-[Bestilling klient-side v2](#bestilling-klient-side-v2)
+[Bestilling klient-side](#bestilling-klient-side)
 
-[Bestilling server-side v2](#bestilling-server-side-v2)
+[Bestilling server-side](#bestilling-server-side)
 
-[Mottak av status for bestillingen v2](#mottak-av-status-for-bestillingen-v2)
+[Feilsituasjoner](#feilsituasjoner)
+
+[Mottak av status for bestillingen](#mottak-av-status-for-bestillingen)
+
 
 API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
 
@@ -19,7 +22,7 @@ NB!
 I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som del av HTTP header:
 `headers: {"Authorization": "Basic " + apiKey}` 
 
-## Bestilling klient-side v2
+## Bestilling klient-side
 
 **Eksempelkode (javascript)**
 
@@ -113,7 +116,7 @@ I tillegg til alle inn-parametre:
 
 POST
 
-## Bestilling server-side v2
+## Bestilling server-side
 
 **API**
 
@@ -121,7 +124,7 @@ Tilgjenglig som NuGet pakke
 
 NuGet repository: https://hemit.myget.org/F/hemitpublic/api/v3/index.json
 
-Navn: Hemit. Proms. Integration
+Navn: Hemit.Proms.Integration
 
 **Eksempelkode (C#)**
 
@@ -189,7 +192,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
   + LoginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
   + NotificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` . The actual channel used is first known when PROMS performs the callback, notifying about the status.
 
-### Feilsituasjoner
+## Feilsituasjoner
 
 Hvis responsen resulterer i "id": "00000000-0000-0000-0000-000000000000" er det ikke generert noe bestilling. Dette skjer hvis fødselsnummeret ikke eksisterer.
 Ellers kan følgende feilsituasjoner oppstå:
@@ -201,7 +204,7 @@ Ellers kan følgende feilsituasjoner oppstå:
 
  
 
-### Mottak av status for bestillingen v2
+## Mottak av status for bestillingen
 
 API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
 
