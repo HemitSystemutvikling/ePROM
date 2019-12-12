@@ -2,6 +2,14 @@
 
 *Sist oppdatert 27.08.2019*
 
+### Innholdsfortegnelse
+
+[Bestilling klient-side v1 - Utgått](#bestilling-klient-side---utgått)
+
+[Bestilling server-side v1 - Utgått](#bestilling-server-side---utgått)
+
+[Mottak av status for bestillingen v1 - Utgått](#mottak-av-status-for-bestillingen---utgått)
+
 Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
