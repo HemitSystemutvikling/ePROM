@@ -9,19 +9,13 @@
 
 [BESTILLING AV SKJEMA V2](BestillingAvSkjemaV2)
 
---
-
 [BESTILLING AV SKJEMA V1 - Utgått](BestillingAvSkjemaV1)
-
---
 
 [PASIENTINITIERT BESTILLING AV SKJEMA](PasientinitiertBestillingAvSkjema)
 
---
+[RETUR AV UTFYLT SKJEMA](ReturAvUtfyltSkjema)
 
-[RETUR AV UTFYLT SKJEMA](#retur-av-utfylt-skjema)
-
-[SKJEMA SOM KREVER SIGNATUR](#skjema-som-krever-signatur)
+[SKJEMA SOM KREVER SIGNATUR](SkjemaSomKreverSignatur)
 
 --
 
