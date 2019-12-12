@@ -1,5 +1,7 @@
 # SKJEMA SOM KREVER SIGNATUR
 
+*Sist oppdatert 27.08.2019*
+
 ## Bestilling ##
 
 Skjema som krever signatur bestilles av Bestillersystem på vanlig måte (se [BESTILLING AV SKJEMA](#bestilling-av-skjema)). For å angi at et skjema krever signatur må det hukes av for dette i skjemadesigneren (under *Avansert innstilling*) i ePROM Selvbetjeningsmodul: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/):
