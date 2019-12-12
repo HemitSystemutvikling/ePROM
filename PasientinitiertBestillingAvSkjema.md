@@ -1,5 +1,7 @@
 # PASIENTINITIERT BESTILLING AV SKJEMA
 
+*Sist oppdatert 27.08.2019*
+
 Pasientinitert bestilling av skjema er en mulighet hvor pasienten kan gå via en direktelink for utfylling av et skjema. Identifisering skjer ved at pasienten logger på med BankId.
 
 For at et skjema skal kunne bestilles av pasienten må "Kan bestilles av pasient" (under "Avansert innstilling" i skjemabygger) være huket av, samt at skjemaet må være publisert
