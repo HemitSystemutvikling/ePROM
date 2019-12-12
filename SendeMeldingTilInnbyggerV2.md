@@ -30,6 +30,7 @@ Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet f
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
 * notificationChannel - The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` Tallverdien kan sendes.
+* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
 **Parametere – Ut**
 
@@ -47,7 +48,7 @@ Tilgjenglig som NuGet pakke
 
 NuGet repository: [https://hemit.myget.org/F/hemitpublic/api/v3/index.json](https://hemit.myget.org/F/hemitpublic/api/v3/index.json)
 
-Navn: Hemit. Proms. Integration
+Navn: Hemit.Proms.Integration
 
 Eksempelkode (C#)
 
@@ -87,7 +88,8 @@ nationalId,
 senderInfo, 
 messageInfo, 
 documentCollection, 
-notificationPriorityList); 
+notificationPriorityList,
+false); 
 
     if (result.HasErrors)
     {
@@ -111,6 +113,7 @@ notificationChannel = result. NotificationChannel });
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
 * notificationChannel - The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` Tallverdien kan sendes.
+* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
