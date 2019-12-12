@@ -168,7 +168,7 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/MessageToCitizen
 
 * success – true if the request was processed successfully, otherwise false
 
-For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.PromsFormOrderRequest* for parameter inn og *Hemit.Proms.Integration.PromsFormOrderResponse* for parameter ut
+For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.SendMessageToCitizenResult* for parameter inn og *Hemit.Proms.Integration.SendMessageToCitizenResponse* for parameter ut
 
 **Metode**
 
@@ -179,9 +179,9 @@ Eksempel request fra Proms (JSON)
 ``` 
 {
     "apiKey" : "",
-    "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
+    "messageToCitizenId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
     "notificationChannel" : "Helsenorge",
-    "formOrderStatus" : "Ordered"
+    "sentStatus" : "Sent"
 }
 ```
 
