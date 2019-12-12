@@ -8,6 +8,7 @@
 
 [Bestilling server-side v2](#bestilling-server-side-v2)
 
+[Mottak av status for bestillingen v2](#mottak-av-status-for-bestillingen-v2)
 
 API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
 
