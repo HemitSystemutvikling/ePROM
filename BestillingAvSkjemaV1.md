@@ -2,17 +2,19 @@
 
 *Sist oppdatert 27.08.2019*
 
-### Innholdsfortegnelse
+## Innholdsfortegnelse
 
-[Bestilling klient-side v1 - Utgått](#bestilling-klient-side---utgått)
+[Bestilling klient-side](#bestilling-klient-side)
 
-[Bestilling server-side v1 - Utgått](#bestilling-server-side---utgått)
+[Bestilling server-side](#bestilling-server-side)
+
+[Feilsituasjoner](#feilsituasjoner)
 
 
 Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
-## Bestilling klient-side - UTGÅTT
+## Bestilling klient-side
 
 **Eksempelkode (javascript)**
 
@@ -100,7 +102,7 @@ I tillegg til alle inn-parametre:
 
 POST
 
-## Bestilling server-side - UTGÅTT
+## Bestilling server-side
 
 **API**
 
@@ -108,7 +110,7 @@ Tilgjenglig som NuGet pakke
 
 NuGet repository: https://hemit.myget.org/F/hemitpublic/api/v3/index.json
 
-Navn: Hemit. Proms. Integration
+Navn: Hemit.Proms.Integration
 
 **Eksempelkode (C#)**
 
@@ -172,7 +174,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
   + LoginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
   + NotificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` . The actual channel used is first known when PROMS performs the callback, notifying about the status.
 
-### Feilsituasjoner
+## Feilsituasjoner
 
 Hvis responsen resulterer i "id": "00000000-0000-0000-0000-000000000000" er det ikke generert noe bestilling. Dette skjer hvis fødselsnummeret ikke eksisterer.
 Ellers kan følgende feilsituasjoner oppstå:
