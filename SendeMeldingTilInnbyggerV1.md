@@ -2,7 +2,7 @@
 
 *Sist oppdatert 12.12.2019*
 
-### Innholdsfortegnelse
+## Innholdsfortegnelse
 
 [Sende melding klient-side](#sende-melding-klient-side)
 
