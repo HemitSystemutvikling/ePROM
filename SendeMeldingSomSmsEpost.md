@@ -120,7 +120,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
   + success – true og false, whether sending message was ok
 
  
-### Feilsituasjoner SMS
+### Feilsituasjoner
 
 **Følgende feilsituasjoner kan oppstå:**
 
