@@ -7,15 +7,15 @@
 [GENERELT](#generelt)
 
 
-[BESTILLING AV SKJEMA v2](BestillingAvSkjemaV2)
+[BESTILLING AV SKJEMA V2](BestillingAvSkjemaV2)
 
 --
 
-[BESTILLING AV SKJEMA - Utgått](BestillingAvSkjemaV1)
+[BESTILLING AV SKJEMA V1 - Utgått](BestillingAvSkjemaV1)
 
 --
 
-[PASIENTINITIERT BESTILLING AV SKJEMA](#pasientinitiert-bestilling-av-skjema)
+[PASIENTINITIERT BESTILLING AV SKJEMA](PasientinitiertBestillingAvSkjema)
 
 --
 
