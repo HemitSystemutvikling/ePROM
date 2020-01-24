@@ -25,7 +25,7 @@
 
 ### Integrasjonsguide
 [Integrasjonsguide](Integrasjonsguide)  
-[Integrasjonsguide for skjemautfyller](IntegrasjonsguideSkjemautfyller)
+[Integrasjonsguide for skjemautfyller](IntegrasjonsguideSkjemautfyllerApi)
 
 ### Utfylling av skjema
 [Utfylling av skjema](Utfylling%20av%20skjema)
