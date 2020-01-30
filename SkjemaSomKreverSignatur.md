@@ -24,7 +24,7 @@ Skjema som krever signatur leveres tilbake til Bestillersystem på vanlig måte 
 
 ### Nedlasting av det signerte dokumentet ###
 
-GET request mot: `<PromsApiBaseUrl>` /ExternalDocument/ `<SignedFormId>` 
+GET request mot: `<PromsApiBaseUrl>` /api/ExternalDocument/ `<SignedFormId>` 
 
 `<PromsApiBaseUrl>` skal være *https://proms2.hemit.org/PromsWebApi*
 
