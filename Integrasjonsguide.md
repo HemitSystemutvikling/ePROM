@@ -1,6 +1,6 @@
 # Integrasjonsguide
 
-*Sist oppdatert 10.03.2020*
+*Sist oppdatert 12.12.2019*
 
 ### Innholdsfortegnelse
 
@@ -77,12 +77,3 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 4 = PhysicalMailReturned
 ```
 
-### FormOrderEventLogType
-
-```
-0 = FormOpened 
-1 = QuestionAccessed
-2 = SigningStarted
-3 = SigningCancelled
-4 = SigningError
-```
