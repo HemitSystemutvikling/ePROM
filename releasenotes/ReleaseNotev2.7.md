@@ -1,19 +1,34 @@
 # Nytt i ePROM v2.7
 *Dato: 14.05.2020*
 
+### ePROM Skjemautfyller
+* Analyse av utfylling av skjema: Pasientens aksjoner logges og returneres til Bestillersystemet sammen med skjemasvaret
+* For skjema som er sendt ut med engangskode huser ikke nettlleser tidligere engangskoder
+* Følgebrev inkluderes sammen med kopi av utfylt skjema som sendes til pasienten
+* Samleskjema: Setningen «Alle skjemaene skal leveres samlet til slutt» under «Mine skjema» utheves
+* Samleskjema: Ved levering av skjema der obligatoriske spørsmål ikke er besvart blir disse markert når man går inn på et underskjema
+
+### ePROM på papir
+* Inkludere en veiledningstekst for utfylling av papirskjema
+* For utsending på papir skal det være mulig å velge fargeutskrift
+
 ### ePROM
-* Forhåndsvisning av brev i helsenorge.no og digipost gjøres tilgjenglig fra enheter utenfor helsenettet
-* Forhåndsvisning av skjema i ePROM gjøres tilgjenglig fra enheter utenfor helsenettet
-* Forhåndsvisning av skjema på mobil gjøres responsive
-* Spesifisere avsender i Skjemaoppgave-melding som sendes til helsenorge.no og Digipost. NB! For helsenorge.no først etter 28. januar
-*	Mulighet for å tilpasse innhold i varsling pr. SMS/epost og brev fra helsenorge.no og Digipost. NB! For helsenorge.no først etter 28. januar
-*	Støtte for utsending av fysiske brev til innbygger via Digipost hvis mottaker ikke er på helsenorge.no eller ikke har sikker digital post (Digipost eller eBoks) 
-* Innfører kryptering av metadata slik at man kan sende sensitive metadata med bestillingen
+* Offline modus: Med DistributionRule = NoDistribution benyttes ingen integrasjoner
 
 ### ePROM Skjemabygger
-*	Mulighet for bestemme sortering av svaralternativer for Valgfelt
-*	Støtte for klokkeslett på datofelt
-*	Mulighet for å legge inn validering av dato og tallfelt 
+*	Mulighet for å disable progressbar for Samleskjema
+
+### ePROM Skjemakatalog
+* Viser klokkeslett for når et skjema sist er endret
+* Lenke til skjemafinformasjon for et enkelt skjema i skjemakatalogen
+* Skjemainformasjon: Viser lenke til Skjemaet og til "Informasjon til pasienten"
 
 ### ePROM Admin
-*	Muliggjør at man kan skjule progressbar ved oppretting av skjema i eFORSK
+* Inkludere forhåndsvising av melding på helsenorge/digipost ved redigering av Skjemainformasjon
+* Forbedret Skjemastatistikk slik at man kan se statistikk for lengre perioder
+* Bestillersystem: Visning av epostadresse i pasientskjema må aktiveres av administrator
+
+### ePROM Admin (admin-bruker)
+* Informasjon til pasienten: Legg til mulighet for å avgrense på Bestillersystem
+* Skjemainformasjon: Avgrense lista med til et Bestillersystem
+* Ved oppretting av Samleskjema vise kun felles og tilhørende skjema
