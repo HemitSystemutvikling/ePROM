@@ -19,7 +19,7 @@
 
 ### ePROM Skjemakatalog
 * Viser klokkeslett for når et skjema sist er endret
-* Lenke til skjemafinformasjon for et enkelt skjema i skjemakatalogen
+* Lenke til skjemainformasjon for et enkelt skjema i skjemakatalogen
 * Skjemainformasjon: Viser lenke til Skjemaet og til "Informasjon til pasienten"
 
 ### ePROM Admin
@@ -32,3 +32,4 @@
 * Informasjon til pasienten: Legg til mulighet for å avgrense på Bestillersystem
 * Skjemainformasjon: Avgrense lista med til et Bestillersystem
 * Ved oppretting av Samleskjema vise kun felles og tilhørende skjema
+* Automatsk generering av utfylte PDF'er for test og verifikasjon av papirskjema
