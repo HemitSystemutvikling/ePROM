@@ -2,9 +2,8 @@
 *Dato: 14.05.2020*
 
 ### ePROM Skjemautfyller
-* Analyse av utfylling av skjema: Pasientens aksjoner logges og returneres til Bestillersystemet sammen med skjemasvaret
-* For skjema som er sendt ut med engangskode huser ikke nettlleser tidligere engangskoder
-* Følgebrev inkluderes sammen med kopi av utfylt skjema som sendes til pasienten
+* For skjema som er sendt ut med engangskode husker ikke nettleser tidligere engangskoder
+* Følgebrev inkluderes sammen med kopi av utfylt skjema som sendes til pasienten via helsenorge.no og Sikker Digital Post
 * Samleskjema: Setningen «Alle skjemaene skal leveres samlet til slutt» under «Mine skjema» utheves
 * Samleskjema: Ved levering av skjema der obligatoriske spørsmål ikke er besvart blir disse markert når man går inn på et underskjema
 
@@ -29,6 +28,7 @@
 * Bestillersystem: Visning av epostadresse i pasientskjema må aktiveres av administrator
 
 ### ePROM Admin (admin-bruker)
+* Analyse av utfylling av skjema: Pasientens aksjoner logges og returneres til Bestillersystemet sammen med skjemasvaret. Data kan hentes av admin-bruker i Admingrensesnittet
 * Informasjon til pasienten: Legg til mulighet for å avgrense på Bestillersystem
 * Skjemainformasjon: Avgrense lista med til et Bestillersystem
 * Ved oppretting av Samleskjema vise kun felles og tilhørende skjema
