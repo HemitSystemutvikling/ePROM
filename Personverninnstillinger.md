@@ -72,7 +72,7 @@ POST
 
 **Swagger**
 
-(https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync)[https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync]
+[https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync](https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync)
 
 ### Server-side
 
@@ -191,7 +191,8 @@ POST
 
 **Swagger**
 
-(https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync)[https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync]
+[https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync]
+(https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync)
 
 ### Server-side
 
