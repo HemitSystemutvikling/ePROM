@@ -4,14 +4,21 @@
 
 ## Innholdsfortegnelse
 
-[Sjekk personverninnstilling klient-side](#sjekk-personverninnstilling-klient-side)
+[Sjekk personverninnstilling](#sjekk-personverninnstilling)
 
-[Sjekk personverninnstilling server-side](#sjekk-personverninnstilling-server-side)
+[Klient-side](#klient-side)
+
+[Server-side](#server-side)
 
 [Feilsituasjoner](#feilsituasjoner)
 
-[Mottak av status for bestillingen](#mottak-av-status-for-bestillingen)
+[Oppdater personverninnstilling](#oppdater-personverninnstilling)
 
+[Klient-side](#klient-side)
+
+[Server-side](#server-side)
+
+[Feilsituasjoner](#feilsituasjoner)
 
 Endring av personverninnstilling og sjekk av status på denne kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
@@ -20,7 +27,9 @@ NB!
 ApiKey skal sendes som en `Authorization` parameter og er en del av HTTP header:
 `headers: {"Authorization": "Basic " + apiKey}` 
 
-## Sjekk personverninnstilling klient-side
+## Sjekk personverninnstilling
+
+### Klient-side
 
 **Eksempelkode (javascript)**
 
@@ -77,7 +86,7 @@ POST
 
 https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync
 
-## Sjekk personverninnstilling server-side
+### Server-side
 
 **API**
 
@@ -108,26 +117,6 @@ private async Task GetReservasjon(PatientInRegistryDataContract patient)
 }
 ```
 
-``` javascript
-private async Task UpdateReservasjon(PatientInRegistryDataContract patient, PersonvernInnstillingStatus personvernInnstillingStatus)
-{
-    var response = await Hemit.Proms.Integration.Api
-        .SetPersonvernInnstillingAsync(
-            ConfigurationManager.AppSettings["PromsApiBaseUrl"], 
-            ConfigurationManager.AppSettings["PromsApiKey"], 
-            patient.DecryptedPID,
-            PersonvernInnstillingType.Reservasjon,
-            personvernInnstillingStatus);
-
-    if (!response.HasErrors)
-    {
-        var newStatus = personvernInnstillingStatus == PersonvernInnstillingStatus.Aktiv
-            ? ReservationStatus.Reservert
-            : ReservationStatus.IkkeReserervert;
-    }
-}
-```
-
 **Parametere - Inn**
 
 * PromsApiBaseUrl - The base URL of the PROMS API
@@ -145,7 +134,7 @@ PromsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 * Name - The name of the PersonvernInnstilling.
 * Status - The status of the PersonvernInnstilling.
 
-## Feilsituasjoner
+### Feilsituasjoner
 
 **Respons**
 Ok (200) - Alt OK.
@@ -156,7 +145,9 @@ Unauthorized (401) - Feil i ApiKey.
 Internal Server Error (500) - Alle feil som ikke fanges opp på annen måte.
 Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som JSON: `{ statusCode, status, message}`
 
-## Sjekk personverninnstilling klient-side
+## Oppdater personverninnstilling
+
+### Klient-side
 
 **Eksempelkode (javascript)**
 
@@ -213,7 +204,7 @@ POST
 
 https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync
 
-## Sjekk personverninnstilling server-side
+### Server-side
 
 **API**
 
@@ -281,7 +272,7 @@ PromsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 * Name - The name of the PersonvernInnstilling.
 * Status - The status of the PersonvernInnstilling.
 
-## Feilsituasjoner
+### Feilsituasjoner
 
 **Respons**
 Ok (200) - Alt OK.
