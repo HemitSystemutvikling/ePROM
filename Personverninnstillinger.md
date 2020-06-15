@@ -274,7 +274,7 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/]
 * nationalId – The national id of the person to update.
 * id – The guid of the PersonvernInnstilling to update.
 * name – The name of the PersonvernInnstilling to update.
-* status - The updated status of the PersonvernInnstilling. En verdi fra Volven 7609 `RES | IRES | ...`. **NB!** Ikke samme statusverdier som i [Sjekk personverninnstilling](#sjekk-personverninnstilling) og [Oppdater personverninnstilling](#oppdater-personverninnstilling).
+* status - The updated status of the PersonvernInnstilling. En verdi fra Volven 7609 `( RES | IRES | ... )`. **NB!** Dette er ikke samme statusverdier som i [Sjekk personverninnstilling](#sjekk-personverninnstilling) og [Oppdater personverninnstilling](#oppdater-personverninnstilling).
 
 **Parametere - Ut**
 
