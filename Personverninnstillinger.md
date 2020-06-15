@@ -86,7 +86,7 @@ Navn: Hemit.Proms.Integration
 
 **Eksempelkode (C#)**
 
-``` javascript
+``` csharp
 private async Task GetReservasjon(PatientInRegistryDataContract patient)
 {
     var response = await Hemit.Proms.Integration.Api
@@ -124,11 +124,12 @@ PromsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
 ### Feilsituasjoner
 
-**Respons**
+**Respons**  
 Ok (200) - Alt OK.  
-Bad Request (400) - Feil i forespørsel. Skjer...  
+Bad Request (400) - Feil i forespørsel. Skjer...
 * Hvis NationalId ikke er angitt eller har en lengde som er forskjellig fra 11.
-* Hvis Type ikke er angitt.  
+* Hvis Type ikke er angitt.
+
 Unauthorized (401) - Feil i ApiKey.  
 Internal Server Error (500) - Alle feil som ikke fanges opp på annen måte.  
 Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som JSON: `{ statusCode, status, message}`
@@ -203,7 +204,7 @@ Navn: Hemit.Proms.Integration
 
 **Eksempelkode (C#)**
 
-``` javascript
+``` csharp
 private async Task UpdateReservasjon(PatientInRegistryDataContract patient, PersonvernInnstillingStatus personvernInnstillingStatus)
 {
     var response = await Hemit.Proms.Integration.Api
@@ -240,8 +241,9 @@ PromsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 ### Feilsituasjoner
 
 **Respons**
+
 Ok (200) - Alt OK.  
-Bad Request (400) - Feil i forespørsel. Skjer...  
+Bad Request (400) - Feil i forespørsel. Skjer...
 * Hvis NationalId ikke er angitt eller har en lengde som er forskjellig fra 11.
 * Hvis Type ikke er angitt.
 * Hvis Status ikke er angitt.  
