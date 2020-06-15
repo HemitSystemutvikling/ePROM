@@ -8,6 +8,8 @@
 
 [Oppdater personverninnstilling](#oppdater-personverninnstilling)
 
+[Mottak av status for personverninnstilling (replikeringsmelding fra PVK)](#mottak-av-status-for-personverninnstilling-replikeringsmelding-fra-pvk)
+
 Endring av personverninnstilling og sjekk av status på denne kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
@@ -253,3 +255,47 @@ Bad Request (400) - Feil i forespørsel. Skjer...
 Unauthorized (401) - Feil i ApiKey.  
 Internal Server Error (500) - Alle feil som ikke fanges opp på annen måte.  
 Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som JSON: `{ statusCode, status, message}`
+
+## Mottak av status for personverninnstilling (replikeringsmelding fra PVK)
+
+Når innbygger gjør en endring av en personverninnstilling i PVK, sender PVK ut en replikeringsmelding til systemer den er integrert med, deriblandt ePROM, for å informere om endringen. ePROM gjøre ved mottak av en slik replikeringsmelding et kall videre mot angitte Bestillersystem med den nye statusen for personverninnstillingen. Bestillersystemet må implementere en service som mottar dette kallet.
+
+**URL for Web API kall**
+
+ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
+
+Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/PersonvernInnstilling
+
+F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/)
+
+**Parametere - Inn**
+
+* nationalId – The national id of the person to update.
+* id – The guid of the PersonvernInnstilling to update.
+* name – The name of the PersonvernInnstilling to update.
+* status - The updated status of the PersonvernInnstilling. En verdi fra Volven 7609 `RES | IRES | ...`. **NB!** Ikke samme statusverdier som i [Sjekk personverninnstilling](#sjekk-personverninnstilling) og [Oppdater personverninnstilling](#oppdater-personverninnstilling).
+
+**Parametere - Ut**
+
+* success – Was the update completed successfully?
+
+For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.Pvk.SetPersonvernInnstillingInEusRequest* for parameter inn og *Hemit.Proms.Integration.Pvk.SetPersonvernInnstillingInEusResponse* for parameter ut
+
+**Metode**
+
+PUT
+
+**Autentisering**
+
+ApiKey sendes med i header og skal brukes av Bestillersystem for å sikre at det er riktig mottaker
+
+Eksempel request fra Proms (JSON)
+
+``` 
+{
+    "nationalId" : "26073941651",
+    "id" : "b3cda307-154c-4af4-87d3-30567c931924",
+    "name" : "Reservasjon mot registrering",
+    "status" : "RES"
+}
+```
