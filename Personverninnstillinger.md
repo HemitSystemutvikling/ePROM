@@ -1,48 +1,35 @@
-# BESTILLING AV SKJEMA V2
+# PERSONVERNINNSTILLINGER
 
-*Sist oppdatert 12.12.2019*
+*Sist oppdatert 15.06.2020*
 
 ## Innholdsfortegnelse
 
-[Bestilling klient-side](#bestilling-klient-side)
+[Sjekk personverninnstilling klient-side](#sjekk-personverninnstilling-klient-side)
 
-[Bestilling server-side](#bestilling-server-side)
+[Sjekk personverninnstilling server-side](#sjekk-personverninnstilling-server-side)
 
 [Feilsituasjoner](#feilsituasjoner)
 
 [Mottak av status for bestillingen](#mottak-av-status-for-bestillingen)
 
 
-API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
-
-Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
+Endring av personverninnstilling og sjekk av status på denne kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
 NB!
-I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som del av HTTP header:
+ApiKey skal sendes som en `Authorization` parameter og er en del av HTTP header:
 `headers: {"Authorization": "Basic " + apiKey}` 
 
-## Bestilling klient-side
+## Sjekk personverninnstilling klient-side
 
 **Eksempelkode (javascript)**
 
 ``` javascript
-function placeFormOrderV2() {
-    var url = 'https://proms2.hemit.org/PromsWebApi/api/v2/formorder'; // Demo server
-    var apiKey = ""; // The ApiKey for your system
-    var formId = "1bc5f9f0-2607-49eb-94f0-6af955bbd79a"; // RAND-12
-    var nationalId = "26073941651"; // the national ID of the patient (Norsk fødselsnummer or D-nummer)
-    var expiryDate = new Date(new Date().getTime() + (86400000 * 7)); // add 7 days
-    var reminderDate = new Date(new Date().getTime() + (86400000 * 6)); // add 6 days
-    var metadata = JSON.stringify({
-        age: 76
-    });
-    var dontStoreCompletedFormInPha = false;
-    var distributionRule = "Basic";
-    var mustBeSigned = false;
-    var signingText = null;
-    var physicalAddress = null;
-    var testMode = false;
+function sjekkPersonverninnstilling() {
+    var url = 'https://proms2.hemit.org/PromsWebApi/api/getpersonverninnstilling'; // Demo server
+    var apiKey = ""; // ApiKey of the end user system performing the requeset
+    var nationalId = "26073941651"; The national id of the citizen.
+    var type = 0; // Reservasjon
 
     $.ajax({
         url: url,
@@ -52,20 +39,11 @@ function placeFormOrderV2() {
             "Authorization": "Basic " + apiKey
         },
         data: JSON.stringify({
-            formId,
             nationalId,
-            expiryDate,
-            reminderDate,
-            metadata,
-            dontStoreCompletedFormInPha,
-            distributionRule,
-            mustBeSigned,
-            signingText,
-            physicalAddress,
-            testMode
+            type
         }),
         success: function(data) {
-            alert("formOrderId: " + data.id + "\nsingleUseCode: " + data.singleUseCode + "\nloginUrl: " + data.loginUrl + "\npreferred notificationChannel: " + data.notificationChannel);
+            alert("nationalId: " + data.nationalId + "\ntype: " + data.type + "\nnid: " + data.id + "\nnname: " + data.name + "\nstatus: " + data.status);
         },
         error: function() {
             alert("Error!");
@@ -76,173 +54,240 @@ function placeFormOrderV2() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/PromsWebApi/api/v2/formorder]
+[https://proms2.hemit.org/PromsWebApi/api/getpersonverninnstilling]
 
 **Parametere - Inn**
 
-* apiKey - ApiKey of the end user system placing the order (sendes som `Authorization` parameter som del av HTTP header)
-* formId - The form to place an order for
-* nationalId  - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
-* expiryDate - The expiry date of the order
-* reminderDate - Optional. The date to send a reminder for the order. If not set or NULL, no reminder will be sent
-* metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an stringified JSON object (ex. JSON.stringify({ age: 76 }))
-* dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
-* distributionRule - Optional. The rule used when deciding how to notify the patient `{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }` . Tallverdien kan sendes. Default: Basic
-* mustBeSigned - Optional. Whether the form must be signed
-* signingText - Optional. The text displyed for signing
-* physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used. PhysicalAddress is a JSON object in the following format:
-
-``` 
-{
-    fullName: "Test Testesen",
-    addressLine1: "Testeveien 1",
-    postalCode: "1234",
-    postalPlace: "Testestad"
-}
-```
-
-* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
+* nationalId  - The national id of the person to get PersonvernInnstilling for.
+* type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`
 
 **Parametere – Ut**
 
-I tillegg til alle inn-parametre:
-
-* id – The id of this form order
-* singleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution
-* loginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
-* notificationChannel – The preferred channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` . The actual channel used is first known when PROMS performs the callback, notifying about the status.
+* nationalId - The national id of the citizen.
+* type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`
+* id – The guid of the PersonvernInnstilling.
+* name – The name of the PersonvernInnstilling.
+* status – The status of the PersonvernInnstilling.`{ IkkeAktiv | Aktiv }`.
 
 **Metode**
 
 POST
 
-## Bestilling server-side
+**Swagger**
+
+https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync
+
+## Sjekk personverninnstilling server-side
 
 **API**
 
 Tilgjenglig som NuGet pakke
 
-NuGet repository: https://hemit.myget.org/F/hemitpublic/api/v3/index.json
+NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
 
 Navn: Hemit.Proms.Integration
 
 **Eksempelkode (C#)**
 
 ``` javascript
-[HttpPost]
-public JsonResult OrderPromsFormV2(Guid formId) {
-    var form = _context.FormService.GetForm(formId);
-    var patient = _context.PatientInRegistryService.GetByFormGuid(formId);
+private async Task GetReservasjon(PatientInRegistryDataContract patient)
+{
+    var response = await Hemit.Proms.Integration.Api
+        .GetPersonvernInnstillingAsync(
+            ConfigurationManager.AppSettings["PromsApiBaseUrl"], 
+            ConfigurationManager.AppSettings["PromsApiKey"], 
+            patient.DecryptedPID,
+            PersonvernInnstillingType.Reservasjon);
 
-    var promsFormId = _formTypeToPromsFormIdMapping[(FormType) form.FormTypeId];
-
-    var result = Api.CreateFormOrderV2(
-        ConfigurationManager.AppSettings["PromsApiBaseUrl"],
-        ConfigurationManager.AppSettings["PromsApiKey"],
-        promsFormId,
-        patient.DecryptedPID,
-        DateTime.Now.AddDays(7),
-        DateTime.Now.AddDays(6),
-        GetMetadata(promsFormId, form, patient) false,
-        DistributionRule.AllowUnsecure,
-        false,
-        null,
-        null,
-        false);
-
-    if (result.HasErrors) {
-        Response.StatusCode = result.ErrorStatusCode.Value;
-        Response.Write(result.ErrorJson);
-        return null;
+    if (!response.HasErrors)
+    {
+        var status = response.Status == PersonvernInnstillingStatus.Aktiv
+            ? ReservationStatus.Reservert
+            : ReservationStatus.IkkeReserervert;
     }
+}
+```
 
-    _promsFormOrderService.Add(result.FormOrderId, form.Id, form.ReshId);
+``` javascript
+private async Task UpdateReservasjon(PatientInRegistryDataContract patient, PersonvernInnstillingStatus personvernInnstillingStatus)
+{
+    var response = await Hemit.Proms.Integration.Api
+        .SetPersonvernInnstillingAsync(
+            ConfigurationManager.AppSettings["PromsApiBaseUrl"], 
+            ConfigurationManager.AppSettings["PromsApiKey"], 
+            patient.DecryptedPID,
+            PersonvernInnstillingType.Reservasjon,
+            personvernInnstillingStatus);
 
-    return Json(new {
-        loginUrl = result.LoginUrl,
-            singleUseCode = result.SingleUseCode,
-            notificationChannel = result.NotificationChannel.ToString()
+    if (!response.HasErrors)
+    {
+        var newStatus = personvernInnstillingStatus == PersonvernInnstillingStatus.Aktiv
+            ? ReservationStatus.Reservert
+            : ReservationStatus.IkkeReserervert;
+    }
+}
+```
+
+**Parametere - Inn**
+
+* PromsApiBaseUrl - The base URL of the PROMS API
+* ApiKey - ApiKey of the end user system performing the requeset (sendes som `Authorization` parameter og er en del av HTTP header)
+* NationalId - The national id of the person to get PersonvernInnstilling for.
+* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`.
+
+PromsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+
+**Parametere – Ut**
+
+* NationalId - The national id of the citizen.
+* Type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`.
+* Id -The guid of the PersonvernInnstilling.
+* Name - The name of the PersonvernInnstilling.
+* Status - The status of the PersonvernInnstilling.
+
+## Feilsituasjoner
+
+**Respons**
+Ok (200) - Alt OK.
+Bad Request (400) - Feil i forespørsel. Skjer...
+* Hvis NationalId ikke er angitt eller har en lengde som er forskjellig fra 11.
+* Hvis Type ikke er angitt.
+Unauthorized (401) - Feil i ApiKey.
+Internal Server Error (500) - Alle feil som ikke fanges opp på annen måte.
+Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som JSON: `{ statusCode, status, message}`
+
+## Sjekk personverninnstilling klient-side
+
+**Eksempelkode (javascript)**
+
+``` javascript
+function sjekkPersonverninnstilling() {
+    var url = 'https://proms2.hemit.org/PromsWebApi/api/getpersonverninnstilling'; // Demo server
+    var apiKey = ""; // ApiKey of the end user system performing the requeset
+    var nationalId = "26073941651"; The national id of the citizen.
+    var type = 0; // Reservasjon
+
+    $.ajax({
+        url: url,
+        type: "POST",
+        contentType: "application/json;charset=utf-8",
+        headers: {
+            "Authorization": "Basic " + apiKey
+        },
+        data: JSON.stringify({
+            nationalId,
+            type
+        }),
+        success: function(data) {
+            alert("nationalId: " + data.nationalId + "\ntype: " + data.type + "\nnid: " + data.id + "\nnname: " + data.name + "\nstatus: " + data.status);
+        },
+        error: function() {
+            alert("Error!");
+        }
     });
 }
 ```
 
+**URL for Web API kall**
+
+[https://proms2.hemit.org/PromsWebApi/api/getpersonverninnstilling]
+
 **Parametere - Inn**
 
-* promsApiBaseUrl - The base URL of the PROMS API
-* apiKey - ApiKey of the end user system placing the order (sendes som `Authorization` parameter som del av HTTP header)
-* formId - The form to place an order for
-* nationalId - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
-* expiryDate - The expiry date of the order
-* reminderDate - The date to send a reminder for the order. If NULL, no reminder will be sent
-* metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an anonymous object (ex.new { age = 23 }).
-* dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
-* distributionRule - Optional. The rule used when deciding how to notify the patient `{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }` . Tallverdien kan sendes. Default: Basic
-* mustBeSigned - Optional. Whether the form must be signed
-* signingText - Optional. The text displyed for signing
-* physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
-* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
-
-promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+* nationalId  - The national id of the person to get PersonvernInnstilling for.
+* type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`
 
 **Parametere – Ut**
 
-* CreateFormOrderResult
-  + FormOrderId – The id of this form order
-  + SingleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution
-  + LoginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
-  + NotificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` . The actual channel used is first known when PROMS performs the callback, notifying about the status.
-
-## Feilsituasjoner
-
-Hvis responsen resulterer i "id": "00000000-0000-0000-0000-000000000000" er det ikke generert noe bestilling. Dette skjer hvis fødselsnummeret ikke eksisterer.
-Ellers kan følgende feilsituasjoner oppstå:
-
-* BadRequest("The ordered form is not Published")
-* BadRequest($"No form with id='{formOrder.formId}' exists")
-* BadRequest($"The ordered form needs to be signed. This is not possible when using DistributionRule = 'NoDistribution'.")
-* BadRequest($"Form with id='{formOrder.formId}' is not paper enabled")
-
- 
-
-## Mottak av status for bestillingen
-
-API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
-
-**URL for Web API kall**
-
-ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
-
-Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/PromsFormOrder
-
-F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/)
-
-**Parametere - Inn**
-
-* apiKey – ApiKey of the end user system placing the order
-* formOrderId – The Id of the formOrder
-* notificationChannel – The actual channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
-* formOrderStatus – Status of the formOrder `{ Ordered | Error }` 
-  + Ordered – The formOrder was successful
-  + Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
-
-**Parametere - Ut**
-
-* success – true if the request was processed successfully, otherwise false
-
-For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.PromsFormOrderRequest* for parameter inn og *Hemit.Proms.Integration.PromsFormOrderResponse* for parameter ut
+* nationalId - The national id of the citizen.
+* type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`
+* id – The guid of the PersonvernInnstilling.
+* name – The name of the PersonvernInnstilling.
+* status – The status of the PersonvernInnstilling.`{ IkkeAktiv | Aktiv }`.
 
 **Metode**
 
-PUT
+POST
 
-Eksempel request fra Proms (JSON)
+**Swagger**
 
-``` 
+https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync
+
+## Sjekk personverninnstilling server-side
+
+**API**
+
+Tilgjenglig som NuGet pakke
+
+NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
+
+Navn: Hemit.Proms.Integration
+
+**Eksempelkode (C#)**
+
+``` javascript
+private async Task GetReservasjon(PatientInRegistryDataContract patient)
 {
-    "apiKey" : "",
-    "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
-    "notificationChannel" : "Helsenorge",
-    "formOrderStatus" : "Ordered"
+    var response = await Hemit.Proms.Integration.Api
+        .GetPersonvernInnstillingAsync(
+            ConfigurationManager.AppSettings["PromsApiBaseUrl"], 
+            ConfigurationManager.AppSettings["PromsApiKey"], 
+            patient.DecryptedPID,
+            PersonvernInnstillingType.Reservasjon);
+
+    if (!response.HasErrors)
+    {
+        var status = response.Status == PersonvernInnstillingStatus.Aktiv
+            ? ReservationStatus.Reservert
+            : ReservationStatus.IkkeReserervert;
+    }
 }
 ```
 
+``` javascript
+private async Task UpdateReservasjon(PatientInRegistryDataContract patient, PersonvernInnstillingStatus personvernInnstillingStatus)
+{
+    var response = await Hemit.Proms.Integration.Api
+        .SetPersonvernInnstillingAsync(
+            ConfigurationManager.AppSettings["PromsApiBaseUrl"], 
+            ConfigurationManager.AppSettings["PromsApiKey"], 
+            patient.DecryptedPID,
+            PersonvernInnstillingType.Reservasjon,
+            personvernInnstillingStatus);
+
+    if (!response.HasErrors)
+    {
+        var newStatus = personvernInnstillingStatus == PersonvernInnstillingStatus.Aktiv
+            ? ReservationStatus.Reservert
+            : ReservationStatus.IkkeReserervert;
+    }
+}
+```
+
+**Parametere - Inn**
+
+* PromsApiBaseUrl - The base URL of the PROMS API
+* ApiKey - ApiKey of the end user system performing the requeset (sendes som `Authorization` parameter og er en del av HTTP header)
+* NationalId - The national id of the person to get PersonvernInnstilling for.
+* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`.
+
+PromsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+
+**Parametere – Ut**
+
+* NationalId - The national id of the citizen.
+* Type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`.
+* Id -The guid of the PersonvernInnstilling.
+* Name - The name of the PersonvernInnstilling.
+* Status - The status of the PersonvernInnstilling.
+
+## Feilsituasjoner
+
+**Respons**
+Ok (200) - Alt OK.
+Bad Request (400) - Feil i forespørsel. Skjer...
+* Hvis NationalId ikke er angitt eller har en lengde som er forskjellig fra 11.
+* Hvis Type ikke er angitt.
+Unauthorized (401) - Feil i ApiKey.
+Internal Server Error (500) - Alle feil som ikke fanges opp på annen måte.
+Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som JSON: `{ statusCode, status, message}`
