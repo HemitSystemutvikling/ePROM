@@ -22,7 +22,7 @@
 
 [SENDE MELDING SOM SMS/EPOST](SendeMeldingSomSmsEpost)
 
-[PERSONVERNINNSILLINGER](Personverninnstillinger)
+[PERSONVERNINNSTILLINGER](Personverninnstillinger)
 
 
 # GENERELT
@@ -78,4 +78,3 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 3 = Error
 4 = PhysicalMailReturned
 ```
-
