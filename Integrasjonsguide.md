@@ -22,7 +22,7 @@
 
 [SENDE MELDING SOM SMS/EPOST](SendeMeldingSomSmsEpost)
 
-[PERSONVERNINNSILLINGER](Personverninnstillinger)
+[PERSONVERNINNSTILLINGER](Personverninnstillinger)
 
 
 # GENERELT
