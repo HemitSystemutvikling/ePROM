@@ -1,6 +1,6 @@
 # Integrasjonsguide
 
-*Sist oppdatert 12.12.2019*
+*Sist oppdatert 15.06.2020*
 
 ### Innholdsfortegnelse
 
@@ -21,6 +21,8 @@
 [(SENDE MELDING TIL INNBYGGER - Utgått)](SendeMeldingTilInnbyggerV1)
 
 [SENDE MELDING SOM SMS/EPOST](SendeMeldingSomSmsEpost)
+
+[PERSONVERNINNSILLINGER](Personverninnstillinger)
 
 
 # GENERELT
@@ -76,4 +78,3 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 3 = Error
 4 = PhysicalMailReturned
 ```
-
