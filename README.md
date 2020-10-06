@@ -7,6 +7,9 @@
 ### Start-guide
 [Startguide](Startguide)
 
+### Brukerstøtte
+[Brukerstøtte](UserSupport)
+
 ### Skisser
 [Overordnetskisse](Overordnetskisse)
 
