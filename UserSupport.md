@@ -2,7 +2,7 @@
 
 ## Feil hos pasienter
 
-Ved tilbakemeldinger til registermiljøet fra pasienter som ikke får åpnet mottatt pasientskjemaet.
+Ved tilbakemeldinger fra pasienter som opplever problem med mottatt pasientskjemaet.
 Be om følgende informasjon fra pasient:
 - Enkel beskrivelse av hva som skjedde
 - Skjermbilde av nettleser som viser siden der det feiler
