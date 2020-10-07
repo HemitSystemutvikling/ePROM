@@ -166,8 +166,8 @@ public async Task<JsonResult> OrderPromsFormV2Async(Guid formId) {
 
     return Json(new {
         loginUrl = result.Data.LoginUrl,
-            singleUseCode = result.Data.SingleUseCode,
-            notificationChannel = result.Data.NotificationChannel.ToString()
+        singleUseCode = result.Data.SingleUseCode,
+        notificationChannel = result.Data.NotificationChannel.ToString()
     });
 }
 ```
@@ -194,7 +194,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
 **Parametere – Ut**
 
-* ResponseWrapper<CreateFormOrderV2Response>
+* ResponseWrapper&lt;CreateFormOrderV2Response>
   + HasErrors
   + ErrorStatusCode
   + ErrorJson
