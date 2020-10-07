@@ -104,7 +104,7 @@ function placeFormOrderV2() {
 ```
 
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
-* onBehalfOfNationalId - Optional. The national ID of the receiver of the formorder. Should only be supplied if other than the one who the formorder is concerning
+* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding.
 
 **Parametere – Ut**
 
@@ -125,21 +125,22 @@ POST
 
 Tilgjenglig som NuGet pakke
 
-NuGet repository: https://hemit.myget.org/F/hemitpublic/api/v3/index.json
+NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
 
 Navn: Hemit.Proms.Integration
+Version: 3.0
 
 **Eksempelkode (C#)**
 
-``` javascript
+``` csharp
 [HttpPost]
-public JsonResult OrderPromsFormV2(Guid formId) {
+public async Task<JsonResult> OrderPromsFormV2Async(Guid formId) {
     var form = _context.FormService.GetForm(formId);
     var patient = _context.PatientInRegistryService.GetByFormGuid(formId);
 
     var promsFormId = _formTypeToPromsFormIdMapping[(FormType) form.FormTypeId];
 
-    var result = Api.CreateFormOrderV2(
+    var result = await Api.CreateFormOrderV2Async(
         ConfigurationManager.AppSettings["PromsApiBaseUrl"],
         ConfigurationManager.AppSettings["PromsApiKey"],
         promsFormId,
@@ -151,7 +152,9 @@ public JsonResult OrderPromsFormV2(Guid formId) {
         false,
         null,
         null,
-        false);
+        false,
+        null,
+        null);
 
     if (result.HasErrors) {
         Response.StatusCode = result.ErrorStatusCode.Value;
@@ -159,12 +162,12 @@ public JsonResult OrderPromsFormV2(Guid formId) {
         return null;
     }
 
-    _promsFormOrderService.Add(result.FormOrderId, form.Id, form.ReshId);
+    _promsFormOrderService.Add(result.Data.Id, form.Id, form.ReshId);
 
     return Json(new {
-        loginUrl = result.LoginUrl,
-            singleUseCode = result.SingleUseCode,
-            notificationChannel = result.NotificationChannel.ToString()
+        loginUrl = result.Data.LoginUrl,
+            singleUseCode = result.Data.SingleUseCode,
+            notificationChannel = result.Data.NotificationChannel.ToString()
     });
 }
 ```
@@ -184,16 +187,22 @@ public JsonResult OrderPromsFormV2(Guid formId) {
 * signingText - Optional. The text displyed for signing
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
+* paperColorPrint - Optional. Set to true when paper should be printed in color. Default: false
+* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding.
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
 **Parametere – Ut**
 
-* CreateFormOrderResult
-  + FormOrderId – The id of this form order
-  + SingleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution
-  + LoginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
-  + NotificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` . The actual channel used is first known when PROMS performs the callback, notifying about the status.
+* ResponseWrapper<CreateFormOrderV2Response>
+  + HasErrors
+  + ErrorStatusCode
+  + ErrorJson
+  + Data  
+    + Id – The id of this form order
+    + SingleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution
+    + LoginUrl – URL the patient can use to log in to PROMS to fill out the ordered form
+    + NotificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` . The actual channel used is first known when PROMS performs the callback, notifying about the status.
 
 ## Feilsituasjoner
 
@@ -203,6 +212,7 @@ Ellers kan følgende feilsituasjoner oppstå:
 * BadRequest("The ordered form is not Published")
 * BadRequest($"No form with id='{formOrder.formId}' exists")
 * BadRequest($"The ordered form needs to be signed. This is not possible when using DistributionRule = 'NoDistribution'.")
+* BadRequest($"The ordered form needs to be signed. This is not possible when the form is ordered on behalf of someone.")
 * BadRequest($"Form with id='{formOrder.formId}' is not paper enabled")
 
  
