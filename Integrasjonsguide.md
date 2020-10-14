@@ -78,3 +78,10 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 3 = Error
 4 = PhysicalMailReturned
 ```
+
+### SentStatus
+
+``` 
+0 = Sent
+1 = Error
+```
