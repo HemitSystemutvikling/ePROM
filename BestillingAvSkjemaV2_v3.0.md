@@ -106,7 +106,7 @@ function placeFormOrderV2() {
 ```
 
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
-* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding.
+* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding. **VIKTIG! Se også ["På vegne av"-funksjonalitet og personvern](#på-vegne-av-funksjonalitet-og-personvern)**
 
 **Parametere – Ut**
 
@@ -188,7 +188,7 @@ public async Task<JsonResult> OrderPromsFormV2Async(Guid formId) {
 * signingText - Optional. The text displyed for signing
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
-* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding.
+* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding. **VIKTIG! Se også ["På vegne av"-funksjonalitet og personvern](#på-vegne-av-funksjonalitet-og-personvern)**
 
 promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
 
@@ -262,5 +262,5 @@ Eksempel request fra Proms (JSON)
 ## "På vegne av"-funksjonalitet og personvern
 For at mottaker av bestillingen skal kunne vite hvem skjemaet besvares på vegne av vises som default en informasjonstekst, både i notifikasjonen som sendes og i selve skjemaet, som viser fullt navn til den som skjemaet besvares på vegne av. Det er derfor **svært viktig** å sikre at selve bestillingen går til rett fødselsnummer slik at sensitive opplysninger ikke havner på avveie. Dette er bestillersystemet sitt ansvar å sikre, ePROM gjør ingen validering av relasjon mellom fødselsnummer til mottaker og den skjemaet besvares på vegne av.
 
-Det er mulig å endre informasjonsteksten om "på vegne av" slik at den ikke angir den som skjemaet besvares på vegne av. Dette gjøres ved å overstyre default "På vegne av info" i PROMs selvbetjeningsmodul -> Skjemainformasjon.
+Det er mulig å endre informasjonsteksten om "på vegne av" slik at den ikke angir den som skjemaet besvares på vegne av. Dette gjøres ved å overstyre default "På vegne av info" i PROMs selvbetjeningsmodul -> Skjemainformasjon. Eksempel på slik anonym tekst kan være: "Skjemaet skal fylles ut sammen med pasienten.". Det er da viktig å tenke på at mottaker ikke nødvendigvis kan forstå nøyaktig hvem skjemaet faktisk gjelder.
 
