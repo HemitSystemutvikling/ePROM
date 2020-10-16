@@ -19,6 +19,8 @@
 
 [Designskisse](Designskisse)
 
+[Flyt og sikkerhet ved bruk av "på vegne av"](PaVegneAvFlyt)
+
 ### Selvbetjeningsløsning
 [Brukerdokumentasjon for selvbetjeningsløsning](Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning)
 
