@@ -15,4 +15,4 @@
 * I Skjemakatalogen kan man se alle innstillingen på et skjema
 
 ### ePROM pasientinitierteskjema
-* Melding om utgåtte skjema inneholder informasjon om skjemaid, fødselsnumer og bestillingstidspunkt
+* Melding om utgåtte skjema inneholder informasjon om skjemaid, fødselsnummer og bestillingstidspunkt
