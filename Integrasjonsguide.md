@@ -85,3 +85,11 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 0 = Sent
 1 = Error
 ```
+
+### Produksjonsmiljøet
+
+For produksjonsmiljøet gjelder følgende URL'er
+
+Base URL for bestillingsAPIer:
+PROD: [https://pasientrapportering.nhn.no/webapi/api/formorder](https://pasientrapportering.nhn.no/webapi/api/formorder)
+QA: [https://pasientrapportering.qa.nhn.no/webapi/api/formorder](https://pasientrapportering.qa.nhn.no/webapi/api/formorder)
