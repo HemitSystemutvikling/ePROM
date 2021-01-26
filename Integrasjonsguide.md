@@ -1,6 +1,6 @@
 # Integrasjonsguide
 
-*Sist oppdatert 15.06.2020*
+*Sist oppdatert 26.01.2021*
 
 ### Innholdsfortegnelse
 
@@ -88,8 +88,10 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 
 ### Produksjonsmiljøet
 
+API'et for å bestille pasientskjema via ePROM er tilgjengelig forr alle som er på Helsenettet.
+
 For produksjonsmiljøet gjelder følgende URL'er for bestillingsAPIer:
-``` 
+ 
 PROD: [https://pasientrapportering.nhn.no/webapi/api/formorder](https://pasientrapportering.nhn.no/webapi/api/formorder)
+
 QA: [https://pasientrapportering.qa.nhn.no/webapi/api/formorder](https://pasientrapportering.qa.nhn.no/webapi/api/formorder)
-``` 
