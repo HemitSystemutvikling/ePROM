@@ -86,9 +86,9 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 1 = Error
 ```
 
-### Produksjonsmiljøet
+# Produksjonsmiljøet
 
-API'et for å bestille pasientskjema via ePROM er tilgjengelig forr alle som er på Helsenettet.
+API'et for å bestille pasientskjema via ePROM er tilgjengelig på Helsenettet.
 
 For produksjonsmiljøet gjelder følgende URL'er for bestillingsAPI'et:
  
