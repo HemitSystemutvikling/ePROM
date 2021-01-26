@@ -90,7 +90,7 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 
 API'et for å bestille pasientskjema via ePROM er tilgjengelig forr alle som er på Helsenettet.
 
-For produksjonsmiljøet gjelder følgende URL'er for bestillingsAPIer:
+For produksjonsmiljøet gjelder følgende URL'er for bestillingsAPI'et:
  
 PROD: [https://pasientrapportering.nhn.no/webapi/api/formorder](https://pasientrapportering.nhn.no/webapi/api/formorder)
 
