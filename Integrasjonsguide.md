@@ -92,6 +92,13 @@ API'et for å bestille pasientskjema via ePROM er tilgjengelig på Helsenettet.
 
 For produksjonsmiljøet gjelder følgende URL'er for bestillingsAPI'et:
  
-PROD: [https://pasientrapportering.nhn.no/webapi/api/formorder](https://pasientrapportering.nhn.no/webapi/api/formorder)
+PROD: [https://pasientrapportering.nhn.no/webapi/api/v2/formorder](https://pasientrapportering.nhn.no/webapi/api/v2/formorder)
 
-QA: [https://pasientrapportering.qa.nhn.no/webapi/api/formorder](https://pasientrapportering.qa.nhn.no/webapi/api/formorder)
+QA: [https://pasientrapportering.qa.nhn.no/webapi/api/v2/formorder](https://pasientrapportering.qa.nhn.no/webapi/v2/api/formorder)
+
+
+For produksjonsmiljøet gjelder følgende URL'er for SendeMeldingAPI'et:
+
+PROD: [https://pasientrapportering.nhn.no/webapi/api/v2/MessageToCitizen](https://pasientrapportering.nhn.no/webapi/api/v2/MessageToCitizen)
+
+QA: [https://pasientrapportering.qa.nhn.no/webapi/api/v2/MessageToCitizen](https://pasientrapportering.qa.nhn.no/webapi/api/v2/MessageToCitizen)
