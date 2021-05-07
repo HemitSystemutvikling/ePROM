@@ -3,7 +3,7 @@
 
 ### ePROM
 * Pålogget sesjon holdes aktiv under utfylling av pasientskjemaet. Dette for bl.a. unngå feil ved signering
-* Signering av skjema: Endret tittel på kopi av skjemasvar som sendes til utfyller.
+* Signering av skjema: Endret tittel på kopi av skjemasvar som sendes til utfyller
 * Viser Norsk helsenett sin kontaktinformasjon for teknisk support
 * Fiks for å vise hjelpetekster på mobile enheter
 * For pålogget bruker vises også mellomnavn i pasientskjemaet
