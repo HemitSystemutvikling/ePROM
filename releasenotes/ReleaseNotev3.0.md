@@ -1,4 +1,4 @@
-# Nytt i ePROM v3.1
+# Nytt i ePROM v3.0
 *Dato: 05.11.2020*
 
 ### ePROM
