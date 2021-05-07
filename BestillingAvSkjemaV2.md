@@ -234,9 +234,13 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/]
 * apiKey – ApiKey of the end user system placing the order
 * formOrderId – The Id of the formOrder
 * notificationChannel – The actual channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
-* formOrderStatus – Status of the formOrder `{ Ordered | Error }` 
+* formOrderStatus – Status of the formOrder
   + Ordered – The formOrder was successful
   + Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
+* formOrderEventLog – Log of events for the form
+  + eventType – Events `{ FormOpened | QuestionAccessed | SigningStarted | SigningCancelled | SigningError | SigningCompleted | FormDelivered }`
+  + questionId – Id of the question
+  + timestampUtc - Timestamp of envent
 
 **Parametere - Ut**
 
@@ -255,7 +259,15 @@ Eksempel request fra Proms (JSON)
     "apiKey" : "",
     "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
     "notificationChannel" : "Helsenorge",
-    "formOrderStatus" : "Ordered"
+    "formOrderStatus" : "Ordered",
+    "formOrderEventLog" : [{
+        eventType: "FormOpened",
+        timestampUtc: "2021-05-07 09:17:51.220"
+    },{
+        eventType: "QuestionAccessed",
+        questionId: "Rand12Q01",
+        timestampUtc: "2021-05-07 09:18:09.627"
+    }]
 }
 ```
 
