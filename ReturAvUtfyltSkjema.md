@@ -31,6 +31,10 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](
 * patientInitiatedValues - Information about the patient initiated order
   + formId - The Id of the form ordered
   + nationalId - The national id number of the patient ordered the form
+* formOrderEventLog – Log of events for the form
+  + eventType – Events `{ FormOpened | QuestionAccessed | SigningStarted | SigningCancelled | SigningError | SigningCompleted | FormDelivered }`
+  + questionId – Id of the question
+  + timestampUtc - Timestamp of envent
 
 **Parametere - Ut**
 
@@ -54,7 +58,15 @@ NB! formData sendes som stringified JSON-object
     "signedFormId":"00000000-0000-0000-0000-000000000000",
     "timestamp":"2019-05-03T00:00:00+02:00",
     "scannedPaperId":"00000000-0000-0000-0000-000000000000",
-    "formDataWarnings":[{"fieldName":"Key","warning":"Value"},{"fieldName":"Key2","warning":"Value2"}]
+    "formDataWarnings":[{"fieldName":"Key","warning":"Value"},{"fieldName":"Key2","warning":"Value2"}],
+    "formOrderEventLog" : [{
+        eventType: "FormOpened",
+        timestampUtc: "2021-05-07 09:17:51.220"
+    },{
+        eventType: "QuestionAccessed",
+        questionId: "Rand12Q01",
+        timestampUtc: "2021-05-07 09:18:09.627"
+    }]
 }
 ```
 
