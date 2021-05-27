@@ -1,5 +1,5 @@
 # Nytt i ePROM v3.1
-*Dato: 07.05.2021*
+*Dato: 27.05.2021*
 
 ### ePROM
 * Pålogget sesjon holdes aktiv under utfylling av pasientskjemaet. Dette for bl.a. unngå feil ved signering hvis utfylling av skjema tar lang tid
@@ -22,5 +22,5 @@
 * Deler av applikasjonen oppdatert fra .NET Core 2.1 til .NET 5.0
 * helsenorge
   * Klientpakke oppdatert for helsenorge.messaging
-  * Oppgradert meldingstype "DIALOG_INNBYGGER_MELDINGSFORMIDLING" fra v0.8 til v1.0
+  * Oppgradert meldingstype "DIALOG_INNBYGGER_MELDINGSFORMIDLING" fra v0.8 til v1.1
   * Klientpakke oppdatert for Digipost og Digipost.Signering
