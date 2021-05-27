@@ -1,6 +1,6 @@
 # RETUR AV UTFYLT SKJEMA
 
-*Sist oppdatert 27.08.2019*
+*Sist oppdatert 27.05.2021*
 
 Når pasienten har fylt ut et skjema sendes skjemaet tilbake til Bestillersystemet.
 
