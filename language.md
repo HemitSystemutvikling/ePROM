@@ -1,8 +1,10 @@
 Støtte for skjema på 2 språk
 
 Admin-rolle setter opp et Samleskjema for dette i Skjemakatalogen
+
 Register-rolle dubliserer ønsket skjema og oversetter til engelsk
 - Alle variabler i skjemaet MÅ væer like
+
 Følgebrev settes opp av admin. Innholdet oversettes av register
 
 
