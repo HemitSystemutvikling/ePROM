@@ -3,17 +3,18 @@
 Admin-rolle setter opp et Samleskjema for dette i Skjemakatalogen
 
 Register-rolle dubliserer ønsket skjema og oversetter til engelsk
-- Alle variabler i skjemaet MÅ væer like
+- Alle variabler i skjemaet MÅ være like
 
 Følgebrev settes opp av admin. Innholdet oversettes av register
 
 
 Følgende er ikke flerspråklig:
-- Toppmeny
+- Toppmeny 
 - Signering
 - Kontaktinformasjon
-- "Du er logget inn som ..."
-- "du fyller ut skjema på vegen av ..."
+- Innloggingsinformasjon: "Du er logget inn som ..."
+- På vegne av: "Du fyller ut skjema på vegne av ..."
 - Valideringstekster bortsett fra:
-  - "Skriv inn et tall mellom 0 og 100"
-
+  - Validering av obligatoriske felter
+  - Validering av tall, f.eks: "Skriv inn et tall mellom 0 og 100"
+- Innlogging med engangskode, startside 
