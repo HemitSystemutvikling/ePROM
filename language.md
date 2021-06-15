@@ -1,4 +1,4 @@
-Støtte for skjema på 2 språk
+## Støtte for skjema på 2 språk
 
 Admin-rolle setter opp et Samleskjema for dette i Skjemakatalogen
 
@@ -9,6 +9,7 @@ Følgebrev settes opp av admin. Innholdet oversettes av register
 
 
 Følgende er ikke flerspråklig:
+- Toppmeny
 - Signering
 - Kontaktinformasjon
 - "Du er logget inn som ..."
