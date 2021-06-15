@@ -18,3 +18,5 @@ Følgende er ikke flerspråklig:
   - Validering av obligatoriske felter
   - Validering av tall, f.eks: "Skriv inn et tall mellom 0 og 100"
 - Innlogging med engangskode, startside 
+- Skjemainformasjon: skjemaoppgave i helsenorge/melding i digipost
+- Varsler på sms eller epost
