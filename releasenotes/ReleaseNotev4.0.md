@@ -2,7 +2,7 @@
 *Dato: 24.06.2021*
 
 ### ePROM
-* Spøtte for norsk og engelsk
+* Støtte for norsk og engelsk
 
 ### ePROM Admin
 * Admin-rollen kan sette opp støtte for skjema på 2-språk
