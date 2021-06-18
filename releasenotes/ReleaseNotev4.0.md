@@ -1,5 +1,5 @@
 # Nytt i ePROM v4.0
-*Dato: 24.06.2021*
+*Dato: 22.06.2021*
 
 ### ePROM
 * Støtte for norsk og engelsk
