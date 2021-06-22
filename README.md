@@ -1,6 +1,6 @@
 # ePROM
 
-[Release Note siste versjon](releasenotes/ReleaseNotev3.1)
+[Release Note siste versjon](releasenotes/ReleaseNotev4.0)
 
 [Kostnader ved bruk av ePROM](kostnader)
 
