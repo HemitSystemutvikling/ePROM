@@ -1,6 +1,3 @@
-layout: post
-date: YYYY-MM-DD hh:mm:ss -0000
-
 # BESTILLING AV SKJEMA V2
 
 *Sist oppdatert 25.06.2021*
