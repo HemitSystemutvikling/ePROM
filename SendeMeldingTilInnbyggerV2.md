@@ -1,6 +1,6 @@
 # SENDE MELDING TIL INNBYGGER V2
 
-*Sist oppdatert 12.12.2019*
+*Sist oppdatert 25.06.2021*
 
 ## Innholdsfortegnelse
 
@@ -27,7 +27,7 @@ I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som de
 ## Sende melding klient-side
 
 **URL for Web API kall**
-[https://proms2.hemit.org/PromsWebApi/api/messagetocitizen](https://proms2.hemit.org/PromsWebApi/api/messagetocitizen)
+[https://proms2.hemit.org/PromsWebApi/api/v2/messagetocitizen]
 
 **Parametere – Inn**
 
@@ -54,7 +54,7 @@ POST
 
 Tilgjenglig som NuGet pakke
 
-NuGet repository: [https://hemit.myget.org/F/hemitpublic/api/v3/index.json](https://hemit.myget.org/F/hemitpublic/api/v3/index.json)
+NuGet repository: [https://hemit.myget.org/F/hemitpublic/api/v3/index.json]
 
 Navn: Hemit.Proms.Integration
 
@@ -64,7 +64,7 @@ Eksempelkode (C#)
 [HttpPost]
 public JsonResult SendMessageToCitizenV2(string nationalId, DocumentCollection documentCollection)
 {
-// <add key="PromsApiBaseUrl" value="http://mrsdev.helsemn.no/PromsWebApi/" />
+// <add key="PromsApiBaseUrl" value="http://proms2.hemit.org/PromsWebApi/" />
 var promsApiBaseUrl = ConfigurationManager. AppSettings["PromsApiBaseUrl"]; 
 var apikey = ConfigurationManager. AppSettings["ApiKey"]; 
 var messageInfo = new MessageInfo {
@@ -152,9 +152,9 @@ API-kallet for å sende sensitiv informasjon er i v2 endret slik at man får res
 
 ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
 
-Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/MessageToCitizen
+Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/v2/MessageToCitizen
 
-F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/MessageToCitizen/](https://mrsdev.helsemn.no/PromsTestregisterServices/api/MessageToCitizen/)
+F.eks: [https://proms2.hemit.org/PromsTestregisterServices/api/v2/MessageToCitizen/]
 
 **Parametere - Inn**
 
