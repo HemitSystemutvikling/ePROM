@@ -27,7 +27,7 @@ I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som de
 ## Sende melding klient-side
 
 **URL for Web API kall**
-[https://proms2.hemit.org/PromsWebApi/api/v2/messagetocitizen]
+[https://proms2.hemit.org/promswebapi/api/v2/messagetocitizen]
 
 **Parametere – Inn**
 
@@ -64,7 +64,7 @@ Eksempelkode (C#)
 [HttpPost]
 public JsonResult SendMessageToCitizenV2(string nationalId, DocumentCollection documentCollection)
 {
-// <add key="PromsApiBaseUrl" value="http://proms2.hemit.org/PromsWebApi/" />
+// <add key="PromsApiBaseUrl" value="http://proms2.hemit.org/promswebapi/" />
 var promsApiBaseUrl = ConfigurationManager. AppSettings["PromsApiBaseUrl"]; 
 var apikey = ConfigurationManager. AppSettings["ApiKey"]; 
 var messageInfo = new MessageInfo {
@@ -123,7 +123,7 @@ messageToCitizenId = result.messageToCitizenId});
 * notificationChannel - The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` Tallverdien kan sendes.
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
-promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
 
 **Parametere – Ut**
 
@@ -152,9 +152,9 @@ API-kallet for å sende sensitiv informasjon er i v2 endret slik at man får res
 
 ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
 
-Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/v2/MessageToCitizen
+Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/MessageToCitizen
 
-F.eks: [https://proms2.hemit.org/PromsTestregisterServices/api/v2/MessageToCitizen/]
+F.eks: [https://proms2.hemit.org/PromsTestregisterServices/api/MessageToCitizen/]
 
 **Parametere - Inn**
 
