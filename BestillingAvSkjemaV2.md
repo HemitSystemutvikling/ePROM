@@ -1,3 +1,5 @@
+[Home](site.baseurl)
+
 # BESTILLING AV SKJEMA V2
 
 *Sist oppdatert 25.06.2021*
