@@ -1,6 +1,6 @@
 # BESTILLING AV SKJEMA V2
 
-*Sist oppdatert 07.11.2020*
+*Sist oppdatert 25.06.2021*
 
 ## Innholdsfortegnelse
 
@@ -227,7 +227,7 @@ ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersy
 
 Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/PromsFormOrder
 
-F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/)
+F.eks: [https://mrsweb.hemit.org/PromsTestregisterServices/api/PromsFormOrder/]
 
 **Parametere - Inn**
 
