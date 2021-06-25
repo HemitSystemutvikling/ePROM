@@ -1,3 +1,4 @@
+layout: post
 date: YYYY-MM-DD hh:mm:ss -0000
 
 # BESTILLING AV SKJEMA V2
