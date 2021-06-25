@@ -1,4 +1,4 @@
-[Home](site.baseurl)
+[Home](/)
 
 # BESTILLING AV SKJEMA V2
 
