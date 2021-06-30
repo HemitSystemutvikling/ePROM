@@ -79,6 +79,14 @@ Default **DistributionRule** er *Basic* og betyr at ePROM først sjekker om pasi
 4 = PhysicalMailReturned
 ```
 
+### FormOrderStatusErrorCode
+
+``` 
+0 = None
+1 = PatientUnreachable
+2 = SikkerDigitalPostError
+```
+
 ### SentStatus
 
 ``` 
