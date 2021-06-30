@@ -2,7 +2,7 @@
 
 # BESTILLING AV SKJEMA V2
 
-*Sist oppdatert 25.06.2021*
+*Sist oppdatert 30.06.2021*
 
 ## Innholdsfortegnelse
 
