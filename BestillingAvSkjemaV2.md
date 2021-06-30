@@ -239,6 +239,9 @@ F.eks: [https://mrsweb.hemit.org/PromsTestregisterServices/api/PromsFormOrder/]
 * formOrderStatus – Status of the formOrder
   + Ordered – The formOrder was successful
   + Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
+* formOrderStatusErrorCode – ErrorCode of the formOrder
+  + None – No error code
+  + PatientUnreachable - Unable to notify the pasient bye the selected notification channel.
 
 **Parametere - Ut**
 
@@ -257,7 +260,15 @@ Eksempel request fra Proms (JSON)
     "apiKey" : "",
     "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
     "notificationChannel" : "Helsenorge",
-    "formOrderStatus" : "Ordered"
+    "formOrderStatus" : "Ordered",
+    "formOrderStatusErrorCode" : "None"
+}
+{
+    "apiKey" : "",
+    "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
+    "notificationChannel" : "None",
+    "formOrderStatus" : "Error",
+    "formOrderStatusErrorCode" : "PatientUnreachable"
 }
 ```
 
