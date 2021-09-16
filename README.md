@@ -30,6 +30,8 @@
 
 [Pasientskjema via epost og sms](PasientskjemaViaEpostSms)
 
+[Pasientskjema og flerspråklighet](PasientskjemaFlerspraklighet)
+
 ### Integrasjonsguide
 [Integrasjonsguide](Integrasjonsguide)  
 [Integrasjonsguide for skjemautfyller](IntegrasjonsguideSkjemautfyllerApi)
