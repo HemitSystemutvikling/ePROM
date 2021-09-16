@@ -35,7 +35,7 @@ Man må krysse av for både den norsk og den engelske versjonen og sette like ve
 
 Når bruker mottar et slik skjema får man valget mellom NORSK og ENGELSK.
 
-![language3](img/language3.png)
+![language4](img/language4.png)
 
 Når det valget er gjort vises skjemaene på det valge språket.
 
