@@ -8,7 +8,7 @@ Pr nå er det støtte for norsk og engelsk
 
 ## Oppretting av skjema
 
-Først oppretter man et skjema på norsk. Deretter lager man en kopi av dette skjema, og oversetter all tekst til engelsk. Eventuelt omvendt.
+Først oppretter man et skjema på norsk. Deretter lager man en kopi av dette skjema, vha "Lag-kopi"-funksjonen, og oversetter all tekst til engelsk. Eventuelt omvendt.
 Det er viktig av alle variablene i skjemaene er like i de to versjonene.
 
 Navnet på skjemaene kan med fordel inneholder hvilket språk skjemet er på. F.eks. 
