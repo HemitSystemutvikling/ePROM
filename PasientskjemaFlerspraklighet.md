@@ -21,12 +21,12 @@ Visningsnavnet oversettes på skjemaet språk
 
 Når dette er på plass gir man beskjed til eprom@hemit.no slik at Admin i ePROM kan sette spåkkode på skjemaene, no for norsk og en for engelsk.
 Skjemene vil få vises med et flaggikon i Skjemakatalogen. 
-[Skjembilde]
+[language2.PNG]
 I tellegg oppretter Admin et Samleskjema med aktuelle språkkoder, no og en.
 
 Deretter kan man i dette Samleskjemaet legge inn ønskede skjema. 
 Man må krysse av for både den norsk og den engelske versjonen og sette like verdier på rekkeføelge og ev om skjemaet er obligatorisk.
-[Skjembilde]
+[Skjembilde2]
 
 ## Utfylling av pasientskjemaet
 
