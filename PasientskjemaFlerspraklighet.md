@@ -1,6 +1,6 @@
 # FLERSPRÅKLIGHET I PASIENTSKJEMA
 
-*Sist oppdatert 16.09.2021*
+*Sist oppdatert 21.09.2021*
 
 ## Hvilke språk støttes
 - norsk
