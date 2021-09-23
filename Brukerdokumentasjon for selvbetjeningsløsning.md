@@ -1,6 +1,6 @@
 # Brukerdokumentasjon for selvbetjeningsløsning
 
-*Sist oppdatert 21.08.2018*
+*Sist oppdatert 23.09.2021*
 
 [Skjemakatalog](#skjemakatalog)
 
@@ -18,15 +18,17 @@
 ## Hovedmeny
 Dashboard for ePROM. Trykk på PROMS Administrasjon eller Hovedmeny øverst til venstre for å komme hit fra hvilken som helst side
  
-![admin1](img/admin1.png)
+![ePROM_admin_dashboard](img/ePROM_admin_dashboard.PNG)
 
 
 ## Skjemakatalog
 Oversikt over tilgjengelige skjema og mulighet for å administrere eksisterende og opprette nye skjema.
 
-![admin2](img/admin2.png)
+![ePROM_admin_skjemakatalog](img/ePROM_admin_skjemakatalog.png)
 
-Skjema som er tilgjengelige for alle bestillersystemer ligger under *Felles*, Skjema som kun er tilgjengelig for eget bestillersystem ligger under *Mine*. Mulig å søke opp Skjema ved å skrive inn hele eller deler av navnet.
+Skjema som er tilgjengelige for alle bestillersystemer ligger under *Felles*, skjema som kun er tilgjengelig for eget bestillersystem ligger under *Mine*. Det er mulig å søke opp skjema ved å skrive inn hele eller deler av navnet.
+
+Under søkefeltet er det også mulig å filtrere listen basert på skjemastatus. Trykk på knappene for å skjule og vise skjema med den aktuelle statusen.
 
 Id brukes av bestillersystem ved skjemabestilling for å angi hvilket skjema som skal bestilles.
 
@@ -45,33 +47,34 @@ Forklaring aksjoner
 
 ## Informasjon til pasienten
 Oversikt over tilgjengelige *Informasjon til pasienten* og mulighet for å administrere eksisterende og opprette nye *Informasjon til pasienten*.
-*Informasjon til pasienten* er tekst som vises i ønskede skjema (se *Informasjon til pasienten* kobling)
+*Informasjon til pasienten* er et følgebrev som pasienten kan få sammen med skjemaet, med utfyllende informasjon om skjemaet, hvem som er avsender, hva som er hensikten og målet med henvendelsen, instrukser om hvordan skjemaet skal fylles ut osv.
 
-![admin3](img/admin3.png)
+![ePROM_admin_informasjonTilPasienten](img/ePROM_admin_informasjonTilPasienten.png)
 
-*Informasjon til pasienten* som er tilgjengelige for alle bestillersystemer ligger under Felles, *Informasjon til pasienten* som kun er tilgjengelig for eget bestillersystem ligger under Mine. Mulig å søke opp *Informasjon til pasienten* ved å skrive inn hele eller deler av navnet. *Informasjon til pasienten* er primært tenkt brukt til tekst av type disclaimer/ansvarsfraskrivelse og kan gjerne være standardisert tekst som kan gjenbrukes på flere skjema
+*Informasjon til pasienten* som er tilgjengelige for alle bestillersystemer ligger under Felles, *Informasjon til pasienten* som kun er tilgjengelig for eget bestillersystem ligger under Mine. Mulig å søke opp *Informasjon til pasienten* ved å skrive inn hele eller deler av navnet. 
 
 
 
 ## Skjemainformasjon
-Oversikt over hvilken *Informasjon til pasienten* de ulike Skjema er koblet mot.
+Skjemainformasjon er informasjon om hvilke skjema som er knyttet til hvilke følgebrev.
+Her defineres også informasjon om selve skjemabestillingen, det vil si informasjonen pasienten skal få i skjemaoppgaven eller brevet til helsenorge, digipost eller eBoks. 
 
-![admin4](img/admin4.png)
-
+![ePROM_admin_skjemainformasjon](img/ePROM_admin_skjemainformasjon.png)
 
 
 ### Skjemainformasjon - Opprett ny kobling
 
-![admin5](img/admin5.png)
+![ePROM_admin_skjemainformasjon_edit](img/ePROM_admin_skjemainformasjon_edit.png)
 
-Velg Skjema og *Informasjon til pasienten* som skal kobles sammen (dvs. hvilken *Informasjon til pasienten* som skal vises i hvilket Skjema)
-
+- Velg Skjema som denne skjemainformasjonen skal gjelde for
+- Velg *Informasjon til pasienten* (følgebrev) som skal kobles sammen med dette skjemaet
+- Fyll ut informasjon om skjemabestilling. Forhåndsvisningen til høyre viser hvordan skjemaoppgaven/brevet vil se ut i hhv helsenorge og digipost
 
 
 ## Bestillersystemer
 Info om eget bestillersystem
 
-![admin6](img/admin6.png)
+![ePROM_admin_bestillersystemer](img/ePROM_admin_bestillersystemer.png)
 
 *API nøkkel* brukes av bestillersystem ved skjemabestilling for å identifisere seg selv
 API base URL angir url til mottakssystemet for bestillersystemet
@@ -80,23 +83,27 @@ API base URL angir url til mottakssystemet for bestillersystemet
 
 ### Bestillersystemer - Endre
 
-![admin7](img/admin7.png)
+![ePROM_admin_bestillersystem_edit](img/ePROM_admin_bestillersystem_edit.png)
+
+*Navn - ikke sensitiv*
 
 *Telefon* er telefonnummeret til kontaktperson for bestillersystemet. Sendes med til mottaker av bestillingen (pasienten)
 
-*E-post* er e-post adressen til kontaktperson for bestillersystemet. Sendes med til mottaker av bestillingen (pasienten)
+*E-post* er e-post adressen til kontaktperson for bestillersystemet. Dersom denne skal sendes med i kontaktinformasjon til pasienten må det aktiveres av administrator. E-post vil aldri vist på helsenorge, kun andre kanaler.
 
 *Trykk* på *Generer* for å generere en ny *API nøkkel*. Denne må i tilfelle også samtidig endres i bestillersystemet. Trykk på *Slett* for å fjerne API nøkkel og gjøre det umulig for bestillersystemet å sende inn flere skjemabestillinger. Generes ny API nøkkel kan bestillersystemet sende inn skjemabestillinger ingjen.
 
 
 
 ## Skjemastatistikk
-Viser oversikt over antall skjemabestillinger og antall utfylte skjema per skjematype. Mulig å søke på statistikk for periode basert på dato
-![admin8](img/admin8.png)
+Viser oversikt over antall skjemabestillinger og antall utfylte skjema per skjematype. 
+ - Mulig å søke på statistikk for periode basert på dato
+ - Mulig å laste ned resultat av søk til excel
+![ePROM_admin_skjemastatistikk](img/ePROM_admin_skjemastatistikk.png)
 
 
 
 ## Brukeradministrasjon
 Oversikt over brukere. Mulig å administrere bestillersystemets egne brukere
 
-![admin9](img/admin9.png)
+![ePROM_admin_brukeradministrasjon](img/ePROM_admin_brukeradministrasjon.png)
