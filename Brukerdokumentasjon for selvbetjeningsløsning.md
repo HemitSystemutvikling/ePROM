@@ -32,7 +32,12 @@ Under søkefeltet er det også mulig å filtrere listen basert på skjemastatus.
 
 Id brukes av bestillersystem ved skjemabestilling for å angi hvilket skjema som skal bestilles.
 
-Status kan være enten Kladd, Publisert eller Trukket tilbake. Skjema kan bare redigeres så lenge de er i Kladd status. Når de har blitt Publisert kan de ikke lenger redigeres, men kan trekkes tilbake. Et skjema som er trukket tilbake kan publiseres på nytt, men kan ikke redigeres. Dette for å hindre at et skjema som er eller har vært publisert kan endres. Skal et skjema endres etter at det er publisert må det opprettes en ny versjon av det.
+Status kan ha følgende status:
+ - Kladd
+ - Publisert
+ - Trukket tilbake. 
+
+Skjema kan bare redigeres så lenge de er i Kladd status. Når de har blitt Publisert kan de ikke lenger redigeres, men kan trekkes tilbake. Det er mulig å svare på et skjema tom er trukket tilbake, men det er ikke mulig å gjøre nye bestillinger av skjemaet. Et skjema som er trukket tilbake kan publiseres på nytt, men kan ikke redigeres. Dette for å hindre at et skjema som er eller har vært publisert kan endres. Skal et skjema endres etter at det er publisert må det opprettes en ny versjon av det.
 
 Skjemaene har følgende mulige aksjoner i de ulike statusene
 *	Kladd – Publiser, Rediger, Slett, Ny versjon, Forhåndsvis, Last ned
@@ -40,14 +45,12 @@ Skjemaene har følgende mulige aksjoner i de ulike statusene
 *	Trukket tilbake – Publiser, Ny versjon, Forhåndsvis, Last ned
 
 Forklaring aksjoner
-*	Ny versjon – Kopierer et eksisterende skjema for å lage en ny versjon, og gjøre endringer på det
+*	Ny versjon – Kopierer et eksisterende skjema for å lage en ny versjon av skjemaet, og gjøre endringer på det. Dette skjemaet får en ny Id.
 *	Last ned – Laster ned en zip-fil med filer for bruk i bestillersystemet. Inneholder skjemadefinisjon og ressursfiler (xsd og resx filer)
-
-
 
 ## Informasjon til pasienten
 Oversikt over tilgjengelige *Informasjon til pasienten* og mulighet for å administrere eksisterende og opprette nye *Informasjon til pasienten*.
-*Informasjon til pasienten* er et følgebrev som pasienten kan få sammen med skjemaet, med utfyllende informasjon om skjemaet, hvem som er avsender, hva som er hensikten og målet med henvendelsen, instrukser om hvordan skjemaet skal fylles ut osv.
+*Informasjon til pasienten* er følgebrevet som pasienten får sammen med skjemaet. Det kan inneholde utfyllende informasjon om skjemaet, hvem som er avsender, hva som er hensikten og målet med henvendelsen, instrukser om hvordan skjemaet skal fylles ut osv. Dette vises øverst i et enkeltskjema, eller på forsiden av et samleskjema. Et følgebrev kan brukes av mange ulike skjema.
 
 ![ePROM_admin_informasjonTilPasienten](img/ePROM_admin_informasjonTilPasienten.png)
 
@@ -56,7 +59,7 @@ Oversikt over tilgjengelige *Informasjon til pasienten* og mulighet for å admin
 
 
 ## Skjemainformasjon
-Skjemainformasjon er informasjon om hvilke skjema som er knyttet til hvilke følgebrev.
+Skjemainformasjon inneholder blant annet informasjon om hvilke skjema som er knyttet til hvilke følgebrev.
 Her defineres også informasjon om selve skjemabestillingen, det vil si informasjonen pasienten skal få i skjemaoppgaven eller brevet til helsenorge, digipost eller eBoks. 
 
 ![ePROM_admin_skjemainformasjon](img/ePROM_admin_skjemainformasjon.png)
