@@ -6,8 +6,6 @@
 
 ### ePROM Admin
 * Forhåndsvisning av Skjemainformasjon er tilpasset endringer hos helsenorge.no
-* 
 
 ### Teknisk
 * Fobedret feilhåndtering rundt kommunikasjon med helsenorge.no
-* 
