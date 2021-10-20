@@ -3,9 +3,10 @@
 
 ### ePROM
 * Forbedret design av pasientskjema, spesielt for mobile enheter
+* Brev som sendes på papir får automatisk blank side først med plass til adressefelt
 
 ### ePROM Admin
 * Forhåndsvisning av Skjemainformasjon er tilpasset endringer hos helsenorge.no
 
 ### Teknisk
-* Fobedret feilhåndtering rundt kommunikasjon med helsenorge.no
+* Forbedret feilhåndtering rundt kommunikasjon med helsenorge.no
