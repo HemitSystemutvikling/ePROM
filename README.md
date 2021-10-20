@@ -1,6 +1,6 @@
 # ePROM
 
-[Release Note v5.0](releasenotes/ReleaseNotev4.0)
+[Release Note v5.0](releasenotes/ReleaseNotev5.0)
 
 ### Start-guide
 [Startguide](Startguide)
