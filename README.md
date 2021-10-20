@@ -2,8 +2,6 @@
 
 [Release Note siste versjon](releasenotes/ReleaseNotev4.0)
 
-[Kostnader ved bruk av ePROM](kostnader)
-
 ### Start-guide
 [Startguide](Startguide)
 
@@ -43,3 +41,6 @@
 [Administrasjon av PROMS i MRS](MrsPromsAdmin)
 
 [Finne ID på en PROMS-bestilling i MRS](MrsPromsId)
+
+### Kostnader
+[Kostnader ved bruk av ePROM](kostnader)
