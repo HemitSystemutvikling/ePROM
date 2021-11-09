@@ -1,6 +1,6 @@
 # Integrasjonsguide
 
-*Sist oppdatert 30.06.2021*
+*Sist oppdatert 10.11.2021*
 
 ### Innholdsfortegnelse
 
@@ -38,6 +38,9 @@ Her finner man alle skjema som er bestilt og man kan f.eks.teste innsending av s
 ## Testpersoner
 
 ePROM i testmiljøet integrerer med Helsenorge og Digipost sine testmiljøer. For å teste integrasjonen mellom ePROM, Helsenorge og Digipost har vi tilgang til fødselsnummer med BankID. Midlertidig tilgang til disse fås ved henvendelse til Hemit.
+
+## nuget-pakke
+Følgende nuget-pakke er tilgjengelig for integrasjon med ePROM: [Hemit.ePROM.Integration v5.1.0](https://dev.azure.com/hemit/Hemit%20Public%20Packages/_packaging?_a=package&feed=Hemit_public_packages%40Local&package=Hemit.ePROM.Integration&protocolType=NuGet&version=5.1.0)
 
 ## Distribusjonsregler
 
