@@ -1,6 +1,6 @@
 # Brukerdokumentasjon for selvbetjeningsløsning
 
-*Sist oppdatert 23.09.2021*
+*Sist oppdatert 11.11.2021*
 
 [Skjemakatalog](#skjemakatalog)
 
