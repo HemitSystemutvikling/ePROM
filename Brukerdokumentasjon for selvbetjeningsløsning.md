@@ -37,16 +37,15 @@ Status kan ha følgende status:
  - Publisert
  - Trukket tilbake. 
 
-Skjema kan bare redigeres så lenge de er i Kladd-status. Når de har blitt Publisert kan de ikke lenger redigeres, men kan trekkes tilbake. Det er mulig å svare på et skjema som er trukket tilbake, men det er ikke mulig å gjøre nye bestillinger av skjemaet. Et skjema som er trukket tilbake kan publiseres på nytt, men kan ikke redigeres. Dette for å hindre at et skjema som er eller har vært publisert kan endres. *Skal et skjema endres etter at det er publisert må det opprettes en ny versjon av det.*
+Skjema kan bare redigeres eller slettes så lenge de er i Kladd-status. Når de har blitt Publisert kan de ikke lenger redigeres eller slettes, men kan trekkes tilbake. Det er mulig å svare på et skjema som er trukket tilbake, men det er ikke mulig å gjøre nye bestillinger av skjemaet. Et skjema som er trukket tilbake kan publiseres på nytt, men kan ikke redigeres. Dette for å hindre at et skjema som er eller har vært publisert kan endres. *Skal et skjema endres etter at det er publisert må det opprettes en ny versjon av det.*
 
-Følgende aksjoner er mulige  i de ulike statusene
-*	Kladd – Publiser, Rediger, Slett, Ny versjon, Forhåndsvis, Last ned
-*	Publisert – Trekk tilbake, Ny versjon, Forhåndsvis, Last ned
-*	Trukket tilbake – Publiser, Ny versjon, Forhåndsvis, Last ned
+Bilde
 
-Forklaring aksjoner
+
 *	Ny versjon – Kopierer et eksisterende skjema for å lage en ny versjon av skjemaet, og gjøre endringer på det. Dette skjemaet får en ny Id.
 *	Last ned – Laster ned en zip-fil med filer for bruk i bestillersystemet. Inneholder blant annet skjemadefinisjon og ressursfiler (.xsd og .resx filer) og PDF av papirskjema for skjema som er aktivert for papir
+
+I tillegg kan du for alle skjematyper se skjemainformasjon og følgebrev hvis skjemaet har dette knyttet til seg.
 
 ## Informasjon til pasienten
 Oversikt over tilgjengelige *Informasjon til pasienten* og mulighet for å administrere eksisterende og opprette nye *Informasjon til pasienten*.
