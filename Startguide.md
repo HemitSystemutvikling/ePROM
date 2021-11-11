@@ -25,7 +25,7 @@ Det er også mulig å legge egendefinert logo på bestillersystemet.
 - [Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
 
-### En (eller flere) fra registeret må være ansvarlig for administrasjon av ePROM og ta stilling til:
+### Registeret må ta stilling til:
 - regler for utsending og mottak av skjema
 - automatisk eller manuell bestilling av skjema
 - purringer og utløpsdato
@@ -34,6 +34,6 @@ Det er også mulig å legge egendefinert logo på bestillersystemet.
 - skal skjema være på engelsk i tillegg til norsk
 - skal det være mulig å bestille skjema til verge/foreldre/andre (på vegne av pasienten)
 
-De fleste punktene i listen over konfigurereres direkte i selve bestillersystemet, ikke i ePROM.
+De fleste punktene i listen over konfigurereres direkte i selve registeret, ikke i ePROM. Det er en fordel om registeret har en person som er ansvarlig for administrasjon av ePROM.
 
 
