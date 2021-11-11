@@ -1,23 +1,39 @@
 # Startguide
 
-*Sist oppdatert 09.04.2019*
+*Sist oppdatert 11.11.2021*
 
 ## Hvordan komme igang med ePROM
 
-Implementere integrasjon mot ePROM i hht Integrasjonsguiden
+### Implementere integrasjon mot ePROM i hht Integrasjonsguiden
 -	Utsending av skjemabestilling
 -	Mottak av skjemabestilling
 
-Vurder hvilke skjema som skal benyttes. Fellesskjema / opprette egne skjema
--	Informasjonstekst til pasienten som skal følge skjemabestillinger
+### Opprette bestillersystem
+
+Registeret må registreres som bestillersystem i ePROM. Dette gjøres av HEMIT, og følgende informasjon må oppgis:
+- Telefonnummeret til kontaktperson for bestillersystemet. Sendes med til mottaker av bestillingen (pasienten)
+- E-post adressen til kontaktperson for bestillersystemet. (Om ønskelig)
+- API base URL
+
+Det er også mulig å legge egendefinert logo på bestillersystemet. 
+
+### Bygge skjema i ePROM
+- Vurdere hvilke skjema som skal brukes
+-	Opprette egne skjema eller bruke standardskjema som dekker behovet
+-	Opprette samleskjema som består av flere enkeltskjema, f.eks. et egendefinert skjema sammen med EQ5D
+-	Opprette skjemainformasjon og følgebrev til skjemaet
 - [Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
-Registeret må registreres som bestillersystem i ePROM. Dette må gjøres av Hemit.
--	Kontaktinformasjon
--	Logo
 
-En eller flere fra registeret må være ansvarlig for administrasjon av ePROM
-Ta stilling til automatikk rundt utsending og mottak av skjema, inkludert purringer og utløpsdato
-Hvordan informere pasienter som ikke er digitalt aktiv på helsenorge.no eller har sikker digital postkasse om bestilt skjema?
--	Utsending av varsel på SMS/e-post?
--	Utsending / mottak av skjema på papir?
+### En (eller flere) fra registeret må være ansvarlig for administrasjon av ePROM og ta stilling til:
+- regler for utsending og mottak av skjema
+- automatisk eller manuell bestilling av skjema
+- purringer og utløpsdato
+- hvilke kanaler ønsker man å kontakte pasientene på
+- skal skjema signeres av pasienten ved levering
+- skal skjema være på engelsk i tillegg til norsk
+- skal det være mulig å bestille skjema til verge/foreldre/andre (på vegne av pasienten)
+
+De fleste punktene i listen over konfigurereres direkte i selve bestillersystemet, ikke i ePROM.
+
+
