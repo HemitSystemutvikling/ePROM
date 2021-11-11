@@ -39,6 +39,7 @@ Status kan ha følgende status:
 
 Skjema kan bare redigeres eller slettes så lenge de er i Kladd-status. Når de har blitt Publisert kan de ikke lenger redigeres eller slettes, men kan trekkes tilbake. Det er mulig å svare på et skjema som er trukket tilbake, men det er ikke mulig å gjøre nye bestillinger av skjemaet. Et skjema som er trukket tilbake kan publiseres på nytt, men kan ikke redigeres. Dette for å hindre at et skjema som er eller har vært publisert kan endres. *Skal et skjema endres etter at det er publisert må det opprettes en ny versjon av det.*
 
+
 ![ePROM_admin_skjemakatalog_detalj2](img/ePROM_admin_skjemakatalog_detalj2.png)
 
 
