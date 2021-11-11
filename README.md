@@ -26,10 +26,6 @@
 
 [Skjemabygger](Skjemabygger)
 
-[Administrasjon av Skjemainformasjon](AdminSkjemainformasjon)
-
-[Pasientskjema via epost og sms](PasientskjemaViaEpostSms)
-
 [Pasientskjema og flerspråklighet](PasientskjemaFlerspraklighet)
 
 ### Integrasjonsguide
