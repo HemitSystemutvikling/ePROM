@@ -1,6 +1,6 @@
 # Skjemabygger
 
-*Sist oppdatert 21.08.2019*
+*Sist oppdatert 11.11.2021*
 
 ### Innholdsfortegnelse
 
@@ -24,17 +24,25 @@ Spørsmålene setter man opp med de forskjellige felttypene:
 - Tekstområde - brukes som informasjonstekst 
 - Metadata - brukes for å kunne motta metadata fra Bestillersystemet ved bestilling
 
-Noen av feltene kan vises på forskjellige måter. F.eks. så kan *Valgfelt* vises som radioknapper eller nedtreksmeny. *Tallfelt* kan vises som et inputfelt eller slider. 
+Noen av feltene kan vises på forskjellige måter. 
+- *Valgfelt* vises som radioknapper eller nedtrekksmeny. 
+- *Tallfelt* kan vises som et inputfelt eller slider. 
+- *Datofelt* kan vises som kun dato eller dato og tidspunkt
+- Ved å plassere flere *Avkrysningsfelt* i samme gruppe, kan disse vises som et flervalgsfelt
 
-På hvert enkelt felt kan man også sette valideringsregler tilpasset felttypen.
-Det er også støtte for å legge inn logikk for skjuling og vising av felt.
+På hvert enkelt felt kan man også sette valideringsregler tilpasset felttypen, f.eks. at et tall i et tallfelt må være innenfor et gitt intervall eller at en dato må være nyere enn en gitt dato.
+Det er også støtte for å legge inn logikk for skjuling og vising av felt, f.eks. at et felt skal skjules og vises basert på hva brukeren har svart på andre felt.
 Det er et krav om at alle feltnavn må være unike.
-Skjemaet kan forhåndsvises underveis ette at det er lagret.
+Skjemaet kan forhåndsvises underveis etter at det er lagret.
+
+For skjema som er aktivert for papir kan man gjøre egne tilpasninger i skjemabygger for hvordan felter skal vises på papir slik at det blir intuitivt for den som fyller ut.
 
 [Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
 # METADATA
-Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel til andre komponenter og for å vise informasjon spesifikk for en skjemabestilling i skjemaet. Metadata kan brukes både i selve skjemaet og i "Informasjon til pasienten" knyttet til skjemaet. Hvis samme metadatanavn benyttes i skjemaet og i "Informasjon til pasienten" vil dette erstattes av samme verdi.
+Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel til andre komponenter og for å vise informasjon spesifikk for en skjemabestilling i skjemaet. Metadata kan brukes både inne i selve skjemaet og i "Informasjon til pasienten" (følgebrevet) knyttet til skjemaet. 
+
+Hvis samme metadatanavn benyttes i skjemaet og i "Informasjon til pasienten" vil dette erstattes av samme verdi.
 
 ## Informasjon til pasienten
 For å vise metadata i "Informasjon til pasienten" legger man inn denne teksten **(NB! Bruk store bokstaver)**:
@@ -44,7 +52,7 @@ For å vise metadata i "Informasjon til pasienten" legger man inn denne teksten 
 
 **Eksempel**
 
-Man ønsker en tekst basert på hvilket sykehus pasienten var innlagt på. Dette kan legges inn i "Informasjon til pasienten":
+Man ønsker en tekst i følgebrevet basert på hvilket sykehus pasienten var innlagt på. Dette kan legges inn i "Informasjon til pasienten":
 
 *I forbindelse med ditt opphold på [\_SYKEHUSNAVN\_] ønsker vi at du svarer på noen spørsmål.*
 
@@ -59,7 +67,7 @@ JSON.stringify({ sykehusnavn: "St. Olavs hospital" })
 
 
 # SPESIALTILPASNING
-Hvis de eksisterende komponentene i skjemabyggeren ikke tilbyr all funksjonalitet man ønsker kan skjemaet spesialtilpasses ved å legge inn CSS/HTML/javascript. Denne mulighet er kun tilgjengelig for en bruker med rolle Admin ettersom man potensielt kan legge til skadelig kode på denne måten.
+Hvis de eksisterende komponentene i skjemabyggeren ikke tilbyr all funksjonalitet man ønsker kan skjemaet spesialtilpasses ved å legge inn CSS/HTML/javascript. Denne mulighet er kun tilgjengelig for en bruker med rolle Admin, ettersom man potensielt kan legge til uhensiktsmessig/skadelig kode på denne måten.
 
 **Eksempel**
 Kode for å legge inn et bilde av en figur der man kan trykke på forskjellige deler av den. Koden legges inn i "Egendefinert HTML/javascript" på skjemasiden
