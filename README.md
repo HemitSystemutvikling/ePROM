@@ -1,6 +1,8 @@
 # ePROM
 
-[Release Note v5.1 - 10.11.2021](releasenotes/ReleaseNotev5.1)
+[Endringer i siste versjon av ePROM v5.1 - 10.11.2021](releasenotes/ReleaseNotev5.1)
+
+[Tidligere releaser](releasenotes/Releaselist)
 
 ### Start-guide
 [Startguide](Startguide)
