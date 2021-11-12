@@ -1,4 +1,4 @@
-# Utfylling av skjema
+# Utfylling av skjema og varsling til pasienten
 
 *Sist oppdatert 12.11.2021*
 
@@ -35,6 +35,22 @@ Varsling til pasienten skjer via e-post, sms eller varsling i app, avhengig av h
 Ved utfylling av skjemaet vil pasienten nå ikke få muligheten til å lagre skjemaet før det er fullført. Pasienten må fylle ut alle obligatoriske spørsmål og levere skjemaet.
 
 Når alle obligatoriske spørsmål er besvart leverer man skjema og man får kvitteringsmelding på at skjemaet er levert. Pasienten får tilsendt en kopi av det utfylte skjemaet til sin Digitale Postkasse.
+
+### Usikker kanal
+
+Hvis pasienten er registrert med kontaktinformasjon i Difi kontakt- og reservasjonsregister, men ikke er digitalt aktiv på helsenorge eller digipost, kan usikker kanal benyttes. Også har må pasienten logge inn med BankID nivå 4 for å fylle ut skjema. 
+
+Pasienten mottar en lenke som går direkte til ePROM skjemautfyller. Det er ikke mulig å mellomlagre skjema. Pasienten får ikke kopi av skjemaet.
+
+Varsling skjer ved at det brukes en standard melding som ikke avslører sensitiv informasjon om hverken pasienten eller hvilket bestillersystem/register henvendelsen kommer fra. ("Usikker" gjenspeiler med andre ord at man kontaker pasienten på en kanal som ikke nødvendigvis er sikret fra pasientens side. Konsekvensen er at pasienten ikke nødvendigvis forstår hvorfor h\*n får henvendelsen)
+
+NB: Usikker kanal bør brukes i minst mulig grad da det ikke nødvendigvis er sånn at en pasient har BankID nivå 4 selv om vedkommende er oppført i Kontaktregisteret.
+
+
+### Papir
+
+Hvis pasienten ikke er digitalt aktiv kan papirskjema være en mulighet. Da mottar pasienten et papirskjema i sin postkasse sammen med en ferdigadressert returkonvolutt. 
+
 
 
 
