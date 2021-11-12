@@ -1,4 +1,4 @@
 
-## Overordnetskisse for ePROM papir
+## Overordnet skisse for ePROM papir
 
 ![eprom](img/eprom_papir.png)
