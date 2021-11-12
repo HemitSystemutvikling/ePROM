@@ -1,4 +1,4 @@
-## Overordnetskisse for ePROM pasientinitiert
+## Overordnet skisse for ePROM pasientinitiert
 
 ![eprom](img/Pasientinitiert%20ePROM%20skisse.png)
 
