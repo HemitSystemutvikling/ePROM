@@ -40,7 +40,7 @@ Når alle obligatoriske spørsmål er besvart leverer man skjema og man får kvi
 
 Hvis pasienten er registrert med kontaktinformasjon i Difi kontakt- og reservasjonsregister, men ikke er digitalt aktiv på helsenorge eller digipost, kan usikker kanal benyttes. Også har må pasienten logge inn med BankID nivå 4 for å fylle ut skjema. 
 
-Pasienten mottar en lenke som går direkte til ePROM skjemautfyller. Det er ikke mulig å mellomlagre skjema. Pasienten får ikke kopi av skjemaet.
+Pasienten mottar en lenke som går direkte til ePROM skjemautfyller. Ved utfylling av skjemaet vil pasienten nå ikke få muligheten til å lagre skjemaet før det er fullført. Pasienten må fylle ut alle obligatoriske spørsmål og levere skjemaet. Pasienten får ikke kopi av skjemaet.
 
 Varsling skjer ved at det brukes en standard melding som ikke avslører sensitiv informasjon om hverken pasienten eller hvilket bestillersystem/register henvendelsen kommer fra. ("Usikker" gjenspeiler med andre ord at man kontaker pasienten på en kanal som ikke nødvendigvis er sikret fra pasientens side. Konsekvensen er at pasienten ikke nødvendigvis forstår hvorfor h\*n får henvendelsen)
 
