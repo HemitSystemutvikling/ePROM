@@ -1,4 +1,4 @@
 
-## Overordnetskisse for ePROM
+## Overordnet skisse for ePROM
 
 ![eprom](img/eprom.png)
