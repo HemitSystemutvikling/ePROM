@@ -2,6 +2,8 @@
 
 *Sist oppdatert 11.11.2021*
 
+[Hovedmeny](#hovedmeny)
+
 [Skjemakatalog](#skjemakatalog)
 
 [Informasjon til pasienten](#informasjon-til-pasienten)
@@ -123,3 +125,6 @@ Viser oversikt over antall skjemabestillinger og antall utfylte skjema per skjem
 Oversikt over brukere. Mulig å administrere bestillersystemets egne brukere
 
 ![ePROM_admin_brukeradministrasjon](img/ePROM_admin_brukeradministrasjon.png)
+
+
+[< Tilbake til startsiden](readme)
