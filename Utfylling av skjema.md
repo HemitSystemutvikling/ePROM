@@ -11,7 +11,7 @@
 
 
 ### Pålogging
-Utfylling av PROMsskjema krever pålogging med BankID – Nivå 4. Dette gjelder alle varslingskanaler med unntak av engangskode. Her brukes fødselsdato og engangskode som gjelder for én skjemautfylling. 
+Utfylling av PROMsskjema krever pålogging med BankID – Nivå 4. Dette gjelder alle varslingskanaler med unntak av engangskode. Her brukes fødselsdato og engangskode som gjelder for én skjemautfylling, og pasienten varsles ikke. 
 
 Hvis man mottar skjema på helsenorge eller digipost og logger seg inn der for å se på skjemaoppgaven der vil man bli redirigert til skjemaet uten å måtte logge inn på nytt. 
 
