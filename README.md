@@ -4,18 +4,18 @@
 
 [Tidligere releaser](releasenotes/Releaselist)
 
-### Start-guide
+### Startguide
 [Startguide](Startguide)
 
 ### Brukerstøtte
 [Brukerstøtte](UserSupport)
 
 ### Skisser
-[Overordnetskisse](Overordnetskisse)
+[Overordnet skisse](Overordnetskisse)
 
-[Overordnetskisse papir](Overordnetskisse%20papir)
+[Overordnet skisse papir](Overordnetskisse%20papir)
 
-[Overordnetskisse pasientinitiert](Overordnetskisse%20pasientinitiert)
+[Overordnet skisse pasientinitiert](Overordnetskisse%20pasientinitiert)
 
 [Designskisse](Designskisse)
 
@@ -29,11 +29,12 @@
 [Pasientskjema og flerspråklighet](PasientskjemaFlerspraklighet)
 
 ### Integrasjonsguide
-[Integrasjonsguide](Integrasjonsguide)  
+[Integrasjonsguide](Integrasjonsguide)
+
 [Integrasjonsguide for skjemautfyller](IntegrasjonsguideSkjemautfyllerApi)
 
 ### Utfylling av skjema
-[Utfylling av skjema](Utfylling%20av%20skjema)
+[Utfylling av skjema og varsling til pasienten](Utfylling%20av%20skjema)
 
 ### Administrasjon av PROMS i MRS
 [Administrasjon av PROMS i MRS](MrsPromsAdmin)
