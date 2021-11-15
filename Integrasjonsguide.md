@@ -88,6 +88,7 @@ Hvis **DistributionRule** er satt til *NoDistribution* sendes det ikke ut varsli
 2 = Ordered
 3 = Error
 4 = PhysicalMailReturned
+5 = DigipostDelivered
 ```
 
 ### FormOrderStatusErrorCode
