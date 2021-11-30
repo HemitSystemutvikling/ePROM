@@ -12,3 +12,5 @@
 
 ### Teknisk
 * Utsending av brev / melding til innbygger støtter PDF-filer på opp til 30MB
+* Reservasjonsløsningen er utvidet med Samtykke, for framtidig bruk fra MRS
+* 
