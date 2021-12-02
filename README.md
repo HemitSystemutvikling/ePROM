@@ -2,7 +2,7 @@
 
 [Endringer i siste versjon av ePROM v5.1 - 10.11.2021](releasenotes/ReleaseNotev5.1)
 
-[Foreløpige endringer i neste versjon ePROM v6.0 - planlagt 09.12.2021](releasenotes/ReleaseNotev6.0) __NB! Under arbeid__
+[Foreløpige endringer i ePROM v6.0 - planlagt 09.12.2021](releasenotes/ReleaseNotev6.0) __NB! Under arbeid__
 
 [Tidligere releaser](releasenotes/Releaselist)
 
