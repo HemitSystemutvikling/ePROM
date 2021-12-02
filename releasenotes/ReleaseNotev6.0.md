@@ -3,14 +3,15 @@
 
 ### ePROM pasientskjema
 * Slider
-  * Nullverdi vises ikke på silderen
-  * Inputfelt for å legge inn tallverdi
+  * Nullverdi vises ikke på slideren slik at det blir lettere for pasienten å se når feltet er utfylt
+  * Inputfelt for å legge inn tallverdi med tastatur i tilfeller der pasienten ikke kan/vil trykke på slideren
   * Svar på slider registreres i utfyllingsloggen
 * Pålogging med engangskode
-  * Fødselsdato skrives inn med 6 siffer
+  * Fødselsdato skrives inn med 6 siffer direkte, uten bruk av nedtrekksliste
   * Støtter pålogging med D-nummer
 
 ### Teknisk
 * Utsending av brev / melding til innbygger støtter PDF-filer på opp til 30MB
-* Reservasjonsløsningen er utvidet med Samtykke, for framtidig bruk fra MRS
-* 
+* Personvernløsningen er utvidet med Samtykke, for framtidig bruk fra MRS
+  * Fungerer tilsvarende som reservasjon mot helsenorge
+  * Støtter flere samtykker
