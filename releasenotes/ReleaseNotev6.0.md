@@ -9,6 +9,8 @@
 * Pålogging med engangskode
   * Fødselsdato skrives inn med 6 siffer direkte, uten bruk av nedtrekksliste
   * Støtter pålogging med D-nummer
+* Datofelt
+  * Det blir mulig å opprette datofelt for utfylling av måned/år og kun år  
 
 ### Teknisk
 * Utsending av brev / melding til innbygger støtter PDF-filer på opp til 30MB
