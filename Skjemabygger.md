@@ -27,8 +27,14 @@ Spørsmålene setter man opp med de forskjellige felttypene:
 Noen av feltene kan vises på forskjellige måter. 
 - *Valgfelt* vises som radioknapper eller nedtrekksmeny. 
 - *Tallfelt* kan vises som et inputfelt eller slider. 
-- *Datofelt* kan vises som kun dato eller dato og tidspunkt
+- *Datofelt* kan vises som 
+  - Dato
+  - Dato og tidspunkt
+  - Måned og år
+  - År 
 - Ved å plassere flere *Avkrysningsfelt* i samme gruppe, kan disse vises som et flervalgsfelt
+
+Hvordan felter skal vises styres under Innstillinger på hvert enkelt felt, med unntak av flervalgsfelt som defineres på gruppenivå.
 
 På hvert enkelt felt kan man også sette valideringsregler tilpasset felttypen, f.eks. at et tall i et tallfelt må være innenfor et gitt intervall eller at en dato må være nyere enn en gitt dato.
 Det er også støtte for å legge inn logikk for skjuling og vising av felt, f.eks. at et felt skal skjules og vises basert på hva brukeren har svart på andre felt.
@@ -42,10 +48,12 @@ For skjema som er aktivert for papir kan man gjøre egne tilpasninger i skjemaby
 # METADATA
 Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel til andre komponenter og for å vise informasjon spesifikk for en skjemabestilling i skjemaet. Metadata kan brukes både inne i selve skjemaet og i "Informasjon til pasienten" (følgebrevet) knyttet til skjemaet. 
 
+Opprett felt av typen metadata med samme navn som det som følger med skjemabestillingen. Metadatafelt kan være av typen string eller number. Feltet kan deretter brukes til å vise/skjule eller validere andre felter i skjemaet. 
+
 Hvis samme metadatanavn benyttes i skjemaet og i "Informasjon til pasienten" vil dette erstattes av samme verdi.
 
-## Informasjon til pasienten
-For å vise metadata i "Informasjon til pasienten" legger man inn denne teksten **(NB! Bruk store bokstaver)**:
+## Metadata i følgebrev/informasjon til pasienten
+For å vise metadata i følgebrevet ("Informasjon til pasienten") legger man inn denne teksten **(NB! Bruk store bokstaver)**:
 
 [\_METADATANAVN\_]
 
