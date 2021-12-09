@@ -13,15 +13,16 @@
 [Brukerstøtte](UserSupport)
 
 ### Skisser
-[Overordnet skisse](Overordnetskisse)
 
-[Overordnet skisse papir](Overordnetskisse%20papir)
+[Designskisse ePROM](Designskisse)
 
-[Overordnet skisse pasientinitiert](Overordnetskisse%20pasientinitiert)
+[Overordnet skisse for ePROM](Overordnetskisse)
 
-[Designskisse](Designskisse)
+[Overordnet skisse ePROM på papir](Overordnetskisse%20papir)
 
-[Flyt og sikkerhet ved bruk av "på vegne av"](PaVegneAvFlyt)
+[Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM](Overordnetskisse%20pasientinitiert)
+
+[Overordnet skisse og flytdiagram ePROM "på vegne av"-funksjonalitet](PaVegneAvFlyt)
 
 ### Selvbetjeningsløsning
 [Brukerdokumentasjon for selvbetjeningsløsning](Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning)
