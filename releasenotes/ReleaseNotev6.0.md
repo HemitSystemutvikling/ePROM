@@ -17,3 +17,5 @@
 * Personvernløsningen er utvidet med Samtykke, for framtidig bruk fra MRS
   * Fungerer tilsvarende som reservasjon mot helsenorge
   * Støtter flere samtykker
+
+[Tilbake](./)
