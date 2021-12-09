@@ -17,3 +17,5 @@
 [Release Note v2.7 - 14.05.2020](ReleaseNotev2.7)
 
 [Release Note v2.6 - 12.12.2019](ReleaseNotev2.6)
+
+[Tilbake](./)
