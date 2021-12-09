@@ -7,10 +7,20 @@
 [Tidligere releaser](releasenotes/Releaselist)
 
 ### Startguide
-[Startguide](Startguide)
+[Startguide - hvordan komme i gang med å bruke ePROM](Startguide)
+
+### Selvbetjeningsløsning
+[Brukerdokumentasjon for selvbetjeningsløsning](Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning)
+
+[Skjemabygger](Skjemabygger)
+
+[Pasientskjema og flerspråklighet](PasientskjemaFlerspraklighet)
+
+### Utfylling av skjema
+[Utfylling av skjema og varsling til pasienten](Utfylling%20av%20skjema)
 
 ### Brukerstøtte
-[Brukerstøtte](UserSupport)
+[Brukerstøtte - hvordan hjelpe pasienten når feil oppstår](UserSupport)
 
 ### Skisser
 
@@ -24,20 +34,11 @@
 
 [Overordnet skisse og flytdiagram ePROM "på vegne av"-funksjonalitet](PaVegneAvFlyt)
 
-### Selvbetjeningsløsning
-[Brukerdokumentasjon for selvbetjeningsløsning](Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning)
-
-[Skjemabygger](Skjemabygger)
-
-[Pasientskjema og flerspråklighet](PasientskjemaFlerspraklighet)
-
 ### Integrasjonsguide
 [Integrasjonsguide](Integrasjonsguide)
 
 [Integrasjonsguide for skjemautfyller](IntegrasjonsguideSkjemautfyllerApi)
 
-### Utfylling av skjema
-[Utfylling av skjema og varsling til pasienten](Utfylling%20av%20skjema)
 
 ### Administrasjon av PROMS i MRS
 [Administrasjon av PROMS i MRS](MrsPromsAdmin)
