@@ -2,3 +2,5 @@
 *Dato: Ikke fastsatt*
 
 Innhold i denne releasen er foreløpig ikke fastsatt. 
+
+[Tilbake](./)
