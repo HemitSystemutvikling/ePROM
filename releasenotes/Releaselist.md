@@ -18,4 +18,4 @@
 
 [Release Note v2.6 - 12.12.2019](ReleaseNotev2.6)
 
-[Tilbake](./)
+[Tilbake](../)
