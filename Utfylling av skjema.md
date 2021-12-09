@@ -52,5 +52,5 @@ NB: Usikker kanal bør brukes i minst mulig grad da det ikke nødvendigvis er s�
 Hvis pasienten ikke er digitalt aktiv kan papirskjema være en mulighet. Da mottar pasienten et papirskjema i sin postkasse sammen med en ferdigadressert returkonvolutt. 
 
 
-
+[Tilbake](./)
 
