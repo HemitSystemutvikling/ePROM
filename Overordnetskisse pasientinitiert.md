@@ -10,3 +10,6 @@ Når et pasientinitiert skjema blir publisert, genereres en generell lenke til e
 ## Flytdiagram for ePROM pasientinitiert
 
 ![eprom](img/Pasientinitiert%20ePROM%20flyt.png)
+
+
+[Tilbake](./)
