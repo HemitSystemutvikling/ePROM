@@ -5,3 +5,5 @@ Standard skjemaflyt baserer seg på at pasienten selv fyller ut skjema. I noen t
 
 
 ![Skisse](img/pa_vegne_av_flyt_sikkerhet.png)
+
+[Tilbake](./)
