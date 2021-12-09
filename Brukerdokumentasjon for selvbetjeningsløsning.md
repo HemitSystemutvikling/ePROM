@@ -6,7 +6,7 @@
 
 [Skjemakatalog](#skjemakatalog)
 
-[Informasjon til pasienten](#informasjon-til-pasienten)
+[Følgebrev - Informasjon til pasienten](#informasjon-til-pasienten)
 
 [Skjemainformasjon](#skjemainformasjon)
 
@@ -127,4 +127,4 @@ Oversikt over brukere. Mulig å administrere bestillersystemets egne brukere
 ![ePROM_admin_brukeradministrasjon](img/ePROM_admin_brukeradministrasjon.png)
 
 
-[< Tilbake til startsiden](index)
+[< Tilbake til startsiden](./)
