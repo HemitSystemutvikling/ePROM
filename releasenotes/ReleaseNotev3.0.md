@@ -16,3 +16,5 @@
 
 ### ePROM pasientinitierteskjema
 * Melding om utgåtte skjema inneholder informasjon om skjemaid, fødselsnummer og bestillingstidspunkt
+
+[Tilbake](./)
