@@ -17,4 +17,4 @@
 ### Teknisk
 * Forbedret feilhåndtering rundt kommunikasjon med helsenorge.no
 
-[Tilbake](./)
+[Tilbake](../)
