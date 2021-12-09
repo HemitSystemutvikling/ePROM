@@ -35,5 +35,3 @@ Det er også mulig å legge egendefinert logo på bestillersystemet.
 - skal det være mulig å bestille skjema til verge/foreldre/andre (på vegne av pasienten)
 
 De fleste punktene i listen over konfigurereres direkte i selve registeret, ikke i ePROM. Det er en fordel om registeret har en person som er ansvarlig for administrasjon av ePROM.
-
-
