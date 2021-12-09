@@ -18,4 +18,4 @@
   * Fungerer tilsvarende som reservasjon mot helsenorge
   * Støtter flere samtykker
 
-[Tilbake](./)
+[Tilbake](../)
