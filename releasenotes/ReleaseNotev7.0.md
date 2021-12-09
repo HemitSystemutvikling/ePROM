@@ -3,4 +3,4 @@
 
 Innhold i denne releasen er foreløpig ikke fastsatt. 
 
-[Tilbake](./)
+[Tilbake](./.)
