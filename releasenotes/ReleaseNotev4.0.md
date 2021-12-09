@@ -9,4 +9,4 @@
 
 [Mer informasjon om språkstøtte i ePROM](../Language)
 
-[Tilbake](../)
+[Tilbake](./Releaselist)
