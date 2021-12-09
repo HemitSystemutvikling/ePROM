@@ -123,3 +123,4 @@ PROD: [https://pasientrapportering.nhn.no/webapi/api/v2/MessageToCitizen](https:
 
 QA: [https://pasientrapportering.qa.nhn.no/webapi/api/v2/MessageToCitizen](https://pasientrapportering.qa.nhn.no/webapi/api/v2/MessageToCitizen)
 
+[Tilbake](./)
