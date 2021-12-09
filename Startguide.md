@@ -20,7 +20,7 @@ Det er også mulig å legge egendefinert logo på bestillersystemet.
 ### Bygge skjema i ePROM
 - Vurdere hvilke skjema som skal brukes
 -	Opprette egne skjema eller bruke standardskjema som dekker behovet
--	Opprette samleskjema som består av flere enkeltskjema, f.eks. et egendefinert skjema sammen med EQ5D
+-	Opprette samleskjema som består av ett eller flere enkeltskjema, f.eks. et egendefinert skjema sammen med EQ5D
 -	Opprette skjemainformasjon og følgebrev til skjemaet
 - [Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
