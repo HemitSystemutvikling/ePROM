@@ -1,5 +1,3 @@
-[Home](/)
-
 # BESTILLING AV SKJEMA V2
 
 *Sist oppdatert 30.06.2021*
