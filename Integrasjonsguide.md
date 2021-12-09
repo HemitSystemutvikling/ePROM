@@ -122,3 +122,4 @@ For produksjonsmiljøet gjelder følgende URL'er for SendeMeldingAPI'et:
 PROD: [https://pasientrapportering.nhn.no/webapi/api/v2/MessageToCitizen](https://pasientrapportering.nhn.no/webapi/api/v2/MessageToCitizen)
 
 QA: [https://pasientrapportering.qa.nhn.no/webapi/api/v2/MessageToCitizen](https://pasientrapportering.qa.nhn.no/webapi/api/v2/MessageToCitizen)
+
