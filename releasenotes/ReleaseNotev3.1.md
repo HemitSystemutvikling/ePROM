@@ -25,4 +25,4 @@
   * Oppgradert meldingstype "DIALOG_INNBYGGER_MELDINGSFORMIDLING" fra v0.8 til v1.1
   * Klientpakke oppdatert for Digipost og Digipost.Signering
 
-[Tilbake](../)
+[Tilbake](./Releaselist)
