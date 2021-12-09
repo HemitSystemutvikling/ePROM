@@ -9,4 +9,4 @@
 ### ePROM Bugfiks
 * En feil i forbindelse med validering av tallfelt ved innsending av skjema er rettet.
 
-[Tilbake](./)
+[Tilbake](../)
