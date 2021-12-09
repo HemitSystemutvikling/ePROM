@@ -275,3 +275,4 @@ For at mottaker av bestillingen skal kunne vite hvem skjemaet besvares på vegne
 
 Det er mulig å endre informasjonsteksten om "på vegne av" slik at den ikke angir den som skjemaet besvares på vegne av. Dette gjøres ved å overstyre default "På vegne av info" i PROMs selvbetjeningsmodul -> Skjemainformasjon. Eksempel på slik anonym tekst kan være: "Skjemaet skal fylles ut sammen med pasienten.". Det er da viktig å tenke på at mottaker ikke nødvendigvis kan forstå nøyaktig hvem skjemaet faktisk gjelder.
 
+[Tilbake](./)
