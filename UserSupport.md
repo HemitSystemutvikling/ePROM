@@ -21,3 +21,5 @@ Be om følgende informasjon fra pasient:
 - Oppsto problemet under levering (alt var fylt ut, men fikk ikke levert)
 - Har pasienten forsøkt å lukke alle nettlesere og forsøke på nytt
 - Hva slags enhet benyttet pasienten? PC, mobil, nettbrett
+
+[Tilbake](./)
