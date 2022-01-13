@@ -270,6 +270,17 @@ Eksempel request fra Proms (JSON)
 }
 ```
 
+Eksempel response (JSON)
+
+``` 
+{
+    "success" : true
+}
+{
+    "success" : false
+}
+```
+
 ## "På vegne av"-funksjonalitet og personvern
 For at mottaker av bestillingen skal kunne vite hvem skjemaet besvares på vegne av vises som default en informasjonstekst, både i notifikasjonen som sendes og i selve skjemaet, som viser fullt navn til den som skjemaet besvares på vegne av. Det er derfor **svært viktig** å sikre at selve bestillingen går til rett fødselsnummer slik at sensitive opplysninger ikke havner på avveie. Dette er bestillersystemet sitt ansvar å sikre, ePROM gjør ingen validering av relasjon mellom fødselsnummer til mottaker og den skjemaet besvares på vegne av.
 
