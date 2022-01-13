@@ -69,4 +69,12 @@ NB! formData sendes som stringified JSON-object
     }]
 }
 ```
-
+Eksempel response (JSON)
+```
+{
+    "success" : true
+}
+{
+    "success" : false
+}
+```
