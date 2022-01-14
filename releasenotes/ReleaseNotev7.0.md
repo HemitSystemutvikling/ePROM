@@ -16,6 +16,7 @@
     * Rapporten viser utsendte og besvarte skjema fordelt på varslingskanaler 
 * Statistikk over utsendt brev
   * Standardrapport for inneværende år, forrige år, forrige måned eller inneværende måned (for alle bestillersystem)
+ 
 ### Teknisk
 
 
