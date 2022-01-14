@@ -20,6 +20,7 @@
  
 ### Teknisk
 * Metadata som sendes med i en bestilling fra et bestillersystem blir validert ved mottak
+  * Feilmelding sendes tilbake til bestillersystemet dersom metadata er ugyldig  
 
 
 [Tilbake](./Releaselist)
