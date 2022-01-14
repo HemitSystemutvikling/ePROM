@@ -3,6 +3,7 @@
 
 ### ePROM pasientskjema
 * Telling av spørsmål i pasientskjema teller nå alle spørsmål, ikke bare obligatoriske spørsmål
+* Hovedspørsmål blir ikke lenger formattert i bold som default 
 * Samleskjema: oversiktssiden viser framdrift for alle underskjema
   * Hvor mange spørsmål er besvart og hvor mange spørsmål gjenstår på hvert enkelt underskjema
   * Viser når hvert enkelt underskjema er klart for levering (alle obligatoriske spørsmål er besvart)
@@ -18,6 +19,7 @@
   * Standardrapport for inneværende år, forrige år, forrige måned eller inneværende måned (for alle bestillersystem)
  
 ### Teknisk
+* Metadata som sendes med i en bestilling fra et bestillersystem blir validert ved mottak
 
 
 [Tilbake](./Releaselist)
