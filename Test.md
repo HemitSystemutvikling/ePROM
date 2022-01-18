@@ -10,16 +10,16 @@ Følgende punkter må verifiseres i testmiljø for nye integrasjoner
 - Mål: ingen feilsituasjoner eller duplikate meldinger
 
 ### 2) Utfylling av skjema
-- logg inn som testperson og besvar skjema 
+- logg inn som testperson på [helsenorge](https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]) og besvar skjema 
   - verifiser at skjema vises som forventet og har forventet oppførsel   
   - verifiser at følgebrev vises som forventet
   - verifiser at ev metadata fungerer etter hensikten
-  - _helsenorge:_ verifiser at skjemaoppgave vises som forventetjeg 
-- Mål: skjema, følgebrev og skjemaoppgave (på helsenorge) fungerer etter spesifikasjonene
+  - verifiser at skjemaoppgave vises som forventet
+  - verifiser at kopi av skjema blir lagret/ikke lagret som forventet avhengig av spesifikasjonen (etter levering)
+- Mål: skjema, følgebrev og skjemaoppgave fungerer etter spesifikasjonene
 
 ### 3) Retur av skjema til bestillersystemet
 - verifiser mottak av skjemasvar
-- _helsenorge:_ verifiser at kopi av skjema blir lagret/ikke lagret som forventet avhengig av spesifikasjonen
 - Mål: bestillersystemet mottar svaret. Ingen feilsituasjoner. Ingen duplikate meldinger.
 
 #### Spesialtilfeller
