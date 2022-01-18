@@ -28,11 +28,11 @@ Følgende punkter må verifiseres i testmiljø for nye integrasjoner
 
 ## Testmiljø
 
-ePROM admin: https://proms2.hemit.org/PromsAdministration
+ePROM admin: [https://proms2.hemit.org/PromsAdministration](https://proms2.hemit.org/PromsAdministration)
 
-ePROM skjemautfyller: https://proms2.hemit.org/Proms (bl.a. for skjema med engangskode)
+ePROM skjemautfyller: [https://proms2.hemit.org/Proms](https://proms2.hemit.org/Proms) (bl.a. for skjema med engangskode)
 
-Helsenorge: https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]
+Helsenorge: [https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]](https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr])
 
 ### Testperson Helsenorge
 Pnr: 01039494104
