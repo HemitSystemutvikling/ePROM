@@ -15,14 +15,14 @@ Følgende punkter må verifiseres i testmiljø for nye integrasjoner
   - verifiser at skjema vises som forventet og har forventet oppførsel   
   - verifiser at følgebrev vises som forventet
   - verifiser at ev metadata fungerer etter hensikten
-  - _helsenorge/digipost:_ verifiser at skjemaoppgave vises som forventet
+  - _helsenorge:_ verifiser at skjemaoppgave vises som forventet
   - _på vegne av:_ verifiser at informasjon om dette vises i skjemaoppgave og i inne i skjemaet
   - _signering:_ verifiser at skjema må signeres før levering
-- Mål: skjema, følgebrev og skjemaoppgave (på helsenorge eller digipost) fungerer etter spesifikasjonene
+- Mål: skjema, følgebrev og skjemaoppgave (på helsenorge) fungerer etter spesifikasjonene
 
 ### 3) Retur av skjema til bestillersystemet
 - verifiser mottak av skjemasvar
-- _helsenorge/digipost:_ verifiser at kopi av skjema blir lagret/ikke lagret som forventet avhengig av spesifikasjonen
+- _helsenorge:_ verifiser at kopi av skjema blir lagret/ikke lagret som forventet avhengig av spesifikasjonen
 - _signering:_ verifiser nedlasting av signert dokument (for skjema som krever signatur)
 - Mål: bestillersystemet mottar svaret. Ingen feilsituasjoner. Ingen duplikate meldinger.
 
@@ -30,17 +30,15 @@ Følgende punkter må verifiseres i testmiljø for nye integrasjoner
 
 ePROM admin: https://proms2.hemit.org/PromsAdministration
 
-ePROM skjemautfyller: https://proms2.hemit.org/Proms
+ePROM skjemautfyller: https://proms2.hemit.org/Proms (bl.a. for skjema med engangskode)
 
 Helsenorge: https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]
 
-Digipost: https://www.difitest.digipost.no/
+### Testperson Helsenorge
+Pnr: 01039494104
 
-Testpersoner med bankID fås på forespørsel (eller vi kan oppgi en her for enkelhets skyld)
+Engangskode: otp (for innlogging med ID-porten i test)
 
-### Testpersoner
-#### Helsenorge
-Testperson blabla
-#### Digipost
-Testperson blablabla
+Personlig passord: qwer1234 (for innlogging med ID-porten i test)
+
 
