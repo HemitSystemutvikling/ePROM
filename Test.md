@@ -32,6 +32,8 @@ ePROM admin: [https://proms2.hemit.org/PromsAdministration](https://proms2.hemit
 
 ePROM skjemautfyller: [https://proms2.hemit.org/Proms](https://proms2.hemit.org/Proms) (bl.a. for skjema med engangskode)
 
+ePROM bestillingsAPI: [https://proms2.hemit.org/promswebapi/api/v2/formorder](https://proms2.hemit.org/promswebapi/api/v2/formorder)
+
 Helsenorge: [https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]](https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr])
 
 ### Testperson Helsenorge
