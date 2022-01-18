@@ -4,9 +4,8 @@
 Følgende punkter må verifiseres i testmiljø for nye integrasjoner
 
 ### 1) Bestilling av skjema:
-- verifiser mottak av svar på bestilling (synkront)
-  - engangskode sendes med dersom notification channel = 0
-- verifiser mottak av status på bestilling (asynkront)
+- verifiser at bestilling blir sendt til ePROM uten feilmelding
+- verifiser mottak av status på bestilling 
   - verifiser at skjema blir bestilt til forventet kanal (riktig notification channel) 
 - Mål: ingen feilsituasjoner eller duplikate meldinger
 
@@ -15,16 +14,17 @@ Følgende punkter må verifiseres i testmiljø for nye integrasjoner
   - verifiser at skjema vises som forventet og har forventet oppførsel   
   - verifiser at følgebrev vises som forventet
   - verifiser at ev metadata fungerer etter hensikten
-  - _helsenorge:_ verifiser at skjemaoppgave vises som forventet
-  - _på vegne av:_ verifiser at informasjon om dette vises i skjemaoppgave og i inne i skjemaet
-  - _signering:_ verifiser at skjema må signeres før levering
+  - _helsenorge:_ verifiser at skjemaoppgave vises som forventetjeg 
 - Mål: skjema, følgebrev og skjemaoppgave (på helsenorge) fungerer etter spesifikasjonene
 
 ### 3) Retur av skjema til bestillersystemet
 - verifiser mottak av skjemasvar
 - _helsenorge:_ verifiser at kopi av skjema blir lagret/ikke lagret som forventet avhengig av spesifikasjonen
-- _signering:_ verifiser nedlasting av signert dokument (for skjema som krever signatur)
 - Mål: bestillersystemet mottar svaret. Ingen feilsituasjoner. Ingen duplikate meldinger.
+
+#### Spesialtilfeller
+  - _på vegne av:_ verifiser at informasjon om dette vises i skjemaoppgave og i inne i skjemaet, og at den som fyller ut skjema ikke mottar kopi
+  - _signering:_ verifiser at skjema blir bestilt med signering, at det må signeres før levering og at nedlasting av signert dokument fungerer
 
 ## Testmiljø
 
