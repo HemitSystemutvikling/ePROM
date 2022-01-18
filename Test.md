@@ -6,7 +6,7 @@ Følgende punkter må verifiseres i testmiljø for nye integrasjoner
 ### 1) Bestilling av skjema:
 - verifiser at bestilling blir sendt til ePROM uten feilmelding
 - verifiser mottak av status på bestilling 
-  - verifiser at skjema blir bestilt til forventet kanal (riktig notification channel) 
+  - verifiser at skjema blir bestilt til forventet varslingskanal 
 - Mål: ingen feilsituasjoner eller duplikate meldinger
 
 ### 2) Utfylling av skjema
