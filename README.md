@@ -39,6 +39,8 @@
 
 [Integrasjonsguide for skjemautfyller](IntegrasjonsguideSkjemautfyllerApi)
 
+[Verifisering av integrasjoner](Test)
+
 
 ### Administrasjon av PROMS i MRS
 [Administrasjon av PROMS i MRS](MrsPromsAdmin)
