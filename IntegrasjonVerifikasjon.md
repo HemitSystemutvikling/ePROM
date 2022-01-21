@@ -1,7 +1,9 @@
 
 ## Verifisering av integrasjoner i testmiljø
 
-Følgende punkter må verifiseres i testmiljø for nye integrasjoner
+Verifisering av integrasjonen tar utgangspunkt i at alt er implementert som beskrevet i integrasjonsguiden som finnes [her](Integrasjonsguide). 
+
+__NB:__ Følgende punkter __skal__ verifiseres i testmiljø for alle nye integrasjoner:
 
 ### 1) Bestilling av skjema:
 - verifiser at bestilling blir sendt til ePROM uten feilmelding
