@@ -42,8 +42,6 @@ Helsenorge test: [https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]](htt
 
 ### QA
 
-ePROM admin: [https://pasientrapportering.qa.nhn.no/administration/](https://pasientrapportering.qa.nhn.no/administration/)
-
 ePROM skjemautfyller: [https://pasientrapportering.qa.nhn.no/proms/](https://pasientrapportering.qa.nhn.no/proms/) (bl.a. for skjema med engangskode)
 
 ePROM bestillingsAPI: [https://pasientrapportering.qa.nhn.no/webapi/api/v2/formorder](https://pasientrapportering.qa.nhn.no/webapi/api/v2/formorder)
