@@ -30,19 +30,31 @@ __NB:__ Følgende punkter __skal__ verifiseres i testmiljø for alle nye integra
 
 ## Testmiljø
 
+### Test
+
 ePROM admin: [https://proms2.hemit.org/PromsAdministration](https://proms2.hemit.org/PromsAdministration)
 
 ePROM skjemautfyller: [https://proms2.hemit.org/Proms](https://proms2.hemit.org/Proms) (bl.a. for skjema med engangskode)
 
 ePROM bestillingsAPI: [https://proms2.hemit.org/promswebapi/api/v2/formorder](https://proms2.hemit.org/promswebapi/api/v2/formorder)
 
-Helsenorge: [https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]](https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr])
+Helsenorge test: [https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]](https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr])
 
-### Testperson Helsenorge
+### QA
+
+ePROM admin: [https://pasientrapportering.qa.nhn.no/administration/](https://pasientrapportering.qa.nhn.no/administration/)
+
+ePROM skjemautfyller: [https://pasientrapportering.qa.nhn.no/proms/](https://pasientrapportering.qa.nhn.no/proms/) (bl.a. for skjema med engangskode)
+
+ePROM bestillingsAPI: [https://pasientrapportering.qa.nhn.no/webapi/api/v2/formorder](https://pasientrapportering.qa.nhn.no/webapi/api/v2/formorder)
+
+Helsenorge QA: [https://tjenester.hn.qa.nhn.no/](https://tjenester.hn.qa.nhn.no/)
+
+### Testperson Helsenorge (test og QA)
 Pnr: 01039494104
 
-Engangskode: otp (for innlogging med ID-porten i test)
+Engangskode: otp (for innlogging med ID-porten/BankID)
 
-Personlig passord: qwer1234 (for innlogging med ID-porten i test)
+Personlig passord: qwer1234 (for innlogging med ID-porten/BankID)
 
 [Tilbake](./)
