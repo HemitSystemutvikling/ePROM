@@ -12,7 +12,7 @@ __NB:__ Følgende punkter __skal__ verifiseres i testmiljø for alle nye integra
 - Mål: ingen feilsituasjoner eller duplikate meldinger
 
 ### 2) Utfylling av skjema
-- logg inn som testperson på [helsenorge](https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]) og besvar skjema 
+- logg inn som testperson på helsenorge og besvar skjema 
   - verifiser at skjema vises som forventet og har forventet oppførsel   
   - verifiser at følgebrev vises som forventet
   - verifiser at ev metadata fungerer etter hensikten
