@@ -7,7 +7,9 @@
 * Samleskjema: oversiktssiden viser framdrift for alle underskjema
   * Hvor mange spørsmål er besvart og hvor mange spørsmål gjenstår på hvert enkelt underskjema
   * Viser når hvert enkelt underskjema er klart for levering (alle obligatoriske spørsmål er besvart)
-  * Viser når samleskjemaet som helhet er klart for levering
+  * (Viser når samleskjemaet som helhet er klart for levering)
+* Mulighet for å minimere lange følgebrev
+* Forbedret visning på mobil
 * Støtte for skjema på nynorsk (språkkode nn) i tillegg til bokmål og engelsk
 
 ### ePROM admin
