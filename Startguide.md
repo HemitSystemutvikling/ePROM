@@ -15,6 +15,8 @@ Ta kontakt på <eprom@hemit.no> for å opprette bestillersystem og brukere til e
 
 __Følgende informasjon må alltid oppgis:__
 - Navn på bestillersystemet
+- En kort beskrivelse av bruksområde, inkl: 
+  - skjemautsending og/eller brevutsending 
 
 __Følgende informasjon må oppgis i henvendelsen dersom bestillersystemet skal gjøre skjemabestillinger:__
 - Telefonnummeret til kontaktperson for bestillersystemet (til bruk av mottaker av skjema, dvs pasienten)
