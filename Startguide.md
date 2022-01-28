@@ -8,14 +8,20 @@
 -	Utsending av skjemabestilling
 -	Mottak av skjemabestilling
 
-### Opprette bestillersystem
+### Opprette bestillersystem og brukere
 
-Registeret må registreres som bestillersystem i ePROM. Dette gjøres av HEMIT, og følgende informasjon må oppgis:
+Ta kontakt på <eprom@hemit.no> for å opprette bestillersystem og brukere til ePROM skjemabygger
+
+Følgende informasjon må oppgis i henvendelsen:
 - Telefonnummeret til kontaktperson for bestillersystemet. Sendes med til mottaker av bestillingen (pasienten)
 - E-post adressen til kontaktperson for bestillersystemet. (Om ønskelig)
 - API base URL
+- Det er også mulig å legge egendefinert logo på bestillersystemet. 
 
-Det er også mulig å legge egendefinert logo på bestillersystemet. 
+Følgende informasjon blir sendt i retur:
+- API nøkkel
+- brukernavn og passord for å benytte skjemabygger
+
 
 ### Bygge skjema i ePROM
 - Vurdere hvilke skjema som skal brukes
