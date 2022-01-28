@@ -4,11 +4,6 @@
 
 ## Hvordan komme igang med ePROM
 
-### Implementere integrasjon mot ePROM i hht [Integrasjonsguiden](Integrasjonsguide)
--	Utsending av skjemabestilling
--	Mottak av skjemabestilling
--	Utsending av brev
-
 ### Opprette bestillersystem og brukere
 
 Ta kontakt på <eprom@hemit.no> for å opprette bestillersystem og brukere til ePROM skjemabygger. Bruker til ePROM skjemabygger er ikke nødvendig dersom bestillersystemet kun skal sende ut brev.
@@ -30,6 +25,10 @@ __Følgende informasjon blir sendt i retur fra Hemit:__
 - API nøkkel
 - brukernavn og passord for å benytte skjemabygger (for utsending av skjema)
 
+### Implementere integrasjon mot ePROM i hht [Integrasjonsguiden](Integrasjonsguide)
+-	Utsending av skjemabestilling
+-	Mottak av skjemabestilling
+-	Utsending av brev
 
 ### Bygge skjema i ePROM
 - Vurdere hvilke skjema som skal brukes
@@ -39,7 +38,7 @@ __Følgende informasjon blir sendt i retur fra Hemit:__
 - [Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
 
-### Registeret må ta stilling til:
+#### I forbindelse med skjemabygging må registeret må ta stilling til:
 - regler for utsending og mottak av skjema
 - automatisk eller manuell bestilling av skjema
 - purringer og utløpsdato
@@ -48,6 +47,6 @@ __Følgende informasjon blir sendt i retur fra Hemit:__
 - skal skjema være på engelsk i tillegg til norsk
 - skal det være mulig å bestille skjema til verge/foreldre/andre (på vegne av pasienten)
 
-De fleste punktene i listen over konfigurereres direkte i selve registeret, ikke i ePROM. Det er en fordel om registeret har en person som er ansvarlig for administrasjon av ePROM.
+De fleste punktene i listen over konfigurereres direkte i selve registeret, ikke i ePROM. Det er en fordel om registeret har en ePROM-ansvarlig som kan være kontaktpunkt ved henvendelser til og fra Hemit.
 
 [Tilbake](./)
