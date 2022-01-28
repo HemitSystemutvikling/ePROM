@@ -1,6 +1,6 @@
 # Startguide
 
-*Sist oppdatert 11.11.2021*
+*Sist oppdatert 28.01.2022*
 
 ## Hvordan komme igang med ePROM
 
