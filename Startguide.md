@@ -7,20 +7,26 @@
 ### Implementere integrasjon mot ePROM i hht [Integrasjonsguiden](Integrasjonsguide)
 -	Utsending av skjemabestilling
 -	Mottak av skjemabestilling
+-	Utsending av brev
 
 ### Opprette bestillersystem og brukere
 
-Ta kontakt på <eprom@hemit.no> for å opprette bestillersystem og brukere til ePROM skjemabygger
+Ta kontakt på <eprom@hemit.no> for å opprette bestillersystem og brukere til ePROM skjemabygger. Bruker til ePROM skjemabygger er ikke nødvendig dersom bestillersystemet kun skal sende ut brev.
 
-Følgende informasjon må oppgis i henvendelsen:
-- Telefonnummeret til kontaktperson for bestillersystemet. Sendes med til mottaker av bestillingen (pasienten)
-- E-post adressen til kontaktperson for bestillersystemet. (Om ønskelig)
-- API base URL
-- Det er også mulig å legge egendefinert logo på bestillersystemet. 
+__Følgende informasjon må alltid oppgis:__
+- Navn på bestillersystemet
 
-Følgende informasjon blir sendt i retur:
+__Følgende informasjon må oppgis i henvendelsen dersom bestillersystemet skal gjøre skjemabestillinger:__
+- Telefonnummeret til kontaktperson for bestillersystemet (til bruk av mottaker av skjema, dvs pasienten)
+- API base URL for mottakstjenesten
+
+_- I tillegg er følgende informasjon valgfri:_ 
+  -  Egendefinert logo på bestillersystemet. 
+  -  E-post-adresse som kontaktinfo for bestillersystemet (ikke anbefalt mtp sensitive data)
+
+__Følgende informasjon blir sendt i retur fra Hemit:__
 - API nøkkel
-- brukernavn og passord for å benytte skjemabygger
+- brukernavn og passord for å benytte skjemabygger (for utsending av skjema)
 
 
 ### Bygge skjema i ePROM
