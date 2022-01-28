@@ -15,14 +15,14 @@ Ta kontakt på <eprom@hemit.no> for å opprette bestillersystem og brukere til e
 
 __Følgende informasjon må alltid oppgis:__
 - Navn på bestillersystemet
+- API base URL for mottakstjenesten
 - En kort beskrivelse av bruksområde, inkl: 
   - skjemautsending og/eller brevutsending 
 
 __Følgende informasjon må oppgis i henvendelsen dersom bestillersystemet skal gjøre skjemabestillinger:__
 - Telefonnummeret til kontaktperson for bestillersystemet (til bruk av mottaker av skjema, dvs pasienten)
-- API base URL for mottakstjenesten
 
-_- I tillegg er følgende informasjon valgfri:_ 
+  _- I tillegg er følgende informasjon valgfri:_ 
   -  Egendefinert logo på bestillersystemet. 
   -  E-post-adresse som kontaktinfo for bestillersystemet (ikke anbefalt mtp sensitive data)
 
