@@ -37,7 +37,7 @@ Her finner man alle skjema som er bestilt og man kan f.eks.teste innsending av s
 
 ## Testpersoner
 
-ePROM i testmiljøet integrerer med Helsenorge og Digipost sine testmiljøer. For å teste integrasjonen mellom ePROM, Helsenorge og Digipost har vi tilgang til fødselsnummer med BankID. Midlertidig tilgang til disse fås ved henvendelse til Hemit.
+ePROM i testmiljøet integrerer med Helsenorge og Digipost sine testmiljøer. For å teste integrasjonen mellom ePROM, Helsenorge og Digipost har vi tilgang til fødselsnummer med BankID. Midlertidig tilgang til disse fås ved henvendelse til Hemit på <eprom@hemit.no>.
 
 ## Verifisering av integrasjon
 
