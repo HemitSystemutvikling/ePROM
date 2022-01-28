@@ -20,6 +20,8 @@ Hvis man har behov for å sende sensitiv informasjon til pasienten kan man sende
 Utsending av melding kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
 Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM
 
+Utsending av brev / melding til innbygger støtter PDF-filer på opp til 30MB
+
 NB!
 I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som del av HTTP header:
 `headers: {"Authorization": "Basic " + apiKey}` 
