@@ -10,7 +10,7 @@ __NB Endringer i pasientskjema blir gjeldende for alle eksisterende skjema__
   * Viser hvor mange spørsmål som er besvart og hvor mange spørsmål det er totalt på hvert enkelt underskjema
   * Viser når hvert enkelt underskjema er klart for levering. Dette krever som minimum at skjema har vært åpnet og at obligatoriske spørsmål er besvart
   * Tilpasset visning for underskjema uten spørsmål. Disse blir markert med eget ikon
-* Mulighet for å minimere lange følgebrev
+* Mulighet for å minimere lange følgebrev (Informasjon til pasienten)
   * Følgebrev er alltid åpent første gang skjema åpnes 
 * Hovedspørsmål blir ikke lenger formattert i bold som default
 * Støtte for skjema på nynorsk (språkkode nn) i tillegg til bokmål og engelsk (gjelder nye skjema)
