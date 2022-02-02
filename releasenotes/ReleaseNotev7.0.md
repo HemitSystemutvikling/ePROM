@@ -1,5 +1,5 @@
 # Nytt i ePROM v7.0
-*Dato: Ikke bestemt*
+*Dato: Februar 2022*
 
 ### ePROM pasientskjema
 __NB Endringer i pasientskjema blir gjeldende for alle eksisterende skjema__
