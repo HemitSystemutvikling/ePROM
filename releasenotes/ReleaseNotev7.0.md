@@ -2,17 +2,16 @@
 *Dato: Ikke bestemt*
 
 ### ePROM pasientskjema
-__NB Med mindre noe annet er spesifisert, vil endringer i pasientskjema bli gjeldende for alle eksisterende skjema, med unntak av skjema med spesialtilpasset html-kode__
+__NB Endringer i pasientskjema blir gjeldende for alle eksisterende skjema__
 
 * Telling av spørsmål i pasientskjema teller nå alle spørsmål, ikke bare obligatoriske spørsmål
-* Samleskjema: forsiden viser framdrift for alle underskjema
+* Forsiden på samleskjema viser framdrift for alle underskjema
   * Viser om et underskjema har obligatoriske spørsmål   
   * Viser hvor mange spørsmål som er besvart og hvor mange spørsmål det er totalt på hvert enkelt underskjema
   * Viser når hvert enkelt underskjema er klart for levering. Dette krever som minimum at skjema har vært åpnet og at obligatoriske spørsmål er besvart
   * Tilpasset visning for underskjema uten spørsmål. Disse blir markert med eget ikon
 * Mulighet for å minimere lange følgebrev
   * Følgebrev er alltid åpent første gang skjema åpnes 
-* Forbedret visning på mobil
 * Hovedspørsmål blir ikke lenger formattert i bold som default
 * Støtte for skjema på nynorsk (språkkode nn) i tillegg til bokmål og engelsk (gjelder nye skjema)
 
