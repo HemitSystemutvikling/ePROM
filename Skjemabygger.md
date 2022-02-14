@@ -45,6 +45,8 @@ For skjema som er aktivert for papir kan man gjøre egne tilpasninger i skjemaby
 
 [Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
 
+[Tips til bygging av skjema](PasientskjemaTips)
+
 # METADATA
 Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel til andre komponenter og for å vise informasjon spesifikk for en skjemabestilling i skjemaet. Metadata kan brukes både inne i selve skjemaet og i "Informasjon til pasienten" (følgebrevet) knyttet til skjemaet. 
 
