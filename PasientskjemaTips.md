@@ -6,9 +6,9 @@ Tall fra helsenorge viser at mellom 70 og 80% av alle skjemautfyllinger skjer ve
 
 I skjemabyggingen bør det dermed tas hensyn til at flesteparten av skjemaene fylles ut på mobile enheter. 
 
-## Samleskjema 
+## Skal jeg ha samleskjema
 
-Dersom skjema består av flere deler med ulike fokusområder anbefaler vi at skjema bygges som et samleskjema. Det gir bedre oversikt for brukeren og også mindre behov for scrolling i et langt skjema med mange spørsmål.
+Det anbefales at alle skjema bygges som samleskjema. Det gir bedre oversikt og oppdeling for brukeren og også mindre behov for scrolling i et langt enkeltskjema med mange spørsmål.
 
 ## Hvilken felttype skal jeg bruke?
 
@@ -31,9 +31,11 @@ Beste praksis er alltid å prøve radioknapper først, før nedtrekksliste velge
 
 Flervalgsfelt brukes i tilfeller der pasienten kan velge 0 til mange alternativ som svar på et spørsmål.
 
-I skjemabyggeren opprettes flervalgsfelt ved å legge til en ny gruppe og krysse av for "Flersvarsfelt" under innstillinger på gruppen
-Deretter legges de ønskede alternativene til som avkrysningsbokser i gruppen.
-Gruppen kan ikke inneholde andre felt enn avkrysningsbokser.
+I skjemabyggeren opprettes flervalgsfelt ved å legge til en ny gruppe og krysse av for "Flersvarsfelt" under innstillinger på gruppen. Deretter legges de ønskede alternativene til som avkrysningsbokser i gruppen.
+
+__NB: Gruppen kan ikke inneholde andre typer felt enn avkrysningsbokser.__ Hvis man ønsker å ha regler på avkrysningsboksene for skjuling/visning av andre typer felter, må disse feltene ligge utenfor flervalgsfelt-gruppen.
+
+
 Fordelen med flervalgsfelt er
  - avkrysningsboksene er plassert tettere og oppfattes dermed av brukeren som svar på ett spørsmål, og ikke som separate spørsmål
  - alle avkrysningsboksene i et flervalgsfelt telles som ett spørsmål i framdriftsvisningen _NB: telling gjelder fra og med ePROM v7.0_
