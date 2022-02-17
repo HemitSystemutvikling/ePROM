@@ -12,7 +12,6 @@
 
 # GENERELT
 Vha Skjemabygger bygger man pasientskjemaene som skal sendes til pasientene.
-Skjemaet bygges med overskrift, informasjon til pasienten og spørsmål.
 
 Alle skjema må ha et navn og visningsnavn. Navnet er det som vises f.eks. i skjemakatalogen. Visningsnavnet er det som er synlig på samleskjemaforsiden når skjemaet er en del av samleskjema. Det bør være enkelt å forstå for pasienten. "Spørsmål om din helse" er bedre enn "EQ5D".
 
@@ -45,14 +44,13 @@ Spørsmålene setter man opp med de forskjellige felttypene:
 
 På hvert enkelt felt kan man også sette valideringsregler tilpasset felttypen, f.eks. at et tall i et tallfelt må være innenfor et gitt intervall eller at en dato må være nyere enn en gitt dato.
 Det er også støtte for å legge inn logikk for skjuling og vising av felt, f.eks. at et felt skal skjules og vises basert på hva brukeren har svart på andre felt.
-Det er et krav om at alle feltnavn må være unike.
+Det er et krav om at alle feltnavn må være unike. Hvert felt skal også ha også ha en tittel.
 Skjemaet kan forhåndsvises underveis etter at det er lagret.
+
+[Flere tips om skjemabygging - nyttig informasjon](PasientskjemaTips)
 
 For skjema som er aktivert for papir kan man gjøre egne tilpasninger i skjemabygger for hvordan felter skal vises på papir slik at det blir intuitivt for den som fyller ut.
 
-[Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
-
-[Tips til bygging av skjema](PasientskjemaTips)
 
 # METADATA
 Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel til andre komponenter og for å vise informasjon spesifikk for en skjemabestilling i skjemaet.
