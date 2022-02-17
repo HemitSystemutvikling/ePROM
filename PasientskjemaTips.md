@@ -6,7 +6,7 @@ Tall fra helsenorge viser at mellom 70 og 80% av alle skjemautfyllinger skjer ve
 
 I skjemabyggingen bør det dermed tas hensyn til at flesteparten av skjemaene fylles ut på mobile enheter. 
 
-## Skal jeg ha samleskjema
+## Skal jeg ha samleskjema?
 
 Det anbefales at alle skjema bygges som samleskjema. Det gir bedre oversikt og oppdeling for brukeren og også mindre behov for scrolling i et langt enkeltskjema med mange spørsmål.
 
@@ -69,7 +69,12 @@ Dersom det er behov for en fullstendig visuell analog skala (uten tall) velges "
 
 
 
-###
+## Hvordan lager jeg papirskjema?
+
+Papirskjema genereres ved å velge "Papirformat aktivert" under skjemainnstillinger. 
+
+Det er mulig å velge at felter skal skjules og vises kun for papir. Det kan f.eks. være utfyllende hjelpetekst som er nødvendig for papir.
+Det er også mulig å angi sideskift etter spesifikke felter i et papirskjema
 
 
 
