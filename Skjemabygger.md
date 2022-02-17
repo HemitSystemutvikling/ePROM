@@ -13,13 +13,13 @@
 # GENERELT
 Vha Skjemabygger bygger man pasientskjemaene som skal sendes til pasientene.
 
-Alle skjema må ha et navn og visningsnavn. Navnet er det som vises f.eks. i skjemakatalogen. Visningsnavnet er det som er synlig på samleskjemaforsiden når skjemaet er en del av samleskjema. Det bør være enkelt å forstå for pasienten. "Spørsmål om din helse" er bedre enn "EQ5D".
+Alle skjema må ha et navn og visningsnavn. Navnet er det som vises f.eks. i skjemakatalogen. Visningsnavnet er det som er synlig på samleskjemaforsiden når skjemaet er en del av samleskjema. Visningsnavnet bør være enkelt å forstå for pasienten. "Spørsmål om din helse" er bedre enn "EQ5D".
 
 ## Innstillinger på skjema
-- Lisensiert - angir at pasientskjema kun kan brukes med lisens
-- Copyright - felt for å angi copyright/lisensrettigheter. Dette vil blir synlig nederst på skjemaet når pasienten fyller ut.
-- Sidevisning - angir at skjema skal vises med sider. Én side = en gruppe på rotnivå i skjemabyggeren.
 - Flerspråkling - angir hvilket språk skjemaet har (for enkeltskjema) eller hvilke språk skjemaet har totalt (for samleskjema). Les mer om språk [her](PasientskjemaFlerspraklighet)
+- Lisensiert* - angir at pasientskjema kun kan brukes med lisens
+- Copyright* - felt for å angi copyright/lisensrettigheter. Dette vil blir synlig nederst på skjemaet når pasienten fyller ut.
+- Sidevisning* - angir at skjema skal vises med sider. Én side = en gruppe på rotnivå i skjemabyggeren.
 - Skjul progressbar - angir at framdriftsinformasjon skal skjules for pasienten under utfylling. Det er lite brukervennlig å skjule denne informasjonen, og det anbefales IKKE.
 - Signering støttes - ikke i bruk. Dette settes nå pr. bestilling, ikke pr. skjematype.
 - Papirformat aktivert - angir at det skal genereres en papirversjon (PDF) av skjemaet, som _KAN_ brukes etter avtale med Hemit/Posten. 
@@ -29,6 +29,8 @@ Alle skjema må ha et navn og visningsnavn. Navnet er det som vises f.eks. i skj
 - Kan bestilles av pasient - angir at personinitert utfylling av skjema skal være mulig. Les mer om det [her](PasientinitiertBestillingAvSkjema)
    - Skjema bestilt av pasient må signeres - angir at personinitert skjema må signeres ved levering
    - Offentlig URL - URL hvor personinitert skjema kan finnes for pasienten. 
+
+*) Gjelder ikke for samleskjema
 
 ## Felter og regler
 Spørsmålene setter man opp med de forskjellige felttypene:
@@ -44,12 +46,10 @@ Spørsmålene setter man opp med de forskjellige felttypene:
 
 På hvert enkelt felt kan man også sette valideringsregler tilpasset felttypen, f.eks. at et tall i et tallfelt må være innenfor et gitt intervall eller at en dato må være nyere enn en gitt dato.
 Det er også støtte for å legge inn logikk for skjuling og vising av felt, f.eks. at et felt skal skjules og vises basert på hva brukeren har svart på andre felt.
-Det er et krav om at alle feltnavn må være unike. Hvert felt skal også ha også ha en tittel.
+Det er et krav om at alle feltnavn må være unike, og hvert felt skal også ha ha en tittel.
 Skjemaet kan forhåndsvises underveis etter at det er lagret.
 
 [Flere tips om skjemabygging - nyttig informasjon](PasientskjemaTips)
-
-For skjema som er aktivert for papir kan man gjøre egne tilpasninger i skjemabygger for hvordan felter skal vises på papir slik at det blir intuitivt for den som fyller ut.
 
 
 # METADATA
@@ -351,4 +351,5 @@ document.getElementById("painfigureFieldset").outerHTML = `
 </script>
 ```
 
+[Tilbake](./)
 
