@@ -2,6 +2,12 @@
 
 *Sist oppdatert 17.02.2022*
 
+## Bruksområde ##
+
+Signering er ikke nødvendig for å bekrefte pasientens identitet ved levering av skjema, den blir bekreftet allerede ved innlogging. 
+
+Signering krever en ekstra innlogging med bankID eller tilsvarende og oppfattes fra pasientens side unødvendig å måtte gjøre dette to ganger i løpet av prosessen med å fylle ut og levere skjema. Derfor er det viktig å begrense bruken av signering.
+
 ## Bestilling ##
 
 Skjema som krever signatur bestilles av Bestillersystem på vanlig måte (se [BESTILLING AV SKJEMA](BestillingAvSkjemaV2)). 
