@@ -10,6 +10,21 @@ I skjemabyggingen bør det dermed tas hensyn til at flesteparten av skjemaene fy
 
 Det anbefales at alle skjema bygges som samleskjema. Det gir bedre oversikt og oppdeling for brukeren og også mindre behov for scrolling i et langt enkeltskjema med mange spørsmål.
 
+## Hvilke felttyper finnes og hvordan kan de vises?
+
+- *Valgfelt* vises som radioknapper eller nedtrekksmeny. 
+- *Tallfelt* kan vises som et inputfelt eller slider. 
+- *Datofelt* kan vises som 
+  - Dato
+  - Dato og tidspunkt
+  - Måned og år
+  - År 
+- Ved å plassere flere *Avkrysningsfelt* i samme gruppe, kan disse vises som et flervalgsfelt
+- Metadata
+- Metadatatekst
+
+Hvordan felter skal vises styres under Innstillinger på hvert enkelt felt, med unntak av flervalgsfelt som defineres på gruppenivå.
+
 ## Hvilken felttype skal jeg bruke?
 
 ### Metadata
@@ -55,7 +70,6 @@ Dersom det er behov for en fullstendig visuell analog skala (uten tall) velges "
 
 
 ###
-
 
 
 
