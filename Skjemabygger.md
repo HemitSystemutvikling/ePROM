@@ -53,7 +53,9 @@ For skjema som er aktivert for papir kan man gjøre egne tilpasninger i skjemaby
 
 
 # METADATA
-Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel til andre komponenter og for å vise informasjon spesifikk for en skjemabestilling i skjemaet.
+
+Metadata er informasjon som kan sendes med fra bestillerstystemet på bestillingstidspunktet og som kan benyttes i skjemaet og i følgebrevet. 
+Et vanlig eksempel er at pasientens kjønn sendes med bestillingen og brukes til å vise/skjule felter i skjemaet automatisk, og pasienten slipper dermed å svare på unødvendige kontrollspørsmål.
 
 Metadata kan brukes både inne i selve skjemaet og i følgebrevet ("Informasjon til pasienten") knyttet til skjemaet. Metadata kan _IKKE_ brukes i skjemainformasjon ("Skjemainformasjon") som vises på helsenorge eller digipost.
 
@@ -63,7 +65,7 @@ Opprett felt av typen metadata med samme navn som det som følger med skjemabest
 
 Metadatafelt kan være av typen string eller number. Feltet kan deretter brukes til å vise/skjule eller validere andre felter i skjemaet. 
 
-Feltet metadatatekst kan brukes for å vise fram verdien av et metadatafelt.  
+Feltet metadatatekst kan brukes for å vise fram verdien av et metadatafelt. Her velges hvilket metadatafelt som skal vises og det er mulig å legge til en beskrivende tekst.
 
 NB: Metadatatekst kan ikke brukes/vises i skjema som er aktivert for papir. Feltet må isåfall skjules i papirversjonen.
 
