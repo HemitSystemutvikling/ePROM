@@ -27,11 +27,6 @@ Hvordan felter skal vises styres under Innstillinger på hvert enkelt felt, med 
 
 ## Hvilken felttype skal jeg bruke?
 
-### Metadata
-
-Metadata er informasjon som kan sendes med i bestillingen og benyttes i skjemaet og i følgebrevet. 
-Et vanlig eksempel er at pasientens kjønn sendes med bestillingen og brukes til å vise/skjule felter i skjemaet automatisk, og pasienten slipper dermed å svare på unødvendige kontrollspørsmål.
-
 ### Valgfelt
 
 For et valgfelt er det kun mulig å velge ett (1) alternativ som svar på et spørsmål
