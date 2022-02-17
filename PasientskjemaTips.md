@@ -20,8 +20,8 @@ Det anbefales at alle skjema bygges som samleskjema. Det gir bedre oversikt og o
   - Måned og år
   - År 
 - Ved å plassere flere *Avkrysningsfelt* i samme gruppe, kan disse vises som et flervalgsfelt
-- Metadata
-- Metadatatekst
+- Metadata (beskrevet [her](Skjemabygger#metadata))
+- Metadatatekst (beskrevet [her](Skjemabygger#metadata))
 
 Hvordan felter skal vises styres under Innstillinger på hvert enkelt felt, med unntak av flervalgsfelt som defineres på gruppenivå.
 
