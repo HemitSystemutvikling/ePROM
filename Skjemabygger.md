@@ -15,23 +15,6 @@ Vha Skjemabygger bygger man pasientskjemaene som skal sendes til pasientene.
 
 Alle skjema må ha et navn og visningsnavn. Navnet er det som vises f.eks. i skjemakatalogen. Visningsnavnet er det som er synlig på samleskjemaforsiden når skjemaet er en del av samleskjema. Visningsnavnet bør være enkelt å forstå for pasienten. "Spørsmål om din helse" er bedre enn "EQ5D".
 
-## Innstillinger på skjema
-- Flerspråkling - angir hvilket språk skjemaet har (for enkeltskjema) eller hvilke språk skjemaet har totalt (for samleskjema). Les mer om språk [her](PasientskjemaFlerspraklighet)
-- Lisensiert* - angir at pasientskjema kun kan brukes med lisens
-- Copyright* - felt for å angi copyright/lisensrettigheter. Dette vil blir synlig nederst på skjemaet når pasienten fyller ut.
-- Sidevisning* - angir at skjema skal vises med sider. Én side = en gruppe på rotnivå i skjemabyggeren.
-- Skjul progressbar - angir at framdriftsinformasjon skal skjules for pasienten under utfylling. Det er lite brukervennlig å skjule denne informasjonen, og det anbefales IKKE.
-- Signering støttes - ikke i bruk. Dette settes nå pr. bestilling, ikke pr. skjematype.
-- Papirformat aktivert - angir at det skal genereres en papirversjon (PDF) av skjemaet, som _KAN_ brukes etter avtale med Hemit/Posten. 
-  - Fargeutskrift - angir at papirskjema skal sendes ut i farger (medfører ekstra kostnad)
-  - Heftet utskrift - angir at papirskjema skal produseres som hefte, ikke løse ark, for skjema over ~8-10 sider (medfører ekstra kostnad)
-  - Ferdig PDF skjema ved papirutsendelse - angir at en egen PDF skal erstatte den genererte papirversjonen. Anbefales KUN for skjema hvor det er påkrevd av lisens/copyright-årsaker (medfører ekstra kostnad)
-- Kan bestilles av pasient - angir at personinitert utfylling av skjema skal være mulig. Les mer om det [her](PasientinitiertBestillingAvSkjema)
-   - Skjema bestilt av pasient må signeres - angir at personinitert skjema må signeres ved levering
-   - Offentlig URL - URL hvor personinitert skjema kan finnes for pasienten. 
-
-*) Gjelder ikke for samleskjema
-
 ## Felter og regler
 Spørsmålene setter man opp med de forskjellige felttypene:
 - Grupper - brukes for å gruppere spørsmål i bolker
@@ -49,7 +32,24 @@ Det er også støtte for å legge inn logikk for skjuling og vising av felt, f.e
 Det er et krav om at alle feltnavn må være unike, og hvert felt skal også ha ha en tittel.
 Skjemaet kan forhåndsvises underveis etter at det er lagret.
 
-[Flere tips om skjemabygging - nyttig informasjon](PasientskjemaTips)
+__[Flere tips om skjemabygging - nyttig informasjon](PasientskjemaTips)__
+
+## Innstillinger på skjema
+- Flerspråkling - angir hvilket språk skjemaet har (for enkeltskjema) eller hvilke språk skjemaet har totalt (for samleskjema). Les mer om språk [her](PasientskjemaFlerspraklighet)
+- Lisensiert* - angir at pasientskjema kun kan brukes med lisens
+- Copyright* - felt for å angi copyright/lisensrettigheter. Dette vil blir synlig nederst på skjemaet når pasienten fyller ut.
+- Sidevisning* - angir at skjema skal vises med sider. Én side = en gruppe på rotnivå i skjemabyggeren. Hver side (gruppe) kan ha 0 til mange spørsmål
+- Skjul progressbar - angir at framdriftsinformasjon skal skjules for pasienten under utfylling. Det er lite brukervennlig å skjule denne informasjonen, og det anbefales IKKE.
+- Signering støttes - ikke i bruk. Dette settes nå pr. bestilling, ikke pr. skjematype.
+- Papirformat aktivert - angir at det skal genereres en papirversjon (PDF) av skjemaet, som _KAN_ brukes etter avtale med Hemit/Posten. 
+  - Fargeutskrift - angir at papirskjema skal sendes ut i farger (medfører ekstra kostnad)
+  - Heftet utskrift - angir at papirskjema skal produseres som hefte, ikke løse ark, for skjema over ~8-10 sider (medfører ekstra kostnad)
+  - Ferdig PDF skjema ved papirutsendelse - angir at en egen PDF skal erstatte den genererte papirversjonen. Anbefales KUN for skjema hvor det er påkrevd av lisens/copyright-årsaker (medfører ekstra kostnad)
+- Kan bestilles av pasient - angir at personinitert utfylling av skjema skal være mulig. Les mer om det [her](PasientinitiertBestillingAvSkjema)
+   - Skjema bestilt av pasient må signeres - angir at personinitert skjema må signeres ved levering
+   - Offentlig URL - URL hvor personinitert skjema kan finnes for pasienten. 
+
+*) Gjelder ikke for samleskjema
 
 
 # METADATA
