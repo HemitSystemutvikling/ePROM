@@ -53,7 +53,7 @@ __NB: Gruppen kan ikke inneholde andre typer felt enn avkrysningsbokser.__ Hvis 
 
 Fordelen med flervalgsfelt er
  - avkrysningsboksene er plassert tettere og oppfattes dermed av brukeren som svar på ett spørsmål, og ikke som separate spørsmål
- - alle avkrysningsboksene i et flervalgsfelt telles som ett spørsmål i framdriftsvisningen _NB: telling gjelder fra og med ePROM v7.0_
+ - alle avkrysningsboksene i et flervalgsfelt telles som ett spørsmål i framdriftsvisningen
 
 ### Tallfelt
 
