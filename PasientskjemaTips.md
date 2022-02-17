@@ -10,18 +10,19 @@ I skjemabyggingen bør det dermed tas hensyn til at flesteparten av skjemaene fy
 
 Det anbefales at alle skjema bygges som samleskjema. Det gir bedre oversikt og oppdeling for brukeren og også mindre behov for scrolling i et langt enkeltskjema med mange spørsmål.
 
-## Hvilke felttyper finnes og hvordan kan de vises?
+## Hvilke felttyper finnes?
 
-- *Valgfelt* vises som radioknapper eller nedtrekksmeny. 
+- *Valgfelt* kan vises som radioknapper eller nedtrekksmeny. 
 - *Tallfelt* kan vises som et inputfelt eller slider. 
 - *Datofelt* kan vises som 
   - Dato
   - Dato og tidspunkt
   - Måned og år
-  - År 
-- Ved å plassere flere *Avkrysningsfelt* i samme gruppe, kan disse vises som et flervalgsfelt
-- Metadata (beskrevet [her](Skjemabygger#metadata))
-- Metadatatekst (beskrevet [her](Skjemabygger#metadata))
+  - År
+- *Avkrysningsfelt*  
+- *Flervalgsfelt* - Ved å plassere flere *Avkrysningsfelt* i samme gruppe, kan disse vises som et flervalgsfelt
+- *Metadata* (beskrevet [her](Skjemabygger#metadata))
+- *Metadatatekst* (beskrevet [her](Skjemabygger#metadata))
 
 Hvordan felter skal vises styres under Innstillinger på hvert enkelt felt, med unntak av flervalgsfelt som defineres på gruppenivå.
 
@@ -35,7 +36,7 @@ For valgfelt finnes to visningsalternativer:
  - _radioknapper_: anbefales alltid dersom spørsmålet har 2-5 alternativer, og bør være førstevalg 
  - _nedtrekksliste_: anbefales kun i tilfeller med ~ 6 eller flere alternativer.
 
-Beste praksis er alltid å prøve radioknapper først, før nedtrekksliste velges
+__Beste praksis er alltid å prøve radioknapper først, før nedtrekksliste velges__
 
 ### Flervalgfelt
 
@@ -53,15 +54,22 @@ Fordelen med flervalgsfelt er
 ### Tallfelt
 
 For tallfelt finnes to visningsalternativer:
- - tallfelt
+ - tallboks
  - slider/skala
+
+Alle tallfelt kan konfigureres med en min og max-verdi.
 
 #### Slider
 
 Ved bruk av slider anbefales at denne vises i horisontal retning, så lenge maksimal verdi <= 10. 
-Dersom det er behov for en fullstendig visuell analog skala (uten tall) velges "Skjul tallverdier" under innstillingene på feltet. Da vil slideren vises uten tall, men det er mulig å sette på beskrivende tekst i hver ende.
 
+Dersom slideren har min-verdi på 0 eller 1 vil pasienten også få opp en tilhørende tallboks hvor verdien kan tastes inn (forutsetter at "Skjul tallverdier" ikke er satt). Det kan være nyttig for pasienter som synes det er vanskelig å krysse av på riktig sted på slideren.
 
+Dersom det er behov for en fullstendig visuell analog skala (uten tall i slideren) velges "Skjul tallverdier" under innstillingene på feltet. Da vil slideren vises uten tall, og pasienten vil ikke se hvilken verdi som blir valgt. Det er mulig å sette på beskrivende tekst i hver ende av slideren.
+
+#### Tallboks
+
+Ved bruk av tallboks er det mulig å angi om tallet skal være et heltall eller et desimaltall med opptil 4 desimaler
 
 
 ## Hvordan lager jeg papirskjema?
