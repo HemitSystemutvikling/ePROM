@@ -4,7 +4,7 @@
 
 Tall fra helsenorge viser at mellom 70 og 80% av alle skjemautfyllinger skjer ved hjelp av mobile enheter, hovedsaklig mobiltelefon. Det vil si at vi ikke kan anta at pasienten har tastatur, stor skjerm og mus tilgjengelig på utfyllingstidspunktet.
 
-I skjemabyggingen bør det dermed tas hensyn til at flesteparten av skjemaene fylles ut på mobile enheter. 
+ePROM vil automatisk tilpasse visningen av skjemaet til den enheten pasienten bruker, men det er viktig å tenke på dette når skjema bygges. 
 
 ## Hva er samleskjema?
 
@@ -38,7 +38,7 @@ For valgfelt finnes to visningsalternativer:
  - _radioknapper_: anbefales alltid dersom spørsmålet har 2-5 alternativer, og bør være førstevalg 
  - _nedtrekksliste_: anbefales kun i tilfeller med ~ 6 eller flere alternativer.
 
-__Beste praksis er alltid å prøve radioknapper først, før nedtrekksliste velges__
+__Beste praksis er alltid å prøve radioknapper først, før nedtrekksliste velges - spesielt med tanke på mobile enheter__
 
 ### Flervalgfelt
 
@@ -73,13 +73,6 @@ Dersom det er behov for en fullstendig visuell analog skala (uten tall i slidere
 
 Ved bruk av tallboks er det mulig å angi om tallet skal være et heltall eller et desimaltall med opptil 4 desimaler
 
-
-## Hvordan lages papirskjema?
-
-Papirskjema genereres ved å velge "Papirformat aktivert" under skjemainnstillinger. 
-
-Det er mulig å velge at felter skal skjules og vises kun for papir. Det kan f.eks. være utfyllende hjelpetekst som er nødvendig for papir.
-Det er også mulig å angi sideskift etter spesifikke felter i et papirskjema
 
 [Tilbake](Skjemabygger)
 
