@@ -43,3 +43,5 @@ Header name: authorization
 Header value: Basic <ApiKey>
 ```
 
+
+[Tilbake](./Integrasjonsguide)
