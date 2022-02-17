@@ -28,7 +28,7 @@ Det anbefales at alle skjema som sendes til pasienten er samleskjema. Det gir be
 
 Hvordan felter skal vises styres under Innstillinger på hvert enkelt felt, med unntak av flervalgsfelt som defineres på gruppenivå.
 
-## Hvilken felttype skal jeg bruke?
+## Hvilken felttype bør brukes når?
 
 ### Valgfelt
 
@@ -74,7 +74,7 @@ Dersom det er behov for en fullstendig visuell analog skala (uten tall i slidere
 Ved bruk av tallboks er det mulig å angi om tallet skal være et heltall eller et desimaltall med opptil 4 desimaler
 
 
-## Hvordan lager jeg papirskjema?
+## Hvordan lages papirskjema?
 
 Papirskjema genereres ved å velge "Papirformat aktivert" under skjemainnstillinger. 
 
