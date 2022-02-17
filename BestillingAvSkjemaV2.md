@@ -12,8 +12,6 @@
 
 [Mottak av status for bestillingen](#mottak-av-status-for-bestillingen)
 
-["På vegne av"-funksjonalitet og personvern](#på-vegne-av-funksjonalitet-og-personvern)
-
 
 API-kallet for bestilling av skjema er i v2 endret slik at man får respons med en gang, uten å vente på at bestillingen har gått igjennom til Helsenorge/Digipost. Når bestillingen er fullført (pasienten har fått beskjed og skjemaet ligger klart til utfylling) vil ePROM gjøre et kall mot Bestillersystemet med status for bestillingen. Bestillersystemet må implementere en service som mottar dette kallet.
 
@@ -281,9 +279,5 @@ Eksempel response (JSON)
 }
 ```
 
-## "På vegne av"-funksjonalitet og personvern
-For at mottaker av bestillingen skal kunne vite hvem skjemaet besvares på vegne av vises som default en informasjonstekst, både i notifikasjonen som sendes og i selve skjemaet, som viser fullt navn til den som skjemaet besvares på vegne av. Det er derfor **svært viktig** å sikre at selve bestillingen går til rett fødselsnummer slik at sensitive opplysninger ikke havner på avveie. Dette er bestillersystemet sitt ansvar å sikre, ePROM gjør ingen validering av relasjon mellom fødselsnummer til mottaker og den skjemaet besvares på vegne av.
-
-Det er mulig å endre informasjonsteksten om "på vegne av" slik at den ikke angir den som skjemaet besvares på vegne av. Dette gjøres ved å overstyre default "På vegne av info" i PROMs selvbetjeningsmodul -> Skjemainformasjon. Eksempel på slik anonym tekst kan være: "Skjemaet skal fylles ut sammen med pasienten.". Det er da viktig å tenke på at mottaker ikke nødvendigvis kan forstå nøyaktig hvem skjemaet faktisk gjelder.
 
 [Tilbake](./)
