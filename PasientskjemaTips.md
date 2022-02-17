@@ -76,6 +76,6 @@ Papirskjema genereres ved å velge "Papirformat aktivert" under skjemainnstillin
 Det er mulig å velge at felter skal skjules og vises kun for papir. Det kan f.eks. være utfyllende hjelpetekst som er nødvendig for papir.
 Det er også mulig å angi sideskift etter spesifikke felter i et papirskjema
 
-
+[Tilbake](Skjemabygger)
 
 
