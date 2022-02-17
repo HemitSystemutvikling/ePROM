@@ -12,7 +12,9 @@
 
 [Skjemabygger](Skjemabygger)
 
-[Pasientskjema og flerspråklighet](PasientskjemaFlerspraklighet)
+[Flerspråklighet i pasientskjema](PasientskjemaFlerspraklighet)
+
+["På vegne av"-funksjonalitet](PaVegneAvFlyt)
 
 ### Utfylling av skjema
 [Utfylling av skjema og varsling til pasienten](Utfylling%20av%20skjema)
