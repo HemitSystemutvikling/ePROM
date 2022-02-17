@@ -4,7 +4,7 @@
 
 Tall fra helsenorge viser at mellom 70 og 80% av alle skjemautfyllinger skjer ved hjelp av mobile enheter, hovedsaklig mobiltelefon. Det vil si at vi ikke kan anta at pasienten har tastatur, stor skjerm og mus tilgjengelig på utfyllingstidspunktet.
 
-ePROM vil automatisk tilpasse visningen av skjemaet til den enheten pasienten bruker. 
+ePROM vil automatisk tilpasse visningen av skjemaet til den enheten pasienten bruker, men det er likevel lurt å tenke på hvilke felttyper som brukes og hvordan disse presenteres. 
 
 ## Hva er samleskjema?
 
