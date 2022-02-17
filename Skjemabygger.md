@@ -14,6 +14,24 @@
 Vha Skjemabygger bygger man pasientskjemaene som skal sendes til pasientene.
 Skjemaet bygges med overskrift, informasjon til pasienten og spørsmål.
 
+Alle skjema må ha et navn og visningsnavn. Navnet er det som vises f.eks. i skjemakatalogen. Visningsnavnet er det som er synlig på samleskjemaforsiden når skjemaet er en del av samleskjema. Det bør være enkelt å forstå for pasienten. "Spørsmål om din helse" er bedre enn "EQ5D".
+
+## Innstillinger på skjema
+- Lisensiert - angir at pasientskjema kun kan brukes med lisens
+- Copyright - felt for å angi copyright/lisensrettigheter. Dette vil blir synlig nederst på skjemaet når pasienten fyller ut.
+- Sidevisning - angir at skjema skal vises med sider. Én side = en gruppe på rotnivå i skjemabyggeren.
+- Flerspråkling - angir hvilket språk skjemaet har (for enkeltskjema) eller hvilke språk skjemaet har totalt (for samleskjema). Les mer om språk [her](PasientskjemaFlerspraklighet)
+- Skjul progressbar - angir at framdriftsinformasjon skal skjules for pasienten under utfylling. Det er lite brukervennlig å skjule denne informasjonen, og det anbefales IKKE.
+- Signering støttes - ikke i bruk. Dette settes nå pr. bestilling, ikke pr. skjematype.
+- Papirformat aktivert - angir at det skal genereres en papirversjon (PDF) av skjemaet, som _KAN_ brukes etter avtale med Hemit/Posten. 
+  - Fargeutskrift - angir at papirskjema skal sendes ut i farger (medfører ekstra kostnad)
+  - Heftet utskrift - angir at papirskjema skal produseres som hefte, ikke løse ark, for skjema over ~8-10 sider (medfører ekstra kostnad)
+  - Ferdig PDF skjema ved papirutsendelse - angir at en egen PDF skal erstatte den genererte papirversjonen. Anbefales KUN for skjema hvor det er påkrevd av lisens/copyright-årsaker (medfører ekstra kostnad)
+- Kan bestilles av pasient - angir at personinitert utfylling av skjema skal være mulig. Les mer om det [her](PasientinitiertBestillingAvSkjema)
+   - Skjema bestilt av pasient må signeres - angir at personinitert skjema må signeres ved levering
+   - Offentlig URL - URL hvor personinitert skjema kan finnes for pasienten. 
+
+## Felter og regler
 Spørsmålene setter man opp med de forskjellige felttypene:
 - Grupper - brukes for å gruppere spørsmål i bolker
 - Valgfelt - brukes når det er flere svaralternativer
@@ -23,18 +41,7 @@ Spørsmålene setter man opp med de forskjellige felttypene:
 - Tallfelt
 - Tekstområde - brukes som informasjonstekst 
 - Metadata - brukes for å kunne motta metadata fra Bestillersystemet ved bestilling
-
-Noen av feltene kan vises på forskjellige måter. 
-- *Valgfelt* vises som radioknapper eller nedtrekksmeny. 
-- *Tallfelt* kan vises som et inputfelt eller slider. 
-- *Datofelt* kan vises som 
-  - Dato
-  - Dato og tidspunkt
-  - Måned og år
-  - År 
-- Ved å plassere flere *Avkrysningsfelt* i samme gruppe, kan disse vises som et flervalgsfelt
-
-Hvordan felter skal vises styres under Innstillinger på hvert enkelt felt, med unntak av flervalgsfelt som defineres på gruppenivå.
+- Metadatatekst
 
 På hvert enkelt felt kan man også sette valideringsregler tilpasset felttypen, f.eks. at et tall i et tallfelt må være innenfor et gitt intervall eller at en dato må være nyere enn en gitt dato.
 Det er også støtte for å legge inn logikk for skjuling og vising av felt, f.eks. at et felt skal skjules og vises basert på hva brukeren har svart på andre felt.
@@ -48,13 +55,24 @@ For skjema som er aktivert for papir kan man gjøre egne tilpasninger i skjemaby
 [Tips til bygging av skjema](PasientskjemaTips)
 
 # METADATA
-Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel til andre komponenter og for å vise informasjon spesifikk for en skjemabestilling i skjemaet. Metadata kan brukes både inne i selve skjemaet og i "Informasjon til pasienten" (følgebrevet) knyttet til skjemaet. 
+Metadata kan sendes med en skjemabestilling både for å kontrollere oppførsel til andre komponenter og for å vise informasjon spesifikk for en skjemabestilling i skjemaet.
 
-Opprett felt av typen metadata med samme navn som det som følger med skjemabestillingen. Metadatafelt kan være av typen string eller number. Feltet kan deretter brukes til å vise/skjule eller validere andre felter i skjemaet. 
+Metadata kan brukes både inne i selve skjemaet og i følgebrevet ("Informasjon til pasienten") knyttet til skjemaet. Metadata kan _IKKE_ brukes i skjemainformasjon ("Skjemainformasjon") som vises på helsenorge eller digipost.
 
-Hvis samme metadatanavn benyttes i skjemaet og i "Informasjon til pasienten" vil dette erstattes av samme verdi.
+
+## Metadata i skjema
+Opprett felt av typen metadata med samme navn som det som følger med skjemabestillingen. 
+
+Metadatafelt kan være av typen string eller number. Feltet kan deretter brukes til å vise/skjule eller validere andre felter i skjemaet. 
+
+Feltet metadatatekst kan brukes for å vise fram verdien av et metadatafelt.  
+
+NB: Metadatatekst kan ikke brukes/vises i skjema som er aktivert for papir. Feltet må isåfall skjules i papirversjonen.
 
 ## Metadata i følgebrev/informasjon til pasienten
+
+Samme metadatanavn kan benyttes i skjemaet og i følgebrevet ("Informasjon til pasienten"). Dette vil i så fall erstattes av samme verdi.
+
 For å vise metadata i følgebrevet ("Informasjon til pasienten") legger man inn denne teksten **(NB! Bruk store bokstaver)**:
 
 [\_METADATANAVN\_]
