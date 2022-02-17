@@ -1,6 +1,6 @@
 # Skjemabygger
 
-*Sist oppdatert 11.11.2021*
+*Sist oppdatert 17.02.2022*
 
 ### Innholdsfortegnelse
 
