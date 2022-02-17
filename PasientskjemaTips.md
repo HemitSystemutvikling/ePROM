@@ -6,9 +6,11 @@ Tall fra helsenorge viser at mellom 70 og 80% av alle skjemautfyllinger skjer ve
 
 I skjemabyggingen bør det dermed tas hensyn til at flesteparten av skjemaene fylles ut på mobile enheter. 
 
-## Skal jeg ha samleskjema?
+## Hva er samleskjema?
 
-Det anbefales at alle skjema bygges som samleskjema. Det gir bedre oversikt og oppdeling for brukeren og også mindre behov for scrolling i et langt enkeltskjema med mange spørsmål.
+Samleskjema er en samling av enkeltskjema som sendes til pasienten i en samlet utsendelse.
+
+Det anbefales at alle skjema som sendes til pasienten er samleskjema. Det gir bedre oversikt og oppdeling for brukeren og også mindre behov for scrolling i et langt enkeltskjema med mange spørsmål. Det gir også mulighet til å gjenbruke standardskjematyper som f.eks. RAND12 eller EQ5D. Disse ligger under katalogen "Felles" i Skjemakatalogen.
 
 ## Hvilke felttyper finnes?
 
