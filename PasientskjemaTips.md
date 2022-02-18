@@ -23,6 +23,7 @@ Det anbefales at alle skjema som sendes til pasienten er samleskjema. Det gir be
   - År
 - *Avkrysningsfelt*  
 - *Flervalgsfelt* - Ved å plassere flere *Avkrysningsfelt* i samme gruppe, kan disse vises som et flervalgsfelt
+- *Tekstfelt* kan vises som tekstboks eller tekstområde
 - *Metadata* (beskrevet [her](Skjemabygger#metadata))
 - *Metadatatekst* (beskrevet [her](Skjemabygger#metadata))
 
@@ -78,6 +79,12 @@ Ved bruk av inputfelt er det mulig å angi om tallet skal være et heltall eller
 Ved bruk av dato med måned og år er det den 1. i måneden som blir satt som reell dato i bakgrunnen, og det er denne datoen som returneres til bestillersystemet.
 
 Ved bruk av dato med kun år er det 1. januar i det aktuelle året som blir satt som reell dato, og det er denne datoen som returneres til bestillersystemet.
+
+### Tekstfelt
+
+Tekstfelt er fritekstfelt uten validering.
+
+Tekstfelt kan vises som tekstboks (én linje) eller tekstområde (6 linjer). Tekstområde brukes f.eks. til kommentarfelt, og bør bare brukes der det er forventet med lengre tekst/flere setninger.
 
 
 [Tilbake](Skjemabygger)
