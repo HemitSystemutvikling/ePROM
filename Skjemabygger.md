@@ -32,7 +32,7 @@ Det er også støtte for å legge inn logikk for skjuling og vising av felt, f.e
 Det er et krav om at alle feltnavn må være unike, og hvert felt skal også ha ha en tittel.
 Skjemaet kan forhåndsvises underveis etter at det er lagret.
 
-__[Flere tips om skjemabygging - nyttig informasjon](PasientskjemaTips)__
+__[Obligatorisk lesning for den som skal bygge skjema](PasientskjemaTips)__
 
 ## Innstillinger på skjema
 - Flerspråkling - angir hvilket språk skjemaet har (for enkeltskjema) eller hvilke språk skjemaet har totalt (for samleskjema). Les mer om språk [her](PasientskjemaFlerspraklighet)
