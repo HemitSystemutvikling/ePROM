@@ -15,7 +15,7 @@ Det anbefales at alle skjema som sendes til pasienten er samleskjema. Det gir be
 ## Hvilke felttyper finnes?
 
 - *Valgfelt* kan vises som radioknapper eller nedtrekksmeny. 
-- *Tallfelt* kan vises som et inputfelt eller slider. 
+- *Tallfelt* kan vises som et inputfelt eller slider/skala. 
 - *Datofelt* kan vises som 
   - Dato
   - Dato og tidspunkt
@@ -56,7 +56,7 @@ Fordelen med flervalgsfelt er
 ### Tallfelt
 
 For tallfelt finnes to visningsalternativer:
- - tallboks
+ - Inputfelt
  - slider/skala
 
 Alle tallfelt kan konfigureres med en min og max-verdi.
@@ -65,13 +65,19 @@ Alle tallfelt kan konfigureres med en min og max-verdi.
 
 Ved bruk av slider anbefales at denne vises i horisontal retning, så lenge maksimal verdi <= 10. 
 
-Dersom slideren har min-verdi på 0 eller 1 vil pasienten også få opp en tilhørende tallboks hvor verdien kan tastes inn (forutsetter at "Skjul tallverdier" ikke er satt). Det kan være nyttig for pasienter som synes det er vanskelig å krysse av på riktig sted på slideren.
+Dersom slideren har min-verdi på 0 eller 1 vil pasienten også få opp en tilhørende inputfelt hvor verdien kan tastes inn (forutsetter at "Skjul tallverdier" ikke er satt). Det kan være nyttig for pasienter som synes det er vanskelig å krysse av på riktig sted på slideren.
 
 Dersom det er behov for en fullstendig visuell analog skala (uten tall i slideren) velges "Skjul tallverdier" under innstillingene på feltet. Da vil slideren vises uten tall, og pasienten vil ikke se hvilken verdi som blir valgt. Det er mulig å sette på beskrivende tekst i hver ende av slideren.
 
-#### Tallboks
+#### Inputfelt
 
-Ved bruk av tallboks er det mulig å angi om tallet skal være et heltall eller et desimaltall med opptil 4 desimaler
+Ved bruk av inputfelt er det mulig å angi om tallet skal være et heltall eller et desimaltall med opptil 4 desimaler
+
+### Datofelt
+
+Ved bruk av dato med måned og år er det den 1. i måneden som blir satt som reell dato i bakgrunnen, og det er denne datoen som returneres til bestillersystemet.
+
+Ved bruk av dato med kun år er det 1. januar i det aktuelle året som blir satt som reell dato, og det er denne datoen som returneres til bestillersystemet.
 
 
 [Tilbake](Skjemabygger)
