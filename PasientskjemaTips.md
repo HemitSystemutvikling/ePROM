@@ -31,6 +31,11 @@ Hvordan felter skal vises styres under Innstillinger på hvert enkelt felt, med 
 
 ## Hvilken felttype bør brukes når?
 
+### Generelt for alle felter 
+- alle felter må ha et feltnavn og en tittel (tittel kan ikke være på gruppenivå)
+- det er mulig å sette styling på feltnavnet (bold og italic)
+- obligatoriske felter markeres med * foran feltnavnet (se forhåndsvisning)
+
 ### Valgfelt
 
 For et valgfelt er det kun mulig å velge ett (1) alternativ som svar på et spørsmål
