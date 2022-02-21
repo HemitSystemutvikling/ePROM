@@ -212,6 +212,7 @@ Ellers kan følgende feilsituasjoner oppstå:
 * BadRequest($"The ordered form needs to be signed. This is not possible when using DistributionRule = 'NoDistribution'.")
 * BadRequest($"The ordered form needs to be signed. This is not possible when the form is ordered on behalf of someone.")
 * BadRequest($"Form with id='{formOrder.formId}' is not paper enabled")
+* BadRequest($"JSON in metadata is not valid: {ex.Message}")
 
  
 
