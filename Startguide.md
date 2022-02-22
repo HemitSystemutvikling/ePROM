@@ -35,7 +35,7 @@ __Følgende informasjon blir sendt i retur fra Hemit:__
 -	Opprette egne skjema eller bruke standardskjema som dekker behovet
 -	Opprette samleskjema som består av ett eller flere enkeltskjema, f.eks. et egendefinert skjema sammen med EQ5D
 -	Opprette skjemainformasjon og følgebrev til skjemaet
-- [Opplæringsvideo for bruk av ePROM Skjemabygger](https://youtu.be/3vMOpnLnQ80)
+- Les mer om [skjemabygger](Skjemabygger) og [tips til skjemabygging](PasientskjemaTips)
 
 
 #### I forbindelse med skjemabygging må registeret må ta stilling til:
