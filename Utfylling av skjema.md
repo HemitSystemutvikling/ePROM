@@ -44,7 +44,7 @@ Når alle obligatoriske spørsmål er besvart leverer man skjema og man får kvi
 
 ### Epost eller sms
 
-Hvis pasienten er registrert med kontaktinformasjon i Difi kontakt- og reservasjonsregister, men ikke er digitalt aktiv på helsenorge eller digipost, kan epost/sms benyttes. Også har må pasienten logge inn med BankID nivå 4 for å fylle ut skjema. 
+Hvis pasienten er registrert med kontaktinformasjon i Difi kontakt- og reservasjonsregister, men ikke er digitalt aktiv på helsenorge eller digipost, kan epost/sms benyttes. Også her må pasienten logge inn med BankID nivå 4 for å fylle ut skjema. 
 
 Pasienten mottar en lenke som går direkte til ePROM skjemautfyller. Ved utfylling av skjemaet vil pasienten nå ikke få muligheten til å lagre skjemaet før det er fullført. Pasienten må fylle ut alle obligatoriske spørsmål og levere skjemaet. Pasienten får ikke kopi av skjemaet.
 
