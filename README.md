@@ -16,8 +16,8 @@
 
 ["På vegne av"-funksjonalitet](PaVegneAvFlyt)
 
-### Utfylling av skjema
-[Utfylling av skjema og varsling til pasienten](Utfylling%20av%20skjema)
+### Varslingskanaler og utfylling av skjema
+[Varslingskanaler og utfylling av skjema](Utfylling%20av%20skjema)
 
 ### Brukerstøtte
 [Brukerstøtte - hvordan hjelpe pasienten når feil oppstår](UserSupport)
