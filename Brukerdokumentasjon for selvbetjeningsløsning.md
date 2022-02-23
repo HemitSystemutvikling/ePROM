@@ -2,6 +2,8 @@
 
 *Sist oppdatert 23.02.2022*
 
+Dette er en beskrivelse av de ulike områdene ("flisene") man finner i selvbetjeningsløsningen.
+
 [Hovedmeny](#hovedmeny)
 
 [Skjemakatalog](#skjemakatalog)
@@ -18,7 +20,7 @@
 
 
 # Hovedmeny
-Dashboard for ePROM. Trykk på ePROM selvbetjeningsmodul på menylinjen øverst for å komme hit fra hvilken som helst side
+Dashboard/hovedmeny for ePROM selvbetjeningsmodul. Trykk på "ePROM selvbetjeningsmodul" på menylinjen øverst for å komme hit fra hvilken som helst side
  
 ![ePROM_admin_dashboard](img/ePROM_admin_dashboard.PNG)
 
