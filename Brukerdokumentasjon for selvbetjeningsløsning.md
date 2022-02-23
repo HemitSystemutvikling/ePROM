@@ -109,8 +109,9 @@ NB: Når nytt bestillersystem opprettes må følgende informasjon oppgis før be
  - API base URL
  - API-nøkkel
 
-*Trykk* på *Generer* for å generere en ny *API nøkkel*. Denne må i tilfelle også samtidig endres i bestillersystemet. Trykk på *Slett* for å fjerne API nøkkel og gjøre det umulig for bestillersystemet å sende inn flere skjemabestillinger. Generes ny API nøkkel kan bestillersystemet sende inn skjemabestillinger ingjen.
+*Trykk* på *Generer* for å generere en ny *API nøkkel*. Denne må i tilfelle også samtidig endres i bestillersystemet. Trykk på *Slett* for å fjerne API nøkkel og gjøre det umulig for bestillersystemet å sende inn flere skjemabestillinger. Generes ny API nøkkel kan bestillersystemet sende inn skjemabestillinger igjen.
 
+Integrasjon med PVK omhandler integrasjon med personvernkomponenten til helsenorge og brukes til å konfigurere bl.a. reservasjon og samtykke i bestillersystemet.
 
 
 # Skjemastatistikk
