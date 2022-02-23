@@ -1,6 +1,6 @@
 # Brukerdokumentasjon for selvbetjeningsløsning
 
-*Sist oppdatert 11.11.2021*
+*Sist oppdatert 23.02.2022*
 
 [Hovedmeny](#hovedmeny)
 
@@ -17,14 +17,16 @@
 [Brukeradministrasjon](#brukeradministrasjon)
 
 
-## Hovedmeny
+# Hovedmeny
 Dashboard for ePROM. Trykk på ePROM selvbetjeningsmodul på menylinjen øverst for å komme hit fra hvilken som helst side
  
 ![ePROM_admin_dashboard](img/ePROM_admin_dashboard.PNG)
 
 
-## Skjemakatalog
-Oversikt over tilgjengelige skjema og mulighet for å administrere eksisterende skjema og opprette nye skjema.
+# Skjemakatalog
+Oversikt over tilgjengelige skjema og mulighet for å administrere eksisterende skjema og opprette nye skjema. 
+
+__Les mer om skjemabygging [her](Skjemabygger)__
 
 ![ePROM_admin_skjemakatalog](img/ePROM_admin_skjemakatalog.png)
 
@@ -41,12 +43,12 @@ Skjema kan ha følgende status:
 
 Skjema kan bare redigeres eller slettes så lenge de er i Kladd-status. Når de har blitt Publisert kan de ikke lenger redigeres eller slettes, men kan trekkes tilbake. Det er mulig å svare på et skjema som er trukket tilbake, men det er ikke mulig å gjøre nye bestillinger av skjemaet. Et skjema som er trukket tilbake kan publiseres på nytt, men kan ikke redigeres. Dette for å hindre at et skjema som er eller har vært publisert kan endres. 
 
-*_NB: Skal et skjema endres etter at det er publisert må det opprettes en ny versjon av det._*
+*__NB: Skal et skjema endres etter at det er publisert må det opprettes en ny versjon av det.__*
 
 
 ![ePROM_admin_skjemakatalog_detalj2](img/ePROM_admin_skjemakatalog_detalj2.PNG)
 
-Beskrivelse av ikonene i listen til høyre på bildet over:
+Beskrivelse av knappene til høyre på bildet over:
 * Publiser/trekk tilbake skjema
 * Rediger skjema
 * Slett - for skjema som ikke har vært publisert
@@ -59,11 +61,9 @@ Beskrivelse av ikonene i listen til høyre på bildet over:
 
 I tillegg kan du for alle skjematyper se skjemainformasjon og følgebrev hvis skjemaet har dette knyttet til seg.
 
-### Samleskjema
 
-Her kommer informasjon om å hvordan man oppretter samleskjema
 
-## Informasjon til pasienten
+# Informasjon til pasienten
 Oversikt over tilgjengelige *Informasjon til pasienten* og mulighet for å administrere eksisterende og opprette nye *Informasjon til pasienten*.
 *Informasjon til pasienten* er følgebrevet som pasienten får sammen med skjemaet. Det kan inneholde utfyllende informasjon om skjemaet, hvem som er avsender, hva som er hensikten og målet med henvendelsen, instrukser om hvordan skjemaet skal fylles ut osv. Dette vises øverst i et enkeltskjema, eller på forsiden av et samleskjema. Et følgebrev kan brukes av mange ulike skjema, men et skjema kan kun ha ett følgebrev.
 
@@ -73,14 +73,14 @@ Oversikt over tilgjengelige *Informasjon til pasienten* og mulighet for å admin
 
 
 
-## Skjemainformasjon
+# Skjemainformasjon
 Skjemainformasjon inneholder blant annet informasjon om hvilke skjema som er knyttet til hvilke følgebrev.
 Her defineres også informasjon om selve skjemabestillingen, det vil si informasjonen pasienten skal få i skjemaoppgaven eller brevet til helsenorge, digipost eller eBoks. 
 
 ![ePROM_admin_skjemainformasjon](img/ePROM_admin_skjemainformasjon.png)
 
 
-### Skjemainformasjon - Opprett ny kobling
+## Skjemainformasjon - Opprett ny kobling
 
 ![ePROM_admin_skjemainformasjon_edit](img/ePROM_admin_skjemainformasjon_edit.png)
 
@@ -89,7 +89,7 @@ Her defineres også informasjon om selve skjemabestillingen, det vil si informas
 - Fyll ut informasjon om skjemabestilling. Forhåndsvisningen til høyre viser hvordan skjemaoppgaven/brevet vil se ut i hhv helsenorge og digipost (veksle ved å trykke på knappene)
 
 
-## Bestillersystemer
+# Bestillersystemer
 Info om eget bestillersystem
 
 ![ePROM_admin_bestillersystemer](img/ePROM_admin_bestillersystemer.png)
@@ -97,8 +97,10 @@ Info om eget bestillersystem
 *API nøkkel* brukes av bestillersystem ved skjemabestilling for å identifisere seg selv.
 API base URL angir url til mottakssystemet for bestillersystemet og må oppgis.
 
+Tips for admin-rollen: det er mulig å verifisere at ePROM får kontakt med bestillersystemet ved å gå til Statuspanel på hovedsiden. Velg det aktuelle bestillersystemet fra nedtrekkslisten nederst og trykk "Ping tjeneste"
 
-### Bestillersystemer - Endre
+
+## Bestillersystemer - Endre
 
 ![ePROM_admin_bestillersystem_edit](img/ePROM_admin_bestillersystem_edit.png)
 
@@ -113,15 +115,16 @@ NB: Når nytt bestillersystem opprettes må følgende informasjon oppgis før be
 
 
 
-## Skjemastatistikk
-Viser oversikt over antall skjemabestillinger og antall utfylte skjema per skjematype. 
- - Mulig å søke på statistikk for periode basert på dato
+# Skjemastatistikk
+Viser oversikt over antall skjemabestillinger og antall utfylte skjema og antall utsendte brev 
+ - Ferdigdefinerte rapporter for inneværende år, forrige år, inneværende måned og forrige måned
+ - Mulig å søke på statistikk for avgrenset periode basert på dato
  - Mulig å laste ned resultat av søk til excel
-![ePROM_admin_skjemastatistikk](img/ePROM_admin_skjemastatistikk.png)
+![ePROM_admin_skjemastatistikk](img/ePROM_skjemastatistikk7.0.PNG)
 
 
 
-## Brukeradministrasjon
+# Brukeradministrasjon
 Oversikt over brukere. Mulig å administrere bestillersystemets egne brukere
 
 ![ePROM_admin_brukeradministrasjon](img/ePROM_admin_brukeradministrasjon.png)
