@@ -2,13 +2,13 @@
 
 *Sist oppdatert 23.02.2022*
 
-Dette er en beskrivelse av de ulike områdene ("flisene") man finner i selvbetjeningsløsningen.
+Dette er en beskrivelse av de ulike områdene man finner i selvbetjeningsløsningen.
 
 [Hovedmeny](#hovedmeny)
 
 [Skjemakatalog](#skjemakatalog)
 
-[Følgebrev - Informasjon til pasienten](#informasjon-til-pasienten)
+[Følgebrev - Informasjon til pasienten](#følgebrev)
 
 [Skjemainformasjon](#skjemainformasjon)
 
@@ -64,17 +64,6 @@ Beskrivelse av knappene til høyre på bildet over:
 I tillegg kan du for alle skjematyper se skjemainformasjon og følgebrev hvis skjemaet har dette knyttet til seg.
 
 
-
-# Informasjon til pasienten
-Oversikt over tilgjengelige *Informasjon til pasienten* og mulighet for å administrere eksisterende og opprette nye *Informasjon til pasienten*.
-*Informasjon til pasienten* er følgebrevet som pasienten får sammen med skjemaet. Det kan inneholde utfyllende informasjon om skjemaet, hvem som er avsender, hva som er hensikten og målet med henvendelsen, instrukser om hvordan skjemaet skal fylles ut osv. Dette vises øverst i et enkeltskjema, eller på forsiden av et samleskjema. Et følgebrev kan brukes av mange ulike skjema, men et skjema kan kun ha ett følgebrev.
-
-![ePROM_admin_informasjonTilPasienten](img/ePROM_admin_informasjonTilPasienten.png)
-
-*Informasjon til pasienten* som er tilgjengelige for alle bestillersystemer ligger under Felles, *Informasjon til pasienten* som kun er tilgjengelig for eget bestillersystem ligger under Mine. Mulig å søke opp *Informasjon til pasienten* ved å skrive inn hele eller deler av navnet. 
-
-
-
 # Skjemainformasjon
 Skjemainformasjon inneholder blant annet informasjon om hvilke skjema som er knyttet til hvilke følgebrev.
 Her defineres også informasjon om selve skjemabestillingen, det vil si informasjonen pasienten skal få i skjemaoppgaven eller brevet til helsenorge, digipost eller eBoks. 
@@ -89,6 +78,13 @@ Her defineres også informasjon om selve skjemabestillingen, det vil si informas
 - Velg Skjema som denne skjemainformasjonen skal gjelde for
 - Velg *Informasjon til pasienten* (følgebrev) som skal kobles sammen med dette skjemaet
 - Fyll ut informasjon om skjemabestilling. Forhåndsvisningen til høyre viser hvordan skjemaoppgaven/brevet vil se ut i hhv helsenorge og digipost (veksle ved å trykke på knappene)
+
+# Følgebrev
+Oversikt over tilgjengelige følgebrev og mulighet for å administrere eksisterende og opprette nye følgebrev. Følgebrevet kan inneholde utfyllende informasjon om skjemaet, hvem som er avsender, hva som er hensikten og målet med henvendelsen, instrukser om hvordan skjemaet skal fylles ut osv. Dette vises øverst i et enkeltskjema, eller på forsiden av et samleskjema. Et følgebrev kan brukes av mange ulike skjema, men et skjema kan kun ha ett følgebrev.
+
+![ePROM_admin_informasjonTilPasienten](img/ePROM_admin_informasjonTilPasienten.png)
+
+Følgebrev som er tilgjengelige for alle bestillersystemer ligger under Felles, følgebrev som kun er tilgjengelig for eget bestillersystem ligger under Mine. 
 
 
 # Bestillersystemer
