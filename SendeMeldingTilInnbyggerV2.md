@@ -39,12 +39,12 @@ I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som de
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` Tallverdien kan sendes.
+* notificationPriorityList - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` The numeric value can be sent.
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
 **Parametere – Ut**
 
-* notificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` 
+* notificationChannel – The channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` 
 
 **Metode**
 
@@ -122,7 +122,7 @@ messageToCitizenId = result.messageToCitizenId});
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` Tallverdien kan sendes.
+* notificationChannel - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` The numeric value can be sent.
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
 promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
@@ -131,7 +131,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
 
 * SendMessageToCitizenResult
 
- * notificationChannel – The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` 
+ * notificationChannel – The channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` 
 
 ## Feilsituasjoner
 
@@ -162,7 +162,7 @@ F.eks: [https://proms2.hemit.org/PromsTestregisterServices/api/MessageToCitizen/
 
 * apiKey – ApiKey of the end user system placing the order
 * formOrderId – The Id of the formOrder
-* notificationChannel – The actual channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
+* notificationChannel – The actual channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
 * formOrderStatus – Status of the formOrder `{ Ordered | Error }` 
   + Ordered – The formOrder was successful
   + Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
