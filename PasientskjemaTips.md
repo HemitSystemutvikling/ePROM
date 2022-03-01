@@ -91,6 +91,41 @@ Tekstfelt er fritekstfelt uten validering.
 
 Tekstfelt kan vises som tekstboks (én linje) eller tekstområde (6 linjer). Tekstområde brukes f.eks. til kommentarfelt, og bør bare brukes der det er forventet med lengre tekst/flere setninger.
 
+## Hvordan formattere tekst i skjemabyggeren?
+
+Det er mulig å velge styling på tekst (feltnavn) i skjemabyggeren. Dette kan man gjøre under innstillinger på hvert enkelt felt, under Styling er det mulig å velge Bold eller Italic tekst. 
+
+Noen ganger er det imidlertid ønskelig å formattere bare deler av teksten på et felt, da benyttes følgende syntaks: 
+
+__Bold:__
+````
+#b#Anstrengende aktiviteter#b# som å løpe, løfte tunge gjenstander, delta i anstrengende idrett 
+````
+Gir følgende formattering i pasientskjema:
+
+"__Anstrengende aktiviteter__ som å løpe, løfte tunge gjenstander, delta i anstrengede idrett"
+
+__Italic:__
+
+````
+VANLIGE GJØREMÅL #i#(f.eks. arbeid, studier, husarbeid, familie- eller fritidsaktiviteter)#i#
+````
+Gir følgende formattering i pasientskjema:
+
+"VANLIGE GJØREMÅL _(f.eks. arbeid, studier, husarbeid, familie- eller fritidsaktiviteter)_"
+
+__Understreking:__
+
+````
+I løpet av #u#de siste fire ukene#u#, hvor mye av tiden har den #u#fysiske helsen din eller følelsesmessige problemer#u# påvirket dine sosiale aktiviteter (som å besøke venner, slektninger osv.)?
+````
+Gir følgende formattering i pasientskjema:
+
+"I løpet av <ins>de siste fire ukene</ins>, hvor mye av tiden har den <ins>fysiske helsen din eller følelsesmessige problemer</ins> påvirket dine sosiale aktiviteter (som å besøke venner, slektninger osv.)?"
+
+__Linjeskift:__
+
+Dersom det er ønskelig med linjeskift i tittel benyttes #n på ønsket sted i teksten
 
 [Tilbake](Skjemabygger)
 
