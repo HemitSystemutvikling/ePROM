@@ -1,15 +1,14 @@
 # Bestillersystemer som benytter ePROM pr. 28.02.2022:
 
 ## MRS
-- Norsk Hjerteinfarktregister
+- Norsk Hjerteinfarktregister *
 - Norsk register for motornevronsykdom (ALS)
-- Nasjonal medisinsk kvalitetsregister for Hjertestans
-- Nasjonal medisinsk kvalitetsregister for barne og -ungdomsdiabete (Barnediabetesregisteret)
+- Nasjonal medisinsk kvalitetsregister for Hjertestans *
+- Nasjonal medisinsk kvalitetsregister for barne og -ungdomsdiabetes (Barnediabetesregisteret)
 - NORKAR - Norsk karkirurgisk register
 - Norsk MS-register og biobank
 - Norsk nakke- og ryggregister
 - Nasjonal traumeregister
-- Norsk hjertestansregister
 - Norsk Intensivregister (NIR)
 - Nasjonal korsbåndregister
 - Norsk porfyriregister
@@ -24,11 +23,14 @@
 - Norsk elektronisk smerteregister (NOKSmerte)
 - Nasjonal register for behandling av skadelig bruk eller avhengighet av rusmidler (Kvarus)
 - Rehabiliteringsregisteret
-- Norsk Intensiv- og Pandemiregister (NiPAR)
+- Norsk Intensiv- og Pandemiregister (NiPAR) *
 - Norsk register for personer som utredes for kognitive symptomer i spesialisthelsetjenesten (NorKog) (kommer)
 - Hørselsregisteret for barn (kommer)
 - Kvalitetsregister for postoperative sårinfeksjoner (POSI)
-- St. Olavs hospital, Regionalt senter for helsetjenesteutvikling (Forløp PREM)
+- St. Olavs hospital, Regionalt senter for helsetjenesteutvikling (Forløp PREM) *
+
+
+\* PIPP 
 
 ## Andre
 
