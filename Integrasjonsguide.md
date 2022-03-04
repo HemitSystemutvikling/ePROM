@@ -8,8 +8,6 @@
 
 [BESTILLING AV SKJEMA V2](BestillingAvSkjemaV2)
 
-[(BESTILLING AV SKJEMA V1 - Utgått)](BestillingAvSkjemaV1)
-
 [PASIENTINITIERT BESTILLING AV SKJEMA](PasientinitiertBestillingAvSkjema)
 
 [RETUR AV UTFYLT SKJEMA](ReturAvUtfyltSkjema)
@@ -17,8 +15,6 @@
 [SKJEMA SOM KREVER SIGNATUR](SkjemaSomKreverSignatur)
 
 [SENDE MELDING TIL INNBYGGER V2](SendeMeldingTilInnbyggerV2)
-
-[(SENDE MELDING TIL INNBYGGER - Utgått)](SendeMeldingTilInnbyggerV1)
 
 [SENDE MELDING SOM SMS/EPOST](SendeMeldingSomSmsEpost)
 
