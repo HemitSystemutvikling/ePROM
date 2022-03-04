@@ -39,6 +39,11 @@ Her finner man alle skjema som er bestilt og man kan f.eks.teste innsending av s
 
 ePROM i testmiljøet integrerer med Helsenorge og Digipost sine testmiljøer. For å teste integrasjonen mellom ePROM, Helsenorge og Digipost har vi tilgang til fødselsnummer med BankID. Midlertidig tilgang til disse fås ved henvendelse til Hemit på <eprom@hemit.no>.
 
+## Aynkron kommunikasjon
+
+ePROM basserer seg på asynkron kommunikasjon med Bestillersystem. Dette gjelder både for bestilling av skjema og sending av melding til innbygger.
+Se eksempel i [sekvensdiagram](img/bestilling_av_pasientskjema_asynkront.png)
+
 ## Verifisering av integrasjon
 
 Verifisering av integrasjonen er beskrevet [her](IntegrasjonVerifikasjon). Det er et krav at dette utføres for alle nye integrasjoner.
