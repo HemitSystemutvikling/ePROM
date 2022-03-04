@@ -24,6 +24,13 @@
 ### Brukerstøtte
 [Brukerstøtte - hvordan hjelpe pasienten når feil oppstår](UserSupport)
 
+### Integrasjonsguide
+[Integrasjonsguide](Integrasjonsguide)
+
+[Integrasjonsguide for skjemautfyller](IntegrasjonsguideSkjemautfyllerApi)
+
+[Verifisering av integrasjoner](IntegrasjonVerifikasjon)
+
 ### Skisser
 
 [Designskisse ePROM](Designskisse)
@@ -35,14 +42,6 @@
 [Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM](Overordnetskisse%20pasientinitiert)
 
 [Overordnet skisse og flytdiagram ePROM "på vegne av"-funksjonalitet](PaVegneAvFlyt)
-
-### Integrasjonsguide
-[Integrasjonsguide](Integrasjonsguide)
-
-[Integrasjonsguide for skjemautfyller](IntegrasjonsguideSkjemautfyllerApi)
-
-[Verifisering av integrasjoner](IntegrasjonVerifikasjon)
-
 
 ### Administrasjon av PROMS i MRS
 [Administrasjon av PROMS i MRS](MrsPromsAdmin)
