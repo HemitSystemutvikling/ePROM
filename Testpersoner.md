@@ -15,19 +15,18 @@ Når samtykke er gitt vil skjemabestillinger leveres som en skjemaoppgave til pa
 
 D-nummer kan også benyttes, med samme forutsetninger som for andre testpersoner
 
-eHelse sitt testpersonverktøy [TestAbel](http://ehelsetestdata.azurewebsites.net/) kan brukes til å finne testpersoner, tilgang til dette gis av NHN. 
-
-## Kontaktregisteret
-
-Kontaktinformasjon i kontaktregisteret må oppdateres med jevne mellomrom. Dersom testpasienten ikke har oppdatert kontaktinformasjon siste 18 mnd regnes den som ikke digitalt aktiv selv om samtykke er gitt på helsenorge.
-
-Ved innlogging på IdPorten får man derfor fra tid til annen spørsmål om kontaktinformasjon. Denne må fylles ut med telefonnummer og e-post, men dette må ikke være reell informasjon med mindre man ønsker å motta varslinger fra testmiljøet, f.eks. når testpasienten mottar nye skjemaoppgaver. 
-
 ## Innlogging i IdPorten
 
 Ved innlogging i IdPorten i test, velg alternativ **TestID**. Fyll deretter inn fødselsnummer i feltet "Syntetisk personidentifikator (pid)" og trykk Autentiser. Man er da innlogget tilsvarende bankID nivå 4.
 
 ![idporten](img/idporten_testid.PNG)
+
+
+### Kontaktregisteret
+
+Kontaktinformasjon i kontaktregisteret må oppdateres med jevne mellomrom. Dersom testpasienten ikke har oppdatert kontaktinformasjon siste 18 mnd regnes den som ikke digitalt aktiv selv om samtykke er gitt på helsenorge.
+
+Ved innlogging på IdPorten får man derfor fra tid til annen spørsmål om kontaktinformasjon. Denne må fylles ut med telefonnummer og e-post, men dette må ikke være reell informasjon med mindre man ønsker å motta varslinger fra testmiljøet, f.eks. når testpasienten mottar nye skjemaoppgaver. 
 
 [Tilbake](./Integrasjonsguide)
 
