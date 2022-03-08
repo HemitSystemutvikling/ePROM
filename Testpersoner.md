@@ -29,3 +29,5 @@ Ved innlogging i IdPorten i test, velg alternativ **TestID**. Fyll deretter inn 
 
 ![idporten](img/idporten_testid.PNG)
 
+[Tilbake](./Integrasjonsguide)
+
