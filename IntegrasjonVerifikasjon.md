@@ -48,11 +48,12 @@ ePROM bestillingsAPI: [https://pasientrapportering.qa.nhn.no/webapi/api/v2/formo
 
 Helsenorge QA: [https://tjenester.hn.qa.nhn.no/](https://tjenester.hn.qa.nhn.no/)
 
-### Testperson Helsenorge (test og QA)
-Pnr: 01039494104
+### Testpersoner Helsenorge (test og QA)
 
-Engangskode: otp (for innlogging med ID-porten/BankID)
+[Mer om testpersoner og innlogging](Testpersoner)
 
-Personlig passord: qwer1234 (for innlogging med ID-porten/BankID)
+**Testperson som kan benyttes til verifikasjon: 01039494104**
+
+Denne har samtykket på helsenorge i test og QA, men kan også være i bruk av andre bestillersystemer.
 
 [Tilbake](./)
