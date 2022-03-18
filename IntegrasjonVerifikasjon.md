@@ -50,9 +50,13 @@ Helsenorge QA: [https://tjenester.hn.qa.nhn.no/](https://tjenester.hn.qa.nhn.no/
 
 ### Testpersoner Helsenorge (test og QA)
 
-[Mer om testpersoner og innlogging](Testpersoner)
-
 **Testperson som kan benyttes til verifikasjon: 01039494104**
+
+Pnr over brukes med BankID i IdPorten med følgende innloggingsdetaljer:
+
+Engangspassord: otp
+
+Personlig kode: qwer1234
 
 Denne har samtykket på helsenorge i test og QA, men kan også være i bruk av andre bestillersystemer.
 
