@@ -1,4 +1,4 @@
-# Nytt i ePROM v8.0
+# Foreløpige endringer i ePROM v8.0
 *Dato: uke 18 2022*
  
 ### Teknisk
