@@ -6,7 +6,7 @@
 
 ### ePROM admin
 - rapport som viser oversikt over alle bestillersystemer og siste aktivitet
-- mulighet for å slette reservasjon og samtykke som er koblet til et bestillersystem
+- mulighet for å slette konfigurasjon av reservasjon og samtykke koblet til et bestillersystem
 - personiniterte skjema blir registrert som egen varslingskanal internt i ePROM 
  
 ### Teknisk
