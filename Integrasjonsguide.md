@@ -31,9 +31,12 @@ For å se / fylle ut de bestilte skjemaene kan man finne de igjen i pasientløsn
 
 Her finner man alle skjema som er bestilt og man kan f.eks.teste innsending av skjemaer. Pålogging med BankID eller engangskode.
 
-## Testpersoner
+## Pasienter
 
-Test-PREG benyttes i alle miljø. 
+Noen forutsetninger må være oppfylt for at personer skal kunne motta skjema og brev fra ePROM. Les mer om disse [her](Personer)
+
+### Testpasienter til verifisering
+Test-PREG benyttes i alle miljø, foruten PROD. 
 
 [Mer om testpersoner](Testpersoner)
 
