@@ -7,13 +7,13 @@
 
 Alle varslingskanaler krever elektronisk ID på nivå 4 (BankID eller tilsvarende), med unntak av engangskode. 
 
-__NB__: For at personen skal regnes som digitalt aktiv må informasjon i kontaktregisteret være oppdatert i løpet av siste 18 mnd
+__NB__: For at personen skal regnes som digitalt aktiv må informasjon i Difi Kontaktregister være oppdatert i løpet av siste 18 mnd
 
 I tillegg har de ulike varslingskanalene følgende begrensninger:
 
 #### helsenorge:
 - over 16 år
-- må ha gitt samtykke (ulike samtykkenivå for skjema og brev)
+- må ha gitt samtykke (Full)
  
 #### sikker digital postkasse:
 - over 18 år 
