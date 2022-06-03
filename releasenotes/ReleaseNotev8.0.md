@@ -1,4 +1,4 @@
-# Foreløpige endringer i ePROM v8.0
+# Endringer i ePROM v8.0
 *Dato: 28.04.2022*
 
 ### Pasientskjema
