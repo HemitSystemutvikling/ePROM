@@ -1,5 +1,5 @@
 # Foreløpige endringer i ePROM v8.0
-*Tentativ dato: 28.04.2022*
+*Dato: 28.04.2022*
 
 ### Pasientskjema
 - rettet feil for samleskjema som har mer enn 1 skjema med sidevisning
