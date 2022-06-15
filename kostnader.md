@@ -1,6 +1,6 @@
 # Kostnader ved bruk av ePROM
 
-Eventuelle kostnader knyttet til distribusjon av skjema blir fakturert prosjektet.
+Eventuelle kostnader knyttet til distribusjon av skjema blir fakturert bestillersystemet.
 
 ## Distribusjon av digitale skjema
 
