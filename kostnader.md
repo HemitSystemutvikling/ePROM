@@ -19,8 +19,8 @@ Kostnader for distribusjon av skjema:
 - Kostnad for skjema utsendt og returnert på papir avhenger av 
   - antall utsendte skjema (kostnad for print, konvoluttering og porto)
   - antall besvarte skjema (kostnad for skanning, digitalisering og porto)
-  - heftet skjema eller løse ark
-  - farger eller svart/hvitt følgebrev
+  - om skjema sendes som hefte eller løse ark
+  - om følgebrev er i farger eller svart/hvitt
 
 ## Lisensbaserte skjema 
 
