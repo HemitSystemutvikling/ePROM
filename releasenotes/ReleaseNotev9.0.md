@@ -8,7 +8,7 @@
 ### ePROM admin
 - Mulighet for å registrere konfigurasjon av fler enn én reservasjon koblet til et bestillersystem
 - Skjemainformasjon - forhåndsvisning lik melding på helsenorge
-- Brukeradministrasjion - mulig å endre passord på egen bruker
+- Brukeradministrasjon - mulig å endre passord på egen bruker
 - Skjemabygger - retting av småfeil
  
 ### Teknisk
