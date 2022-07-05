@@ -3,7 +3,7 @@
 
 ### Pasientskjema
 - Mer tydelig markering av dagens dato i datovelger
-- Mulighet for å snu retning på slider
+- Slider kan vises i enten stigende eller synkende rekkefølge
 
 ### ePROM admin
 - Mulighet for å registrere konfigurasjon av fler enn én reservasjon koblet til et bestillersystem
