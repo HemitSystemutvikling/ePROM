@@ -13,6 +13,7 @@
  
 ### Teknisk
 - Mellomlagring helsenorge med REST API og FHIR format
+- Tatt i bruk Helsenorge.Messaging v4
 
 
 
