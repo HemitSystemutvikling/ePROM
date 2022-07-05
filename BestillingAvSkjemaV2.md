@@ -33,7 +33,6 @@ function placeFormOrderV2() {
     var formId = "1bc5f9f0-2607-49eb-94f0-6af955bbd79a"; // RAND-12
     var nationalId = "26073941651"; // the national ID of the patient (Norsk fødselsnummer or D-nummer)
     var expiryDate = new Date(new Date().getTime() + (86400000 * 7)); // add 7 days
-    var reminderDate = new Date(new Date().getTime() + (86400000 * 6)); // add 6 days
     var metadata = JSON.stringify({
         age: 76
     });
@@ -56,7 +55,6 @@ function placeFormOrderV2() {
             formId,
             nationalId,
             expiryDate,
-            reminderDate,
             metadata,
             dontStoreCompletedFormInPha,
             distributionRule,
@@ -86,7 +84,7 @@ function placeFormOrderV2() {
 * formId - The form to place an order for
 * nationalId  - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
 * expiryDate - The expiry date of the order
-* reminderDate - Optional. The date to send a reminder for the order. If not set or NULL, no reminder will be sent
+* reminderDate - Optional. Reminderdate is ignored as helsenorge does not use it.
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an stringified JSON object (ex. JSON.stringify({ age: 76 }))
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
 * distributionRule - Optional. The rule used when deciding how to notify the patient `{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }` . Tallverdien kan sendes. Default: Basic
@@ -146,7 +144,7 @@ public async Task<JsonResult> OrderPromsFormV2Async(Guid formId) {
         promsFormId,
         patient.DecryptedPID,
         DateTime.Now.AddDays(7),
-        DateTime.Now.AddDays(6),
+        null,
         GetMetadata(promsFormId, form, patient) false,
         DistributionRule.AllowUnsecure,
         false,
@@ -178,7 +176,7 @@ public async Task<JsonResult> OrderPromsFormV2Async(Guid formId) {
 * formId - The form to place an order for
 * nationalId - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
 * expiryDate - The expiry date of the order
-* reminderDate - The date to send a reminder for the order. If NULL, no reminder will be sent
+* reminderDate - Reminderdate is ignored as helsenorge does not use it.
 * metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an anonymous object (ex.new { age = 23 }).
 * dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients "Personlig helsearkiv" (Helsenorge) or sent to secure digital mailbox. Default: false
 * distributionRule - Optional. The rule used when deciding how to notify the patient `{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }` . Tallverdien kan sendes. Default: Basic
