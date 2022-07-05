@@ -2,17 +2,17 @@
 *Dato: august 2022*
 
 ### Pasientskjema
-- markering av datens dato
-- slider med motsatt rekkefølge
+- Mer tydelig markering av dagens dato i datovelger
+- Mulighet for å snu retning på slider
 
 ### ePROM admin
-- mulighet for å registrere konfigurasjon av flere enn en reservasjon koblet til et bestillersystem
+- Mulighet for å registrere konfigurasjon av fler enn én reservasjon koblet til et bestillersystem
 - Skjemainformasjon - forhåndsvisning lik melding på helsenorge
-- Brukeradministrasjion - Mulig å endre passord på egen bruker
+- Brukeradministrasjion - mulig å endre passord på egen bruker
 - Skjemabygger - retting av småfeil
  
 ### Teknisk
-- mellomlagring helsenorge med REST API og FHIR format
+- Mellomlagring helsenorge med REST API og FHIR format
 
 
 
