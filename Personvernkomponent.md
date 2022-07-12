@@ -22,3 +22,5 @@ Integrasjonen med PVK må registreres på bestillersystemet i ePROM admin.
 
 For å se på personvern-innstillingene til et bestillersystem, logg inn på ePROM admin og gå til Bestillersystemer.
 
+![eprom](img/pvk_bestillersystem.png)
+
