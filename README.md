@@ -2,7 +2,7 @@
 
 [Bestillersystemer som benytter ePROM](Bestillersystemer)
 
-[Endringer i ePROM v9.0 - (Aungust 2022)](releasenotes/ReleaseNotev9.0) 
+[Endringer i ePROM v9.0 - (August 2022)](releasenotes/ReleaseNotev9.0) 
 
 [Tidligere releaser](releasenotes/Releaselist)
 
