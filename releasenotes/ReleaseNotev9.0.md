@@ -11,7 +11,7 @@
 - Mulighet for å registrere konfigurasjon av fler enn én reservasjon koblet til et bestillersystem
 - Skjemainformasjon - forhåndsvisning lik melding på helsenorge
 - Brukeradministrasjon - mulig å endre passord på egen bruker
-- Skjemabygger - retting av småfeil
+- Skjemabygger - begrensning på hva som er lov å legge til i et flersvarsfelt
  
 ### Teknisk
 - Mellomlagring helsenorge med REST API og FHIR format
