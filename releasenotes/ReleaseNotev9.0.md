@@ -5,6 +5,7 @@
 - Mer tydelig markering av dagens dato i datovelger
 - Slider kan vises i enten stigende eller synkende rekkefølge
 - Slider viser enhet dersom dette er oppgitt
+- Sliderverdi kan nullstilles
 
 ### ePROM admin
 - Mulighet for å registrere konfigurasjon av fler enn én reservasjon koblet til et bestillersystem
