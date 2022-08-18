@@ -1,5 +1,5 @@
 # Endringer i ePROM v9.0
-*Dato: august 2022*
+*Dato: 18. august 2022*
 
 ### Pasientskjema
 - Mer tydelig markering av dagens dato i datovelger
