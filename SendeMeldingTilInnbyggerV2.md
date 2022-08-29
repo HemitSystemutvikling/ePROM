@@ -33,13 +33,13 @@ I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som de
 
 **Parametere – Inn**
 
-* apiKey - ApiKey of the end user system placing the order
-* nationalId  - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
+* apiKey - ApiKey of the end user system sending the message
+* nationalId  - The national id number of the patient the message is addressing (must be either Norsk fødselsnummer or D-nummer)
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
 * notificationPriorityList - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` The numeric value can be sent.
-* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
+* testMode - Optional. Set to true when the message is initiated from ePROM Admin and the status shall not to be returned to the BestillerSystem. Default: false
 * paperColorPrint - Optional. Set to true when paper should be printed in color. Default: false
 
 **Parametere – Ut**
@@ -118,13 +118,13 @@ messageToCitizenId = result.messageToCitizenId});
 **Parametere - Inn**
 
 * promsApiBaseUrl - The base URL of the PROMS API
-* apiKey - ApiKey of the end user system placing the order
-* nationalId - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
+* apiKey - ApiKey of the end user system sending the message
+* nationalId - The national id number of the patient the message is addressing (must be either Norsk fødselsnummer or D-nummer)
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
 * notificationChannel - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` The numeric value can be sent.
-* testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
+* testMode - Optional. Set to true when the message is initiated from ePROM Admin and the status shall not to be returned to the BestillerSystem. Default: false
 * paperColorPrint - Optional. Set to true when paper should be printed in color. Default: false
 
 promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
@@ -145,9 +145,7 @@ Ellers kan følgende feilsituasjoner oppstå:
 * 504 GatewayTimeout, "Timeout while waiting for response from Helsenorge"
 * 502 BadGateway, "Unable to communicate with Helsenorge. No message sent."
 * 400 BadRequest("Main document in MessageToCitizen is missing")
-* 400 BadRequest($"apiKey '{formOrder.apiKey}' doesn't exists")
-* 400 BadRequest($"No form with id='{formOrder.formId}' exists")
-
+* 400 BadRequest($"apiKey '{message.apiKey}' doesn't exists")
 
 ## Mottak av status for forsendelse
 
@@ -163,12 +161,12 @@ F.eks: [https://proms2.hemit.org/PromsTestregisterServices/api/MessageToCitizen/
 
 **Parametere - Inn**
 
-* apiKey – ApiKey of the end user system placing the order
+* apiKey – ApiKey of the end user system sending the message
 * messageToCitizenId – The Id of the message
 * notificationChannel – The actual channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
-* formOrderStatus – Status of the formOrder `{ Ordered | Error }` 
-  + Ordered – The formOrder was successful
-  + Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
+* sentStatus – Status of the message `{ Sent | Error }` 
+  + Sent – The message was successfully sent
+  + Error – The message was not successfully sent. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
 
 **Parametere - Ut**
 
