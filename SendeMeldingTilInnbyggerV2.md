@@ -34,17 +34,18 @@ I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som de
 **Parametere – Inn**
 
 * apiKey - ApiKey of the end user system placing the order
-* formId - The form to place an order for
 * nationalId  - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
 * notificationPriorityList - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` The numeric value can be sent.
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
+* paperColorPrint - Optional. Set to true when paper should be printed in color. Default: false
 
 **Parametere – Ut**
 
 * notificationChannel – The channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` 
+* messageToCitizenId – The Id of the message
 
 **Metode**
 
@@ -124,6 +125,7 @@ messageToCitizenId = result.messageToCitizenId});
 * documentCollection – Collection of documents to send to citizen
 * notificationChannel - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` The numeric value can be sent.
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
+* paperColorPrint - Optional. Set to true when paper should be printed in color. Default: false
 
 promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
 
@@ -132,6 +134,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
 * SendMessageToCitizenResult
 
  * notificationChannel – The channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` 
+ * messageToCitizenId – The Id of the message
 
 ## Feilsituasjoner
 
@@ -161,7 +164,7 @@ F.eks: [https://proms2.hemit.org/PromsTestregisterServices/api/MessageToCitizen/
 **Parametere - Inn**
 
 * apiKey – ApiKey of the end user system placing the order
-* formOrderId – The Id of the formOrder
+* messageToCitizenId – The Id of the message
 * notificationChannel – The actual channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
 * formOrderStatus – Status of the formOrder `{ Ordered | Error }` 
   + Ordered – The formOrder was successful
