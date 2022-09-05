@@ -23,10 +23,13 @@ PROMS-bestillingene er tilgjengelig for nedlasting til Excel (datadump) ved å k
 
 ### OrderStatus:
 Statuskoder for en bestilling:
-* 0 = bestilt
-* 1 = besvart
-* 2 = utgått
-* 3 = feilet
+* 0 = Bestilt
+* 1 = Besvart
+* 2 = Utgått
+* 3 = Feilet
+* 4 = Ikke bestilt
+* 5 = Mottaker ikke nådd
+* 6 = Prosesserer bestilling
 
 
 ### ErrorCode:
