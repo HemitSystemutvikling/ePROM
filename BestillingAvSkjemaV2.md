@@ -212,8 +212,8 @@ Ellers kan følgende feilsituasjoner oppstå:
 * BadRequest($"The ordered form needs to be signed. This is not possible when the form is ordered on behalf of someone.")
 * BadRequest($"Form with id='{formOrder.formId}' is not paper enabled")
 * BadRequest($"JSON in metadata is not valid: {ex.Message}")
-
- 
+* BadRequest($"nationalId: FH-nummer is not supported as national ID. The national ID must be either Norsk fødselsnummer or D-nummer.")
+* BadRequest($"nationalId: H-nummer is not supported as national ID. The national ID must be either Norsk fødselsnummer or D-nummer.")
 
 ## Mottak av status for bestillingen
 
