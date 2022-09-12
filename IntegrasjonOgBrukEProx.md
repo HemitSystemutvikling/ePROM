@@ -20,6 +20,10 @@ Relevant dato:
 
 ## Bestilling og svar
 
+### Overordnet flytdiagram
+
+
+
 ### Bestilling uten relevant dato
 
 En standard bestilling gjøres på samme måte som en bestilling mot ePROM. ePROX vil gjøre følgende:
