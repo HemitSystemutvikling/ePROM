@@ -2,21 +2,13 @@
 
 ## Integrasjon
 
-Integrasjon mot ePROX skjer på samme måte som mot ePROM, med unntak av adressen. Integrasjonsguide for ePROM finnes [her](Integrasjonsguide.md)
+Integrasjon mot ePROX skjer på samme måte som mot ePROM, med unntak av adresse til bestillings-API. 
+
+Integrasjonsguide for ePROM finnes [her](Integrasjonsguide.md)
 
 ## Bruk av ePROX
 
 Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestillinger av den aktuelle skjematypen. 
-
-### Ordliste:
-
-Aktiv bestilling: 
-- Bestilling med status bestilt hvor bestillingsdato ikke er foreldet
-- Bestilling med status utløpt hvor bestillingsdato ikke er foreldet
-- Bestilling med status besvart hvor svar ikke er sendt tilbake til alle som kan tenkes å få svar
-
-Relevant dato: 
-- dato for relevant hendelse for denne pasienten. Det kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Denne blir brukt til å avgjøre om det finnes eksisterende bestillinger i ePROX som den nye bestillingen skal kobles til eller hvorvidt det skal trigges en ny bestilling mot ePROM om det ikke finnnes en eksisterende bestilling i ePROX.
 
 ## Bestilling og svar
 
@@ -48,7 +40,15 @@ Et tenkt tilfelle er at en pasient med flere tidligere hjerteinfarkt opplever et
 #### Relevant dato som ikke trigger ny bestilling 
 Et annet tenkt tilfelle er at data blir etterregistrert i registeret, slik at fristen for utsending allerede er utløpt i det skjemaet blir registrert. I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i ePROX og det ikke er utdatert, men ikke gjøre en ny bestilling mot ePROM om det ikke finnes. I dette tilfellet benyttes _RelevantDateDontCreate_. Denne vil ikke trigge ny bestilling mot ePROM dersom det ikke finnes eksisterende svar som tilfredsstiller kravene.
 
+### Ordliste:
 
+Aktiv bestilling: 
+- Bestilling med status bestilt hvor bestillingsdato ikke er foreldet (mindre enn 365 dager gammel)
+- Bestilling med status utløpt hvor bestillingsdato ikke er foreldet (mindre enn 365 dager gammel)
+- Bestilling med status besvart hvor svar ikke er sendt tilbake til alle som kan tenkes å få svar
+
+Relevant dato: 
+- dato for relevant hendelse for denne pasienten. Det kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Denne blir brukt til å avgjøre om det finnes eksisterende bestillinger i ePROX som den nye bestillingen skal kobles til eller hvorvidt det skal trigges en ny bestilling mot ePROM om det ikke finnnes en eksisterende bestilling i ePROX.
 
 
 
