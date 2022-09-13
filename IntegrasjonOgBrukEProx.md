@@ -16,7 +16,7 @@ Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestil
 
 En standard bestilling fra registeret til ePROX behandles i to steg
 
-1) Finne [aktiv bestilling**](#hva-er-en-aktiv-bestilling): dersom det finnes en eller flere aktive bestillinger, på samme pasient og samme skjema men fra annet register, skal det ikke trigges en ny bestilling mot ePROM, men bestillingene skal kobles sammen i ePROX. Den nye bestillingen vil kobles til den bestillingen med nyest bestillingsdato og få samme status som denne (bestilt, besvart, utløpt).
+1) Finne [aktiv bestilling**](#hva-er-en-aktiv-bestilling): dersom det finnes en aktive bestilling, på samme pasient og samme skjema men fra annet register, skal det ikke trigges en ny bestilling mot ePROM, men bestillingene skal kobles sammen i ePROX. 
 
 2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
 
@@ -48,9 +48,14 @@ I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i 
 ### **Hva er en aktiv bestilling?
 
 En aktiv bestilling er en bestilling med en av følgende tilstander: 
-- Bestilling med status bestilt hvor bestillingsdato ikke er foreldet (mindre enn 365 dager gammel)
-- Bestilling med status utløpt hvor bestillingsdato ikke er foreldet (mindre enn 365 dager gammel)
-- Bestilling med status besvart hvor svar ikke er sendt tilbake til alle som kan tenkes å få svar
+- Bestilling med status bestilt, uløpt eller besvart hvor bestillingsdato ikke er foreldet (mindre enn 365 dager gammel)
+
+
+### Unntak  
+
+Dersom det gjøres flere bestillinger på samme pasient og samme skjema fra __samme register__, vil dette trigge ny bestilling mot ePROM. 
+
+Det vil si at det kan være flere aktive bestillinger på samme pasient og samme skjema. En ny bestilling fra et annet register vil kobles til den aktive bestillingen med nyest bestillingsdato.
 
 
 
