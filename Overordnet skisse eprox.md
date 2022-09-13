@@ -21,4 +21,6 @@ Flytdiagrammet under viser hva som skjer når to registre bestiller samme skjema
 
 ![eprox](img/ePROX_kobling_bestilling_med_besvarelse.png)
 
+[ePROX i bruk](IntegrasjonOgBrukEProx)
+
 [Tilbake](./)
