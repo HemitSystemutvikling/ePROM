@@ -6,6 +6,9 @@ Integrasjon mot ePROX skjer på samme måte som mot ePROM, med unntak av adresse
 
 Integrasjonsguide for ePROM finnes [her](Integrasjonsguide.md)
 
+All kommunikasjon fra registrene går via ePROX mot ePROM
+
+
 ## Bruk av ePROX
 
 Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestillinger av den aktuelle skjematypen. Registre som er knyttet til samme bestilling vil motta samme statusoppdateringer på bestillingen, både når det gjelder bestilling, svar, utløpsdato og feil.
