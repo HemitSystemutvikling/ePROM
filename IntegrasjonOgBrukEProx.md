@@ -4,9 +4,9 @@
 
 Integrasjon mot ePROX skjer på samme måte som mot ePROM, med unntak av adresse til bestillings-API. 
 
-Integrasjonsguide for ePROM finnes [her](Integrasjonsguide.md)
+Integrasjonsguide for ePROM finnes [her](Integrasjonsguide)
 
-Overordnet skisse og flytdiagram for ePROX finnes [her](Overordnet%20skisse%20eprox.md)
+Overordnet skisse og flytdiagram for ePROX finnes [her](Overordnet%20skisse%20eprox)
 
 Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestillinger av den aktuelle skjematypen. Registre som er knyttet til samme bestilling vil motta samme statusoppdateringer på bestillingen, både når det gjelder bestilling, svar, utløpsdato og feil.
 
