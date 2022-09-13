@@ -15,16 +15,6 @@ Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestil
 
 ## Bestilling og svar
 
-### Overordnet flytdiagram
-
-Flytdiagrammet under viser hva som skjer når to registre bestiller samme skjema via ePROX. I dette tilfellet bestiller begge registre skjemaet før pasienten svarer. Begge registre kobles da til samme bestilling mot ePROM, og mottar svaret samtidig når/hvis pasienten velger å svare.  
-
-![eprox](img/ePROX_kobling_bestilling.png)
-
-Flytdiagrammet under viser hva som skjer når to registre bestiller samme skjema via ePROX. I dette tilfellet bestiller register nr 2 skjemaet etter at pasienten har svart på bestillingen fra register 1. Register 2 vil da motta svaret umiddelbart. 
-
-![eprox](img/ePROX_kobling_bestilling_med_besvarelse.png)
-
 ### Bestilling uten relevant dato
 
 En standard bestilling gjøres på samme måte som en bestilling mot ePROM. ePROX vil først lete etter aktive bestillinger** etter følgende regler :
