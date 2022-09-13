@@ -13,9 +13,13 @@ Bakgrunnen for ePROX at det finnes flere registre med overlappende pasientgruppe
 
 ## Overordnet flytdiagram
 
+### Bestilling av skjema med status bestilt 
+
 Flytdiagrammet under viser hva som skjer når to registre bestiller samme skjema via ePROX. I dette tilfellet bestiller begge registre skjemaet før pasienten svarer. Begge registre kobles da til samme bestilling mot ePROM, og mottar svaret samtidig når/hvis pasienten velger å svare.  
 
 ![eprox](img/ePROX_kobling_bestilling.png)
+
+### Bestilling av skjema med status besvart
 
 Flytdiagrammet under viser hva som skjer når to registre bestiller samme skjema via ePROX. I dette tilfellet bestiller register nr 2 skjemaet etter at pasienten har svart på bestillingen fra register 1. Register 2 vil da motta svaret umiddelbart. 
 
