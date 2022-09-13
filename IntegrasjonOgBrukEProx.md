@@ -6,7 +6,7 @@ Integrasjon mot ePROX skjer på samme måte som mot ePROM, med unntak av adresse
 
 Integrasjonsguide for ePROM finnes [her](Integrasjonsguide.md)
 
-Overordnet skisse og flytdiagram for ePROX finnes [her](Overordnet_skisse_eprox.md)
+Overordnet skisse og flytdiagram for ePROX finnes [her](Overordnet%20skisse%20eprox.md)
 
 ## Bruk av ePROX
 
@@ -17,8 +17,9 @@ Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestil
 ### Standard bestilling
 
 En standard bestilling fra registeret til ePROX behandles i to steg
+
 1) Finne [aktiv bestilling**](#hva-er-en-aktiv-bestilling): dersom det finnes en eller flere aktive bestillinger, på samme pasient og samme skjema men fra annet register, skal det ikke trigges en ny bestilling mot ePROM, men bestillingene skal kobles sammen i ePROX. Den nye bestillingen vil kobles til den bestillingen med nyest bestillingsdato og få samme status som denne (bestilt, besvart, utløpt).
-2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
+3) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
 
 ### Bestilling med relevant dato (metadata) 
 Relevant dato sendes med som metadata til bestillingen. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger:
