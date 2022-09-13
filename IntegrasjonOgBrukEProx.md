@@ -6,6 +6,8 @@ Integrasjon mot ePROX skjer på samme måte som mot ePROM, med unntak av adresse
 
 Integrasjonsguide for ePROM finnes [her](Integrasjonsguide.md)
 
+Overordnet skisse og flytdiagram for ePROX finnes [her](Overordnetskisse ePROX.md)
+
 All kommunikasjon fra registrene går via ePROX mot ePROM
 
 
