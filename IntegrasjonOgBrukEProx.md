@@ -6,10 +6,7 @@ Integrasjon mot ePROX skjer på samme måte som mot ePROM, med unntak av adresse
 
 Integrasjonsguide for ePROM finnes [her](Integrasjonsguide.md)
 
-Overordnet skisse og flytdiagram for ePROX finnes [her](Overordnetskisse ePROX.md)
-
-All kommunikasjon fra registrene går via ePROX mot ePROM
-
+Overordnet skisse og flytdiagram for ePROX finnes [her](Overordnet_skisse_eprox.md)
 
 ## Bruk av ePROX
 
@@ -17,25 +14,34 @@ Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestil
 
 ## Bestilling og svar
 
-### Bestilling uten relevant dato
+### Standard bestilling
 
-En standard bestilling gjøres på samme måte som en bestilling mot ePROM. ePROX vil først lete etter aktive bestillinger** etter følgende regler :
-- dersom samme register bestiller samme skjema på samme pasient to eller flere ganger, trigges ny bestilling mot ePROM, selv om det allerede finnes aktive bestillinger på samme pasient og skjema. 
-- dersom det finnes en eller flere aktive bestillinger, på samme pasient og samme skjema men fra annet register, skal det ikke trigges en ny bestilling mot ePROM, men bestillingene skal kobles sammen i ePROX. Den nye bestillingen vil kobles til den bestillingen med nyest bestillingsdato og få samme status som denne (bestilt, besvart, utløpt).
-- dersom det ikke finnes en aktiv bestilling, på samme pasient og samme skjema, skal det trigges en ny bestilling mot ePROM
-
+En standard bestilling fra registeret til ePROX behandles i to steg
+1) Finne [aktiv bestilling**](#hva-er-en-aktiv-bestilling): dersom det finnes en eller flere aktive bestillinger, på samme pasient og samme skjema men fra annet register, skal det ikke trigges en ny bestilling mot ePROM, men bestillingene skal kobles sammen i ePROX. Den nye bestillingen vil kobles til den bestillingen med nyest bestillingsdato og få samme status som denne (bestilt, besvart, utløpt).
+2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
 
 ### Bestilling med relevant dato (metadata) 
+Relevant dato sendes med som metadata til bestillingen. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger:
 
-Relevant dato sendes med som metadata til bestillingen. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Denne blir brukt til å avgjøre om det finnes eksisterende bestillinger i ePROX som den nye bestillingen skal kobles til eller hvorvidt det skal trigges en ny bestilling mot ePROM om det ikke finnnes en eksisterende bestilling i ePROX. ePROX vil kun hente ut eksisterende bestillinger med bestillingsdato som er nyere enn relevant dato. 
+Det er to ulike metadataparametre som kan brukes: __RelevantDateCreateNew__ og __RelevantDateDontCreate__
 
-#### Relevant dato som trigger ny bestilling
-_Scenario 1: en pasient med flere tidligere hjerteinfarkt opplever et nytt hjerteinfarkt i mai, men hadde allerede fylt ut skjema knyttet til tidligere hendelse i februar samme år._ 
-- I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterende svaret fordi det er utdatert, men det kan hende de ønsker å gjøre en ny bestilling mot ePROM. I dette tilfelles benyttes _RelevantDateCreateNew_. Denne vil trigge ny bestilling dersom det ikke finnes eksisterende svar som tilfredsstiller kravene.
+#### __RelevantDateCreateNew__: relevant dato som trigger ny bestilling
+1) Finne aktiv bestilling**: samme metode som for standard bestilling, men ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.
+2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
 
-#### Relevant dato som ikke trigger ny bestilling 
-_Scenario 2: skjema blir etterregistrert i registeret, slik at fristen for utsending allerede er utløpt i det skjemaet blir registrert._ 
-- I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i ePROX og det ikke er utdatert, men ikke gjøre en ny bestilling mot ePROM om det ikke finnes. I dette tilfellet benyttes _RelevantDateDontCreate_. Denne vil ikke trigge ny bestilling mot ePROM dersom det ikke finnes eksisterende svar som tilfredsstiller kravene.
+_Bruksscenario: en pasient med flere tidligere hjerteinfarkt opplever et nytt hjerteinfarkt i mai, men hadde allerede fylt ut skjema knyttet til tidligere hendelse i februar samme år._ 
+
+I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterende svaret fordi det er utdatert, men det kan hende de ønsker å gjøre en ny bestilling mot ePROM. __RelevantDateCreateNew__ vil trigge ny bestilling dersom det ikke finnes eksisterende svar som tilfredsstiller kravene.
+
+
+#### __RelevantDateDontCreate__ : relevant dato som ikke trigger ny bestilling 
+1) Finne aktiv bestilling**: samme metode som for standard bestilling, men ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
+2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det __IKKE__ trigges en ny bestilling mot ePROM
+
+_Bruksscenario: skjema blir etterregistrert i registeret, slik at fristen for utsending allerede er utløpt i det skjemaet blir registrert._
+
+I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i ePROX og det ikke er utdatert, men ikke gjøre en ny bestilling mot ePROM om det ikke finnes.  __RelevantDateDontCreate__ vil ikke trigge ny bestilling mot ePROM dersom det ikke finnes eksisterende svar som tilfredsstiller kravene.
+
 
 #### **Hva er en aktiv bestilling?
 
