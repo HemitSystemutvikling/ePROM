@@ -11,4 +11,14 @@ Bakgrunnen for ePROX at det finnes flere registre med overlappende pasientgruppe
 - ePROX er registrert som et helt vanlig bestillersystem i ePROM, og kommuniserer med ePROM via samme API som alle andre bestillersystemer.
 - Skjema som er delt mellom registrene ligger i ePROM under ePROX bestillersystem sin skjemakatalog
 
+## Overordnet flytdiagram
+
+Flytdiagrammet under viser hva som skjer når to registre bestiller samme skjema via ePROX. I dette tilfellet bestiller begge registre skjemaet før pasienten svarer. Begge registre kobles da til samme bestilling mot ePROM, og mottar svaret samtidig når/hvis pasienten velger å svare.  
+
+![eprox](img/ePROX_kobling_bestilling.png)
+
+Flytdiagrammet under viser hva som skjer når to registre bestiller samme skjema via ePROX. I dette tilfellet bestiller register nr 2 skjemaet etter at pasienten har svart på bestillingen fra register 1. Register 2 vil da motta svaret umiddelbart. 
+
+![eprox](img/ePROX_kobling_bestilling_med_besvarelse.png)
+
 [Tilbake](./)
