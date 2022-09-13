@@ -19,6 +19,7 @@ Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestil
 En standard bestilling fra registeret til ePROX behandles i to steg
 
 1) Finne [aktiv bestilling**](#hva-er-en-aktiv-bestilling): dersom det finnes en eller flere aktive bestillinger, på samme pasient og samme skjema men fra annet register, skal det ikke trigges en ny bestilling mot ePROM, men bestillingene skal kobles sammen i ePROX. Den nye bestillingen vil kobles til den bestillingen med nyest bestillingsdato og få samme status som denne (bestilt, besvart, utløpt).
+
 2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
 
 ### Bestilling med relevant dato (metadata) 
@@ -28,6 +29,7 @@ Det er to ulike metadataparametre som kan brukes: __RelevantDateCreateNew__ og _
 
 #### __RelevantDateCreateNew__: relevant dato som trigger ny bestilling
 1) Finne aktiv bestilling**: samme metode som for standard bestilling, men ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.
+
 2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
 
 _Bruksscenario: en pasient med flere tidligere hjerteinfarkt opplever et nytt hjerteinfarkt i mai, men hadde allerede fylt ut skjema knyttet til tidligere hendelse i februar samme år._ 
@@ -37,6 +39,7 @@ I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterend
 
 #### __RelevantDateDontCreate__ : relevant dato som ikke trigger ny bestilling 
 1) Finne aktiv bestilling**: samme metode som for standard bestilling, men ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
+
 2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det __IKKE__ trigges en ny bestilling mot ePROM
 
 _Bruksscenario: skjema blir etterregistrert i registeret, slik at fristen for utsending allerede er utløpt i det skjemaet blir registrert._
