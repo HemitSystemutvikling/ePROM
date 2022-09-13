@@ -21,7 +21,7 @@ En standard bestilling fra registeret til ePROX behandles i to steg
 2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
 
 ## Bestilling med relevant dato (metadata) 
-Relevant dato sendes med som metadata til bestillingen. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger:
+Relevant dato sendes med som metadata til bestillingen. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger.
 
 Det er to ulike metadataparametre som kan brukes: __RelevantDateCreateNew__ og __RelevantDateDontCreate__
 
@@ -32,21 +32,17 @@ Det er to ulike metadataparametre som kan brukes: __RelevantDateCreateNew__ og _
 
 _Bruksscenario: en pasient med flere tidligere hjerteinfarkt opplever et nytt hjerteinfarkt i mai, men hadde allerede fylt ut skjema knyttet til tidligere hendelse i februar samme år._ 
 
-I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterende svaret fordi det er utdatert, men det kan hende de ønsker å gjøre en ny bestilling mot ePROM. 
-
-__RelevantDateCreateNew__ vil trigge ny bestilling dersom det ikke finnes eksisterende svar som tilfredsstiller kravene.
+I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterende svaret fordi det er utdatert, men det kan hende de ønsker å gjøre en ny bestilling mot ePROM. ePROX vil trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
 
 
-### __RelevantDateDontCreate__ : relevant dato som ikke trigger ny bestilling 
+### __RelevantDateDontCreate__: relevant dato som ikke trigger ny bestilling 
 1) Finne aktiv bestilling**: samme metode som for standard bestilling, men ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
 
 2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det __IKKE__ trigges en ny bestilling mot ePROM
 
 _Bruksscenario: skjema blir etterregistrert i registeret, slik at fristen for utsending allerede er utløpt i det skjemaet blir registrert._
 
-I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i ePROX og det ikke er utdatert, men ikke gjøre en ny bestilling mot ePROM om det ikke finnes.  
-
-__RelevantDateDontCreate__ vil ikke trigge ny bestilling mot ePROM dersom det ikke finnes eksisterende svar som tilfredsstiller kravene.
+I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i ePROX og det ikke er utdatert, men ikke gjøre en ny bestilling mot ePROM om det ikke finnes. ePROX vil ikke trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
 
 
 ### **Hva er en aktiv bestilling?
