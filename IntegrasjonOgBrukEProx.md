@@ -47,11 +47,11 @@ I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i 
 
 ### **Hva er en aktiv bestilling?
 
-En aktiv bestilling er en bestilling med en av følgende tilstander: 
+En aktiv bestilling er en bestilling med en av følgende statuser: 
 - Bestilling med status bestilt, uløpt eller besvart hvor bestillingsdato ikke er foreldet (mindre enn 365 dager gammel)
 
 
-### Unntak  
+### Unntak ved flere bestillinger fra samme register 
 
 Dersom det gjøres flere bestillinger på samme pasient og samme skjema fra __samme register__, vil dette trigge ny bestilling mot ePROM. 
 
