@@ -27,7 +27,7 @@ Dersom det gjøres flere bestillinger på samme pasient og samme skjema fra __sa
 Det vil si at det kan være flere aktive bestillinger på samme pasient og samme skjema. En ny bestilling fra et annet register vil kobles til den aktive bestillingen med nyest bestillingsdato.
 
 ## Bestilling med relevant dato (metadata) 
-Relevant dato sendes med som metadata til bestillingen. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger.
+Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger.
 
 Det er to ulike metadataparametre som kan brukes: 
 
