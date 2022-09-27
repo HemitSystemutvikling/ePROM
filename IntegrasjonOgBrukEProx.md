@@ -22,7 +22,7 @@ En standard bestilling fra registeret til ePROX behandles i to steg
 
 ### Flere bestillinger fra samme register 
 
-Dersom det gjøres flere bestillinger på samme pasient og samme skjema fra __samme register__, vil dette trigge ny bestilling mot ePROM. 
+Dersom det gjøres ny bestilling på samme pasient og samme skjema fra __samme register__, vil dette trigge ny bestilling mot ePROM. 
 
 Det vil si at det kan være flere aktive bestillinger på samme pasient og samme skjema. En ny bestilling fra et annet register vil kobles til den aktive bestillingen med nyest bestillingsdato.
 
