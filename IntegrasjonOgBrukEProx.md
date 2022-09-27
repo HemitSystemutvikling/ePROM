@@ -26,12 +26,11 @@ Dersom det gjøres ny bestilling på samme pasient og samme skjema fra __samme r
 
 Det vil si at det kan være flere aktive bestillinger på samme pasient og samme skjema. En ny bestilling fra et annet register vil kobles til den aktive bestillingen med nyest bestillingsdato.
 
-## Bestilling med relevant dato (metadata) 
-Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger.
+## Bestilling med metadata
 
 Det er to ulike metadataparametre som kan brukes: 
 
-- RELEVANT_DATE - Brukes til å avgjøre om en eksisterende, aktiv bestilling er ny nok
+- RELEVANT_DATE - Brukes til å avgjøre om en eksisterende, aktiv bestilling er ny nok. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger.
 - CREATE_NEW_ORDER - Brukes til å avgjøre om det skal genereres en ny bestilling dersom det ikke finnes en eksisterende bestilling å koble til. Dersom true skal det opprettes ny bestilling, dersom false skal det ikke opprettes ny bestilling. Default = true
 
 
