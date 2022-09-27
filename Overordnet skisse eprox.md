@@ -9,9 +9,11 @@ ePROX vil gjøre det mulig for et register å koble seg på et annet registers b
 ![eprom](img/ePROM_proxy.png)
 
 
-- Registrene kommuniserer utelukkende med ePROX
+- Registrene kommuniserer utelukkende med ePROX (ikke ePROM)
 - ePROX er registrert som et helt vanlig bestillersystem i ePROM, og kommuniserer med ePROM via samme API som alle andre bestillersystemer.
 - Skjema som er delt mellom registrene ligger i ePROM under ePROX bestillersystem sin skjemakatalog
+- Registrene bestiller samme skjema (samme id), og bruker samme følgebrev og samme skjemainformasjon (f.eks. på helsenorge)
+- Hver bestilling har en fast levetid. Denne er default på 365 dager. Etter dette vil ikke bestillingen være aktiv lenger, uansett hvilken status den har i ePROM (bestilt, levert, utløpt, feilet).
 
 ## Overordnet flytdiagram
 
