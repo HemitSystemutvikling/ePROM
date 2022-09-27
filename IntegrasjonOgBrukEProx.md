@@ -51,8 +51,6 @@ I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i 
 
 Syntaks: _{"RELEVANT_DATE":"2022-09-22.","CREATE_NEW_ORDER":false}_
 
-Merk: CREATE_NEW_ORDER = false kan kun benyttes sammen med RELEVANT_DATE.
-
 ### **Hva er en aktiv bestilling?
 
 En aktiv bestilling er en bestilling med en av følgende statuser: 
