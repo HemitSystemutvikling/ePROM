@@ -51,13 +51,8 @@ I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i 
 
 Syntaks: _{"RELEVANT_DATE":"2022-09-22.","CREATE_NEW_ORDER":false}_
 
-### **Hva er en aktiv bestilling?
 
-En aktiv bestilling er en bestilling med en av følgende statuser: 
-- Bestilling med status bestilt, uløpt eller besvart hvor bestillingsdato ikke er foreldet (mindre enn 365 dager gammel)
-
-
-### Unntak ved flere bestillinger fra samme register 
+### Flere bestillinger fra samme register 
 
 Dersom det gjøres flere bestillinger på samme pasient og samme skjema fra __samme register__, vil dette trigge ny bestilling mot ePROM. 
 
@@ -65,9 +60,15 @@ Det vil si at det kan være flere aktive bestillinger på samme pasient og samme
 
 ### Tvinge bestilling
 
-I noen tilfeller er det nødvendig å tvinge gjennom en ny bestilling. Det kan bl.a. skje dersom man ønsker å bestille skjema på en spesifikk kanal (f.eks. papir). Da er det mulig å benytte CREATE_NEW_ORDER alene.
+I noen tilfeller er det nødvendig å tvinge gjennom en ny bestilling, uten å ta hensyn til om det allerede finnes en aktiv bestilling. Det kan bl.a. skje dersom man ønsker å bestille skjema på en spesifikk kanal (f.eks. papir). Da er det mulig å benytte CREATE_NEW_ORDER alene.
 
 Syntaks: _{"CREATE_NEW_ORDER":true}_
+
+### **Hva er en aktiv bestilling?
+
+En aktiv bestilling er en bestilling med en av følgende statuser: 
+- Bestilling med status bestilt, uløpt eller besvart hvor bestillingsdato ikke er foreldet (mindre enn 365 dager gammel)
+
 
 
 
