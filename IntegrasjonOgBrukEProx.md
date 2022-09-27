@@ -43,7 +43,7 @@ _Bruksscenario: en pasient med flere tidligere hjerteinfarkt opplever et nytt hj
 
 I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterende svaret fordi det er utdatert, men det kan hende de ønsker å gjøre en ny bestilling mot ePROM. ePROX vil trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
 
-Syntaks: _{"RELEVANT_DATE":"2022-09-22."}_
+Syntaks: _{"RELEVANT_DATE":"2022-09-22"}_
 
 ### Relevant dato som ikke trigger ny bestilling 
 1) Finne aktiv bestilling**: samme metode som for standard bestilling, men ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
