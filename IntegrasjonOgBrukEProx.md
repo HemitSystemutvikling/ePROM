@@ -34,30 +34,31 @@ Det er to ulike metadataparametre som kan brukes:
 - CREATE_NEW_ORDER - Brukes til å avgjøre om det skal genereres en ny bestilling dersom det ikke finnes en eksisterende bestilling å koble til. Dersom true skal det opprettes ny bestilling, dersom false skal det ikke opprettes ny bestilling. Default = true
 
 
-### Relevant dato som trigger ny bestilling
-1) Finne aktiv bestilling**: samme metode som for standard bestilling, men ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.
+### _Bruksscenario 1: en pasient med flere tidligere sykehusinnleggelser opplever en ny hendelse, men har allerede fylt ut skjema knyttet til en annen hendelse tidligere samme år._ 
+
+I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterende svaret fordi det er utdatert og/eller urelevant, men det kan hende de ønsker å gjøre en ny bestilling mot ePROM. ePROX vil i dette tilfellet trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
+
+1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.
 
 2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
 
-_Bruksscenario: en pasient med flere tidligere hjerteinfarkt opplever et nytt hjerteinfarkt i mai, men hadde allerede fylt ut skjema knyttet til tidligere hendelse i februar samme år._ 
-
-I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterende svaret fordi det er utdatert, men det kan hende de ønsker å gjøre en ny bestilling mot ePROM. ePROX vil trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
 
 Syntaks: _{"RELEVANT_DATE":"2022-09-22"}_
 
-### Relevant dato som ikke trigger ny bestilling 
-1) Finne aktiv bestilling**: samme metode som for standard bestilling, men ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
+### _Bruksscenario 2: skjema er blitt etterregistrert og det er ønskelig å se om de finnes eksisterende svar, uten å gjøre ny bestilling._
+
+I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert, men ønsker ikke gjøre en ny bestilling mot ePROM om det ikke finnes fordi det er for lenge siden hendelsesdato. ePROX vil i dette tilfellet ikke trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
+
+
+1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
 
 2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det __IKKE__ trigges en ny bestilling mot ePROM
 
-_Bruksscenario: skjema blir etterregistrert i registeret, slik at fristen for utsending allerede er utløpt i det skjemaet blir registrert._
-
-I dette tilfellet ønsker registeret å motta eksisterende svar om det finnes i ePROX og det ikke er utdatert, men ikke gjøre en ny bestilling mot ePROM om det ikke finnes. ePROX vil ikke trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
 
 Syntaks: _{"RELEVANT_DATE":"2022-09-22.","CREATE_NEW_ORDER":false}_
 
 
-### Tvinge bestilling
+### _Bruksscenario 3: Tvinge ny bestilling_
 
 I noen tilfeller er det nødvendig å tvinge gjennom en ny bestilling, uten å ta hensyn til om det allerede finnes en aktiv bestilling. Det kan bl.a. skje dersom man ønsker å bestille skjema på en spesifikk kanal (f.eks. papir). Da er det mulig å benytte CREATE_NEW_ORDER alene.
 
