@@ -30,13 +30,13 @@ Det vil si at det kan være flere aktive bestillinger på samme pasient og samme
 
 Det er to ulike metadataparametre som kan brukes: 
 
-- RELEVANT_DATE - Brukes til å avgjøre om en eksisterende, aktiv bestilling er ny nok. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger.
+- RELEVANT_DATE - Brukes til å avgjøre om en eksisterende, aktiv bestilling ikke er for gammel. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger.
 - CREATE_NEW_ORDER - Brukes til å avgjøre om det skal genereres en ny bestilling dersom det ikke finnes en eksisterende bestilling å koble til. Dersom true skal det opprettes ny bestilling, dersom false skal det ikke opprettes ny bestilling. Default = true
 
 
-### _Bruksscenario 1: en pasient med flere tidligere sykehusinnleggelser opplever en ny hendelse, men har allerede fylt ut skjema knyttet til en annen hendelse tidligere samme år._ 
+### _Bruksscenario 1: Det er ønskelig å koble seg til en eksisterende bestilling/svar, men bare hvis den er ny nok. Hvis den ikke finnes eller er for gammel, trigges en ny bestilling._
 
-I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterende svaret fordi det er utdatert og/eller urelevant, men det kan hende de ønsker å gjøre en ny bestilling mot ePROM. ePROX vil i dette tilfellet trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
+I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Hvis det finnes en bestilling eller et svar, men det er for gammelt i forhold til relevant dato, ønsker registeret å gjøre en ny bestilling mot ePROM. ePROX vil i dette tilfellet trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene. Det kan f.eks. skje dersom en pasient opplever en ny hendelse, men allerede har fylt ut skjema knyttet til en annen, tidligere hendelse samme år
 
 1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.
 
@@ -45,9 +45,9 @@ I dette tilfellet ønsker ikke registeret nødvendigvis å motta det eksisterend
 
 Syntaks: _{"RELEVANT_DATE":"2022-09-22"}_
 
-### _Bruksscenario 2: skjema er blitt etterregistrert og det er ønskelig å se om de finnes eksisterende svar, uten å gjøre ny bestilling._
+### _Bruksscenario 2: Det er ønskelig å koble seg til eksisterende bestilling/svar hvis den finnes og er ny nok. Hvis den ikke finnes eller er for gammel, trigges ikke en ny bestilling._
 
-I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert, men ønsker ikke gjøre en ny bestilling mot ePROM om det ikke finnes fordi det er for lenge siden hendelsesdato. ePROX vil i dette tilfellet ikke trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
+I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM om det ikke finnes svar. Det kan f.eks. skje hvis hovedskjema i registeret blir etterregistrert, og det er for lenge siden hendelsesdato. ePROX vil i dette tilfellet ikke trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
 
 
 1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
