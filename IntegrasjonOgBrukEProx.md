@@ -38,7 +38,7 @@ Det er to ulike metadataparametre som kan brukes:
 
 ### _Bruksscenario 1: Det er ønskelig å koble seg til en eksisterende bestilling/svar, men bare hvis den er ny nok. Hvis den ikke finnes eller er for gammel, trigges en ny bestilling._
 
-I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Hvis det finnes en bestilling eller et svar, men det er for gammelt i forhold til relevant dato, ønsker registeret å gjøre en ny bestilling mot ePROM. ePROX vil i dette tilfellet trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene. Det kan f.eks. skje dersom en pasient opplever en ny hendelse, men allerede har fylt ut skjema knyttet til en annen, tidligere hendelse innenfor samme år.
+I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke for gammelt i forhold til relevant dato. Hvis ikke ønsker registeret å gjøre en ny bestilling mot ePROM. Et eksempel på et slikt scenario er f.eks. dersom en pasient opplever en ny hendelse, men allerede har fylt ut skjema knyttet til en annen, tidligere hendelse innenfor samme år.
 
 1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.
 
@@ -49,7 +49,7 @@ Syntaks: _{"RELEVANT_DATE":"2022-09-22"}_
 
 ### _Bruksscenario 2: Det er ønskelig å koble seg til eksisterende bestilling/svar hvis den finnes og er ny nok. Hvis den ikke finnes eller er for gammel, trigges ikke en ny bestilling._
 
-I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM om det ikke finnes svar. Det kan f.eks. skje hvis hovedskjema i registeret blir etterregistrert, og det er for lenge siden hendelsesdato. ePROX vil i dette tilfellet ikke trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
+I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM om det ikke finnes svar. Et eksempel på et slikt scenario er hvis hovedskjema i registeret blir etterregistrert, og det er for lenge siden hendelsesdato til at det er aktuelt å trigge en ny bestilling. ePROX vil i dette tilfellet ikke trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
 
 
 1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
