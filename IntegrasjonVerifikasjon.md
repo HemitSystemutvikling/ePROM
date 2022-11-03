@@ -38,7 +38,7 @@ ePROM skjemautfyller: [https://proms2.hemit.org/Proms](https://proms2.hemit.org/
 
 ePROM bestillingsAPI: [https://proms2.hemit.org/promswebapi/api/v2/formorder](https://proms2.hemit.org/promswebapi/api/v2/formorder)
 
-Helsenorge test: [https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr]](https://tjenester-hn-prodkopi-01.int-hn.nhn.no/?pnr=[pnr])
+Helsenorge test: [https://tjenester.hn2.test.nhn.no/?pnr=[pnr]](https://tjenester.hn2.test.nhn.no/?pnr=[pnr])
 
 ### QA
 
