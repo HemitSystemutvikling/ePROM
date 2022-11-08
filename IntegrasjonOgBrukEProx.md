@@ -10,11 +10,13 @@ Overordnet skisse og flytdiagram for ePROX finnes [her](Overordnet%20skisse%20ep
 
 Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestillinger av den aktuelle skjematypen. Registre som er knyttet til samme bestilling vil motta samme statusoppdateringer på bestillingen, både når det gjelder bestilling, svar, utløpsdato og feil.
 
-# Regler for bestilling 
+# Regler for bestilling
+
+**Dersom det ikke finnes en aktiv bestilling, opprettes det alltid en ny bestilling. Det gjelder for alle typer bestilling, både med og uten metadata (også hvis CREATE_NEW_ORDER=false).**
 
 ## Standard bestilling
 
-En standard bestilling fra registeret til ePROX behandles i to steg
+En standard bestilling fra registeret til ePROX behandles i tre steg
 
 1) Finne aktiv bestilling*: dersom det finnes en aktiv bestilling, på samme pasient og samme skjema - men fra annet register, skal det ikke trigges en ny bestilling mot ePROM, men bestillingene skal kobles sammen i ePROX. 
 
@@ -40,16 +42,18 @@ Det er to ulike metadataparametre som kan brukes:
 
 I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke for gammelt i forhold til relevant dato. Hvis ikke ønsker registeret å gjøre en ny bestilling mot ePROM. Et eksempel på et slikt scenario er f.eks. dersom en pasient opplever en ny hendelse, men allerede har fylt ut skjema knyttet til en annen, tidligere hendelse innenfor samme år.
 
-1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.
+1) Finne aktiv bestilling**: Dersom det ikke finnes noen aktive bestillinger, blir det opprettet en ny bestilling
 
-2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM
+2) Finne relevante bestillinger: ePROX vil deretter kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.
+
+3) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 2 vil det trigges en ny bestilling mot ePROM
 
 
 Syntaks: _{"RELEVANT_DATE":"2022-09-22"}_
 
-### _Bruksscenario 2: Det er ønskelig å koble seg til eksisterende bestilling/svar hvis den finnes og er ny nok. Hvis den ikke finnes eller er for gammel, trigges ikke en ny bestilling._
+### _Bruksscenario 2: Det er ønskelig å koble seg til eksisterende bestilling/svar hvis den finnes og er ny nok. Hvis den finnes men er for gammel, trigges ikke en ny bestilling._
 
-I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM om det ikke finnes svar. Et eksempel på et slikt scenario er hvis hovedskjema i registeret blir etterregistrert, og det er for lenge siden hendelsesdato til at det er aktuelt å trigge en ny bestilling. ePROX vil i dette tilfellet ikke trigge ny bestilling dersom det ikke finnes aktive bestillinger som tilfredsstiller kravene.
+I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM om det ikke finnes svar. Et eksempel på et slikt scenario er hvis hovedskjema i registeret blir etterregistrert, og det er for lenge siden hendelsesdato til at det er aktuelt å trigge en ny bestilling. ePROX vil i dette tilfellet ikke trigge ny bestilling dersom det finnes aktive bestillinger, men disse ikke tilfredsstiller kravene.
 
 
 1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
