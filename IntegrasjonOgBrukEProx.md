@@ -53,18 +53,24 @@ Syntaks: _{"RELEVANT_DATE":"2022-09-22"}_
 
 ### _Bruksscenario 2: Det er ønskelig å koble seg til eksisterende bestilling/svar hvis den finnes og er ny nok. Hvis den finnes men er for gammel, trigges ikke en ny bestilling._
 
-I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM om det ikke finnes svar. Et eksempel på et slikt scenario er hvis hovedskjema i registeret blir etterregistrert, og det er for lenge siden hendelsesdato til at det er aktuelt å trigge en ny bestilling. ePROX vil i dette tilfellet ikke trigge ny bestilling dersom det finnes aktive bestillinger, men disse ikke tilfredsstiller kravene.
+I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM dersom svaret finnes, men er utdatert. 
 
 
 1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato. 
 
-2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det __IKKE__ trigges en ny bestilling mot ePROM
+2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigge en ny bestilling mot ePROM. Dersom det finnes aktive bestillinger, men disse er for gamle i forhold til relevant dato, vil det __IKKE__ trigges en ny bestilling mot ePROM
 
 
 Syntaks: _{"RELEVANT_DATE":"2022-09-22.","CREATE_NEW_ORDER":false}_
 
+### _Bruksscenario 3: Det er ønskelig å koble seg til eksisterende bestilling/svar hvis det finnes. Hvis den ikke finnes, trigges ikke ny bestilling mot ePROM._ 
 
-### _Bruksscenario 3: Tvinge ny bestilling_
+I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM om det ikke finnes svar. Et eksempel på et slikt scenario er hvis hovedskjema i registeret blir etterregistrert, og det er for lenge siden hendelsesdato til at det er aktuelt å trigge en ny bestilling. ePROX vil i dette tilfellet ikke trigge ny bestilling.
+
+Syntaks: _{"CREATE_NEW_ORDER":false}_
+
+
+### _Bruksscenario 4: Tvinge ny bestilling_
 
 I noen tilfeller er det nødvendig å tvinge gjennom en ny bestilling, uten å ta hensyn til om det allerede finnes en aktiv bestilling. Det kan bl.a. skje dersom man ønsker å bestille skjema på en spesifikk kanal (f.eks. papir). Da er det mulig å benytte CREATE_NEW_ORDER alene.
 
