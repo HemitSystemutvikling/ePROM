@@ -1,11 +1,19 @@
 # Endringer i ePROM v9.2
 *Dato: 01. desember 2022*
 
+### Pasientskjema
+- Støtte for skjema på polsk (språkkode pl)
+- Kopi av skjema: Vising av metadata i tekstfelt støttes
+- Følgebrev: tekst endret fra "Vis mere" til "Vis mer" når følgebrev er minimert
+
+
 ### ePROM admin
-- Brukeradministrasjon - mulig å opprette nye brukere
- 
+- Registrering av telefonnr på Bestillersystem er begrenset til 25 tegn (maks 2 telefonnummer)
+
+
 ### Teknisk
-- Forberedelse for overgang til ny tjenestebuss hos helsenorge
-- Deaktivert bruk av synkron kommunikasjon over tjenestebuss hos helsenorge
+- Konfigurering av tjenestebuss hos helsenorge
+- PVK: Videresending av replikeringsmelinger til MRS går nå asynkront
+- Justert logging av HTTP requester
 
 [Tilbake](./Releaselist)
