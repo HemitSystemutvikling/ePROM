@@ -1,5 +1,5 @@
-# Endringer i ePROM v9.1
-*Dato: 22. september 2022*
+# Endringer i ePROM v9.2
+*Dato: 01. desember 2022*
 
 ### ePROM admin
 - Brukeradministrasjon - mulig å opprette nye brukere
