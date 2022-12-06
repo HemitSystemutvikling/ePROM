@@ -15,5 +15,6 @@
 - Konfigurering av tjenestebuss hos helsenorge
 - PVK: Videresending av replikeringsmelinger til MRS går nå asynkront
 - Justert logging av HTTP requester
+- Justering av antall workers i Hangfire
 
 [Tilbake](./Releaselist)
