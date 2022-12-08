@@ -1,5 +1,5 @@
 # Endringer i ePROM v9.2
-*Dato: 8. desember 2022*
+*Dato: 08. desember 2022*
 
 ### Pasientskjema
 - Støtte for skjema på polsk (språkkode pl)
