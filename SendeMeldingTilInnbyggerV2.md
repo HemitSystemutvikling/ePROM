@@ -44,7 +44,7 @@ I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som de
 
 **Parametere – Ut**
 
-* notificationChannel – The channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` 
+* notificationChannel – The channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | PhysicalMailbox | Unsecure }` 
 * messageToCitizenId – The Id of the message
 
 **Metode**
@@ -133,7 +133,7 @@ promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
 
 * SendMessageToCitizenResult
 
- * notificationChannel – The channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` 
+ * notificationChannel – The channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | PhysicalMailbox | Unsecure }` 
  * messageToCitizenId – The Id of the message
 
 ## Feilsituasjoner
@@ -163,7 +163,7 @@ F.eks: [https://proms2.hemit.org/PromsTestregisterServices/api/MessageToCitizen/
 
 * apiKey – ApiKey of the end user system sending the message
 * messageToCitizenId – The Id of the message
-* notificationChannel – The actual channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
+* notificationChannel – The actual channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | PhysicalMailbox | Unsecure }` 
 * sentStatus – Status of the message `{ Sent | Error }` 
   + Sent – The message was successfully sent
   + Error – The message was not successfully sent. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
