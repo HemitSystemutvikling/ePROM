@@ -1,6 +1,6 @@
 # SENDE MELDING TIL INNBYGGER V2
 
-*Sist oppdatert 25.06.2021*
+*Sist oppdatert 12.01.2023*
 
 ## Innholdsfortegnelse
 
