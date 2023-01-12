@@ -38,7 +38,7 @@ I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som de
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationPriorityList - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` The numeric value can be sent.
+* notificationPriorityList - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | PhysicalMailbox | Unsecure }` The numeric value can be sent.
 * testMode - Optional. Set to true when the message is initiated from ePROM Admin and the status shall not to be returned to the BestillerSystem. Default: false
 * paperColorPrint - Optional. Set to true when paper should be printed in color. Default: false
 
@@ -123,7 +123,7 @@ messageToCitizenId = result.messageToCitizenId});
 * senderInfo - Information about the sender
 * messageInfo - Information about the message
 * documentCollection – Collection of documents to send to citizen
-* notificationChannel - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | Unsecure }` The numeric value can be sent.
+* notificationChannel - List of channels where to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | PhysicalMailbox | Unsecure }` The numeric value can be sent.
 * testMode - Optional. Set to true when the message is initiated from ePROM Admin and the status shall not to be returned to the BestillerSystem. Default: false
 * paperColorPrint - Optional. Set to true when paper should be printed in color. Default: false
 
