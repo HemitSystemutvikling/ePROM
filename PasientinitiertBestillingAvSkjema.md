@@ -25,3 +25,4 @@ Ved retur av utfyllt skjema sendes pasientens personnummer og skjemaets ID samme
 }
 ```
 
+[Tilbake](./)
