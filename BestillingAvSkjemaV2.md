@@ -1,6 +1,6 @@
 # BESTILLING AV SKJEMA V2
 
-*Sist oppdatert 30.06.2021*
+*Sist oppdatert 19.04.2023*
 
 ## Innholdsfortegnelse
 
@@ -232,6 +232,8 @@ F.eks: [https://mrsweb.hemit.org/PromsTestregisterServices/api/PromsFormOrder/]
 * apiKey – ApiKey of the end user system placing the order
 * formOrderId – The Id of the formOrder
 * notificationChannel – The actual channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
+* timestamp - Timestamp when order was initiated
+* timestampUtc - Timestamp when order was initiated in UTC format
 * formOrderStatus – Status of the formOrder
   + Ordered – The formOrder was successful
   + Error – The formOrder was not successfull. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
@@ -256,6 +258,8 @@ Eksempel request fra Proms (JSON)
     "apiKey" : "",
     "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
     "notificationChannel" : "Helsenorge",
+    "timestamp" : "2023-03-29T10:20:10.1804332",
+    "timestampUtc" : "2023-03-29T08:20:10.1804332Z",
     "formOrderStatus" : "Ordered",
     "formOrderStatusErrorCode" : "None"
 }
