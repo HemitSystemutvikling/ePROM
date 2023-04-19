@@ -1,6 +1,6 @@
 # PASIENTINITIERT BESTILLING AV SKJEMA
 
-*Sist oppdatert 27.08.2019*
+*Sist oppdatert 19.04.2023*
 
 Pasientinitert bestilling av skjema er en mulighet hvor pasienten kan gå via en direktelink for utfylling av et skjema. Identifisering skjer ved at pasienten logger på med BankId.
 
@@ -19,7 +19,8 @@ Ved retur av utfyllt skjema sendes pasientens personnummer og skjemaets ID samme
     "patientInitiatedValues":
     {
         "formId": "1bc5f9f0-2607-49eb-94f0-6af955bbd79a",
-        "nationalId": "26073941651"
+        "nationalId": "26073941651",
+        "orderTimestamp": "2023-03-29T10:01:49.857"
     }
 }
 ```
