@@ -1,6 +1,6 @@
 # PERSONVERNINNSTILLINGER
 
-*Sist oppdatert 15.06.2020*
+*Sist oppdatert 04.05.2023*
 
 ## Innholdsfortegnelse
 
@@ -26,7 +26,7 @@ ApiKey skal sendes som en `Authorization` parameter og er en del av HTTP header:
 
 ``` javascript
 function sjekkPersonverninnstilling() {
-    var url = 'https://proms2.hemit.org/PromsWebApi/api/getpersonverninnstilling'; // Demo server
+    var url = 'https://proms.hemitdev.org/PromsWebApi/api/getpersonverninnstilling'; // Demo server
     var apiKey = ""; // ApiKey of the end user system performing the requeset
     var nationalId = "26073941651"; The national id of the citizen.
     var type = 0; // Reservasjon
@@ -54,17 +54,17 @@ function sjekkPersonverninnstilling() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/PromsWebApi/api/getpersonverninnstilling]
+[https://proms.hemitdev.org/PromsWebApi/api/getpersonverninnstilling]
 
 **Parametere - Inn**
 
 * nationalId  - The national id of the person to get PersonvernInnstilling for.
-* type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`
+* type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes.  `Reservasjon` og `Samtykke` støttes.
 
 **Parametere – Ut**
 
 * nationalId - The national id of the citizen.
-* type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`
+* type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
 * id – The guid of the PersonvernInnstilling.
 * name – The name of the PersonvernInnstilling.
 * status – The status of the PersonvernInnstilling.`{ IkkeAktiv | Aktiv }`.
@@ -75,13 +75,13 @@ POST
 
 **Swagger**
 
-[https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync](https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync)
+[https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync)
 
 ### Server-side
 
 **API**
 
-Tilgjenglig som NuGet pakke
+Tilgjengelig som NuGet pakke
 
 NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
 
@@ -103,7 +103,7 @@ private async Task GetReservasjon(PatientInRegistryDataContract patient)
     {
         var status = response.Status == PersonvernInnstillingStatus.Aktiv
             ? ReservationStatus.Reservert
-            : ReservationStatus.IkkeReserervert;
+            : ReservationStatus.IkkeReservert;
     }
 }
 ```
@@ -113,14 +113,14 @@ private async Task GetReservasjon(PatientInRegistryDataContract patient)
 * PromsApiBaseUrl - The base URL of the PROMS API
 * ApiKey - ApiKey of the end user system performing the requeset (sendes som `Authorization` parameter og er en del av HTTP header)
 * NationalId - The national id of the person to get PersonvernInnstilling for.
-* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`.
+* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
 
-PromsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+PromsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi
 
 **Parametere – Ut**
 
 * NationalId - The national id of the citizen.
-* Type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`.
+* Type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
 * Id -The guid of the PersonvernInnstilling.
 * Name - The name of the PersonvernInnstilling.
 * Status - The status of the PersonvernInnstilling.
@@ -146,7 +146,7 @@ Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som 
 
 ``` javascript
 function oppdaterPersonverninnstilling() {
-    var url = 'https://proms2.hemit.org/PromsWebApi/api/setpersonverninnstilling'; // Demo server
+    var url = 'https://proms.hemitdev.org/PromsWebApi/api/setpersonverninnstilling'; // Demo server
     var apiKey = ""; // ApiKey of the end user system performing the requeset
     var nationalId = "26073941651"; The national id of the person to update the status of PersonvernInnstilling for.
     var type = 0; // Reservasjon
@@ -176,12 +176,12 @@ function oppdaterPersonverninnstilling() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/PromsWebApi/api/setpersonverninnstilling]
+[https://proms.hemitdev.org/PromsWebApi/api/setpersonverninnstilling]
 
 **Parametere - Inn**
 
 * nationalId  - The national id of the person to update the status of PersonvernInnstilling for.
-* type - The type of the PersonvernInnstilling to apply change of status to. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`
+* type - The type of the PersonvernInnstilling to apply change of status to. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
 * status - The new status of the PersonvernInnstilling. `{ IkkeAktiv | Aktiv }`.
 
 **Parametere – Ut**
@@ -194,8 +194,7 @@ POST
 
 **Swagger**
 
-[https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync]
-(https://proms2.hemit.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync)
+[https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync)
 
 ### Server-side
 
@@ -224,7 +223,7 @@ private async Task UpdateReservasjon(PatientInRegistryDataContract patient, Pers
     {
         var newStatus = personvernInnstillingStatus == PersonvernInnstillingStatus.Aktiv
             ? ReservationStatus.Reservert
-            : ReservationStatus.IkkeReserervert;
+            : ReservationStatus.IkkeReservert;
     }
 }
 ```
@@ -234,10 +233,10 @@ private async Task UpdateReservasjon(PatientInRegistryDataContract patient, Pers
 * PromsApiBaseUrl - The base URL of the PROMS API
 * ApiKey - ApiKey of the end user system performing the requeset (sendes som `Authorization` parameter og er en del av HTTP header)
 * NationalId - The national id of the person to get PersonvernInnstilling for.
-* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. Foreløpig støttes kun `Reservasjon`.
+* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
 * Status - The new status of the PersonvernInnstilling. `{ IkkeAktiv | Aktiv }`.
 
-PromsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+PromsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi
 
 **Parametere – Ut**
 
@@ -263,7 +262,7 @@ Når innbygger gjør en endring av en personverninnstilling i PVK, sender PVK ut
 
 **URL for Web API kall**
 
-ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
+ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms.hemitdev.org/PromsAdministration/](https://proms.hemitdev.org/PromsAdministration/)
 
 Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/PersonvernInnstilling
 
