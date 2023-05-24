@@ -6,9 +6,9 @@
 
 
 ### ePROM admin
-- Bestillersystem: det er mulig å angi om et bestillersystem er knyttet til forskning, da det er mulig å reservere seg mot dette på helsenorge
+- Bestillersystem: det er mulig å angi på bestillersystemet om det er knyttet til forskning, da det er mulig å reservere seg mot dette på helsenorge
   - Alle eFORSK-bestillersystem er default satt med denne innstillingen
-  - Ikke implementert på helsenorge, så denne er foreløpig ikke i bruk 
+  - Funksjonalitet ennå ikke implementert på helsenorge, så denne er foreløpig ikke i bruk 
 - Bestillersystem: forbedring i registrering av partkode, reservasjon og samtykke. Må sette og lagre partkode før det er mulig å registrere reservasjon og/eller samtykke 
 - Skjemakatalog: optimalisering ved at admin må velge et spesifikt bestillersystem for å se skjema
 - ePROM-rapport: ny rapport viser antall bestillinger per bestillersystem for siste 3 måneder, sortert per måned. Sendes til systemutvikling@hemit.no den 1. i hver måned
