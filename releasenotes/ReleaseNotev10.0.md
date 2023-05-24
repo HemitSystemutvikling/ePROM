@@ -11,7 +11,7 @@
   - Ikke implementert på helsenorge, så denne er foreløpig ikke i bruk 
 - Bestillersystem: forbedring i registrering av partkode, reservasjon og samtykke. Må sette og lagre partkode før det er mulig å registrere reservasjon og/eller samtykke 
 - Skjemakatalog: optimalisering ved at admin må velge et spesifikt bestillersystem for å se skjema
-- ePROM-rapport: rapport viser antall utsendinger per bestillersystem for siste 3 måneder. Sendes til systemutvikling@hemit.no den 1. i hver måned
+- ePROM-rapport: ny rapport viser antall bestillinger per bestillersystem for siste 3 måneder, sortert per måned. Sendes til systemutvikling@hemit.no den 1. i hver måned
 
 
 ### Teknisk
@@ -20,7 +20,7 @@
 - Papirskjema: bestilling av papirskjema sendes direkte til digipost/Posten, ikke digdir
 - Jobb som leser brev fra Andvord via digipost kjøres en gang i døgnet, tidligere hver halvtime
 - Forbedret parsing av XML i brev fra Andvord
-- Personiniterte skjema: bestillingsdato 
+- Personiniterte skjema: sender med bestillingsdato-timestamp på format UTC til bestillersystemet 
 
 
 [Tilbake](./Releaselist)
