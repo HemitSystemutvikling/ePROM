@@ -10,7 +10,7 @@
   - Alle eFORSK-bestillersystem er default satt med denne innstillingen
   - Funksjonalitet ennå ikke implementert på helsenorge, så denne er foreløpig ikke i bruk 
 - Bestillersystem: forbedring i registrering av partkode, reservasjon og samtykke. Må sette og lagre partkode før det er mulig å registrere reservasjon og/eller samtykke 
-- Skjemakatalog: optimalisering ved at admin må velge et spesifikt bestillersystem for å se skjema
+- Skjemakatalog: generell optimalisering. Admin må velge et spesifikt bestillersystem for å se skjema
 - ePROM-rapport: ny rapport viser antall bestillinger per bestillersystem for siste 3 måneder, sortert per måned. Sendes til systemutvikling@hemit.no den 1. i hver måned
 
 
