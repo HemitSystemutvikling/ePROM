@@ -16,6 +16,7 @@
 
 ### Teknisk
 - Hangfire: prioritering av køer med fokus på å få gjennomført alle steg i en enkelt bestilling så raskt som mulig
+  - Ny fane i ePROM admin for test av masseutsending: "Testbestilling statistikk" 
 - Ny integrasjon med digital postkasse: Digitale skjema og brev (både digitale og fysiske) sendes nå via digdir sitt REST API
 - Papirskjema: bestilling av papirskjema sendes direkte til digipost/Posten, ikke digdir
 - Jobb som leser brev fra Andvord via digipost kjøres en gang i døgnet, tidligere hver halvtime
