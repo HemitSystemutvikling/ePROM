@@ -32,6 +32,7 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](
   + formId - The Id of the form ordered
   + nationalId - The national id number of the patient ordered the form
   + orderTimestamp - Timestamp when order was initiated
+  + orderTimestampUTC - Timestamp when order was initiated in UTC
 * formOrderEventLog – Log of events for the form
   + eventType – Events `{ FormOpened | QuestionAccessed | SigningStarted | SigningCancelled | SigningError | SigningCompleted | FormDelivered }`
   + questionId – Id of the question
