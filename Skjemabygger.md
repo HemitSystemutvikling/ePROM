@@ -69,6 +69,13 @@ Feltet metadatatekst kan brukes for å vise fram verdien av et metadatafelt. Her
 
 NB: Metadatatekst kan ikke brukes/vises i skjema som er aktivert for papir. Feltet må isåfall skjules i papirversjonen.
 
+**Eksempel**
+Et skjema har et valgfelt ("valgfelt") som skal vises og skjules på bakgrunn av metadata (visValgfelt) som sendes med bestillingen. Dersom visValgfelt = 1 skal feltet vises.
+
+Følgende eksempel viser 
+
+```{visValgfelt: 1}```
+
 ## Metadata i følgebrev/informasjon til pasienten
 
 Samme metadatanavn kan benyttes i skjemaet og i følgebrevet ("Informasjon til pasienten"). Dette vil i så fall erstattes av samme verdi.
@@ -93,6 +100,54 @@ Metadatafeltet i skjemabestillingen vil da være:
 JSON.stringify({ sykehusnavn: "St. Olavs hospital" })
 ```
 
+# Defaultverdi 
+
+
+**NB: Defaultverdier tilgjengelig i ePROM v11.0 tentativ produksjonssetting september 2023**
+
+I noen tilfeller er det ønskelig at felter er forhåndsutfylt med informasjon som allerede er samlet inn om/av pasienten. Eksempel på dette kan være høyde, vekt, utdanning og andre forholdsvis statiske forhold. På den måten slipper pasienten å oppgi samme informasjon flere ganger, og feltene vil være utfylt når pasienten åpner skjema. 
+
+Informasjonen sendes med bestillingen via metadata.
+
+**Eksempel**
+
+Et skjema har følgende felter som ønskes forhåndsutfylt: vekt, høyde og antall år skolegang. 
+Alle felter er av datatype int og har feltnavn *Vekt* , *Hoyde* og *ArPaSkole*. I tillegg har skjema et metadatafelt: visValgfelt.
+
+I metadata legges følgende:
+```{visValgfelt: 1, Vekt: 70, Hoyde: 180, ArPaSkole: 10}```
+
+## Samleskjema
+
+I samleskjema må defaultverdier prefixes med skjemaid til det enkelte underskjema de tilhører. 
+
+Følgende eksempel viser defaultverdier for et samleskjema som består av to ulike underskjema, hhv et egendefinert skjema (*ff3748a5_*) og RAND12 (*1bc5f9f0_*). I tillegg har skjema et metadatafelt: visValgfelt 
+
+```
+{
+	"visValgfelt": 1,
+	"_ff3748a5_67d7_425d_9175_1f9fb5bbfdde":
+	{
+		"valgfelt":"1",
+		"nedtrekksliste":"1",
+		"tallfelt":33,
+		"slider":34,
+		"avkrysningsboks":true,
+		"tekstfelt":"Hei",
+		"dato":"2023-08-08T22:00:00.000Z",
+		"datotid":"2023-08-10T11:47:00.000Z",
+		"datomnd":"2023-04-30T22:00:00.000Z",
+		"datoaar":"2026-12-31T23:00:00.000Z"
+	},
+	"_1bc5f9f0_2607_49eb_94f0_6af955bbd79a":
+	{
+		"Rand12Q01":"2",
+		"Rand12Q02":"2",
+		"Rand12Q09":"3",
+		"Rand12Q08":"5"
+	}
+}
+```
 
 # SPESIALTILPASNING
 Hvis de eksisterende komponentene i skjemabyggeren ikke tilbyr all funksjonalitet man ønsker kan skjemaet spesialtilpasses ved å legge inn CSS/HTML/javascript. Denne mulighet er kun tilgjengelig for en bruker med rolle Admin, ettersom man potensielt kan legge til uhensiktsmessig/skadelig kode på denne måten.
