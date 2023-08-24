@@ -33,11 +33,15 @@
 
 ### Skisser
 
-[Designskisse ePROM](Designskisse)
-
 [Overordnet skisse for ePROM](Overordnetskisse)
 
 [Overordnet skisse ePROM på papir](Overordnetskisse%20papir)
+
+([Designskisse ePROM](Designskisse))
+
+[Tekniskskisse ePROM helsenorge](TekniskSkisseHelsenorge)
+
+[Tekniskskisse ePROM Digdir](TekniskSkisseDigdir)
 
 [Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM](Overordnetskisse%20pasientinitiert)
 
