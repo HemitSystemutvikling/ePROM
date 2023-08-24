@@ -1,6 +1,6 @@
 
 
-## Overordnet skisse for ePROM
+## Teknisk skisse for ePROM helsenorge
 
 ![eprom](img/eprom_teknisk_helsenorge.png)
 
