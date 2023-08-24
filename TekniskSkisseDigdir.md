@@ -1,5 +1,5 @@
 
-## Overordnet skisse for ePROM
+## Teknisk skisse for ePROM Digdir
 
 ![eprom](img/eprom_teknisk_digdir.png)
 
