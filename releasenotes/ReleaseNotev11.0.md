@@ -7,6 +7,7 @@
 - Pasientskjema: Knapper som er disablet er fjernet slik at  det skal bli mer intuitivt å navigere i skjemaene
 - Samleskjema: "Skjul progressbar" på Samleskjema skjuler tellingen men vises ikonene
 - Pasientskjema på Android: Fiks slik at utfylling av tallfelt ikke gir "Ugyldig tegn"
+- Pasientskjema: Fiks på visning av slider.
 
 ### ePROM admin
 - Skjemabygger: for felttype tekstområde er det mulig å legge til lenker, vha syntaks #a#https://www.www.www#a#
