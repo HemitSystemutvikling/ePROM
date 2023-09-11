@@ -13,6 +13,8 @@
 - Skjemabygger: for felttype tekstområde er det mulig å legge til lenker, vha syntaks #a#https://www.www.www#a#
 - ePROM-rapport: fiks av minneproblem ved generering av rapporten
 
+### Papirskjema
+- 
 
 ### Teknisk
 - Hangfire:
@@ -22,6 +24,8 @@
 - Forhåndsvisning av skjema og meldinger: URL endret til f.eks.
   - Pasientskjema: https://pasientrapportering.nhn.no/proms/preview/form/...
   - Skjemainformasjon: https://pasientrapportering.nhn.no/proms/preview/message/...
+- Svar på papirskjema
+  - Brev leses fra Digipost bolkvis for å unngå timeout
 - Proms STS brukes ikke lengre i forbindelse med innbyggerpålogging 
 
 
