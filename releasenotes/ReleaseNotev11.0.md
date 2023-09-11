@@ -17,6 +17,7 @@
 - 
 
 ### Teknisk
+- Skjemautfyller (public ePROM) er oppgradert til .NET 6
 - Hangfire:
   - Jobbene skal kjøre i henhold til lokalt tid på serveren
   - Fiks av ryddejobb, som sletter utgåtte skjema, slik at en restart ikke sletter dobbelt
