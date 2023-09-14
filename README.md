@@ -41,6 +41,8 @@
 
 [Teknisk skisse ePROM Digdir](TekniskSkisseDigdir)
 
+[Teknisk skisse ePROM Samtykke/Reservasjon](TekniskSkissePvk)
+
 [Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM](Overordnetskisse%20pasientinitiert)
 
 [Overordnet skisse og flytdiagram ePROM "på vegne av"-funksjonalitet](PaVegneAvFlyt)
