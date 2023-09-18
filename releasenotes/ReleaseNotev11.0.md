@@ -1,5 +1,5 @@
 # Endringer i ePROM v11.0
-*Dato: 25. september
+*Dato: 25.september 2023
 
 ### Innbyggerpålogging og skjemautfyller
 - Ved utfylling av pasientskjema via helsenorge benyttes Helsenorge OIDC som støtter SSO (single-sign on) med helsenorge-appen
