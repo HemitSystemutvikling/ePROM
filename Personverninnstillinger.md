@@ -88,14 +88,14 @@ Tilgjengelig som NuGet pakke
 
 NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
 
-Navn: Hemit.Proms.Integration
+Navn: Hemit.ePROM.Integration
 
 **Eksempelkode (C#)**
 
 ``` csharp
 private async Task GetReservasjon(PatientInRegistryDataContract patient)
 {
-    var response = await Hemit.Proms.Integration.Api
+    var response = await Hemit.ePROM.Integration.Api
         .GetPersonvernInnstillingV2Async(
             ConfigurationManager.AppSettings["PromsApiBaseUrl"], 
             ConfigurationManager.AppSettings["PromsApiKey"], 
@@ -212,15 +212,15 @@ Tilgjenglig som NuGet pakke
 
 NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
 
-Navn: Hemit.Proms.Integration
+Navn: Hemit.ePROM.Integration
 
 **Eksempelkode (C#)**
 
 ``` csharp
 private async Task UpdateReservasjon(PatientInRegistryDataContract patient, PersonvernInnstillingStatus personvernInnstillingStatus)
 {
-    var response = await Hemit.Proms.Integration.Api
-        .SetPersonvernInnstillingAsync(
+    var response = await Hemit.ePROM.Integration.Api
+        .SetPersonvernInnstillingV2Async(
             ConfigurationManager.AppSettings["PromsApiBaseUrl"], 
             ConfigurationManager.AppSettings["PromsApiKey"], 
             patient.DecryptedPID,
@@ -290,7 +290,7 @@ F.eks: [https://mrsdemo.hemitdev.org/PromsTestregisterServices/api/PersonvernInn
 
 * success – Was the update completed successfully?
 
-For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.Pvk.SetPersonvernInnstillingInEusRequest* for parameter inn og *Hemit.Proms.Integration.Pvk.SetPersonvernInnstillingInEusResponse* for parameter ut
+For parameter inn og ut kan NuGet pakken *Hemit.ePROM.Integration* benyttes. Bruk da *Hemit.ePROM.Integration.Pvk.SetPersonvernInnstillingRequestV2* for parameter inn og *Hemit.ePROM.Integration.Pvk.SetPersonvernInnstillingInEusResponse* for parameter ut
 
 **Metode**
 
