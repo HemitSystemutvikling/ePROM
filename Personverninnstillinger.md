@@ -30,6 +30,7 @@ function sjekkPersonverninnstilling() {
     var apiKey = ""; // ApiKey of the end user system performing the requeset
     var nationalId = "26073941651"; The national id of the citizen.
     var type = 0; // Reservasjon
+    var pvkId = pvkId; // The guid of the PersonvernInnstilling
 
     $.ajax({
         url: url,
@@ -40,7 +41,8 @@ function sjekkPersonverninnstilling() {
         },
         data: JSON.stringify({
             nationalId,
-            type
+            type,
+            pvkId
         }),
         success: function(data) {
             alert("nationalId: " + data.nationalId + "\ntype: " + data.type + "\nnid: " + data.id + "\nnname: " + data.name + "\nstatus: " + data.status);
@@ -59,12 +61,13 @@ function sjekkPersonverninnstilling() {
 **Parametere - Inn**
 
 * nationalId  - The national id of the person to get PersonvernInnstilling for.
-* type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes.  `Reservasjon` og `Samtykke` støttes.
+* type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke }`. Tallverdien kan sendes.
+* pvkId - The guid of the PersonvernInnstilling
 
 **Parametere – Ut**
 
 * nationalId - The national id of the citizen.
-* type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
+* type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke }`. Tallverdien kan sendes.
 * id – The guid of the PersonvernInnstilling.
 * name – The name of the PersonvernInnstilling.
 * status – The status of the PersonvernInnstilling.`{ IkkeAktiv | Aktiv }`.
@@ -93,10 +96,11 @@ Navn: Hemit.Proms.Integration
 private async Task GetReservasjon(PatientInRegistryDataContract patient)
 {
     var response = await Hemit.Proms.Integration.Api
-        .GetPersonvernInnstillingAsync(
+        .GetPersonvernInnstillingV2Async(
             ConfigurationManager.AppSettings["PromsApiBaseUrl"], 
             ConfigurationManager.AppSettings["PromsApiKey"], 
             patient.DecryptedPID,
+            patient.PvkId,
             PersonvernInnstillingType.Reservasjon);
 
     if (!response.HasErrors)
@@ -113,14 +117,15 @@ private async Task GetReservasjon(PatientInRegistryDataContract patient)
 * PromsApiBaseUrl - The base URL of the PROMS API
 * ApiKey - ApiKey of the end user system performing the requeset (sendes som `Authorization` parameter og er en del av HTTP header)
 * NationalId - The national id of the person to get PersonvernInnstilling for.
-* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
+* PvkId - The guid of the PersonvernInnstilling
+* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke }`. Tallverdien kan sendes.
 
 PromsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi
 
 **Parametere – Ut**
 
 * NationalId - The national id of the citizen.
-* Type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
+* Type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke }`. Tallverdien kan sendes.
 * Id -The guid of the PersonvernInnstilling.
 * Name - The name of the PersonvernInnstilling.
 * Status - The status of the PersonvernInnstilling.
@@ -151,6 +156,7 @@ function oppdaterPersonverninnstilling() {
     var nationalId = "26073941651"; The national id of the person to update the status of PersonvernInnstilling for.
     var type = 0; // Reservasjon
     var status = 1; // Aktiv
+    var pvkId = pvkId; // The guid of the PersonvernInnstilling
 
     $.ajax({
         url: url,
@@ -161,6 +167,7 @@ function oppdaterPersonverninnstilling() {
         },
         data: JSON.stringify({
             nationalId,
+            pvkId,
             type,
             status
         }),
@@ -181,7 +188,8 @@ function oppdaterPersonverninnstilling() {
 **Parametere - Inn**
 
 * nationalId  - The national id of the person to update the status of PersonvernInnstilling for.
-* type - The type of the PersonvernInnstilling to apply change of status to. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
+* pvkId - The guid of the PersonvernInnstilling
+* type - The type of the PersonvernInnstilling to apply change of status to. `{ Reservasjon | Samtykke }`. Tallverdien kan sendes.
 * status - The new status of the PersonvernInnstilling. `{ IkkeAktiv | Aktiv }`.
 
 **Parametere – Ut**
@@ -216,6 +224,7 @@ private async Task UpdateReservasjon(PatientInRegistryDataContract patient, Pers
             ConfigurationManager.AppSettings["PromsApiBaseUrl"], 
             ConfigurationManager.AppSettings["PromsApiKey"], 
             patient.DecryptedPID,
+            patient.PvkId,
             PersonvernInnstillingType.Reservasjon,
             personvernInnstillingStatus);
 
@@ -233,7 +242,8 @@ private async Task UpdateReservasjon(PatientInRegistryDataContract patient, Pers
 * PromsApiBaseUrl - The base URL of the PROMS API
 * ApiKey - ApiKey of the end user system performing the requeset (sendes som `Authorization` parameter og er en del av HTTP header)
 * NationalId - The national id of the person to get PersonvernInnstilling for.
-* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke | Tilgangsbegrensning }`. Tallverdien kan sendes. `Reservasjon` og `Samtykke` støttes.
+* PvkId - The guid of the PersonvernInnstilling
+* Type - The type of the PersonvernInnstilling to get. `{ Reservasjon | Samtykke }`. Tallverdien kan sendes.
 * Status - The new status of the PersonvernInnstilling. `{ IkkeAktiv | Aktiv }`.
 
 PromsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi
@@ -273,7 +283,8 @@ F.eks: [https://mrsdemo.hemitdev.org/PromsTestregisterServices/api/PersonvernInn
 * nationalId – The national id of the person to update.
 * id – The guid of the PersonvernInnstilling to update.
 * name – The name of the PersonvernInnstilling to update.
-* status - The updated status of the PersonvernInnstilling. En verdi fra Volven 7609 `( RES | IRES | ... )`. **NB!** Dette er ikke samme statusverdier som i [Sjekk personverninnstilling](#sjekk-personverninnstilling) og [Oppdater personverninnstilling](#oppdater-personverninnstilling).
+* status - The updated status of the PersonvernInnstilling. En verdi fra [Volven 7609](https://volven.no/produkt.asp?id=505635&oid=7609) `( RES | IRES | SAM | ISAM )`. 
+**NB!** Dette er ikke samme statusverdier som i [Sjekk personverninnstilling](#sjekk-personverninnstilling) og [Oppdater personverninnstilling](#oppdater-personverninnstilling).
 
 **Parametere - Ut**
 
@@ -298,4 +309,36 @@ Eksempel request fra Proms (JSON)
     "name" : "Reservasjon mot registrering",
     "status" : "RES"
 }
+```
+
+## Koder
+
+### Status
+
+``` 
+0 = IkkeAktiv
+1 = Aktiv
+```
+
+### Status (Volven 7609)
+
+``` 
+RES
+IRES
+SAM
+ISAM
+```
+
+### Type
+
+``` 
+0 = Reservasjon
+1 = Samtykke
+```
+
+### InstansEndret
+
+``` 
+0 = IkkeEndret
+1 = Endret
 ```
