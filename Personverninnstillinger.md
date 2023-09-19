@@ -268,7 +268,7 @@ Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som 
 
 ## Mottak av status for personverninnstilling (replikeringsmelding fra PVK)
 
-Når innbygger gjør en endring av en personverninnstilling i PVK, sender PVK ut en replikeringsmelding til systemer den er integrert med, deriblandt ePROM, for å informere om endringen. ePROM gjøre ved mottak av en slik replikeringsmelding et kall videre mot angitte Bestillersystem med den nye statusen for personverninnstillingen. Bestillersystemet må implementere en service som mottar dette kallet.
+Når innbygger gjør en endring av en personverninnstilling i PVK/helsenorge, sender PVK/helsenorge ut en replikeringsmelding til systemer den er integrert med, deriblandt ePROM, for å informere om endringen. ePROM gjøre ved mottak av en slik replikeringsmelding et kall videre mot angitte Bestillersystem med den nye statusen for personverninnstillingen. Bestillersystemet må implementere en service som mottar dette kallet.
 
 **URL for Web API kall**
 
@@ -312,6 +312,7 @@ Eksempel request fra Proms (JSON)
 ```
 
 ## Koder
+Kodene som de er satt av helsneorge
 
 ### Status
 
