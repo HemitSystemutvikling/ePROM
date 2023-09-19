@@ -1,6 +1,6 @@
 # PERSONVERNINNSTILLINGER
 
-*Sist oppdatert 04.05.2023*
+*Sist oppdatert 19.09.2023*
 
 ## Innholdsfortegnelse
 
@@ -26,7 +26,7 @@ ApiKey skal sendes som en `Authorization` parameter og er en del av HTTP header:
 
 ``` javascript
 function sjekkPersonverninnstilling() {
-    var url = 'https://proms.hemitdev.org/PromsWebApi/api/getpersonverninnstilling'; // Demo server
+    var url = 'https://proms.hemitdev.org/PromsWebApi/api/v2/getpersonverninnstilling'; // Demo server
     var apiKey = ""; // ApiKey of the end user system performing the requeset
     var nationalId = "26073941651"; The national id of the citizen.
     var type = 0; // Reservasjon
@@ -54,7 +54,7 @@ function sjekkPersonverninnstilling() {
 
 **URL for Web API kall**
 
-[https://proms.hemitdev.org/PromsWebApi/api/getpersonverninnstilling]
+[https://proms.hemitdev.org/PromsWebApi/api/v2/getpersonverninnstilling]
 
 **Parametere - Inn**
 
@@ -75,7 +75,7 @@ POST
 
 **Swagger**
 
-[https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingAsync)
+[https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async)
 
 ### Server-side
 
@@ -146,7 +146,7 @@ Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som 
 
 ``` javascript
 function oppdaterPersonverninnstilling() {
-    var url = 'https://proms.hemitdev.org/PromsWebApi/api/setpersonverninnstilling'; // Demo server
+    var url = 'https://proms.hemitdev.org/PromsWebApi/api/v2/setpersonverninnstilling'; // Demo server
     var apiKey = ""; // ApiKey of the end user system performing the requeset
     var nationalId = "26073941651"; The national id of the person to update the status of PersonvernInnstilling for.
     var type = 0; // Reservasjon
@@ -176,7 +176,7 @@ function oppdaterPersonverninnstilling() {
 
 **URL for Web API kall**
 
-[https://proms.hemitdev.org/PromsWebApi/api/setpersonverninnstilling]
+[https://proms.hemitdev.org/PromsWebApi/api/v2/setpersonverninnstilling]
 
 **Parametere - Inn**
 
@@ -194,7 +194,7 @@ POST
 
 **Swagger**
 
-[https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingAsync)
+[https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingV2Async](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingV2Async)
 
 ### Server-side
 
@@ -266,7 +266,7 @@ ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersy
 
 Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/PersonvernInnstilling
 
-F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/](https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder/)
+F.eks: [https://mrsdemo.hemitdev.org/PromsTestregisterServices/api/PersonvernInnstilling/](https://mrsdemo.hemitdev.org/PromsTestregisterServices/api/PersonvernInnstilling/)
 
 **Parametere - Inn**
 
