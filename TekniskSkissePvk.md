@@ -1,6 +1,6 @@
 
 
-## Teknisk skisse for ePROM helsenorge
+## Teknisk skisse for ePROM samtykke/reservasjon
 
 ![eprom](img/eprom_teknisk_pvk.png)
 
