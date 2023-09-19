@@ -11,7 +11,7 @@ Den store fordelen med denne endringen er at innbyggere nå vil slippe å logge 
 
 **NB:** __På alle andre måter blir brukeropplevelsen uendret, med et unntak: I en overgangsperiode etter produksjonssetting vil innbyggere som har mottatt skjemaoppgave på digipost/eboks bli bedt om å samtykke til bruk av helsenorge for å få tilgang til skjemaet sitt. Dette gjelder dersom skjemaet ble bestilt før produksjonssetting, men skal besvares etter produksjonssetting.__ 
 
-__Dersom innbygger ikke ønsker å gi samtykke, men likevel ønsker å fylle ut skjema, kan de bes om gå direkte til__ https://www.pasientrapportering.nhn.no/proms __og velge "Logg på med BankId (ID-porten) her" nederst på siden. Skjemaet vil da være tilgjengelig for utfylling.__
+__Dersom innbygger ikke ønsker å gi samtykke, men likevel ønsker å fylle ut skjema, kan de bes om gå direkte til__ [https://www.pasientrapportering.nhn.no/proms](https://www.pasientrapportering.nhn.no/proms) __og velge "Logg på med BankId (ID-porten) her" nederst på siden. Skjemaet vil da være tilgjengelig for utfylling.__
 
 
 
