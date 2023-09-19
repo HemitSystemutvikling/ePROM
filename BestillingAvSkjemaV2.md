@@ -126,8 +126,8 @@ Tilgjenglig som NuGet pakke
 
 NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
 
-Navn: Hemit.Proms.Integration  
-Version: 3.0
+Navn: Hemit.ePROM.Integration  
+Version: 10.0
 
 **Eksempelkode (C#)**
 
@@ -245,7 +245,7 @@ F.eks: [https://mrsweb.hemit.org/PromsTestregisterServices/api/PromsFormOrder/]
 
 * success – true if the request was processed successfully, otherwise false
 
-For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.PromsFormOrderRequest* for parameter inn og *Hemit.Proms.Integration.PromsFormOrderResponse* for parameter ut
+For parameter inn og ut kan NuGet pakken *Hemit.ePROM.Integration* benyttes. Bruk da *Hemit.ePROM.Integration.PromsFormOrderRequest* for parameter inn og *Hemit.ePROM.Integration.PromsFormOrderResponse* for parameter ut
 
 **Metode**
 
