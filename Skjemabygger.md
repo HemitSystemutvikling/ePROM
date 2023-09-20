@@ -1,12 +1,14 @@
 # Skjemabygger
 
-*Sist oppdatert 17.02.2022*
+*Sist oppdatert 19.09.2023*
 
 ### Innholdsfortegnelse
 
 [GENERELT](#generelt)
 
 [METADATA](#metadata)
+
+[DEFAULTVERDIER](#defaultverdier)
 
 [SPESIALTILPASNING](#spesialtilpasning)
 
@@ -100,10 +102,8 @@ Metadatafeltet i skjemabestillingen vil da være:
 JSON.stringify({ sykehusnavn: "St. Olavs hospital" })
 ```
 
-# Defaultverdi 
+# DEFAULTVERDIER 
 
-
-**NB: Defaultverdier tilgjengelig i ePROM v11.0 tentativ produksjonssetting september 2023**
 
 I noen tilfeller er det ønskelig at felter er forhåndsutfylt med informasjon som allerede er samlet inn om/av pasienten. Eksempel på dette kan være høyde, vekt, utdanning og andre forholdsvis statiske forhold. På den måten slipper pasienten å oppgi samme informasjon flere ganger, og feltene vil være utfylt når pasienten åpner skjema. 
 
