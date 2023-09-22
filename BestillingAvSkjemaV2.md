@@ -103,7 +103,7 @@ function placeFormOrderV2() {
 ```
 
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
-* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding. **VIKTIG! Se også ["På vegne av"-funksjonalitet og personvern](#på-vegne-av-funksjonalitet-og-personvern)**
+* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding. **VIKTIG! Se også ["På vegne av"-funksjonalitet og personvern](PaVegneAvFlyt)**
 
 **Parametere – Ut**
 
@@ -185,7 +185,7 @@ public async Task<JsonResult> OrderPromsFormV2Async(Guid formId) {
 * signingText - Optional. The text displyed for signing
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
-* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding. **VIKTIG! Se også ["På vegne av"-funksjonalitet og personvern](#på-vegne-av-funksjonalitet-og-personvern)**
+* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding. **VIKTIG! Se også ["På vegne av"-funksjonalitet og personvern](PaVegneAvFlyt)**
 
 promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
 
