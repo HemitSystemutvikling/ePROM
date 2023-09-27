@@ -8,6 +8,7 @@ Dato: 25.september 2023
 - Samleskjema: "Skjul progressbar" på Samleskjema skjuler tellingen, men viser ikonene 
 - Pasientskjema på Android: Fiks slik at utfylling av tallfelt ikke gir "Ugyldig tegn"
 - Pasientskjema: Fiks på visning av slider.
+- Pasientskjema: Det er nå støtte for å sende med defaultverdier til pasientskjema når man bestiller et skjema
 
 ### ePROM admin
 - Skjemabygger: for felttype tekstområde er det mulig å legge til lenker, vha syntaks #a#https://www.www.www#a#
