@@ -1,6 +1,6 @@
 # SENDE MELDING SOM SMS og EPOST
 
-*Sist oppdatert 27.08.2019*
+*Sist oppdatert 18.10.2023*
 
 ## Innholdsfortegnelse
 
@@ -80,7 +80,7 @@ Tilgjenglig som NuGet pakke
 
 NuGet repository: [https://hemit.myget.org/F/hemitpublic/api/v3/index.json](https://hemit.myget.org/F/hemitpublic/api/v3/index.json)
 
-Navn: Hemit. Proms. Integration
+Navn: Hemit.ePROM.Integration
 
 **Eksempelkode (C#)**
 
@@ -206,7 +206,7 @@ Tilgjenglig som NuGet pakke
 
 NuGet repository: [https://hemit.myget.org/F/hemitpublic/api/v3/index.json](https://hemit.myget.org/F/hemitpublic/api/v3/index.json)
 
-Navn: Hemit. Proms. Integration
+Navn: Hemit.ePROM.Integration
 
 Eksempelkode (C#)
 
