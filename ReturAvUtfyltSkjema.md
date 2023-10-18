@@ -1,6 +1,6 @@
 # RETUR AV UTFYLT SKJEMA
 
-*Sist oppdatert 19.04.2023*
+*Sist oppdatert 18.10.2023*
 
 Når pasienten har fylt ut et skjema sendes skjemaet tilbake til Bestillersystemet.
 
@@ -42,7 +42,7 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](
 
 * success – true if the request was processed successfully, otherwise false
 
-For parameter inn og ut kan NuGet pakken *Hemit. Proms. Integration* benyttes. Bruk da *Hemit. Proms. Integration. PromsFormOrderRequest* for parameter inn og *Hemit. Proms. Integration. PromsFormOrderResponse* for parameter ut
+For parameter inn og ut kan NuGet pakken *Hemit.ePROM.Integration* benyttes. Bruk da *Hemit.ePROM.Integration.PromsFormOrderRequest* for parameter inn og *Hemit.ePROM.Integration.PromsFormOrderResponse* for parameter ut
 
 **Metode**
 
