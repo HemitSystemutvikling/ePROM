@@ -1,6 +1,6 @@
 # SENDE MELDING TIL INNBYGGER V2
 
-*Sist oppdatert 12.01.2023*
+*Sist oppdatert 18.10.2023*
 
 ## Innholdsfortegnelse
 
@@ -59,7 +59,7 @@ Tilgjenglig som NuGet pakke
 
 NuGet repository: [https://hemit.myget.org/F/hemitpublic/api/v3/index.json]
 
-Navn: Hemit.Proms.Integration
+Navn: Hemit.ePROM.Integration
 
 Eksempelkode (C#)
 
@@ -172,7 +172,7 @@ F.eks: [https://proms2.hemit.org/PromsTestregisterServices/api/MessageToCitizen/
 
 * success – true if the request was processed successfully, otherwise false
 
-For parameter inn og ut kan NuGet pakken *Hemit.Proms.Integration* benyttes. Bruk da *Hemit.Proms.Integration.SendMessageToCitizenResult* for parameter inn og *Hemit.Proms.Integration.SendMessageToCitizenResponse* for parameter ut
+For parameter inn og ut kan NuGet pakken *Hemit.ePROM.Integration* benyttes. Bruk da *Hemit.ePROM.Integration.SendMessageToCitizenResult* for parameter inn og *Hemit.ePROM.Integration.SendMessageToCitizenResponse* for parameter ut
 
 **Metode**
 
