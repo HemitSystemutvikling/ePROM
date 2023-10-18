@@ -34,7 +34,7 @@ __NB:__ Følgende punkter __skal__ verifiseres i testmiljø for alle nye integra
 
 ePROM admin: [https://proms2.hemit.org/PromsAdministration](https://proms2.hemit.org/PromsAdministration)
 
-ePROM skjemautfyller: [https://proms2.hemit.org/Proms](https://proms2.hemit.org/Proms) (bl.a. for skjema med engangskode)
+ePROM skjemautfyller: [https://proms2.hemit.org/proms](https://proms2.hemit.org/proms) (bl.a. for skjema med engangskode)
 
 ePROM bestillingsAPI: [https://proms2.hemit.org/promswebapi/api/v2/formorder](https://proms2.hemit.org/promswebapi/api/v2/formorder)
 
