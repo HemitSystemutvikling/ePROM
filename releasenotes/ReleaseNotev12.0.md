@@ -6,7 +6,7 @@ Dato: november 2023
 - Validering av dato- og tallfelt for skjema i Samleskjema
 
 ### ePROM admin
-- 
+- For testbestillinger i PROD maskeres fødselsnummeret
 
 ### Teknisk
 - Oppdatert autentisering mot helsenorge REST API
