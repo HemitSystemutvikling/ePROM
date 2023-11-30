@@ -3,7 +3,7 @@ Dato: november 2023
 
 ### Skjemautfyller
 - Bedre tilbakemelding til bruker ved visning av pasientskjema
-- Validering av dato- og tallfelt for skjema i Samleskjema
+- Feilretting: Validering av dato- og tallfelt for skjema i Samleskjema
 
 ### ePROM admin
 - For testbestillinger i PROD maskeres fødselsnummeret
