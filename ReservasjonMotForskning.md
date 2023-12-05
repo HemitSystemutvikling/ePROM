@@ -27,5 +27,6 @@ Det vil si at selv om innbyggeren er reservert mot forskning på helsenorge, kan
 
 
 Dersom ePROM ikke finner noen aktuelle kanaler vil bestillersystemet få følgende status fra ePROM: `Unable to notify patient. NotificationChannel: None`. Det vil si at bestillersystemet ikke får vite hvorfor innbyggeren ikke kan nås (f.eks. at det skyldes reservasjon).  
+I et register vil da bestillingen typisk få status "Feilet" med begrunnelse at pasienten ikke kan nås.
 
 [Tilbake](./)
