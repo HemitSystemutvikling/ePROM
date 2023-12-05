@@ -1,4 +1,3 @@
-# Reservasjon mot forskning/sekundærbruk på helsenorge
 
 ## På helsenorge
 
