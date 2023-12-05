@@ -6,7 +6,8 @@ Dato: 06.desember 2023
   - når skjema ikke er tilgjengelig ennå
   - når skjema allerede er levert
   - når det oppstår feil, f.eks. feil innlogget bruker forsøker å åpne skjema 
-- Feilretting: Validering av dato- og tallfelt for skjema i Samleskjema
+- Validering av dato- og tallfelt i skjema
+  - rettet feil slik at valideringsregler fungerer for Samleskjema, ikke kun for enkeltskjema
 - Støtte for reservasjon mot forskning/sekundærbruk for skjema og brev (helsenorge)
   - gjelder bestillersystem som er markert som forskning i ePROM admin, bl.a. alle eFORSK bestillersystem.  
 
