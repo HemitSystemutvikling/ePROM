@@ -18,6 +18,8 @@
 
 ["På vegne av"-funksjonalitet](PaVegneAvFlyt)
 
+[Reservasjon mot forskning](ReservasjonMotForskning)
+
 ### Varslingskanaler og utfylling av skjema
 [Varslingskanaler og utfylling av skjema](Utfylling%20av%20skjema)
 
