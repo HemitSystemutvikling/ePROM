@@ -22,7 +22,7 @@ ePROM tilbyr en selvbetjeningsløsning der registrene administrere sine egne pas
 Pasientskjemaene bygger man i ePROM sin skjemabygger. Det er her mulig å aktiver papirskjema ved behov.
 ePROM tilbyr også tilgang til noen standardskjema som f.eks. RAND-12 og EQ-5D m.fl.
 
-## eRPOM Skjemautfyller
+## ePROM Skjemautfyller
 Innbygger svarer på mottatt pasientskjemaene i ePROM sin skjemautfyller. Skjemautfyller støtter Single-Sign-On pålogging med både helsenorge og Digipost/eBoks.
 
 ## PVK

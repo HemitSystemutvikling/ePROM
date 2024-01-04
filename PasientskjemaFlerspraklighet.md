@@ -11,7 +11,7 @@
 Først opprettes et skjema på norsk. Deretter lager man en kopi av dette skjema, vha "Lag-kopi"-funksjonen, og oversetter all tekst, inkludert hjelpetekst til engelsk.
 NB: Det er viktig av alle variablene (feltnavn) i skjemaene er like i de to versjonene.
 
-Navnet på skjemaene kan med fordel inneholder hvilket språk skjemet er på. F.eks. 
+Navnet på skjemaene kan med fordel inneholde hvilket språk skjemet er på. F.eks. 
 - Samtykkeerklæring (obligatorisk)
 - Samtykkeerklæring (obligatorisk)_Engelsk
 
