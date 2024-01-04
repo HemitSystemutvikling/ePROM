@@ -40,7 +40,7 @@ Test-PREG benyttes i alle miljø, foruten PROD.
 
 [Mer om testpersoner](Testpersoner)
 
-## Aynkron kommunikasjon
+## Asynkron kommunikasjon
 
 ePROM baserer seg på asynkron kommunikasjon med Bestillersystem. Dette gjelder både for bestilling av skjema og sending av melding til innbygger.
 Se sekvensdiagram for [bestilling av skjem](img/bestilling_av_pasientskjema_asynkront.png) og [retur av skjemasvar](img/retur_av_skjemasvar_asynkront.png)
