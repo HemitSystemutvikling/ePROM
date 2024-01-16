@@ -3,7 +3,7 @@ Dato: xx.januar 2024
 
 ### Feilrettinger
 - Rettet opp i "forsøk igjen" mekanismen.
-  - en feil gjorde slik at hvis levering av besvart skjema til endesystemet feilet, så ble det ikke forsøkt igjen.
+  - hvis et skjemasvar ikke blir levert med suksess til endesystemet, så vil systemet nå prøve å levere det på nytt etter et visst tidsintervall.
 - Det logges en feil når et skjema som ikke har vært mellomlagret åpnes i skjemautfyller
 - Sletting av brev feilet grunnet manglende oppsett i octopus for sertifikat thumbprint
 
