@@ -10,6 +10,14 @@ Overordnet skisse og flytdiagram for ePROX finnes [her](Overordnet%20skisse%20ep
 
 Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestillinger av den aktuelle skjematypen. Registre som er knyttet til samme bestilling vil motta samme statusoppdateringer på bestillingen, både når det gjelder bestilling, svar, utløpsdato og feil.
 
+# Testmiljøet
+
+API'et i testmiljøet for å bestille pasientskjema via ePROX er tilgjengelig på internett, i motsetning til prdouksjonsmiljøet som kun vil være tilgjengelig på Helsenettet.
+
+For testmiljøet gjelder følgende URL'er for bestillingsAPI'et:
+ 
+DEV: [https://proms.hemitdev.org/proxywebapidev/api/v2/formorder](https://proms.hemitdev.org/proxywebapidev/api/v2/formorder)
+
 # Regler for bestilling
 
 **Dersom det ikke finnes en aktiv bestilling, opprettes det alltid en ny bestilling. Det gjelder for alle typer bestilling, både med og uten metadata (også hvis CREATE_NEW_ORDER=false).**
