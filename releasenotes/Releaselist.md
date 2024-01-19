@@ -1,5 +1,6 @@
 # Tidligere releaser av ePROM
 
+[Release Note v12.0 - 06.12.2023](ReleaseNotev12.0)
 
 [Release Note v11.0 - 25.09.2023](ReleaseNotev11.0)
 
