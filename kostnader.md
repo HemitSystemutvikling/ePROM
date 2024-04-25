@@ -8,11 +8,9 @@ Kostnader for distribusjon av skjema:
 
 - Skjema og brev utsendt og returnert via helsenorge.no koster kr 0,-
 
-- Skjema utsendt og returnert via sikker digital post (Digipost og eBoks) i henhold til Difis prisliste https://samarbeid.difi.no/felleslosninger/digital-postkasse-til-innbyggere
+- Skjema utsendt og returnert via sikker digital post (Digipost og eBoks), og bruk av informasjonsbrev, prises i henhold til Difis prisliste [https://samarbeid.difi.no/felleslosninger/digital-postkasse-til-innbyggere](https://samarbeid.digdir.no/digital-postkasse/kostnadsmodell-digital-postkasse/106 )
 
-- Bruk av eSignering i henhold til Difis prisliste https://samarbeid.difi.no/felleslosninger/esignering
-
-- Bruk av informasjonsbrev prises i henhold til difis prislister https://samarbeid.difi.no/felleslosninger/digital-postkasse-til-innbyggere
+- Bruk av eSignering i henhold til Difis prisliste [https://samarbeid.difi.no/felleslosninger/esignering](https://samarbeid.digdir.no/esignering/kostnadsmodell-esignering/103)
 
 ## Distribusjon av papirskjema
 
