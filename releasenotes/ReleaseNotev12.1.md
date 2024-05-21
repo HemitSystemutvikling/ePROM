@@ -1,5 +1,5 @@
 # Endringer i ePROM v12.1
-Januar 2024
+*Januar 2024*
 
 ### Feilrettinger
 - Rettet opp i "forsøk igjen" mekanismen.
