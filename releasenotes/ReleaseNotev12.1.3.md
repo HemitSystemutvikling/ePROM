@@ -1,7 +1,7 @@
 # Endringer i ePROM v12.1.3
 *September 2024*
 
-### Feilretting (edge caser)
+### Feilretting
 - Papirskjema
   - Det kunne oppstå en situasjon der ikke kvittering og pdf av utfylt skjema ikke blir sendt til innbygger
 - P-REG
