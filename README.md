@@ -1,6 +1,6 @@
 # ePROM
 
-[Endringer i ePROM v12.2 - (Oktober 2024)](releasenotes/ReleaseNotev12.2)
+[Endringer i ePROM v12.3 - (November 2024)](releasenotes/ReleaseNotev12.3)
 
 [Tidligere releaser](releasenotes/Releaselist)
 
