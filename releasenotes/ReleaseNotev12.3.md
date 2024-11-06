@@ -1,7 +1,7 @@
-# Endringer i ePROM v12.3
+# Endringer i ePROM v12.3 - wip
 *November 2024*
 
 ### Teknisk
-- Oppgraderer til .NET 8
+- Oppgradert til .NET 8
     
 [Tilbake](./Releaselist)
