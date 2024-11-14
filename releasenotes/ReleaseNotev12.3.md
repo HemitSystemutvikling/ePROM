@@ -1,4 +1,4 @@
-# Endringer i ePROM v12.3 - wip
+# Endringer i ePROM v12.3
 *November 2024*
 
 ### Teknisk
