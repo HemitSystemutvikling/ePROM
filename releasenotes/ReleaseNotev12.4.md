@@ -1,4 +1,4 @@
-# Endringer i ePROM v12.4 - WIP
+# Endringer i ePROM v12.4
 *November 2024*
 
 ### Teknisk
