@@ -19,7 +19,7 @@ Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet f
 ## Sende melding klient-side
 
 **URL for Web API kall**
-[https://proms2.hemit.org/PromsWebApi/api/messagetocitizen](https://proms2.hemit.org/PromsWebApi/api/messagetocitizen)
+[https://proms.hemitdev.org/PromsWebApi/api/messagetocitizen](https://proms.hemitdev.org/PromsWebApi/api/messagetocitizen)
 
 **Parametere – Inn**
 
@@ -115,7 +115,7 @@ notificationChannel = result. NotificationChannel });
 * notificationChannel - The channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure }` Tallverdien kan sendes.
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
-promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+promsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi
 
 **Parametere – Ut**
 

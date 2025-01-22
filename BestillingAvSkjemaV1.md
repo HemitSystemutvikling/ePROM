@@ -20,7 +20,7 @@ Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet f
 
 ``` javascript
 function placeFormOrder() {
-    var url = 'https://proms2.hemit.org/PromsWebApi/api/formorder'; // Demo server
+    var url = 'https://proms.hemitdev.org/PromsWebApi/api/formorder'; // Demo server
     var apiKey = ""; // The ApiKey for your system
     var formId = "1bc5f9f0-2607-49eb-94f0-6af955bbd79a"; // RAND-12
     var nationalId = "26073941651"; // the national ID of the patient (Norsk fødselsnummer or D-nummer)
@@ -64,7 +64,7 @@ function placeFormOrder() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/PromsWebApi/api/formorder]
+[https://proms.hemitdev.org/PromsWebApi/api/formorder]
 
 **Parametere - Inn**
 
@@ -164,7 +164,7 @@ public JsonResult OrderPromsForm(Guid formId) {
 * physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 
-promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+promsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi
 
 **Parametere – Ut**
 

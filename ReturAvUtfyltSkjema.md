@@ -10,7 +10,7 @@ Bestillersystemet må implementere en service som mottar skjemadataene.
 
 **URL for Web API kall**
 
-ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
+ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms.hemitdev.org/PromsAdministration/](https://proms.hemitdev.org/PromsAdministration/)
 
 Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/PromsFormOrder
 

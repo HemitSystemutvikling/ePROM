@@ -34,7 +34,7 @@ Skjema som krever signatur leveres tilbake til Bestillersystem på vanlig måte 
 
 GET request mot: `<PromsApiBaseUrl>` /api/ExternalDocument/ `<SignedFormId>` 
 
-`<PromsApiBaseUrl>` skal være *https://proms2.hemit.org/PromsWebApi*
+`<PromsApiBaseUrl>` skal være *https://proms.hemitdev.org/PromsWebApi*
 
 **Send med ApiKey i request headeren**
 

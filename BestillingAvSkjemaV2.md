@@ -28,7 +28,7 @@ I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som de
 
 ``` javascript
 function placeFormOrderV2() {
-    var url = 'https://proms2.hemit.org/promswebapi/api/v2/formorder'; // Demo server
+    var url = 'https://proms.hemitdev.org/promswebapi/api/v2/formorder'; // Demo server
     var apiKey = ""; // The ApiKey for your system
     var formId = "1bc5f9f0-2607-49eb-94f0-6af955bbd79a"; // RAND-12
     var nationalId = "26073941651"; // the national ID of the patient (Norsk fødselsnummer or D-nummer)
@@ -77,7 +77,7 @@ function placeFormOrderV2() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/promswebapi/api/v2/formorder]
+[https://proms.hemitdev.org/promswebapi/api/v2/formorder]
 
 **Parametere - Inn**
 
@@ -187,7 +187,7 @@ public async Task<JsonResult> OrderPromsFormV2Async(Guid formId) {
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
 * onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding. **VIKTIG! Se også ["På vegne av"-funksjonalitet og personvern](PaVegneAvFlyt)**
 
-promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
+promsApiBaseUrl skal være https://proms.hemitdev.org/promswebapi
 
 **Parametere – Ut**
 
@@ -221,7 +221,7 @@ API-kallet for bestilling av skjema er i v2 endret slik at man får respons med 
 
 **URL for Web API kall**
 
-ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
+ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms.hemitdev.org/PromsAdministration/](https://proms.hemitdev.org/PromsAdministration/)
 
 Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/PromsFormOrder
 

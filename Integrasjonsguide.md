@@ -27,7 +27,7 @@
 
 For å se / fylle ut de bestilte skjemaene kan man finne de igjen i pasientløsningen:
 
-[https://proms2.hemit.org/proms](https://proms2.hemit.org/proms)
+[https://proms.hemitdev.org/proms](https://proms.hemitdev.org/proms)
 
 Her finner man alle skjema som er bestilt og man kan f.eks.teste innsending av skjemaer. Pålogging med BankID eller engangskode.
 

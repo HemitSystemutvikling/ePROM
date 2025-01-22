@@ -29,7 +29,7 @@ I verson v2 av API'et skal ApiKey sendes som en `Authorization` parameter som de
 ## Sende melding klient-side
 
 **URL for Web API kall**
-[https://proms2.hemit.org/promswebapi/api/v2/messagetocitizen]
+[https://proms.hemitdev.org/promswebapi/api/v2/messagetocitizen]
 
 **Parametere – Inn**
 
@@ -67,7 +67,7 @@ Eksempelkode (C#)
 [HttpPost]
 public JsonResult SendMessageToCitizenV2(string nationalId, DocumentCollection documentCollection)
 {
-// <add key="PromsApiBaseUrl" value="http://proms2.hemit.org/promswebapi/" />
+// <add key="PromsApiBaseUrl" value="http://proms.hemitdev.org/promswebapi/" />
 var promsApiBaseUrl = ConfigurationManager. AppSettings["PromsApiBaseUrl"]; 
 var apikey = ConfigurationManager. AppSettings["ApiKey"]; 
 var messageInfo = new MessageInfo {
@@ -127,7 +127,7 @@ messageToCitizenId = result.messageToCitizenId});
 * testMode - Optional. Set to true when the message is initiated from ePROM Admin and the status shall not to be returned to the BestillerSystem. Default: false
 * paperColorPrint - Optional. Set to true when paper should be printed in color. Default: false
 
-promsApiBaseUrl skal være https://proms2.hemit.org/promswebapi
+promsApiBaseUrl skal være https://proms.hemitdev.org/promswebapi
 
 **Parametere – Ut**
 
@@ -153,11 +153,11 @@ API-kallet for å sende sensitiv informasjon er i v2 endret slik at man får res
 
 **URL for Web API kall**
 
-ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms2.hemit.org/PromsAdministration/](https://proms2.hemit.org/PromsAdministration/)
+ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: [https://proms.hemitdev.org/PromsAdministration/](https://proms.hemitdev.org/PromsAdministration/)
 
 Web API må være tilgjenglig på URL: https:// `<ApiBaseUrl>` /api/MessageToCitizen
 
-F.eks: [https://proms2.hemit.org/PromsTestregisterServices/api/MessageToCitizen/]
+F.eks: [https://proms.hemitdev.org/PromsTestregisterServices/api/MessageToCitizen/]
 
 **Parametere - Inn**
 

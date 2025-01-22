@@ -32,11 +32,11 @@ __NB:__ Følgende punkter __skal__ verifiseres i testmiljø for alle nye integra
 
 ### Test
 
-ePROM admin: [https://proms2.hemit.org/PromsAdministration](https://proms2.hemit.org/PromsAdministration)
+ePROM admin: [https://proms.hemitdev.org/PromsAdministration](https://proms.hemitdev.org/PromsAdministration)
 
-ePROM skjemautfyller: [https://proms2.hemit.org/proms](https://proms2.hemit.org/proms) (bl.a. for skjema med engangskode)
+ePROM skjemautfyller: [https://proms.hemitdev.org/proms](https://proms.hemitdev.org/proms) (bl.a. for skjema med engangskode)
 
-ePROM bestillingsAPI: [https://proms2.hemit.org/promswebapi/api/v2/formorder](https://proms2.hemit.org/promswebapi/api/v2/formorder)
+ePROM bestillingsAPI: [https://proms.hemitdev.org/promswebapi/api/v2/formorder](https://proms.hemitdev.org/promswebapi/api/v2/formorder)
 
 Helsenorge test: [https://tjenester.hn2.test.nhn.no/?pnr=[pnr]](https://tjenester.hn2.test.nhn.no/?pnr=[pnr])
 

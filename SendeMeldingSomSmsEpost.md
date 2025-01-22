@@ -23,7 +23,7 @@ Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet f
 
 ``` javascript
 function sendUnsecureMessageSms() {
-    var url = 'https://proms2.hemit.org/PromsWebApi/api/unsecuremessagesms'; // Demo server
+    var url = 'https://proms.hemitdev.org/PromsWebApi/api/unsecuremessagesms'; // Demo server
     var apiKey = ""; // The ApiKey for your system
     var smsText = " En ikkeSensitivMelding som ikke er sensitiv "; // Message
     var nationalId = "26073941651"; // the national ID of the patient (Norsk fødselsnummer or D-nummer)
@@ -51,7 +51,7 @@ function sendUnsecureMessageSms() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/PromsWebApi/api/unsecuremessagesms](https://proms2.hemit.org/PromsWebApi/api/unsecuremessagesms)
+[https://proms.hemitdev.org/PromsWebApi/api/unsecuremessagesms](https://proms.hemitdev.org/PromsWebApi/api/unsecuremessagesms)
 
 **Parametere - Inn**
 
@@ -112,7 +112,7 @@ public JsonResult SendUnsecureMessageSms(string nationalId)
 
 One of the parameters nationalId or phoneNumber must be provided.
 
-promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+promsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi
 
 **Parametere – Ut**
 
@@ -146,7 +146,7 @@ Eksempelkode (javascript)
 
 ``` javascript
 function sendUnsecureMessageEmail() {
-    var url = 'https://proms2.hemit.org/PromsWebApi/api/unsecuremessageemail'; // Demo server
+    var url = 'https://proms.hemitdev.org/PromsWebApi/api/unsecuremessageemail'; // Demo server
     var apiKey = ""; // The ApiKey for your system
     var emailTitle = " En ikkeSensitivTittel som ikke er sensitiv "; // Subject
     var emailText = " En ikkeSensitivMelding som ikke er sensitiv "; // Message
@@ -176,7 +176,7 @@ function sendUnsecureMessageEmail() {
 
 **URL for Web API kall**
 
-[https://proms2.hemit.org/PromsWebApi/api/unsecuremessageemail](https://proms2.hemit.org/PromsWebApi/api/unsecuremessageemail)
+[https://proms.hemitdev.org/PromsWebApi/api/unsecuremessageemail](https://proms.hemitdev.org/PromsWebApi/api/unsecuremessageemail)
 
 **Parametere - Inn**
 
@@ -241,7 +241,7 @@ public JsonResult SendUnsecureMessageEmail(string nationalId)
 
 One of the parameters nationalId or emailAddress must be provided.
 
-promsApiBaseUrl skal være https://proms2.hemit.org/PromsWebApi
+promsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi
 
 **Parametere – Ut**
 
