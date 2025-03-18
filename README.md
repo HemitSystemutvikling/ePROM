@@ -51,8 +51,9 @@
 
 [Overordnet skisse ePROX](Overordnet%20skisse%20eprox)
 
+<!-- Dette er en kommentar og vises ikke i den renderede Markdown 
 ### Administrasjon av PROMS i MRS
-[Administrasjon av PROMS i MRS](MrsPromsAdmin)
+[Administrasjon av PROMS i MRS](MrsPromsAdmin)-->
 
 [Finne ID på en PROMS-bestilling i MRS](MrsPromsId)
 
