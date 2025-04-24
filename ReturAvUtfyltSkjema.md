@@ -37,6 +37,9 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](
   + eventType – Events `{ FormOpened | QuestionAccessed | SigningStarted | SigningCancelled | SigningError | SigningCompleted | FormDelivered }`
   + questionId – Id of the question
   + timestampUtc - Timestamp of event
+* filledOutBy - Information about the person that filled out the form
+  + filledOutByActNationalId - The national id number of the person that filled out the form
+  + filledOutByActType - Type of representation `{ Ukjent | SegSelv | Foreldrerepresentasjon | Fullmakt }`
 
 **Parametere - Ut**
 
@@ -68,7 +71,8 @@ NB! formData sendes som stringified JSON-object
         eventType: "QuestionAccessed",
         questionId: "HealthGeneral",
         timestampUtc: "2021-05-07 09:18:09.627"
-    }]
+    }],
+    "filledOutBy":{"filledOutByActNationalId":"12345678901","filledOutByActType":"Foreldrerepresentasjon"} - **dobbelsjekk**
 }
 ```
 Eksempel response (JSON)

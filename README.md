@@ -1,6 +1,6 @@
 # ePROM
 
-[Endringer i ePROM v13.0.5 - (Mars 2025)](releasenotes/ReleaseNotev13.0.5)
+[Endringer i ePROM v13.1 - (April 2025)](releasenotes/ReleaseNotev13.1) - _Under utvikling_
 
 [Tidligere releaser](releasenotes/Releaselist)
 
@@ -51,10 +51,11 @@
 
 [Overordnet skisse ePROX](Overordnet%20skisse%20eprox)
 
+<!-- Dette er en kommentar og vises ikke i den renderede Markdown 
 ### Administrasjon av PROMS i MRS
 [Administrasjon av PROMS i MRS](MrsPromsAdmin)
 
-[Finne ID på en PROMS-bestilling i MRS](MrsPromsId)
+[Finne ID på en PROMS-bestilling i MRS](MrsPromsId)-->
 
 ### Kostnader
 [Kostnader ved bruk av ePROM](kostnader)
