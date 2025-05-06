@@ -13,7 +13,14 @@
 
 ### Teknisk
 - Papirskjema
-  - Byttet ut komponentet for generering av QR koder på papirskjema
+  - Byttet ut komponentet for generering av QR koder på papirskjema.
+  - Forbedringer relatert til verifisering av tolkningsmal.
+- Separerer logikk for brevutsending og skjemautsending  
+
+### Diverse
+- UI forbedringer i administrator modul.
+- Logging av brukeraktivitet i administrator modul.
+- Ny nuget integrasjonspakke er tilgjengelig: [*Hemit.ePROM.Integration v10.0.0*-BYTT UT DENNE](https://dev.azure.com/hemit/Hemit%20offentlig/_artifacts/feed/Hemit_public_packages/NuGet/Hemit.ePROM.Integration/overview/10.0.0)
 
 
 [Tilbake](./Releaselist) 
