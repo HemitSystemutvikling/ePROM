@@ -103,7 +103,10 @@ function placeFormOrderV2() {
 ```
 
 * testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false
-* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding. Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding. **VIKTIG! Se også ["På vegne av"-funksjonalitet og personvern](PaVegneAvFlyt)**
+* onBehalfOfNationalId - Optional. The national id number of the citizen the form order is regarding.
+  Should only be supplied when the recipient of the form order is someone else than the person the form order is regarding. Ex. when the recipient is the parent of the patient the form order is regarding.  
+  If the person identified by onBehalfOfNationalId can be represented on Helsenorge, the form will be sent to that person instead.  
+  **VIKTIG! Se også ["På vegne av"-funksjonalitet og personvern](PaVegneAvFlyt) og [Representasjon/"På vegne av" på helsenorge](RepresentasjonPaaHelsenorge)**
 
 **Parametere – Ut**
 
