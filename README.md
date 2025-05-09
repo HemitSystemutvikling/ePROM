@@ -18,6 +18,8 @@
 
 ["På vegne av"-funksjonalitet](PaVegneAvFlyt)
 
+[Representasjon/"På vegne av" på helsenorge](RepresentasjonPaaHelsenorge)
+
 [Reservasjon mot forskning](ReservasjonMotForskning)
 
 ### Varslingskanaler og utfylling av skjema

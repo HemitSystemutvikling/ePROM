@@ -12,7 +12,7 @@ __NB__: For at personen skal regnes som digitalt aktiv må informasjon i Difi Ko
 I tillegg har de ulike varslingskanalene følgende begrensninger:
 
 #### helsenorge:
-- over 16 år
+- over 16 år eller personen kan representeres på helsenorge. [Se Representasjon/"På vegne av" på helsenorge](RepresentasjonPaaHelsenorge)
 - må ha gitt samtykke (Full)
  
 #### sikker digital postkasse:
