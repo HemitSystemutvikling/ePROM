@@ -130,7 +130,7 @@ Tilgjenglig som NuGet pakke
 NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
 
 Navn: Hemit.ePROM.Integration  
-Version: 10.0
+Version: 13.1.0
 
 **Eksempelkode (C#)**
 

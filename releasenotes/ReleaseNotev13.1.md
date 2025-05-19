@@ -1,4 +1,4 @@
-# Endringer i ePROM v13.1 - _Under utvikling_
+# Endringer i ePROM v13.1
 *Mai 2024*
 
 ### Generelt
@@ -20,7 +20,7 @@
 ### Diverse
 - UI forbedringer i administrator modul.
 - Logging av brukeraktivitet i administrator modul.
-- Ny nuget integrasjonspakke er tilgjengelig: [*Hemit.ePROM.Integration v10.0.0*-BYTT UT DENNE](https://dev.azure.com/hemit/Hemit%20offentlig/_artifacts/feed/Hemit_public_packages/NuGet/Hemit.ePROM.Integration/overview/10.0.0)
+- Ny nuget integrasjonspakke er tilgjengelig: [*Hemit.ePROM.Integration v13.1.0*](https://dev.azure.com/hemit/Hemit%20offentlig/_artifacts/feed/Hemit_public_packages/NuGet/Hemit.ePROM.Integration/overview/13.1.0)
 
 
 [Tilbake](./Releaselist) 

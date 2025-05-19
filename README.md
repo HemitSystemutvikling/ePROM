@@ -1,6 +1,6 @@
 # ePROM
 
-[Endringer i ePROM v13.1 - (Mai 2025)](releasenotes/ReleaseNotev13.1) - _Under utvikling_
+[Endringer i ePROM v13.1 - (Mai 2025)](releasenotes/ReleaseNotev13.1)
 
 [Tidligere releaser](releasenotes/Releaselist)
 
