@@ -1,5 +1,5 @@
 # Endringer i ePROM v13.2
-*juni 2024*
+*juni 2025*
 
 ### Generelt
 - Prioritering av hangfire køer er hovedfokus i denne versjonen.

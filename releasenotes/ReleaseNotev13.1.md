@@ -1,5 +1,5 @@
 # Endringer i ePROM v13.1
-*Mai 2024*
+*Mai 2025*
 
 ### Generelt
 - Representasjon på helsenorge
