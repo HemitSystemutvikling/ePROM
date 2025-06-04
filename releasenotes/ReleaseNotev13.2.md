@@ -6,7 +6,7 @@
   - Bestillinger som kommer inn blir prioritert i denne rekkefølgen:
     - Skjemabestillinger (med engangskode).
     - Skjemabestillinger (andre kanaler).
-    - Utsending av melding
+    - Utsending av melding.
 
 ### Teknisk
 - Database
