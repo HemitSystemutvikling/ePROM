@@ -37,7 +37,8 @@ F.eks: [https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder](
   + eventType – Events `{ FormOpened | QuestionAccessed | SigningStarted | SigningCancelled | SigningError | SigningCompleted | FormDelivered }`
   + questionId – Id of the question
   + timestampUtc - Timestamp of event
-* filledOutBy - Information about the person that filled out the form
+* filledOutBy - Information about the person that filled out the form.  
+**Note:** These properties are only populated if the form is submitted via **Helsenorge**.
   + filledOutByActNationalId - The national id number of the person that filled out the form
   + filledOutByActType - Type of representation `{ Ukjent | SegSelv | Foreldrerepresentasjon | Fullmakt }`
 
