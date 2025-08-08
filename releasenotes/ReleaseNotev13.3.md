@@ -8,7 +8,15 @@
 <img src="../img/bestillersystem_persontjenesten.png" alt="Bestillersystem i ePROM admin" width="600" />
 
 ### Diverse
-- Forbedret/utvidet logging
+- Forbedret/utvidet logging.
+- Endret slik at det ikke er er et krav å gjøre oppslag i persontjenesten/P-REG for utsending til Helsenorge og Digipost.
+- Helsenorge [FinnFormidlingskanal API](https://helsenorge.atlassian.net/wiki/spaces/HELSENORGE/pages/1863024641/Finn+formidlingskanal) unntak feilkoder konfigurerbart i Octopus.
+- Forbedringer i administrator modul.
+  - Statistikksiden.
+  - Testbestillinger.
+  - Statuspanel.
+  - Brukeradministrasjon.
+  - Digipost virksomhet.
 
 
 [Tilbake](./Releaselist) 
