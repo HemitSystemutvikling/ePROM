@@ -8,7 +8,7 @@ For at et skjema skal kunne bestilles av pasienten må "Kan bestilles av pasient
 
 URL for pasientbestilling av skjema blir tilgjengelig etter man har lagret skjemaet ("Offentlig url" under "Avansert innstilling")
 
-Det er også mulig å velge om man ønsker at skjema bestilt av pasient må signeres: Huk av "Skjema bestilt av pasient må signeres" under "Avansert innstilling". Forutsetter at "Signering støttes" (under "Avansert innstilling")  er valgt først.
+Det er også mulig å velge om man ønsker at skjema bestilt av pasient må signeres: Huk av "Skjema bestilt av pasient må signeres" under "Avansert innstilling". 
 
 Ved retur av utfyllt skjema sendes pasientens personnummer og skjemaets ID sammen med skjemadataene. I tillegg får isPatientInitiated verdien 'true':
 

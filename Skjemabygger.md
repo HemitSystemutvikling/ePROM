@@ -42,7 +42,6 @@ __[Obligatorisk lesning for den som skal bygge skjema](PasientskjemaTips)__
 - Copyright* - felt for å angi copyright/lisensrettigheter. Dette vil blir synlig nederst på skjemaet når pasienten fyller ut.
 - Sidevisning* - angir at skjema skal vises med sider. Én side = en gruppe på rotnivå i skjemabyggeren. Hver side (gruppe) kan ha 0 til mange spørsmål
 - Skjul progressbar - angir at framdriftsinformasjon skal skjules for pasienten under utfylling. Det er lite brukervennlig å skjule denne informasjonen, og det anbefales IKKE.
-- Signering støttes - __ikke i bruk.__ Dette settes nå pr. bestilling, ikke pr. skjematype.
 - Papirformat aktivert - angir at det skal genereres en papirversjon (PDF) av skjemaet, som _KAN_ brukes etter avtale med Hemit/Posten. 
   - Fargeutskrift - angir at papirskjema skal sendes ut i farger (medfører ekstra kostnad)
   - Heftet utskrift - angir at papirskjema skal produseres som hefte, ikke løse ark, for skjema over ~8-10 sider (medfører ekstra kostnad)
