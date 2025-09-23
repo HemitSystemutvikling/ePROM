@@ -14,4 +14,4 @@
 
 ### Feilretting
 - Rettet feil som gjorde at skjema enkelte ganger hopper til Levere skjema-knappen før spørsmål over er besvart.
-- Rettet feil som gnorde at den månedlige mail-rapporten ikke viste korrekt statistikk.
+- Rettet feil som gjorde at den månedlige mail-rapporten ikke viste korrekt statistikk.
