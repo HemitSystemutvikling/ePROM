@@ -1,5 +1,5 @@
 # Endringer i ePROM v13.3
-*xxxx 2025*
+*23.09.2025*
 
 ### Generelt
 - ePROM v13.3 tar i bruk persontjenesten, dette pga at P-REG avvikles 31. desember 2025.  
