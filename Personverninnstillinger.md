@@ -81,9 +81,9 @@ function sjekkPersonverninnstilling() {
 * id – The guid of the PersonvernInnstilling.
 * name – The name of the PersonvernInnstilling.
 * status – The status of the PersonvernInnstilling.`{ IkkeAktiv | Aktiv }`.
-* sequenceNumber: Sequence number for the resident instance of PersonvernInnstilling.
-* createdDateTimeOffset: Timestamp for when the first instance of the resident's PersonvernInnstilling was created.
-* lastChangedDateTimeOffset: Timestamp of the last change of PersonvernInnstilling.
+* sequenceNumber – Sequence number for the resident instance of PersonvernInnstilling.
+* createdDateTimeOffset – Timestamp for when the first instance of the resident's PersonvernInnstilling was created.
+* lastChangedDateTimeOffset – Timestamp of the last change of PersonvernInnstilling.
 
 **Metode**
 
