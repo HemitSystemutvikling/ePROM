@@ -9,7 +9,7 @@
         - `LastChangedDateTimeOffset` er tidspunkt for når innbygger satt personverninnstillingen som denne endringen representerer
 - Signering er fjernet fra skjemabygger for skjematyper som ikke er pasientinitiert, da dette ikke er i bruk siden det settes pr. bestilling og ikke pr. skjematype 
 
-### Tekninsk
+### Teknisk
 - Oppdaterte Helsenorge-pakkene til siste versjon (6.0.3)
 
 ### Feilretting
