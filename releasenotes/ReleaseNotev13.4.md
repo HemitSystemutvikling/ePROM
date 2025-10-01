@@ -2,7 +2,7 @@
 *xxxx 2025*
 
 ### Generelt
-- Ny versjon av `Hemit.ePROM.Integration`
+- Ny versjon av `Hemit.ePROM.Integration`: [*Hemit.ePROM.Integration v13.4.0*](https://dev.azure.com/hemit/Hemit%20offentlig/_artifacts/feed/Hemit_public_packages/NuGet/Hemit.ePROM.Integration/overview/13.4.0)
     - Lagt til `SequenceNumber`, `CreatedDateTimeOffset` og `LastChangedDateTimeOffset` i `GetPersonvernInnstillingResponse` der
         - `SequenceNumber` er hvilket sekvensnummer dette er for innbygger instans av denne personverninnstillingsdefinisjonen
         - `CreatedDateTimeOffset` er tidspunkt for når første instans av innbyggers personverninnstilling ble opprettet
