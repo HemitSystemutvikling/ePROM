@@ -44,8 +44,18 @@ function sjekkPersonverninnstilling() {
             type,
             pvkId
         }),
-        success: function(data) {
-            alert("nationalId: " + data.nationalId + "\ntype: " + data.type + "\nnid: " + data.id + "\nnname: " + data.name + "\nstatus: " + data.status);
+        success: function (data) {
+            const lines = [
+                `nationalId:              ${data.nationalId}`,
+                `type:                    ${data.type}`,
+                `id:                      ${data.id}`,
+                `name:                    ${data.name}`,
+                `status:                  ${data.status}`,
+                `sequenceNumber:          ${data.sequenceNumber}`,
+                `createdDateTimeOffset:   ${data.createdDateTimeOffset}`,
+                `lastChangedDateTimeOffset:${data.lastChangedDateTimeOffset}`
+            ];
+            alert(lines.join('\n'));
         },
         error: function() {
             alert("Error!");
@@ -71,6 +81,9 @@ function sjekkPersonverninnstilling() {
 * id – The guid of the PersonvernInnstilling.
 * name – The name of the PersonvernInnstilling.
 * status – The status of the PersonvernInnstilling.`{ IkkeAktiv | Aktiv }`.
+* sequenceNumber – Sequence number for the resident instance of PersonvernInnstilling.
+* createdDateTimeOffset – Timestamp for when the first instance of the resident's PersonvernInnstilling was created.
+* lastChangedDateTimeOffset – Timestamp of the last change of PersonvernInnstilling.
 
 **Metode**
 
@@ -86,7 +99,7 @@ POST
 
 Tilgjengelig som NuGet pakke
 
-NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
+[NuGet repository](https://pkgs.dev.azure.com/hemit/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages/nuget/v3/index.json)
 
 Navn: Hemit.ePROM.Integration
 
@@ -105,9 +118,13 @@ private async Task GetReservasjon(PatientInRegistryDataContract patient)
 
     if (!response.HasErrors)
     {
-        var status = response.Status == PersonvernInnstillingStatus.Aktiv
+        var status = response.Data.Status == PersonvernInnstillingStatus.Aktiv
             ? ReservationStatus.Reservert
             : ReservationStatus.IkkeReservert;
+
+        var sequenceNumber = response.Data.SequenceNumber;
+        var createdDateTimeOffset = response.Data.CreatedDateTimeOffset;
+        var lastChangedDateTimeOffset = response.Data.LastChangedDateTimeOffset;
     }
 }
 ```
@@ -129,6 +146,10 @@ PromsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi
 * Id -The guid of the PersonvernInnstilling.
 * Name - The name of the PersonvernInnstilling.
 * Status - The status of the PersonvernInnstilling.
+* SequenceNumber - Sequence number for the resident instance of PersonvernInnstilling.
+* CreatedDateTimeOffset - Timestamp for when the first instance of the resident's PersonvernInnstilling was created.
+* LastChangedDateTimeOffset - Timestamp of the last change of PersonvernInnstilling.
+
 
 ### Feilsituasjoner
 
@@ -210,7 +231,7 @@ POST
 
 Tilgjenglig som NuGet pakke
 
-NuGet repository: https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json
+[NuGet repository](https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json)
 
 Navn: Hemit.ePROM.Integration
 
