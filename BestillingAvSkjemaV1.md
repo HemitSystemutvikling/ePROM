@@ -108,7 +108,7 @@ POST
 
 Tilgjenglig som NuGet pakke
 
-NuGet repository: [Hemit_public_packages/nuget/v3/index.json](https://pkgs.dev.azure.com/hemit/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages/nuget/v3/index.json)
+NuGet repository: [NuGet repository](https://pkgs.dev.azure.com/hemit/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages/nuget/v3/index.json)
 
 Navn: Hemit.Proms.Integration
 
