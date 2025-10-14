@@ -1,6 +1,6 @@
 # PERSONVERNINNSTILLINGER
 
-*Sist oppdatert 19.09.2023*
+*Sist oppdatert 14.10.2025*
 
 ## Innholdsfortegnelse
 
@@ -9,6 +9,8 @@
 [Oppdater personverninnstilling](#oppdater-personverninnstilling)
 
 [Mottak av status for personverninnstilling (replikeringsmelding fra PVK)](#mottak-av-status-for-personverninnstilling-replikeringsmelding-fra-pvk)
+
+[Hent en liste over innbyggere med informasjon om personverninnstilling](#hent-en-liste-over-innbyggere-med-informasjon-om-personverninnstilling)
 
 ## Beskrivelse
 Endring av personverninnstilling og sjekk av status på denne kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
@@ -364,3 +366,98 @@ ISAM
 0 = IkkeEndret
 1 = Endret
 ```
+
+## Hent en liste over innbyggere med informasjon om personverninnstilling
+
+## Klient-side
+
+**Eksempelkode (javascript)**
+
+``` javascript
+function hentInnbyggereAktivePiForDefinisjon () {
+    var url = 'https://proms.hemitdev.org/PromsWebApi/api/v2/get-residents-active-pi-for-definition'; // Demo server
+    var apiKey = ""; // ApiKey of the end user system performing the requeset
+    var pagingReference = 0; // start with 0. If the returned pagingReference > 0, new call must be made with the returned pagingReference
+    var pvkId = pvkId; // The guid of the PersonvernInnstilling
+
+    $.ajax({
+        url: url,
+        type: "POST",
+        contentType: "application/json;charset=utf-8",
+        headers: {
+            "Authorization": "Basic " + apiKey
+        },
+        data: JSON.stringify({
+            pvkId,
+            pagingReference            
+        }),
+        success: function (data) {
+            const lines = [
+                `pagingReference:           ${data.pagingReference}`,
+                `id:                        ${data.id}`,
+                `name:                      ${data.name}`,
+                `partKode:                  ${data.partKode}`,
+                `type:                      ${data.type}`,
+                `personvernInnstillinger:   ${data.personvernInnstillinger}`,
+            ];
+            alert(lines.join('\n'));
+        },
+        error: function() {
+            alert("Error!");
+        }
+    });
+}
+```
+
+**URL for Web API kall**
+
+[https://proms.hemitdev.org/PromsWebApi/api/v2/get-residents-active-pi-for-definition]
+
+**Parametere - Inn**
+
+* pagingReference - Start with 0. If the returned pagingReference > 0, new call must be made with the returned pagingReference
+* pvkId - The guid of the PersonvernInnstilling
+
+**Parametere – Ut**
+
+* id – The guid of the PersonvernInnstilling.
+* name – The name of the PersonvernInnstilling.
+* partKode
+* type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke }`.
+* personvernInnstillinger - A list of all the residents who have an active instance (active reservation, consent, or access restriction)
+    * NationalId - the national id of the person to get PersonvernInnstilling for.
+    * SequenceNumber - Sequence number for the resident instance of PersonvernInnstilling.
+    * createdDateTimeOffset – Timestamp for when the first instance of the resident's PersonvernInnstilling was created.
+    * lastChangedDateTimeOffset – Timestamp of the last change of PersonvernInnstilling.
+ 
+* 
+
+**Metode**
+
+POST
+
+**Swagger**
+
+TODO TODO [https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async)
+
+### Server-side
+
+**API**
+
+Tilgjengelig som NuGet pakke
+
+[NuGet repository](https://pkgs.dev.azure.com/hemit/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages/nuget/v3/index.json)
+
+Navn: Hemit.ePROM.Integration
+
+
+### Feilsituasjoner
+
+**Respons**
+Ok (200) - Alt OK.  
+Bad Request (400) - Feil i forespørsel. Skjer...
+* Hvis PvkPart ikke er angitt.
+
+Unauthorized (401) - Feil i ApiKey.  
+Internal Server Error (500) - Alle feil som ikke fanges opp på annen måte.  
+Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som JSON: `{ statusCode, status, message}`
