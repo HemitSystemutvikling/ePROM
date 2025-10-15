@@ -1,0 +1,26 @@
+---
+layout: default
+title: Søk i dokumentasjon
+---
+<h1>Søk i dokumentasjonen</h1>
+<p>Skriv inn ett eller flere søkeord. Prebygget indeks lastes inn automatisk (raskt første søk). Norsk stemming aktivert.</p>
+<div id="search-container">
+  <input id="search-box" type="search" placeholder="Søk…" style="width:100%;padding:0.6rem;font-size:1rem;" />
+  <p id="search-status" style="font-size:0.9rem;color:#555;">Laster …</p>
+  <ul id="search-results" style="list-style:none;padding-left:0;"></ul>
+</div>
+<script>
+  // Base URL aware path to the prebuilt index
+  window.SEARCH_INDEX_URL = "{{ '/assets/search-index.json' | relative_url }}";
+</script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="https://unpkg.com/lunr-languages/lunr.stemmer.support.js"></script>
+<script src="https://unpkg.com/lunr-languages/lunr.no.js"></script>
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+<style>
+  .search-hit {margin:0 0 1rem 0;padding:0.6rem;border:1px solid #ddd;border-radius:4px;background:#fafafa;}
+  .search-hit h3 {margin:0 0 0.4rem 0;font-size:1rem;}
+  .snippet {font-size:0.85rem;color:#333;white-space:pre-wrap;}
+  mark {background: #ffec99;}
+  #search-box:disabled {background:#eee;}
+</style>

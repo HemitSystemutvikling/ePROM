@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Reservasjon mot forskning/sekundærbruk på helsenorge | ePROM v11.0</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Reservasjon mot forskning/sekundærbruk på helsenorge" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/ReservasjonMotForskning.html" />
+<meta property="og:url" content="http://localhost:4000/ReservasjonMotForskning.html" />
+<meta property="og:site_name" content="ePROM v11.0" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Reservasjon mot forskning/sekundærbruk på helsenorge" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Reservasjon mot forskning/sekundærbruk på helsenorge","url":"http://localhost:4000/ReservasjonMotForskning.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ab89dff6da65ec38e4b1c7a32b73307963685df2">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Reservasjon mot forskning/sekundærbruk på helsenorge</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/HemitSystemutvikling/ePROM" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="reservasjon-mot-forskningsekundærbruk-på-helsenorge">Reservasjon mot forskning/sekundærbruk på helsenorge</h1>
+
+<h2 id="på-helsenorge">På helsenorge</h2>
+
+<p>På helsenorge har innbyggere mulighet til å reservere seg mot henvendelser som ikke er knyttet til helsehjelp, f.eks. forskning og helseundersøkelser</p>
+
+<p>Dette gjøres under Profil og innstillinger/Personverninnstillinger/Hvordan vil du bruke helsenorge/Reservasjon mot henvendelser knyttet til andre formål enn helsehjelp (plassering <em>kan</em> endre seg). Se bildet under:</p>
+
+<p><img src="https://github.com/HemitSystemutvikling/ePROM/assets/45993495/fe666a49-c5e7-44cf-8411-065cad7c6534" alt="image" /></p>
+
+<p>Dersom innbyggeren har reservert seg betyr det at skjemaoppgaver og brev (melding til innbygger) som omfattes av dette IKKE skal sendes til innbyggeren på helsenorge, selv om innbyggeren er aktiv og har samtykket til bruk av helsenorge.</p>
+
+<h2 id="i-eprom-admin">I ePROM admin</h2>
+
+<p>På bestillersystemet markerer man hvorvidt henvendelser er relatert til forskning eller ikke:</p>
+
+<p><img src="https://github.com/HemitSystemutvikling/ePROM/assets/45993495/41ff6093-c78d-4ca6-a41b-8e986a6356b3" alt="image" /></p>
+
+<h2 id="bestilling-av-skjema-eller-brev">Bestilling av skjema eller brev</h2>
+
+<p>Dersom et bestillersystem er markert som forskning vil det ikke være mulig å sende skjema eller brev til pasienten via helsenorge fra dette bestillersystemet. 
+Dersom man forsøker å bestille et skjema eller brev, vil ePROM motta følgende melding fra helsenorge <code class="language-plaintext highlighter-rouge">Patient is not digital active, try next notification channel. NegativeAppRecCode = X99, NegativeAppRecText = Annen feil - 002125: Innbygger har reservert seg mot henvendelser for sekundærbruk.</code></p>
+
+<p>Deretter vil ePROM forsøke andre kanaler, avhengig av hvilken distribusjonsregel som er brukt.
+Det vil si at selv om innbyggeren er reservert mot forskning på helsenorge, kan vedkommende likevel motta henvendelser på digipost, epost/sms eller fysisk post, da disse kanalene ikke er omfattet av reservasjonen og heller ikke har tilsvarende reservasjonsmulighet per i dag.</p>
+
+<p>Dersom ePROM ikke finner noen aktuelle kanaler vil bestillersystemet få følgende status fra ePROM: <code class="language-plaintext highlighter-rouge">Unable to notify patient. NotificationChannel: None</code>. Det vil si at bestillersystemet ikke får vite hvorfor innbyggeren ikke kan nås (f.eks. at det skyldes reservasjon).<br />
+I et register vil da bestillingen typisk få status “Feilet” med begrunnelse at pasienten ikke kan nås.</p>
+
+<p><a href="./">Tilbake</a></p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/HemitSystemutvikling/ePROM">ePROM</a> is maintained by <a href="https://github.com/HemitSystemutvikling">HemitSystemutvikling</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

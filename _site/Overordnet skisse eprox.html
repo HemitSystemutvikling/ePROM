@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ePROM proxy - ePROX | ePROM v11.0</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="ePROM proxy - ePROX" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/Overordnet%20skisse%20eprox.html" />
+<meta property="og:url" content="http://localhost:4000/Overordnet%20skisse%20eprox.html" />
+<meta property="og:site_name" content="ePROM v11.0" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ePROM proxy - ePROX" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"ePROM proxy - ePROX","url":"http://localhost:4000/Overordnet%20skisse%20eprox.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ab89dff6da65ec38e4b1c7a32b73307963685df2">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ePROM proxy - ePROX</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/HemitSystemutvikling/ePROM" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="eprom-proxy---eprox">ePROM proxy - ePROX</h1>
+
+<p>ePROM proxy - ePROX - gir muligheten for to eller flere bestillersystem til å samarbeide om bestilling av pasientskjema og mottak av av besvarte pasientskjema.</p>
+
+<p>Bakgrunnen for ePROX at det finnes flere registre med overlappende pasientgrupper. Det har ikke vært mulig å koordinere utsending av pasientskjema på tvers av registre, og det har ført til at pasienter får henvendelser flere ganger om samme hendelse/sykdomsforløp, eller at noen registre får lavere dekningsgrad enn nødvendig.</p>
+
+<p>ePROX vil gjøre det mulig for et register å koble seg på et annet registers bestilling, forutsatt at begge registre er konfigurert til å bruke ePROX.</p>
+
+<p><img src="/img/ePROM_proxy.png" alt="eprom" /></p>
+
+<ul>
+  <li>Registrene kommuniserer utelukkende med ePROX (ikke ePROM)</li>
+  <li>ePROX er registrert som et helt vanlig bestillersystem i ePROM, og kommuniserer med ePROM via samme API som alle andre bestillersystemer.</li>
+  <li>Skjema som er delt mellom registrene ligger i ePROM under ePROX bestillersystem sin skjemakatalog</li>
+  <li>Registrene bestiller samme skjema (samme id), og bruker samme følgebrev og samme skjemainformasjon (f.eks. på helsenorge)</li>
+  <li>Hver bestilling har en fast levetid. Denne er default på 365 dager. Etter dette vil ikke bestillingen være aktiv lenger, uansett hvilken status den har i ePROM (bestilt, levert, utløpt, feilet).</li>
+</ul>
+
+<h2 id="overordnet-flytdiagram">Overordnet flytdiagram</h2>
+
+<h3 id="bestilling-av-skjema-som-allerede-er-bestilt-men-ikke-besvart">Bestilling av skjema som allerede er bestilt, men ikke besvart</h3>
+
+<p>Flytdiagrammet under viser hva som skjer når to registre bestiller samme skjema via ePROX. I dette tilfellet bestiller begge registre skjemaet før pasienten svarer. Begge registre kobles da til samme bestilling mot ePROM, og mottar svaret samtidig når/hvis pasienten velger å svare.</p>
+
+<p><img src="/img/ePROX_kobling_bestilling.png" alt="eprox" /></p>
+
+<h3 id="bestilling-av-skjema-som-allerede-er-besvart">Bestilling av skjema som allerede er besvart</h3>
+
+<p>Flytdiagrammet under viser hva som skjer når to registre bestiller samme skjema via ePROX. I dette tilfellet bestiller register nr 2 skjemaet etter at pasienten har svart på bestillingen fra register 1. Register 2 vil da motta svaret umiddelbart.</p>
+
+<p><img src="/img/ePROX_kobling_bestilling_med_besvarelse.png" alt="eprox" /></p>
+
+<p><a href="IntegrasjonOgBrukEProx">ePROX i bruk</a></p>
+
+<p><a href="./">Tilbake</a></p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/HemitSystemutvikling/ePROM">ePROM</a> is maintained by <a href="https://github.com/HemitSystemutvikling">HemitSystemutvikling</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

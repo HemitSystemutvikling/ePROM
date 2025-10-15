@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>BESTILLING AV SKJEMA V1 - UTGÅTT | ePROM v11.0</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="BESTILLING AV SKJEMA V1 - UTGÅTT" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/BestillingAvSkjemaV1.html" />
+<meta property="og:url" content="http://localhost:4000/BestillingAvSkjemaV1.html" />
+<meta property="og:site_name" content="ePROM v11.0" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="BESTILLING AV SKJEMA V1 - UTGÅTT" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"BESTILLING AV SKJEMA V1 - UTGÅTT","url":"http://localhost:4000/BestillingAvSkjemaV1.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ab89dff6da65ec38e4b1c7a32b73307963685df2">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">BESTILLING AV SKJEMA V1 - UTGÅTT</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/HemitSystemutvikling/ePROM" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="bestilling-av-skjema-v1---utgått">BESTILLING AV SKJEMA V1 - UTGÅTT</h1>
+
+<p><em>Sist oppdatert 27.08.2019</em></p>
+
+<h2 id="innholdsfortegnelse">Innholdsfortegnelse</h2>
+
+<p><a href="#bestilling-klient-side">Bestilling klient-side</a></p>
+
+<p><a href="#bestilling-server-side">Bestilling server-side</a></p>
+
+<p><a href="#feilsituasjoner">Feilsituasjoner</a></p>
+
+<p>Bestilling av skjema kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
+Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM</p>
+
+<h2 id="bestilling-klient-side">Bestilling klient-side</h2>
+
+<p><strong>Eksempelkode (javascript)</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">placeFormOrder</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://proms.hemitdev.org/PromsWebApi/api/formorder</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// Demo server</span>
+    <span class="kd">var</span> <span class="nx">apiKey</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span> <span class="c1">// The ApiKey for your system</span>
+    <span class="kd">var</span> <span class="nx">formId</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">1bc5f9f0-2607-49eb-94f0-6af955bbd79a</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// RAND-12</span>
+    <span class="kd">var</span> <span class="nx">nationalId</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">26073941651</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// the national ID of the patient (Norsk fødselsnummer or D-nummer)</span>
+    <span class="kd">var</span> <span class="nx">expiryDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="mi">86400000</span> <span class="o">*</span> <span class="mi">7</span><span class="p">));</span> <span class="c1">// add 7 days</span>
+    <span class="kd">var</span> <span class="nx">reminderDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="mi">86400000</span> <span class="o">*</span> <span class="mi">6</span><span class="p">));</span> <span class="c1">// add 6 days</span>
+    <span class="kd">var</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+        <span class="na">age</span><span class="p">:</span> <span class="mi">76</span>
+    <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">dontStoreCompletedFormInPha</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">distributionRule</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Basic</span><span class="dl">"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">physicalAddress</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">testMode</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+        <span class="na">url</span><span class="p">:</span> <span class="nx">url</span><span class="p">,</span>
+        <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">contentType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json;charset=utf-8</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Basic </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">apiKey</span>
+        <span class="p">},</span>
+        <span class="na">data</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+            <span class="nx">formId</span><span class="p">,</span>
+            <span class="nx">nationalId</span><span class="p">,</span>
+            <span class="nx">expiryDate</span><span class="p">,</span>
+            <span class="nx">reminderDate</span><span class="p">,</span>
+            <span class="nx">metadata</span><span class="p">,</span>
+            <span class="nx">dontStoreCompletedFormInPha</span><span class="p">,</span>
+            <span class="nx">distributionRule</span><span class="p">,</span>
+            <span class="nx">physicalAddress</span><span class="p">,</span>
+            <span class="nx">testMode</span>
+        <span class="p">}),</span>
+        <span class="na">success</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">formOrderId: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="s2">singleUseCode: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">singleUseCode</span> <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="s2">loginUrl: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">loginUrl</span> <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="s2">preferred notificationChannel: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">notificationChannel</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="na">error</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error!</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>URL for Web API kall</strong></p>
+
+<p>[https://proms.hemitdev.org/PromsWebApi/api/formorder]</p>
+
+<p><strong>Parametere - Inn</strong></p>
+
+<ul>
+  <li>apiKey - ApiKey of the end user system placing the order</li>
+  <li>formId - The form to place an order for</li>
+  <li>nationalId  - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)</li>
+  <li>expiryDate - The expiry date of the order</li>
+  <li>reminderDate - Optional. The date to send a reminder for the order. If not set or NULL, no reminder will be sent</li>
+  <li>metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an stringified JSON object (ex. JSON.stringify({ age: 76 }))</li>
+  <li>dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients “Personlig helsearkiv” (Helsenorge) or sent to secure digital mailbox. Default: false</li>
+  <li>distributionRule - Optional. The rule used when deciding how to notify the patient <code class="language-plaintext highlighter-rouge">{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly | HelsenorgeOnly | DigitalMailboxOnly | UnsecureOnly }</code> . Tallverdien kan sendes. Default: Basic</li>
+  <li>physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used. PhysicalAddress is a JSON object in the following format:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    fullName: "Test Testesen",
+    addressLine1: "Testeveien 1",
+    postalCode: "1234",
+    postalPlace: "Testestad"
+}
+</code></pre></div></div>
+
+<ul>
+  <li>testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false</li>
+</ul>
+
+<p><strong>Parametere – Ut</strong></p>
+
+<p>I tillegg til alle inn-parametre:</p>
+
+<ul>
+  <li>id – The id of this form order</li>
+  <li>singleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution</li>
+  <li>loginUrl – URL the patient can use to log in to PROMS to fill out the ordered form</li>
+  <li>notificationChannel – The preferred channel used to notify the patient about the form order <code class="language-plaintext highlighter-rouge">{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }</code> . The actual channel used is first known when PROMS performs the callback, notifying about the status.</li>
+</ul>
+
+<p><strong>Metode</strong></p>
+
+<p>POST</p>
+
+<h2 id="bestilling-server-side">Bestilling server-side</h2>
+
+<p><strong>API</strong></p>
+
+<p>Tilgjenglig som NuGet pakke</p>
+
+<p><a href="https://pkgs.dev.azure.com/hemit/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages/nuget/v3/index.json">NuGet repository</a></p>
+
+<p>Navn: Hemit.Proms.Integration</p>
+
+<p><strong>Eksempelkode (C#)</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nx">HttpPost</span><span class="p">]</span>
+<span class="kr">public</span> <span class="nx">JsonResult</span> <span class="nx">OrderPromsForm</span><span class="p">(</span><span class="nx">Guid</span> <span class="nx">formId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">form</span> <span class="o">=</span> <span class="nx">_context</span><span class="p">.</span><span class="nx">FormService</span><span class="p">.</span><span class="nx">GetForm</span><span class="p">(</span><span class="nx">formId</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">patient</span> <span class="o">=</span> <span class="nx">_context</span><span class="p">.</span><span class="nx">PatientInRegistryService</span><span class="p">.</span><span class="nx">GetByFormGuid</span><span class="p">(</span><span class="nx">formId</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">promsFormId</span> <span class="o">=</span> <span class="nx">_formTypeToPromsFormIdMapping</span><span class="p">[(</span><span class="nx">FormType</span><span class="p">)</span> <span class="nx">form</span><span class="p">.</span><span class="nx">FormTypeId</span><span class="p">];</span>
+
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">Api</span><span class="p">.</span><span class="nx">CreateFormOrderV2</span><span class="p">(</span>
+        <span class="nx">ConfigurationManager</span><span class="p">.</span><span class="nx">AppSettings</span><span class="p">[</span><span class="dl">"</span><span class="s2">PromsApiBaseUrl</span><span class="dl">"</span><span class="p">],</span>
+        <span class="nx">ConfigurationManager</span><span class="p">.</span><span class="nx">AppSettings</span><span class="p">[</span><span class="dl">"</span><span class="s2">PromsApiKey</span><span class="dl">"</span><span class="p">],</span>
+        <span class="nx">promsFormId</span><span class="p">,</span>
+        <span class="nx">patient</span><span class="p">.</span><span class="nx">DecryptedPID</span><span class="p">,</span>
+        <span class="nx">DateTime</span><span class="p">.</span><span class="nx">Now</span><span class="p">.</span><span class="nx">AddDays</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+        <span class="nx">DateTime</span><span class="p">.</span><span class="nx">Now</span><span class="p">.</span><span class="nx">AddDays</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+        <span class="nx">GetMetadata</span><span class="p">(</span><span class="nx">promsFormId</span><span class="p">,</span> <span class="nx">form</span><span class="p">,</span> <span class="nx">patient</span><span class="p">)</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nx">DistributionRule</span><span class="p">.</span><span class="nx">AllowUnsecure</span><span class="p">,</span>
+        <span class="kc">null</span><span class="p">,</span>
+        <span class="kc">false</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">HasErrors</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Response</span><span class="p">.</span><span class="nx">StatusCode</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">ErrorStatusCode</span><span class="p">.</span><span class="nx">Value</span><span class="p">;</span>
+        <span class="nx">Response</span><span class="p">.</span><span class="nx">Write</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">ErrorJson</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">_promsFormOrderService</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">FormOrderId</span><span class="p">,</span> <span class="nx">form</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span> <span class="nx">form</span><span class="p">.</span><span class="nx">ReshId</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nx">Json</span><span class="p">(</span><span class="k">new</span> <span class="p">{</span>
+        <span class="nx">loginUrl</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">LoginUrl</span><span class="p">,</span>
+            <span class="nx">singleUseCode</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">SingleUseCode</span><span class="p">,</span>
+            <span class="nx">notificationChannel</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">NotificationChannel</span><span class="p">.</span><span class="nx">ToString</span><span class="p">()</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Parametere - Inn</strong></p>
+
+<ul>
+  <li>promsApiBaseUrl - The base URL of the PROMS API</li>
+  <li>apiKey - ApiKey of the end user system placing the order</li>
+  <li>formId - The form to place an order for</li>
+  <li>nationalId - The national id number of the patient the ordered form is addressing (must be either Norsk fødselsnummer or D-nummer)</li>
+  <li>expiryDate - The expiry date of the order</li>
+  <li>reminderDate - The date to send a reminder for the order. If NULL, no reminder will be sent</li>
+  <li>metadata - Optional. Metadata to send with the order. Pass metadata, like the patient age, as a parameter to this method using an anonymous object (ex.new { age = 23 }).</li>
+  <li>dontStoreCompletedFormInPha - Optional. If true, the completed form will not be stored in the patients “Personlig helsearkiv” (Helsenorge) or sent to secure digital mailbox. Default: false</li>
+  <li>distributionRule - Optional. The rule used when deciding how to notify the patient <code class="language-plaintext highlighter-rouge">{ Basic | AllowUnsecure | NoDistribution | BasicOrPaper | AllowUnsecureOrPaper | PaperOnly } </code> . Tallverdien kan sendes. Default: Basic</li>
+  <li>physicalAddress - Optional. The address to use when sending to physical mailbox. If none is supplied, the address registered in Folkeregisteret is used</li>
+  <li>testMode - Optional. Set to true when the order is created from ePROM Admin and the form answer shall not to be returned to the BestillerSystem. Default: false</li>
+</ul>
+
+<p>promsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi</p>
+
+<p><strong>Parametere – Ut</strong></p>
+
+<ul>
+  <li>CreateFormOrderResult
+    <ul>
+      <li>FormOrderId – The id of this form order</li>
+      <li>SingleUseCode – A code linked to this form order that the patient can use in combination with his date of birth to log in to PROMS to fill out the ordered form. This parameter only has a value when distributionRule is NoDistribution</li>
+      <li>LoginUrl – URL the patient can use to log in to PROMS to fill out the ordered form</li>
+      <li>NotificationChannel – The channel used to notify the patient about the form order <code class="language-plaintext highlighter-rouge">{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }</code> . The actual channel used is first known when PROMS performs the callback, notifying about the status.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="feilsituasjoner">Feilsituasjoner</h2>
+
+<p>Hvis responsen resulterer i “id”: “00000000-0000-0000-0000-000000000000” er det ikke generert noe bestilling. Dette skjer hvis fødselsnummeret ikke eksisterer.
+Ellers kan følgende feilsituasjoner oppstå:</p>
+
+<ul>
+  <li>BadRequest(“The ordered form is not Published”)</li>
+  <li>BadRequest($”No form with id=’{formOrder.formId}’ exists”)</li>
+  <li>BadRequest($”The ordered form needs to be signed. This is not possible when using DistributionRule = ‘NoDistribution’.”)</li>
+  <li>BadRequest($”Form with id=’{formOrder.formId}’ is not paper enabled”)</li>
+</ul>
+
+<p> </p>
+
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/HemitSystemutvikling/ePROM">ePROM</a> is maintained by <a href="https://github.com/HemitSystemutvikling">HemitSystemutvikling</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

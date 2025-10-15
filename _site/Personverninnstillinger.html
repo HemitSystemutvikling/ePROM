@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>PERSONVERNINNSTILLINGER | ePROM v11.0</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="PERSONVERNINNSTILLINGER" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/Personverninnstillinger.html" />
+<meta property="og:url" content="http://localhost:4000/Personverninnstillinger.html" />
+<meta property="og:site_name" content="ePROM v11.0" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PERSONVERNINNSTILLINGER" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"PERSONVERNINNSTILLINGER","url":"http://localhost:4000/Personverninnstillinger.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ab89dff6da65ec38e4b1c7a32b73307963685df2">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">PERSONVERNINNSTILLINGER</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/HemitSystemutvikling/ePROM" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="personverninnstillinger">PERSONVERNINNSTILLINGER</h1>
+
+<p><em>Sist oppdatert 14.10.2025</em></p>
+
+<h2 id="innholdsfortegnelse">Innholdsfortegnelse</h2>
+
+<p><a href="#sjekk-personverninnstilling">Sjekk personverninnstilling</a></p>
+
+<p><a href="#oppdater-personverninnstilling">Oppdater personverninnstilling</a></p>
+
+<p><a href="#mottak-av-status-for-personverninnstilling-replikeringsmelding-fra-pvk">Mottak av status for personverninnstilling (replikeringsmelding fra PVK)</a></p>
+
+<p><a href="#hent-en-liste-over-innbyggere-med-informasjon-om-personverninnstilling">Hent en liste over innbyggere med informasjon om personverninnstilling</a></p>
+
+<h2 id="beskrivelse">Beskrivelse</h2>
+<p>Endring av personverninnstilling og sjekk av status på denne kan gjøres både fra server-side og fra klient-side. Ved kall fra server-side kan man benytte seg av et API utviklet av Hemit og distribuert som NuGet pakke for å forenkle oppkoblingen.
+Alle URL’ene som er oppgitt i dette dokumentet går mot integrasjonsmiljøet for ePROM</p>
+
+<p>NB!
+ApiKey skal sendes som en <code class="language-plaintext highlighter-rouge">Authorization</code> parameter og er en del av HTTP header:
+<code class="language-plaintext highlighter-rouge">headers: {"Authorization": "Basic " + apiKey}</code></p>
+
+<h2 id="sjekk-personverninnstilling">Sjekk personverninnstilling</h2>
+
+<h3 id="klient-side">Klient-side</h3>
+
+<p><strong>Eksempelkode (javascript)</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">sjekkPersonverninnstilling</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://proms.hemitdev.org/PromsWebApi/api/v2/getpersonverninnstilling</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// Demo server</span>
+    <span class="kd">var</span> <span class="nx">apiKey</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span> <span class="c1">// ApiKey of the end user system performing the requeset</span>
+    <span class="kd">var</span> <span class="nx">nationalId</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">26073941651</span><span class="dl">"</span><span class="p">;</span> <span class="nx">The</span> <span class="nx">national</span> <span class="nx">id</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">citizen</span><span class="p">.</span>
+    <span class="kd">var</span> <span class="nx">type</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Reservasjon</span>
+    <span class="kd">var</span> <span class="nx">pvkId</span> <span class="o">=</span> <span class="nx">pvkId</span><span class="p">;</span> <span class="c1">// The guid of the PersonvernInnstilling</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+        <span class="na">url</span><span class="p">:</span> <span class="nx">url</span><span class="p">,</span>
+        <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">contentType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json;charset=utf-8</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Basic </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">apiKey</span>
+        <span class="p">},</span>
+        <span class="na">data</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+            <span class="nx">nationalId</span><span class="p">,</span>
+            <span class="nx">type</span><span class="p">,</span>
+            <span class="nx">pvkId</span>
+        <span class="p">}),</span>
+        <span class="na">success</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">const</span> <span class="nx">lines</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">`nationalId:              </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">nationalId</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`type:                    </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`id:                      </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`name:                    </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`status:                  </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">status</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`sequenceNumber:          </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">sequenceNumber</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`createdDateTimeOffset:   </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">createdDateTimeOffset</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`lastChangedDateTimeOffset:</span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">lastChangedDateTimeOffset</span><span class="p">}</span><span class="s2">`</span>
+            <span class="p">];</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">lines</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">));</span>
+        <span class="p">},</span>
+        <span class="na">error</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error!</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>URL for Web API kall</strong></p>
+
+<p>[https://proms.hemitdev.org/PromsWebApi/api/v2/getpersonverninnstilling]</p>
+
+<p><strong>Parametere - Inn</strong></p>
+
+<ul>
+  <li>nationalId  - The national id of the person to get PersonvernInnstilling for.</li>
+  <li>type - The type of the PersonvernInnstilling to get. <code class="language-plaintext highlighter-rouge">{ Reservasjon | Samtykke }</code>. Tallverdien kan sendes.</li>
+  <li>pvkId - The guid of the PersonvernInnstilling</li>
+</ul>
+
+<p><strong>Parametere – Ut</strong></p>
+
+<ul>
+  <li>nationalId - The national id of the citizen.</li>
+  <li>type - The type of the PersonvernInnstilling. <code class="language-plaintext highlighter-rouge">{ Reservasjon | Samtykke }</code>. Tallverdien kan sendes.</li>
+  <li>id – The guid of the PersonvernInnstilling.</li>
+  <li>name – The name of the PersonvernInnstilling.</li>
+  <li>status – The status of the PersonvernInnstilling.<code class="language-plaintext highlighter-rouge">{ IkkeAktiv | Aktiv }</code>.</li>
+  <li>sequenceNumber – Sequence number for the resident instance of PersonvernInnstilling.</li>
+  <li>createdDateTimeOffset – Timestamp for when the first instance of the resident’s PersonvernInnstilling was created.</li>
+  <li>lastChangedDateTimeOffset – Timestamp of the last change of PersonvernInnstilling.</li>
+</ul>
+
+<p><strong>Metode</strong></p>
+
+<p>POST</p>
+
+<p><strong>Swagger</strong></p>
+
+<p><a href="https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async">https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async</a></p>
+
+<h3 id="server-side">Server-side</h3>
+
+<p><strong>API</strong></p>
+
+<p>Tilgjengelig som NuGet pakke</p>
+
+<p><a href="https://pkgs.dev.azure.com/hemit/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages/nuget/v3/index.json">NuGet repository</a></p>
+
+<p>Navn: Hemit.ePROM.Integration</p>
+
+<p><strong>Eksempelkode (C#)</strong></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">GetReservasjon</span><span class="p">(</span><span class="n">PatientInRegistryDataContract</span> <span class="n">patient</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">Hemit</span><span class="p">.</span><span class="n">ePROM</span><span class="p">.</span><span class="n">Integration</span><span class="p">.</span><span class="n">Api</span>
+        <span class="p">.</span><span class="nf">GetPersonvernInnstillingV2Async</span><span class="p">(</span>
+            <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="p">[</span><span class="s">"PromsApiBaseUrl"</span><span class="p">],</span> 
+            <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="p">[</span><span class="s">"PromsApiKey"</span><span class="p">],</span> 
+            <span class="n">patient</span><span class="p">.</span><span class="n">DecryptedPID</span><span class="p">,</span>
+            <span class="n">patient</span><span class="p">.</span><span class="n">PvkId</span><span class="p">,</span>
+            <span class="n">PersonvernInnstillingType</span><span class="p">.</span><span class="n">Reservasjon</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(!</span><span class="n">response</span><span class="p">.</span><span class="n">HasErrors</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">status</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">Status</span> <span class="p">==</span> <span class="n">PersonvernInnstillingStatus</span><span class="p">.</span><span class="n">Aktiv</span>
+            <span class="p">?</span> <span class="n">ReservationStatus</span><span class="p">.</span><span class="n">Reservert</span>
+            <span class="p">:</span> <span class="n">ReservationStatus</span><span class="p">.</span><span class="n">IkkeReservert</span><span class="p">;</span>
+
+        <span class="kt">var</span> <span class="n">sequenceNumber</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">SequenceNumber</span><span class="p">;</span>
+        <span class="kt">var</span> <span class="n">createdDateTimeOffset</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">CreatedDateTimeOffset</span><span class="p">;</span>
+        <span class="kt">var</span> <span class="n">lastChangedDateTimeOffset</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">LastChangedDateTimeOffset</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Parametere - Inn</strong></p>
+
+<ul>
+  <li>PromsApiBaseUrl - The base URL of the PROMS API</li>
+  <li>ApiKey - ApiKey of the end user system performing the requeset (sendes som <code class="language-plaintext highlighter-rouge">Authorization</code> parameter og er en del av HTTP header)</li>
+  <li>NationalId - The national id of the person to get PersonvernInnstilling for.</li>
+  <li>PvkId - The guid of the PersonvernInnstilling</li>
+  <li>Type - The type of the PersonvernInnstilling to get. <code class="language-plaintext highlighter-rouge">{ Reservasjon | Samtykke }</code>. Tallverdien kan sendes.</li>
+</ul>
+
+<p>PromsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi</p>
+
+<p><strong>Parametere – Ut</strong></p>
+
+<ul>
+  <li>NationalId - The national id of the citizen.</li>
+  <li>Type - The type of the PersonvernInnstilling. <code class="language-plaintext highlighter-rouge">{ Reservasjon | Samtykke }</code>. Tallverdien kan sendes.</li>
+  <li>Id -The guid of the PersonvernInnstilling.</li>
+  <li>Name - The name of the PersonvernInnstilling.</li>
+  <li>Status - The status of the PersonvernInnstilling.</li>
+  <li>SequenceNumber - Sequence number for the resident instance of PersonvernInnstilling.</li>
+  <li>CreatedDateTimeOffset - Timestamp for when the first instance of the resident’s PersonvernInnstilling was created.</li>
+  <li>LastChangedDateTimeOffset - Timestamp of the last change of PersonvernInnstilling.</li>
+</ul>
+
+<h3 id="feilsituasjoner">Feilsituasjoner</h3>
+
+<p><strong>Respons</strong></p>
+
+<p>Ok (200) - Alt OK.<br />
+Bad Request (400) - Feil i forespørsel. Skjer…</p>
+<ul>
+  <li>Hvis NationalId ikke er angitt eller har en lengde som er forskjellig fra 11.</li>
+  <li>Hvis Type ikke er angitt.</li>
+</ul>
+
+<p>Unauthorized (401) - Feil i ApiKey.<br />
+Internal Server Error (500) - Alle feil som ikke fanges opp på annen måte.<br />
+Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som JSON: <code class="language-plaintext highlighter-rouge">{ statusCode, status, message}</code></p>
+
+<h2 id="oppdater-personverninnstilling">Oppdater personverninnstilling</h2>
+
+<h3 id="klient-side-1">Klient-side</h3>
+
+<p><strong>Eksempelkode (javascript)</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">oppdaterPersonverninnstilling</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://proms.hemitdev.org/PromsWebApi/api/v2/setpersonverninnstilling</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// Demo server</span>
+    <span class="kd">var</span> <span class="nx">apiKey</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span> <span class="c1">// ApiKey of the end user system performing the requeset</span>
+    <span class="kd">var</span> <span class="nx">nationalId</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">26073941651</span><span class="dl">"</span><span class="p">;</span> <span class="nx">The</span> <span class="nx">national</span> <span class="nx">id</span> <span class="k">of</span> <span class="nx">the</span> <span class="nx">person</span> <span class="nx">to</span> <span class="nx">update</span> <span class="nx">the</span> <span class="nx">status</span> <span class="k">of</span> <span class="nx">PersonvernInnstilling</span> <span class="k">for</span><span class="p">.</span>
+    <span class="kd">var</span> <span class="nx">type</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// Reservasjon</span>
+    <span class="kd">var</span> <span class="nx">status</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// Aktiv</span>
+    <span class="kd">var</span> <span class="nx">pvkId</span> <span class="o">=</span> <span class="nx">pvkId</span><span class="p">;</span> <span class="c1">// The guid of the PersonvernInnstilling</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+        <span class="na">url</span><span class="p">:</span> <span class="nx">url</span><span class="p">,</span>
+        <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">contentType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json;charset=utf-8</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Basic </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">apiKey</span>
+        <span class="p">},</span>
+        <span class="na">data</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+            <span class="nx">nationalId</span><span class="p">,</span>
+            <span class="nx">pvkId</span><span class="p">,</span>
+            <span class="nx">type</span><span class="p">,</span>
+            <span class="nx">status</span>
+        <span class="p">}),</span>
+        <span class="na">success</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">instansEndret: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">instansEndret</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="na">error</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error!</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>URL for Web API kall</strong></p>
+
+<p>[https://proms.hemitdev.org/PromsWebApi/api/v2/setpersonverninnstilling]</p>
+
+<p><strong>Parametere - Inn</strong></p>
+
+<ul>
+  <li>nationalId  - The national id of the person to update the status of PersonvernInnstilling for.</li>
+  <li>pvkId - The guid of the PersonvernInnstilling</li>
+  <li>type - The type of the PersonvernInnstilling to apply change of status to. <code class="language-plaintext highlighter-rouge">{ Reservasjon | Samtykke }</code>. Tallverdien kan sendes.</li>
+  <li>status - The new status of the PersonvernInnstilling. <code class="language-plaintext highlighter-rouge">{ IkkeAktiv | Aktiv }</code>.</li>
+</ul>
+
+<p><strong>Parametere – Ut</strong></p>
+
+<ul>
+  <li>instansEndret - Was the PersonvernInnstilling changed? <code class="language-plaintext highlighter-rouge">{ IkkeEndret | Endret }</code>.</li>
+</ul>
+
+<p><strong>Metode</strong></p>
+
+<p>POST</p>
+
+<p><strong>Swagger</strong></p>
+
+<p><a href="https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingV2Async">https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingV2Async</a></p>
+
+<h3 id="server-side-1">Server-side</h3>
+
+<p><strong>API</strong></p>
+
+<p>Tilgjenglig som NuGet pakke</p>
+
+<p><a href="https://hemit.pkgs.visualstudio.com/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages%40Local/nuget/v3/index.json">NuGet repository</a></p>
+
+<p>Navn: Hemit.ePROM.Integration</p>
+
+<p><strong>Eksempelkode (C#)</strong></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">UpdateReservasjon</span><span class="p">(</span><span class="n">PatientInRegistryDataContract</span> <span class="n">patient</span><span class="p">,</span> <span class="n">PersonvernInnstillingStatus</span> <span class="n">personvernInnstillingStatus</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="k">await</span> <span class="n">Hemit</span><span class="p">.</span><span class="n">ePROM</span><span class="p">.</span><span class="n">Integration</span><span class="p">.</span><span class="n">Api</span>
+        <span class="p">.</span><span class="nf">SetPersonvernInnstillingV2Async</span><span class="p">(</span>
+            <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="p">[</span><span class="s">"PromsApiBaseUrl"</span><span class="p">],</span> 
+            <span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">AppSettings</span><span class="p">[</span><span class="s">"PromsApiKey"</span><span class="p">],</span> 
+            <span class="n">patient</span><span class="p">.</span><span class="n">DecryptedPID</span><span class="p">,</span>
+            <span class="n">patient</span><span class="p">.</span><span class="n">PvkId</span><span class="p">,</span>
+            <span class="n">PersonvernInnstillingType</span><span class="p">.</span><span class="n">Reservasjon</span><span class="p">,</span>
+            <span class="n">personvernInnstillingStatus</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(!</span><span class="n">response</span><span class="p">.</span><span class="n">HasErrors</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">newStatus</span> <span class="p">=</span> <span class="n">personvernInnstillingStatus</span> <span class="p">==</span> <span class="n">PersonvernInnstillingStatus</span><span class="p">.</span><span class="n">Aktiv</span>
+            <span class="p">?</span> <span class="n">ReservationStatus</span><span class="p">.</span><span class="n">Reservert</span>
+            <span class="p">:</span> <span class="n">ReservationStatus</span><span class="p">.</span><span class="n">IkkeReservert</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Parametere - Inn</strong></p>
+
+<ul>
+  <li>PromsApiBaseUrl - The base URL of the PROMS API</li>
+  <li>ApiKey - ApiKey of the end user system performing the requeset (sendes som <code class="language-plaintext highlighter-rouge">Authorization</code> parameter og er en del av HTTP header)</li>
+  <li>NationalId - The national id of the person to get PersonvernInnstilling for.</li>
+  <li>PvkId - The guid of the PersonvernInnstilling</li>
+  <li>Type - The type of the PersonvernInnstilling to get. <code class="language-plaintext highlighter-rouge">{ Reservasjon | Samtykke }</code>. Tallverdien kan sendes.</li>
+  <li>Status - The new status of the PersonvernInnstilling. <code class="language-plaintext highlighter-rouge">{ IkkeAktiv | Aktiv }</code>.</li>
+</ul>
+
+<p>PromsApiBaseUrl skal være https://proms.hemitdev.org/PromsWebApi</p>
+
+<p><strong>Parametere – Ut</strong></p>
+
+<ul>
+  <li>InstansEndret - Was the PersonvernInnstilling changed? <code class="language-plaintext highlighter-rouge">{ IkkeEndret | Endret }</code>.</li>
+</ul>
+
+<h3 id="feilsituasjoner-1">Feilsituasjoner</h3>
+
+<p><strong>Respons</strong></p>
+
+<p>Ok (200) - Alt OK.<br />
+Bad Request (400) - Feil i forespørsel. Skjer…</p>
+<ul>
+  <li>Hvis NationalId ikke er angitt eller har en lengde som er forskjellig fra 11.</li>
+  <li>Hvis Type ikke er angitt.</li>
+  <li>Hvis Status ikke er angitt.</li>
+</ul>
+
+<p>Unauthorized (401) - Feil i ApiKey.<br />
+Internal Server Error (500) - Alle feil som ikke fanges opp på annen måte.<br />
+Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som JSON: <code class="language-plaintext highlighter-rouge">{ statusCode, status, message}</code></p>
+
+<h2 id="mottak-av-status-for-personverninnstilling-replikeringsmelding-fra-pvk">Mottak av status for personverninnstilling (replikeringsmelding fra PVK)</h2>
+
+<p>Når innbygger gjør en endring av en personverninnstilling i PVK/helsenorge, sender PVK/helsenorge ut en replikeringsmelding til systemer den er integrert med, deriblandt ePROM, for å informere om endringen. ePROM gjøre ved mottak av en slik replikeringsmelding et kall videre mot angitte Bestillersystem med den nye statusen for personverninnstillingen. Bestillersystemet må implementere en service som mottar dette kallet.</p>
+
+<p><strong>URL for Web API kall</strong></p>
+
+<p>ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: <a href="https://proms.hemitdev.org/PromsAdministration/">https://proms.hemitdev.org/PromsAdministration/</a></p>
+
+<p>Web API må være tilgjenglig på URL: https:// <code class="language-plaintext highlighter-rouge">&lt;ApiBaseUrl&gt;</code> /api/PersonvernInnstilling</p>
+
+<p>F.eks: <a href="https://mrsdemo.hemitdev.org/PromsTestregisterServices/api/PersonvernInnstilling/">https://mrsdemo.hemitdev.org/PromsTestregisterServices/api/PersonvernInnstilling/</a></p>
+
+<p><strong>Parametere - Inn</strong></p>
+
+<ul>
+  <li>nationalId – The national id of the person to update.</li>
+  <li>id – The guid of the PersonvernInnstilling to update.</li>
+  <li>name – The name of the PersonvernInnstilling to update.</li>
+  <li>status - The updated status of the PersonvernInnstilling. En verdi fra <a href="https://volven.no/produkt.asp?id=505635&amp;oid=7609">Volven 7609</a> <code class="language-plaintext highlighter-rouge">( RES | IRES | SAM | ISAM )</code>. 
+<strong>NB!</strong> Dette er ikke samme statusverdier som i <a href="#sjekk-personverninnstilling">Sjekk personverninnstilling</a> og <a href="#oppdater-personverninnstilling">Oppdater personverninnstilling</a>.</li>
+</ul>
+
+<p><strong>Parametere - Ut</strong></p>
+
+<ul>
+  <li>success – Was the update completed successfully?</li>
+</ul>
+
+<p>For parameter inn og ut kan NuGet pakken <em>Hemit.ePROM.Integration</em> benyttes. Bruk da <em>Hemit.ePROM.Integration.Pvk.SetPersonvernInnstillingRequestV2</em> for parameter inn og <em>Hemit.ePROM.Integration.Pvk.SetPersonvernInnstillingInEusResponse</em> for parameter ut</p>
+
+<p><strong>Metode</strong></p>
+
+<p>PUT</p>
+
+<p><strong>Autentisering</strong></p>
+
+<p>ApiKey sendes med i header og skal brukes av Bestillersystem for å sikre at det er riktig mottaker</p>
+
+<p>Eksempel request fra Proms (JSON)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "nationalId" : "26073941651",
+    "id" : "b3cda307-154c-4af4-87d3-30567c931924",
+    "name" : "Reservasjon mot registrering",
+    "status" : "RES"
+}
+</code></pre></div></div>
+
+<h2 id="koder">Koder</h2>
+<p>Kodene som de er satt av helsneorge</p>
+
+<h3 id="status">Status</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = IkkeAktiv
+1 = Aktiv
+</code></pre></div></div>
+
+<h3 id="status-volven-7609">Status (Volven 7609)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RES
+IRES
+SAM
+ISAM
+</code></pre></div></div>
+
+<h3 id="type">Type</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = Reservasjon
+1 = Samtykke
+</code></pre></div></div>
+
+<h3 id="instansendret">InstansEndret</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = IkkeEndret
+1 = Endret
+</code></pre></div></div>
+
+<h2 id="hent-en-liste-over-innbyggere-med-informasjon-om-personverninnstilling">Hent en liste over innbyggere med informasjon om personverninnstilling</h2>
+
+<h2 id="klient-side-2">Klient-side</h2>
+
+<p><strong>Eksempelkode (javascript)</strong></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">hentInnbyggereAktivePiForDefinisjon</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://proms.hemitdev.org/PromsWebApi/api/v2/get-residents-active-pi-for-definition</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// Demo server</span>
+    <span class="kd">var</span> <span class="nx">apiKey</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span> <span class="c1">// ApiKey of the end user system performing the requeset</span>
+    <span class="kd">var</span> <span class="nx">pagingReference</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// start with 0. If the returned pagingReference &gt; 0, new call must be made with the returned pagingReference</span>
+    <span class="kd">var</span> <span class="nx">pvkId</span> <span class="o">=</span> <span class="nx">pvkId</span><span class="p">;</span> <span class="c1">// The guid of the PersonvernInnstilling</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+        <span class="na">url</span><span class="p">:</span> <span class="nx">url</span><span class="p">,</span>
+        <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">contentType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json;charset=utf-8</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Basic </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">apiKey</span>
+        <span class="p">},</span>
+        <span class="na">data</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+            <span class="nx">pvkId</span><span class="p">,</span>
+            <span class="nx">pagingReference</span>            
+        <span class="p">}),</span>
+        <span class="na">success</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">const</span> <span class="nx">lines</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">`pagingReference:           </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">pagingReference</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`id:                        </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`name:                      </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`partKode:                  </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">partKode</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`type:                      </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+                <span class="s2">`personvernInnstillinger:   </span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">personvernInnstillinger</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span>
+            <span class="p">];</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">lines</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">));</span>
+        <span class="p">},</span>
+        <span class="na">error</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error!</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>URL for Web API kall</strong></p>
+
+<p>[https://proms.hemitdev.org/PromsWebApi/api/v2/get-residents-active-pi-for-definition]</p>
+
+<p><strong>Parametere - Inn</strong></p>
+
+<ul>
+  <li>pagingReference - Start with 0. If the returned pagingReference &gt; 0, new call must be made with the returned pagingReference</li>
+  <li>pvkId - The guid of the PersonvernInnstilling</li>
+</ul>
+
+<p><strong>Parametere – Ut</strong></p>
+
+<ul>
+  <li>id – The guid of the PersonvernInnstilling.</li>
+  <li>name – The name of the PersonvernInnstilling.</li>
+  <li>partKode</li>
+  <li>type - The type of the PersonvernInnstilling. <code class="language-plaintext highlighter-rouge">{ Reservasjon | Samtykke }</code>.</li>
+  <li>personvernInnstillinger - A list of all the residents who have an active instance (active reservation, consent, or access restriction)
+    <ul>
+      <li>NationalId - the national id of the person to get PersonvernInnstilling for.</li>
+      <li>SequenceNumber - Sequence number for the resident instance of PersonvernInnstilling.</li>
+      <li>createdDateTimeOffset – Timestamp for when the first instance of the resident’s PersonvernInnstilling was created.</li>
+      <li>lastChangedDateTimeOffset – Timestamp of the last change of PersonvernInnstilling.</li>
+    </ul>
+  </li>
+  <li></li>
+</ul>
+
+<p><strong>Metode</strong></p>
+
+<p>POST</p>
+
+<p><strong>Swagger</strong></p>
+
+<p>TODO TODO <a href="https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async">https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async</a></p>
+
+<h3 id="server-side-2">Server-side</h3>
+
+<p><strong>API</strong></p>
+
+<p>Tilgjengelig som NuGet pakke</p>
+
+<p><a href="https://pkgs.dev.azure.com/hemit/a7f87e1f-3406-4ac2-a2d4-18e789c37706/_packaging/Hemit_public_packages/nuget/v3/index.json">NuGet repository</a></p>
+
+<p>Navn: Hemit.ePROM.Integration</p>
+
+<h3 id="feilsituasjoner-2">Feilsituasjoner</h3>
+
+<p><strong>Respons</strong>
+Ok (200) - Alt OK.<br />
+Bad Request (400) - Feil i forespørsel. Skjer…</p>
+<ul>
+  <li>Hvis PvkPart ikke er angitt.</li>
+</ul>
+
+<p>Unauthorized (401) - Feil i ApiKey.<br />
+Internal Server Error (500) - Alle feil som ikke fanges opp på annen måte.<br />
+Bad Gateway (502) - Hvis noe feiler mot PVK. Feilmelding fra PVK returneres som JSON: <code class="language-plaintext highlighter-rouge">{ statusCode, status, message}</code></p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/HemitSystemutvikling/ePROM">ePROM</a> is maintained by <a href="https://github.com/HemitSystemutvikling">HemitSystemutvikling</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

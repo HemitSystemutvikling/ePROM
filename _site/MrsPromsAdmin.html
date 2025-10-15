@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>PROMS Admin i MRS | ePROM v11.0</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="PROMS Admin i MRS" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/MrsPromsAdmin.html" />
+<meta property="og:url" content="http://localhost:4000/MrsPromsAdmin.html" />
+<meta property="og:site_name" content="ePROM v11.0" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PROMS Admin i MRS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"PROMS Admin i MRS","url":"http://localhost:4000/MrsPromsAdmin.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ab89dff6da65ec38e4b1c7a32b73307963685df2">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">PROMS Admin i MRS</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/HemitSystemutvikling/ePROM" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h3 id="proms-admin-i-mrs">PROMS Admin i MRS</h3>
+<p>Registeransvarlig har tilgang til et Admingrensesnitt for PROMs i MRS.</p>
+
+<p><img src="/img/mrs_proms_admin1.png" alt="MRS PROMS Admin" /></p>
+
+<p>Her kan man sette hvilke PROMS-skjema som skal være aktive for utsending og samtidig sette utløpstid og purretid som skal være gjeldende for registeret. Default er 30 dagers utlåpstid og 15 dagers purretid.</p>
+
+<p><img src="/img/mrs_proms_admin2.png" alt="PROMS Bestillinger" /></p>
+
+<p>Lista med PROMS-bestillinger kan filtreres på skjema, tidspunkt og status. Lista viser diverse informasjon om bestillingene, f.eks. bestillingstidspunkt og tidspunkt for når bestillingen er besvart eller utgått. Status kan være <strong>Bestilt</strong>, <strong>Besvart</strong>, <strong>Utgått</strong> eller <strong>Feilet</strong>. I-ikonet viser hvilken kanal varslingen er sendt til mottaker.</p>
+
+<h3 id="datadump-av-proms-bestillinger">Datadump av PROMS bestillinger</h3>
+<p>PROMS-bestillingene er tilgjengelig for nedlasting til Excel (datadump) ved å klikke på knappen <em>Last ned alle bestillinger til excel (råformat)</em>. Datadumpen inneholder følgende:</p>
+
+<ul>
+  <li><strong>Id</strong> =  GUID til bestillingerskjema</li>
+  <li><strong>TargetFormId</strong> =  GUID til registerskjemaet bestillingen er koblet til</li>
+  <li><strong>TargetFormTypeId</strong> =  1 er hovedskjema, 2 er oppfølgingsskjema</li>
+  <li><strong>CreatedFormId</strong> = GUID på pasientskjemaet når det er besvart av pasient</li>
+  <li><strong>Code</strong> = engangskode generert for pålogging</li>
+  <li><strong>UniqueId</strong> = internt ID for å forhindre dobbeltbestillinger, trenger ikke tenke på denne</li>
+</ul>
+
+<h3 id="orderstatus">OrderStatus:</h3>
+<p>Statuskoder for en bestilling:</p>
+<ul>
+  <li>0 = Bestilt</li>
+  <li>1 = Besvart</li>
+  <li>2 = Utgått</li>
+  <li>3 = Feilet</li>
+  <li>4 = Ikke bestilt</li>
+  <li>5 = Mottaker ikke nådd</li>
+  <li>6 = Prosesserer bestilling</li>
+</ul>
+
+<h3 id="errorcode">ErrorCode:</h3>
+<p>Feilkoder som kan oppstå ved en bestillingen:</p>
+<ul>
+  <li>0 = ingen feil</li>
+  <li>1 = ukjent feil (bør ikke skje)</li>
+  <li>2 = tidligere  bestilt</li>
+  <li>3 = Person er ikke digitalt aktiv eller har ikke sikker digital postkasse</li>
+  <li>4 = Ekstern feil (bør ikke skje)</li>
+  <li>5 = Intern feil (bør ikke skje)</li>
+  <li>6 = pasient er død</li>
+  <li>7 = Feil fra PROMS server (bør ikke skje)</li>
+</ul>
+
+<h3 id="notificationchannel">NotificationChannel</h3>
+<p>Mottaker er varslet via en av følgende kanaler:</p>
+<ul>
+  <li>0 = pasient har ikke fått beskjed, det vil si engangskode eller feilet bestilling</li>
+  <li>1 = helsenorge</li>
+  <li>2 = digital postkasse</li>
+  <li>3 = usikker kanal, epost eller sms</li>
+  <li>4 = fysisk brev</li>
+</ul>
+
+<h3 id="distributionrule">DistributionRule:</h3>
+<p>Pasientskjemaet er distribuert med en av følgende regler:</p>
+<ul>
+  <li>0 = <em>default</em> - varsling via sikker kanal, helsenorge eller digital postkasse</li>
+  <li>1 = varsling via usikker kanal, epost eller sms, eller <em>default</em></li>
+  <li>2 = varsling sendes ikke, engangskode må ev. leveres manuelt</li>
+  <li>3 = skjema som fysisk brev, eller <em>default</em></li>
+  <li>4 = varsling via usikker kanal, skjema som fysisk brev, eller <em>default</em></li>
+  <li>5 = skjema som fysisk brev</li>
+</ul>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/HemitSystemutvikling/ePROM">ePROM</a> is maintained by <a href="https://github.com/HemitSystemutvikling">HemitSystemutvikling</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

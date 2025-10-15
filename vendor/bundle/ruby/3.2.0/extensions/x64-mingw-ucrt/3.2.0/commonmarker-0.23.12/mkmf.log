@@ -1,0 +1,30 @@
+block in append_cflags: checking for whether -std=c99 is accepted as CFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\msys64\ucrt64\bin;C:\msys64\usr\bin;C:\Program Files\PowerShell\7;C:\Program Files (x86)\oh-my-posh\bin\;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Meld\;C:\Program Files (x86)\IDEMIA\AWP\Dlls;C:\Program Files\IDEMIA\AWP\Dlls;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\PathRegistered\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\PowerShell\7\;C:\Program Files\Microsoft SQL Server\170\Tools\Binn\;C:\Ruby32-x64\bin;C:\Users\745-11\AppData\Local\Microsoft\WindowsApps;C:\Program Files\kdiff3;C:\Users\745-11\.dotnet\tools;;C:\Users\745-11\AppData\Local\Programs\Ollama;C:\Users\745-11\AppData\Roaming\npm;C:\Users\745-11\AppData\Local\Programs\oh-my-posh\bin;c:\Users\745-11\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand" "gcc -o conftest.exe -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -LC:/Ruby32-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed  -m64   -lx64-ucrt-ruby320  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\msys64\ucrt64\bin;C:\msys64\usr\bin;C:\Program Files\PowerShell\7;C:\Program Files (x86)\oh-my-posh\bin\;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Meld\;C:\Program Files (x86)\IDEMIA\AWP\Dlls;C:\Program Files\IDEMIA\AWP\Dlls;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\PathRegistered\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\PowerShell\7\;C:\Program Files\Microsoft SQL Server\170\Tools\Binn\;C:\Ruby32-x64\bin;C:\Users\745-11\AppData\Local\Microsoft\WindowsApps;C:\Program Files\kdiff3;C:\Users\745-11\.dotnet\tools;;C:\Users\745-11\AppData\Local\Programs\Ollama;C:\Users\745-11\AppData\Roaming\npm;C:\Users\745-11\AppData\Local\Programs\oh-my-posh\bin;c:\Users\745-11\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -m64 -std=c99 -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+

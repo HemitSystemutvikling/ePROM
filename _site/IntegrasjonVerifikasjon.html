@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Verifisering av integrasjoner i testmiljø | ePROM v11.0</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Verifisering av integrasjoner i testmiljø" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/IntegrasjonVerifikasjon.html" />
+<meta property="og:url" content="http://localhost:4000/IntegrasjonVerifikasjon.html" />
+<meta property="og:site_name" content="ePROM v11.0" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Verifisering av integrasjoner i testmiljø" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Verifisering av integrasjoner i testmiljø","url":"http://localhost:4000/IntegrasjonVerifikasjon.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ab89dff6da65ec38e4b1c7a32b73307963685df2">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Verifisering av integrasjoner i testmiljø</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/HemitSystemutvikling/ePROM" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      
+<h2 id="verifisering-av-integrasjoner-i-testmiljø">Verifisering av integrasjoner i testmiljø</h2>
+
+<p>Verifisering av integrasjonen tar utgangspunkt i at alt er implementert som beskrevet i integrasjonsguiden som finnes <a href="Integrasjonsguide">her</a>.</p>
+
+<p><strong>NB:</strong> Følgende punkter <strong>skal</strong> verifiseres i testmiljø for alle nye integrasjoner:</p>
+
+<h3 id="1-bestilling-av-skjema">1) Bestilling av skjema:</h3>
+<ul>
+  <li>verifiser at bestilling blir sendt til ePROM uten feilmelding</li>
+  <li>verifiser mottak av status på bestilling
+    <ul>
+      <li>verifiser at skjema blir bestilt til forventet varslingskanal</li>
+    </ul>
+  </li>
+  <li>Mål: ingen feilsituasjoner eller duplikate meldinger</li>
+</ul>
+
+<h3 id="2-utfylling-av-skjema">2) Utfylling av skjema</h3>
+<ul>
+  <li>logg inn som testperson på helsenorge og besvar skjema
+    <ul>
+      <li>verifiser at skjema vises som forventet og har forventet oppførsel</li>
+      <li>verifiser at følgebrev vises som forventet</li>
+      <li>verifiser at ev metadata fungerer etter hensikten</li>
+      <li>verifiser at skjemaoppgave vises som forventet</li>
+      <li>verifiser at kopi av skjema blir lagret/ikke lagret som forventet avhengig av spesifikasjonen (etter levering)</li>
+    </ul>
+  </li>
+  <li>Mål: skjema, følgebrev og skjemaoppgave fungerer etter spesifikasjonene</li>
+</ul>
+
+<h3 id="3-retur-av-skjema-til-bestillersystemet">3) Retur av skjema til bestillersystemet</h3>
+<ul>
+  <li>verifiser mottak av skjemasvar</li>
+  <li>Mål: bestillersystemet mottar svaret. Ingen feilsituasjoner. Ingen duplikate meldinger.</li>
+</ul>
+
+<h4 id="spesialtilfeller">Spesialtilfeller</h4>
+<ul>
+  <li><em>på vegne av:</em> verifiser at informasjon om dette vises i skjemaoppgave og i inne i skjemaet, og at den som fyller ut skjema ikke mottar kopi</li>
+  <li><em>signering:</em> verifiser at skjema blir bestilt med signering, at det må signeres før levering og at nedlasting av signert dokument fungerer</li>
+</ul>
+
+<h2 id="testmiljø">Testmiljø</h2>
+
+<h3 id="test">Test</h3>
+
+<p>ePROM admin: <a href="https://proms.hemitdev.org/PromsAdministration">https://proms.hemitdev.org/PromsAdministration</a></p>
+
+<p>ePROM skjemautfyller: <a href="https://proms.hemitdev.org/proms">https://proms.hemitdev.org/proms</a> (bl.a. for skjema med engangskode)</p>
+
+<p>ePROM bestillingsAPI: <a href="https://proms.hemitdev.org/promswebapi/api/v2/formorder">https://proms.hemitdev.org/promswebapi/api/v2/formorder</a></p>
+
+<p>Helsenorge test: <a href="https://tjenester.hn2.test.nhn.no/?pnr=[pnr]">https://tjenester.hn2.test.nhn.no/?pnr=[pnr]</a></p>
+
+<h3 id="qa">QA</h3>
+
+<p>ePROM skjemautfyller: <a href="https://pasientrapportering.qa.nhn.no/proms/">https://pasientrapportering.qa.nhn.no/proms/</a> (bl.a. for skjema med engangskode)</p>
+
+<p>ePROM bestillingsAPI: <a href="https://pasientrapportering.qa.nhn.no/webapi/api/v2/formorder">https://pasientrapportering.qa.nhn.no/webapi/api/v2/formorder</a></p>
+
+<p>Helsenorge QA: <a href="https://tjenester.hn.qa.nhn.no/">https://tjenester.hn.qa.nhn.no/</a></p>
+
+<h3 id="testpersoner-helsenorge-test-og-qa">Testpersoner Helsenorge (test og QA)</h3>
+
+<p><strong>Testperson som kan benyttes til verifikasjon: 01039494104</strong></p>
+
+<p>Pnr over brukes med BankID i IdPorten med følgende innloggingsdetaljer:</p>
+
+<p>Engangspassord: otp</p>
+
+<p>Personlig kode: qwer1234</p>
+
+<p>Denne har samtykket på helsenorge i test og QA, men kan også være i bruk av andre bestillersystemer.</p>
+
+<p><a href="./">Tilbake</a></p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/HemitSystemutvikling/ePROM">ePROM</a> is maintained by <a href="https://github.com/HemitSystemutvikling">HemitSystemutvikling</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

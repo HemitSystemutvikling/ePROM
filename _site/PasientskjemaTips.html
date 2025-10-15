@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tips til bygging av pasientskjema | ePROM v11.0</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Tips til bygging av pasientskjema" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/PasientskjemaTips.html" />
+<meta property="og:url" content="http://localhost:4000/PasientskjemaTips.html" />
+<meta property="og:site_name" content="ePROM v11.0" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tips til bygging av pasientskjema" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Tips til bygging av pasientskjema","url":"http://localhost:4000/PasientskjemaTips.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ab89dff6da65ec38e4b1c7a32b73307963685df2">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Tips til bygging av pasientskjema</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/HemitSystemutvikling/ePROM" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="tips-til-bygging-av-pasientskjema">Tips til bygging av pasientskjema</h1>
+
+<h2 id="hvilke-enheter-er-det-som-benyttes">Hvilke enheter er det som benyttes?</h2>
+
+<p>Tall fra helsenorge viser at mellom 70 og 80% av alle skjemautfyllinger skjer ved hjelp av mobile enheter, hovedsaklig mobiltelefon. Det vil si at vi ikke kan anta at pasienten har tastatur, stor skjerm og mus tilgjengelig på utfyllingstidspunktet.</p>
+
+<p>ePROM vil automatisk tilpasse visningen av skjemaet til den enheten pasienten bruker, men det er likevel lurt å tenke på hvilke felttyper som brukes og hvordan disse presenteres.</p>
+
+<h2 id="hva-er-samleskjema">Hva er samleskjema?</h2>
+
+<p>Samleskjema er en samling av enkeltskjema som sendes til pasienten i en samlet utsendelse.</p>
+
+<p>Det anbefales at alle skjema som sendes til pasienten er samleskjema. Det gir bedre oversikt og oppdeling for brukeren og også mindre behov for scrolling i et langt enkeltskjema med mange spørsmål. Det gir også mulighet til å gjenbruke standardskjematyper som f.eks. RAND12 eller EQ5D. Disse ligger under katalogen “Felles” i Skjemakatalogen.</p>
+
+<h2 id="hvilke-felttyper-finnes">Hvilke felttyper finnes?</h2>
+
+<ul>
+  <li><em>Valgfelt</em> kan vises som radioknapper eller nedtrekksmeny.</li>
+  <li><em>Tallfelt</em> kan vises som et inputfelt eller slider/skala.</li>
+  <li><em>Datofelt</em> kan vises som
+    <ul>
+      <li>Dato</li>
+      <li>Dato og tidspunkt</li>
+      <li>Måned og år</li>
+      <li>År</li>
+    </ul>
+  </li>
+  <li><em>Avkrysningsfelt</em></li>
+  <li><em>Flervalgsfelt</em> - Ved å plassere flere <em>Avkrysningsfelt</em> i samme gruppe, kan disse vises som et flervalgsfelt</li>
+  <li><em>Tekstfelt</em> kan vises som tekstboks eller tekstområde</li>
+  <li><em>Metadata</em> (beskrevet <a href="Skjemabygger#metadata">her</a>)</li>
+  <li><em>Metadatatekst</em> (beskrevet <a href="Skjemabygger#metadata">her</a>)</li>
+</ul>
+
+<p>Hvordan felter skal vises styres under Innstillinger på hvert enkelt felt, med unntak av flervalgsfelt som defineres på gruppenivå.</p>
+
+<h2 id="hvilken-felttype-bør-brukes-når">Hvilken felttype bør brukes når?</h2>
+
+<h3 id="generelt-for-alle-felter">Generelt for alle felter</h3>
+<ul>
+  <li>alle felter må ha et feltnavn og en tittel (tittel kan ikke være på gruppenivå)</li>
+  <li>det er mulig å sette styling på feltnavnet (bold og italic)</li>
+  <li>obligatoriske felter markeres med * foran feltnavnet (se forhåndsvisning)</li>
+</ul>
+
+<h3 id="valgfelt">Valgfelt</h3>
+
+<p>For et valgfelt er det kun mulig å velge ett (1) alternativ som svar på et spørsmål</p>
+
+<p>For valgfelt finnes to visningsalternativer:</p>
+<ul>
+  <li><em>radioknapper</em>: anbefales alltid dersom spørsmålet har 2-5 alternativer, og bør være førstevalg</li>
+  <li><em>nedtrekksliste</em>: anbefales kun i tilfeller med ~ 6 eller flere alternativer.</li>
+</ul>
+
+<p><strong>Beste praksis er alltid å prøve radioknapper først, før nedtrekksliste velges - spesielt med tanke på mobile enheter</strong></p>
+
+<h3 id="flervalgfelt">Flervalgfelt</h3>
+
+<p>Flervalgsfelt brukes i tilfeller der pasienten kan velge 0 til mange alternativ som svar på et spørsmål.</p>
+
+<p>I skjemabyggeren opprettes flervalgsfelt ved å legge til en ny gruppe og krysse av for “Flersvarsfelt” under innstillinger på gruppen. Deretter legges de ønskede alternativene til som avkrysningsbokser i gruppen.</p>
+
+<p><strong>NB: Gruppen kan ikke inneholde andre typer felt enn avkrysningsbokser.</strong> Hvis man ønsker å ha regler på avkrysningsboksene for skjuling/visning av andre typer felter, må disse feltene ligge utenfor flervalgsfelt-gruppen.</p>
+
+<p>Fordelen med flervalgsfelt er</p>
+<ul>
+  <li>avkrysningsboksene er plassert tettere og oppfattes dermed av brukeren som svar på ett spørsmål, og ikke som separate spørsmål</li>
+  <li>alle avkrysningsboksene i et flervalgsfelt telles som ett spørsmål i framdriftsvisningen</li>
+</ul>
+
+<h3 id="tallfelt">Tallfelt</h3>
+
+<p>For tallfelt finnes to visningsalternativer:</p>
+<ul>
+  <li>Inputfelt</li>
+  <li>slider/skala</li>
+</ul>
+
+<p>Alle tallfelt kan konfigureres med en min og max-verdi.</p>
+
+<h4 id="slider">Slider</h4>
+
+<p>Ved bruk av slider anbefales at denne vises i horisontal retning, så lenge maksimal verdi &lt;= 10.</p>
+
+<p>Dersom slideren har min-verdi på 0 eller 1 vil pasienten også få opp en tilhørende inputfelt hvor verdien kan tastes inn (forutsetter at “Skjul tallverdier” ikke er satt). Det kan være nyttig for pasienter som synes det er vanskelig å krysse av på riktig sted på slideren.</p>
+
+<p>Dersom det er behov for en fullstendig visuell analog skala (uten tall i slideren) velges “Skjul tallverdier” under innstillingene på feltet. Da vil slideren vises uten tall, og pasienten vil ikke se hvilken verdi som blir valgt. Det er mulig å sette på beskrivende tekst i hver ende av slideren.</p>
+
+<h4 id="inputfelt">Inputfelt</h4>
+
+<p>Ved bruk av inputfelt er det mulig å angi om tallet skal være et heltall eller et desimaltall med opptil 4 desimaler</p>
+
+<h3 id="datofelt">Datofelt</h3>
+
+<p>Ved bruk av dato med måned og år er det den 1. i måneden som blir satt som reell dato i bakgrunnen, og det er denne datoen som returneres til bestillersystemet.</p>
+
+<p>Ved bruk av dato med kun år er det 1. januar i det aktuelle året som blir satt som reell dato, og det er denne datoen som returneres til bestillersystemet.</p>
+
+<h3 id="tekstfelt">Tekstfelt</h3>
+
+<p>Tekstfelt er fritekstfelt uten validering.</p>
+
+<p>Tekstfelt kan vises som tekstboks (én linje) eller tekstområde (6 linjer). Tekstområde brukes f.eks. til kommentarfelt, og bør bare brukes der det er forventet med lengre tekst/flere setninger.</p>
+
+<h2 id="hvordan-formattere-tekst-i-skjemabyggeren">Hvordan formattere tekst i skjemabyggeren?</h2>
+
+<p>Det er mulig å velge styling på tekst (feltnavn) i skjemabyggeren. Dette kan man gjøre under innstillinger på hvert enkelt felt, under Styling er det mulig å velge Bold eller Italic tekst.</p>
+
+<p>Noen ganger er det imidlertid ønskelig å formattere bare deler av teksten på et felt, da benyttes følgende syntaks:</p>
+
+<p><strong>Bold:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#b#Anstrengende aktiviteter#b# som å løpe, løfte tunge gjenstander, delta i anstrengende idrett 
+</code></pre></div></div>
+<p>Gir følgende formattering i pasientskjema:</p>
+
+<p>“<strong>Anstrengende aktiviteter</strong> som å løpe, løfte tunge gjenstander, delta i anstrengede idrett”</p>
+
+<p><strong>Italic:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VANLIGE GJØREMÅL #i#(f.eks. arbeid, studier, husarbeid, familie- eller fritidsaktiviteter)#i#
+</code></pre></div></div>
+<p>Gir følgende formattering i pasientskjema:</p>
+
+<p>“VANLIGE GJØREMÅL <em>(f.eks. arbeid, studier, husarbeid, familie- eller fritidsaktiviteter)</em>”</p>
+
+<p><strong>Understreking:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I løpet av #u#de siste fire ukene#u#, hvor mye av tiden har den #u#fysiske helsen din eller følelsesmessige problemer#u# påvirket dine sosiale aktiviteter (som å besøke venner, slektninger osv.)?
+</code></pre></div></div>
+<p>Gir følgende formattering i pasientskjema:</p>
+
+<p>“I løpet av <ins>de siste fire ukene</ins>, hvor mye av tiden har den <ins>fysiske helsen din eller følelsesmessige problemer</ins> påvirket dine sosiale aktiviteter (som å besøke venner, slektninger osv.)?”</p>
+
+<p><strong>Linjeskift:</strong></p>
+
+<p>Dersom det er ønskelig med linjeskift i tittel benyttes #n på ønsket sted i teksten</p>
+
+<p><a href="Skjemabygger">Tilbake</a></p>
+
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/HemitSystemutvikling/ePROM">ePROM</a> is maintained by <a href="https://github.com/HemitSystemutvikling">HemitSystemutvikling</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

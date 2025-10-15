@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Integrasjonsguide | ePROM v11.0</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Integrasjonsguide" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/Integrasjonsguide.html" />
+<meta property="og:url" content="http://localhost:4000/Integrasjonsguide.html" />
+<meta property="og:site_name" content="ePROM v11.0" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Integrasjonsguide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Integrasjonsguide","url":"http://localhost:4000/Integrasjonsguide.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ab89dff6da65ec38e4b1c7a32b73307963685df2">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Integrasjonsguide</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/HemitSystemutvikling/ePROM" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="integrasjonsguide">Integrasjonsguide</h1>
+
+<p><em>Sist oppdatert 18.10.2023</em></p>
+
+<h3 id="innholdsfortegnelse">Innholdsfortegnelse</h3>
+
+<p><a href="#generelt">GENERELT</a></p>
+
+<p><a href="BestillingAvSkjemaV2">BESTILLING AV SKJEMA V2</a></p>
+
+<p><a href="PasientinitiertBestillingAvSkjema">PASIENTINITIERT BESTILLING AV SKJEMA</a></p>
+
+<p><a href="ReturAvUtfyltSkjema">RETUR AV UTFYLT SKJEMA</a></p>
+
+<p><a href="SkjemaSomKreverSignatur">SKJEMA SOM KREVER SIGNATUR</a></p>
+
+<p><a href="SendeMeldingTilInnbyggerV2">SENDE MELDING TIL INNBYGGER V2</a></p>
+
+<p><a href="SendeMeldingSomSmsEpost">SENDE MELDING SOM SMS/EPOST</a></p>
+
+<p><a href="Personverninnstillinger">PERSONVERNINNSTILLINGER</a></p>
+
+<h1 id="generelt">GENERELT</h1>
+
+<h2 id="pasientløsning-eprom">Pasientløsning ePROM</h2>
+
+<p>For å se / fylle ut de bestilte skjemaene kan man finne de igjen i pasientløsningen:</p>
+
+<p><a href="https://proms.hemitdev.org/proms">https://proms.hemitdev.org/proms</a></p>
+
+<p>Her finner man alle skjema som er bestilt og man kan f.eks.teste innsending av skjemaer. Pålogging med BankID eller engangskode.</p>
+
+<h2 id="pasienter">Pasienter</h2>
+
+<p>Noen forutsetninger må være oppfylt for at personer skal kunne motta skjema og brev fra ePROM. Les mer om disse <a href="Personer">her</a></p>
+
+<h3 id="testpasienter-til-verifisering">Testpasienter til verifisering</h3>
+<p>Test-PREG benyttes i alle miljø, foruten PROD.</p>
+
+<p><a href="Testpersoner">Mer om testpersoner</a></p>
+
+<h2 id="asynkron-kommunikasjon">Asynkron kommunikasjon</h2>
+
+<p>ePROM baserer seg på asynkron kommunikasjon med Bestillersystem. Dette gjelder både for bestilling av skjema og sending av melding til innbygger.
+Se sekvensdiagram for <a href="/img/bestilling_av_pasientskjema_asynkront.png">bestilling av skjem</a> og <a href="/img/retur_av_skjemasvar_asynkront.png">retur av skjemasvar</a></p>
+
+<h2 id="verifisering-av-integrasjon">Verifisering av integrasjon</h2>
+
+<p>Verifisering av integrasjonen er beskrevet <a href="IntegrasjonVerifikasjon">her</a>. Det er et krav at dette utføres for alle nye integrasjoner.</p>
+
+<h2 id="nuget-pakke">nuget-pakke</h2>
+<p>Følgende nuget-pakke er tilgjengelig for integrasjon med ePROM: <a href="https://dev.azure.com/hemit/Hemit%20offentlig/_artifacts/feed/Hemit_public_packages/NuGet/Hemit.ePROM.Integration/overview/13.4.0"><em>Hemit.ePROM.Integration v13.4.0</em></a></p>
+
+<h2 id="distribusjonsregler">Distribusjonsregler</h2>
+
+<p>Vha. parameteren <strong>DistributionRule</strong> kan man bestemme hvordan pasientskjemaet skal distribueres til pasienten. Varslingskanalene er definert i parameteren <strong>NotificationChannel</strong></p>
+
+<p>Default <strong>DistributionRule</strong> er <em>Basic</em> og betyr at ePROM først sjekker om pasienten er tilgjengelig på Helsenorge. Hvis ikke sjekkes det om pasienten har sikker digital postkasse.</p>
+
+<p>Hvis <strong>DistributionRule</strong> er satt til <em>AllowUnsecure</em> sjekkes det om pasienten er registrert i Difi Kontaktregister med epostadresse eller mobilnummer.</p>
+
+<p>Hvis <strong>DistributionRule</strong> er satt til <em>NoDistribution</em> sendes det ikke ut varsling til pasienten. Dette kan benyttes hvis Bestillersystemet skal gi engangskode til pasienten.</p>
+
+<p><em>BasicOrPaper</em> og <em>AllowUnsecureOrPaper</em> er samme som hhv <em>Basic</em> og <em>AllowUnsecure</em>, men med papir som siste utvei.</p>
+
+<p><em>PaperOnly</em>, <em>HelsenorgeOnly</em>, <em>DigitalMailboxOnly</em> og <em>UnsecureOnly</em> sender kun på hhv papir, Helsenorge, sikker digital postkasse og epost/sms.</p>
+
+<h3 id="distributionrule">DistributionRule</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = Basic
+1 = AllowUnsecure
+2 = NoDistribution
+3 = BasicOrPaper
+4 = AllowUnsecureOrPaper
+5 = PaperOnly
+6 = HelsenorgeOnly
+7 = DigitalMailboxOnly
+8 = UnsecureOnly
+</code></pre></div></div>
+
+<h3 id="notificationchannel">NotificationChannel</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = None
+1 = Helsenorge
+2 = DigitalMailbox
+3 = Unsecure
+4 = PhysicalMailbox
+</code></pre></div></div>
+
+<h3 id="formorderstatus">FormOrderStatus</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = Completed
+1 = Expired
+2 = Ordered
+3 = Error
+4 = PhysicalMailReturned
+5 = DigipostDelivered
+</code></pre></div></div>
+
+<h3 id="formorderstatuserrorcode">FormOrderStatusErrorCode</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = None
+1 = PatientUnreachable
+2 = SikkerDigitalPostError
+</code></pre></div></div>
+
+<h3 id="sentstatus">SentStatus</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 = Sent
+1 = Error
+</code></pre></div></div>
+
+<h1 id="produksjonsmiljøet">Produksjonsmiljøet</h1>
+
+<p>API’et for å bestille pasientskjema via ePROM er tilgjengelig på Helsenettet.</p>
+
+<p>For produksjonsmiljøet gjelder følgende URL’er for bestillingsAPI’et:</p>
+
+<p>PROD: <a href="https://pasientrapportering.nhn.no/webapi/api/v2/formorder">https://pasientrapportering.nhn.no/webapi/api/v2/formorder</a></p>
+
+<p>QA: <a href="https://pasientrapportering.qa.nhn.no/webapi/v2/api/formorder">https://pasientrapportering.qa.nhn.no/webapi/api/v2/formorder</a></p>
+
+<p>For produksjonsmiljøet gjelder følgende URL’er for SendeMeldingAPI’et:</p>
+
+<p>PROD: <a href="https://pasientrapportering.nhn.no/webapi/api/v2/MessageToCitizen">https://pasientrapportering.nhn.no/webapi/api/v2/MessageToCitizen</a></p>
+
+<p>QA: <a href="https://pasientrapportering.qa.nhn.no/webapi/api/v2/MessageToCitizen">https://pasientrapportering.qa.nhn.no/webapi/api/v2/MessageToCitizen</a></p>
+
+<p><a href="./">Tilbake</a></p>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/HemitSystemutvikling/ePROM">ePROM</a> is maintained by <a href="https://github.com/HemitSystemutvikling">HemitSystemutvikling</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>

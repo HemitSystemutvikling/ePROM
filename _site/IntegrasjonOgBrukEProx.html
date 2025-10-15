@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ePROX | ePROM v11.0</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="ePROX" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/IntegrasjonOgBrukEProx.html" />
+<meta property="og:url" content="http://localhost:4000/IntegrasjonOgBrukEProx.html" />
+<meta property="og:site_name" content="ePROM v11.0" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ePROX" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"ePROX","url":"http://localhost:4000/IntegrasjonOgBrukEProx.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ab89dff6da65ec38e4b1c7a32b73307963685df2">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">ePROX</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/HemitSystemutvikling/ePROM" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="eprox">ePROX</h1>
+
+<h2 id="integrasjon">Integrasjon</h2>
+
+<p>Integrasjon mot ePROX skjer på samme måte som mot ePROM, med unntak av adresse til bestillings-API.</p>
+
+<p>Integrasjonsguide for ePROM finnes <a href="Integrasjonsguide">her</a></p>
+
+<p>Overordnet skisse og flytdiagram for ePROX finnes <a href="Overordnet%20skisse%20eprox">her</a></p>
+
+<p>Bruk av ePROX baserer seg på at registeret benytter ePROX for alle skjemabestillinger av den aktuelle skjematypen. Registre som er knyttet til samme bestilling vil motta samme statusoppdateringer på bestillingen, både når det gjelder bestilling, svar, utløpsdato og feil.</p>
+
+<h1 id="testmiljøet">Testmiljøet</h1>
+
+<p>API’et i testmiljøet for å bestille pasientskjema via ePROX er tilgjengelig på internett, i motsetning til prdouksjonsmiljøet som kun vil være tilgjengelig på Helsenettet.</p>
+
+<p>For testmiljøet gjelder følgende URL’er for bestillingsAPI’et:</p>
+
+<p>DEV: <a href="https://proms.hemitdev.org/proxywebapidev/api/v2/formorder">https://proms.hemitdev.org/proxywebapidev/api/v2/formorder</a></p>
+
+<h1 id="regler-for-bestilling">Regler for bestilling</h1>
+
+<p><strong>Dersom det ikke finnes en aktiv bestilling, opprettes det alltid en ny bestilling. Det gjelder for alle typer bestilling, både med og uten metadata (også hvis CREATE_NEW_ORDER=false).</strong></p>
+
+<h2 id="standard-bestilling">Standard bestilling</h2>
+
+<p>En standard bestilling fra registeret til ePROX behandles i tre steg</p>
+
+<p>1) Finne aktiv bestilling*: dersom det finnes en aktiv bestilling, på samme pasient og samme skjema - men fra annet register, skal det ikke trigges en ny bestilling mot ePROM, men bestillingene skal kobles sammen i ePROX.</p>
+
+<p>2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigges en ny bestilling mot ePROM</p>
+
+<p><strong>*En aktiv bestilling er en bestilling med status bestilt, uløpt eller besvart hvor bestillingsdato ikke er eldre enn 365 dager gammel</strong></p>
+
+<h3 id="flere-bestillinger-fra-samme-register">Flere bestillinger fra samme register</h3>
+
+<p>Dersom det gjøres ny bestilling på samme pasient og samme skjema fra <strong>samme register</strong>, vil dette trigge ny bestilling mot ePROM.</p>
+
+<p>Det vil si at det kan være flere aktive bestillinger på samme pasient og samme skjema. En ny bestilling fra et annet register vil kobles til den aktive bestillingen med nyest bestillingsdato.</p>
+
+<h2 id="bestilling-med-metadata">Bestilling med metadata</h2>
+
+<p>Det er to ulike metadataparametre som kan brukes:</p>
+
+<ul>
+  <li>RELEVANT_DATE - Brukes til å avgjøre om en eksisterende, aktiv bestilling ikke er for gammel. Relevant dato kan være innleggelsesdato, operasjonsdato, ulykkesdato e.l. Når relevant dato er inkludert benyttes denne til å finne aktive bestillinger.</li>
+  <li>CREATE_NEW_ORDER - Brukes til å avgjøre om det skal genereres en ny bestilling dersom det ikke finnes en eksisterende bestilling å koble til. Dersom true skal det opprettes ny bestilling, dersom false skal det ikke opprettes ny bestilling. Default = true</li>
+</ul>
+
+<h3 id="bruksscenario-1-det-er-ønskelig-å-koble-seg-til-en-eksisterende-bestillingsvar-men-bare-hvis-den-er-ny-nok-hvis-den-ikke-finnes-eller-er-for-gammel-trigges-en-ny-bestilling"><em>Bruksscenario 1: Det er ønskelig å koble seg til en eksisterende bestilling/svar, men bare hvis den er ny nok. Hvis den ikke finnes eller er for gammel, trigges en ny bestilling.</em></h3>
+
+<p>I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke for gammelt i forhold til relevant dato. Hvis ikke ønsker registeret å gjøre en ny bestilling mot ePROM. Et eksempel på et slikt scenario er f.eks. dersom en pasient opplever en ny hendelse, men allerede har fylt ut skjema knyttet til en annen, tidligere hendelse innenfor samme år.</p>
+
+<p>1) Finne aktiv bestilling**: Dersom det ikke finnes noen aktive bestillinger, blir det opprettet en ny bestilling</p>
+
+<p>2) Finne relevante bestillinger: ePROX vil deretter kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.</p>
+
+<p>3) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 2 vil det trigges en ny bestilling mot ePROM</p>
+
+<p>Syntaks: <em>{“RELEVANT_DATE”:”2022-09-22”}</em></p>
+
+<h3 id="bruksscenario-2-det-er-ønskelig-å-koble-seg-til-eksisterende-bestillingsvar-hvis-den-finnes-og-er-ny-nok-hvis-den-finnes-men-er-for-gammel-trigges-ikke-en-ny-bestilling"><em>Bruksscenario 2: Det er ønskelig å koble seg til eksisterende bestilling/svar hvis den finnes og er ny nok. Hvis den finnes men er for gammel, trigges ikke en ny bestilling.</em></h3>
+
+<p>I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX og det ikke er utdatert for denne hendelsen. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM dersom svaret finnes, men er utdatert.</p>
+
+<p>1) Finne aktiv bestilling**: ePROX vil kun hente ut aktive bestillinger med bestillingsdato som er nyere enn relevant dato.</p>
+
+<p>2) Trigge ny bestilling mot ePROM: dersom det ikke finnes noen aktive bestillinger i punkt 1 vil det trigge en ny bestilling mot ePROM. Dersom det finnes aktive bestillinger, men disse er for gamle i forhold til relevant dato, vil det <strong>IKKE</strong> trigges en ny bestilling mot ePROM</p>
+
+<p>Syntaks: <em>{“RELEVANT_DATE”:”2022-09-22.”,”CREATE_NEW_ORDER”:false}</em></p>
+
+<h3 id="bruksscenario-3-det-er-ønskelig-å-koble-seg-til-eksisterende-bestillingsvar-hvis-det-finnes-hvis-den-ikke-finnes-trigges-ikke-ny-bestilling-mot-eprom"><em>Bruksscenario 3: Det er ønskelig å koble seg til eksisterende bestilling/svar hvis det finnes. Hvis den ikke finnes, trigges ikke ny bestilling mot ePROM.</em></h3>
+
+<p>I dette tilfellet ønsker registeret å motta eksisterende svar dersom det finnes i ePROX. Imidlertid ønsker de ikke gjøre en ny bestilling mot ePROM om det ikke finnes svar. Et eksempel på et slikt scenario er hvis hovedskjema i registeret blir etterregistrert, og det er for lenge siden hendelsesdato til at det er aktuelt å trigge en ny bestilling. ePROX vil i dette tilfellet ikke trigge ny bestilling.</p>
+
+<p>Syntaks: <em>{“CREATE_NEW_ORDER”:false}</em></p>
+
+<h3 id="bruksscenario-4-tvinge-ny-bestilling"><em>Bruksscenario 4: Tvinge ny bestilling</em></h3>
+
+<p>I noen tilfeller er det nødvendig å tvinge gjennom en ny bestilling, uten å ta hensyn til om det allerede finnes en aktiv bestilling. Det kan bl.a. skje dersom man ønsker å bestille skjema på en spesifikk kanal (f.eks. papir). Da er det mulig å benytte CREATE_NEW_ORDER alene.</p>
+
+<p>Syntaks: <em>{“CREATE_NEW_ORDER”:true}</em></p>
+
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/HemitSystemutvikling/ePROM">ePROM</a> is maintained by <a href="https://github.com/HemitSystemutvikling">HemitSystemutvikling</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
