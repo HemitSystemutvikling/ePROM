@@ -474,7 +474,42 @@
             ensureIndex().then(()=>{
               const terms = q.split(/\s+/).filter(Boolean);
               let res = [];
-              try { res = idx.search(terms.map(t=>t+'*').join(' ')); } catch(err){ console.error(err); }
+              try { 
+                // Try multiple search strategies for better results
+                let searchQueries = [];
+                
+                // 1. Exact phrase search
+                searchQueries.push(terms.join(' '));
+                
+                // 2. Individual terms with wildcards
+                searchQueries.push(terms.map(t=>t+'*').join(' '));
+                
+                // 3. OR search with wildcards for broader results
+                if (terms.length > 1) {
+                  searchQueries.push(terms.map(t=>t+'*').join(' OR '));
+                }
+                
+                // Execute searches and combine results
+                let allResults = new Map();
+                for (let query of searchQueries) {
+                  try {
+                    let queryResults = idx.search(query);
+                    queryResults.forEach(result => {
+                      if (!allResults.has(result.ref) || allResults.get(result.ref).score < result.score) {
+                        allResults.set(result.ref, result);
+                      }
+                    });
+                  } catch(err) { 
+                    console.warn('Search query failed:', query, err); 
+                  }
+                }
+                
+                // Convert back to array and sort by score
+                res = Array.from(allResults.values()).sort((a, b) => b.score - a.score);
+                
+              } catch(err){ 
+                console.error('Search error:', err); 
+              }
               render(res, terms);
             });
           }, 300); // Debounce search for 300ms
