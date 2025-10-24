@@ -426,6 +426,10 @@
             this.ref('id');
             this.field('title', { boost: 3 });
             this.field('content');
+            
+            // Custom tokenizer that preserves version numbers and technical terms
+            this.tokenizer.separator = /[\s\-\u2013\u2014]+/;
+            
             docs.forEach(d=>this.add(d));
           });
         }
@@ -440,6 +444,46 @@
 
         function render(res, terms){
           results.innerHTML='';
+          
+          // For version searches, filter out false positives and add direct content search
+          if (terms.some(t => /^v?\d+(\.\d+)*$/i.test(t))) {
+            const versionTerms = terms.filter(t => /^v?\d+(\.\d+)*$/i.test(t));
+            
+            // Direct content search for exact version matches
+            const directMatches = docs.filter(doc => {
+              return versionTerms.some(version => {
+                const cleanVersion = version.replace(/^v/i, '');
+                const versionPattern = new RegExp(`\\bv${cleanVersion}\\b`, 'i');
+                const numberPattern = new RegExp(`\\b${cleanVersion}\\b`, 'i');
+                
+                return versionPattern.test(doc.content) || 
+                       versionPattern.test(doc.title) ||
+                       numberPattern.test(doc.content) || 
+                       numberPattern.test(doc.title);
+              });
+            });
+            
+            // Convert direct matches to result format and merge with existing results
+            const directResults = directMatches.map(doc => ({ ref: doc.id, score: 2 }));
+            
+            // Combine and deduplicate results, prioritizing direct matches
+            const allResults = new Map();
+            
+            // Add direct matches first (higher priority)
+            directResults.forEach(result => {
+              allResults.set(result.ref, result);
+            });
+            
+            // Add indexed search results if they don't conflict
+            res.forEach(result => {
+              if (!allResults.has(result.ref)) {
+                allResults.set(result.ref, result);
+              }
+            });
+            
+            res = Array.from(allResults.values()).sort((a, b) => b.score - a.score);
+          }
+          
           if(!res.length){ 
             results.classList.remove('has-results');
             return; 
@@ -487,6 +531,23 @@
                 // 3. OR search with wildcards for broader results
                 if (terms.length > 1) {
                   searchQueries.push(terms.map(t=>t+'*').join(' OR '));
+                }
+                
+                // 4. Special handling for version numbers (e.g., v13.3, v2.6)
+                const versionTerms = terms.filter(t => /^v?\d+(\.\d+)*$/i.test(t));
+                if (versionTerms.length > 0) {
+                  versionTerms.forEach(version => {
+                    // Search for version with and without 'v' prefix
+                    const cleanVersion = version.replace(/^v/i, '');
+                    
+                    // Exact version searches first
+                    searchQueries.push(`+v${cleanVersion}`); // + means required
+                    searchQueries.push(`+${cleanVersion}`);
+                    
+                    // Field-specific searches to avoid false matches
+                    searchQueries.push(`title:v${cleanVersion}`);
+                    searchQueries.push(`title:${cleanVersion}`);
+                  });
                 }
                 
                 // Execute searches and combine results
