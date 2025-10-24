@@ -4,6 +4,9 @@
 
 [Tidligere releaser](releasenotes/Releaselist)
 
+### Søk
+[Søk i dokumentasjonen](/search/)
+
 ### Startguide
 [Hva er ePROM?](Beskrivelse)
 

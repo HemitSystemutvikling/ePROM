@@ -1,6 +1,6 @@
 {
-  "generated_at": "2025-10-15T11:52:03Z",
-  "doc_count": 82,
+  "generated_at": "2025-10-15T12:04:45Z",
+  "doc_count": 83,
   "docs": [
     {
       "id": "AdminSkjemainformasjon.md",
@@ -187,7 +187,7 @@
     {
       "id": "README.md",
       "title": "ePROM",
-      "content": "ePROM Endringer i ePROM v13.4 - (xxxx 2025) Tidligere releaser Startguide Hva er ePROM? Startguide - hvordan komme i gang med å bruke ePROM Selvbetjeningsløsning Brukerdokumentasjon for selvbetjeningsløsning Skjemabygger Flerspråklighet i pasientskjema \"På vegne av\"-funksjonalitet Representasjon/\"På vegne av\" på helsenorge Reservasjon mot forskning Varslingskanaler og utfylling av skjema Varslingskanaler og utfylling av skjema Brukerstøtte Brukerstøtte - hvordan hjelpe pasienten når feil oppstår Integrasjonsguide Integrasjonsguide Integrasjonsguide for skjemautfyller Verifisering av integrasjoner Skisser Overordnet skisse for ePROM Overordnet skisse ePROM på papir Teknisk skisse ePROM helsenorge Teknisk skisse ePROM Digdir Teknisk skisse ePROM Samtykke/Reservasjon Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM Overordnet skisse og flytdiagram ePROM \"på vegne av\"-funksjonalitet Overordnet skisse ePROX Kostnader Kostnader ved bruk av ePROM",
+      "content": "ePROM Endringer i ePROM v13.4 - (xxxx 2025) Tidligere releaser Søk Søk i dokumentasjonen Startguide Hva er ePROM? Startguide - hvordan komme i gang med å bruke ePROM Selvbetjeningsløsning Brukerdokumentasjon for selvbetjeningsløsning Skjemabygger Flerspråklighet i pasientskjema \"På vegne av\"-funksjonalitet Representasjon/\"På vegne av\" på helsenorge Reservasjon mot forskning Varslingskanaler og utfylling av skjema Varslingskanaler og utfylling av skjema Brukerstøtte Brukerstøtte - hvordan hjelpe pasienten når feil oppstår Integrasjonsguide Integrasjonsguide Integrasjonsguide for skjemautfyller Verifisering av integrasjoner Skisser Overordnet skisse for ePROM Overordnet skisse ePROM på papir Teknisk skisse ePROM helsenorge Teknisk skisse ePROM Digdir Teknisk skisse ePROM Samtykke/Reservasjon Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM Overordnet skisse og flytdiagram ePROM \"på vegne av\"-funksjonalitet Overordnet skisse ePROX Kostnader Kostnader ved bruk av ePROM",
       "url": "/README.html",
       "type": "guide"
     },
@@ -210,6 +210,13 @@
       "title": "RETUR AV UTFYLT SKJEMA",
       "content": "RETUR AV UTFYLT SKJEMA Sist oppdatert 18.10.2023 Når pasienten har fylt ut et skjema sendes skjemaet tilbake til Bestillersystemet. Bestillersystemet må implementere en service som mottar skjemadataene. Mottak URL for Web API kall ApiBaseUrl for web API registreres i ePROM Selvbetjeningsmodul under Bestillersystem: https://proms.hemitdev.org/PromsAdministration/ Web API må være tilgjenglig på URL: https:// /api/PromsFormOrder F.eks: https://mrsdev.helsemn.no/PromsTestregisterServices/api/PromsFormOrder Parametere - Inn apiKey – ApiKey of the end user system placing the order formOrderId – The Id of the formOrder formData - The form data of returned form formOrderStatus – Status of the returned formOrder signedFormId – The Id of the signed form if form has been signed timestamp – Date and time when the form was submitted scannedPaperId – The Id of the scanned paper form if form distributed as paper formDataWarnings – A list for form data of returned form with validate warnings notificationChannel - The channel used to notify the patient about the form order isPatientInitiated - If the order is initiated by a patient patientInitiatedValues - Information about the patient initiated order + formId - The Id of the form ordered + nationalId - The national id number of the patient ordered the form + orderTimestamp - Timestamp when order was initiated + orderTimestampUTC - Timestamp when order was initiated in UTC formOrderEventLog – Log of events for the form + eventType – Events + questionId – Id of the question + timestampUtc - Timestamp of event filledOutBy - Information about the person that filled out the form. Note: These properties are only populated if the form is submitted via Helsenorge . + filledOutByActNationalId - The national id number of the person that filled out the form + filledOutByActType - Type of representation Parametere - Ut success – true if the request was processed successfully, otherwise false For parameter inn og ut kan NuGet pakken Hemit.ePROM.Integration benyttes. Bruk da Hemit.ePROM.Integration.PromsFormOrderRequest for parameter inn og Hemit.ePROM.Integration.PromsFormOrderResponse for parameter ut Metode PUT Eksempel request fra Proms (JSON) NB! formData sendes som stringified JSON-object Eksempel response (JSON) Tilbake",
       "url": "/ReturAvUtfyltSkjema.html",
+      "type": "guide"
+    },
+    {
+      "id": "Search.md",
+      "title": "Søk i dokumentasjonen",
+      "content": "Søk i dokumentasjonen Skriv inn ett eller flere søkeord. Indeksen er forhåndsbygget og lastes inn ved første søk. Norsk stemming (Lunr) er aktivert. window.SEARCH INDEX URL = '{{ '/assets/search-index.json' relative url }}'; search-results li { margin-bottom:1rem; } search-results mark { background: ffe89c; }",
+      "url": "/Search.html",
       "type": "guide"
     },
     {
