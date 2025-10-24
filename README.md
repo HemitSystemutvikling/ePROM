@@ -1,11 +1,10 @@
-# ePROM
+# Innhold
+
+### Endringer
 
 [Endringer i ePROM v13.4 - (xxxx 2025)](releasenotes/ReleaseNotev13.4)
 
 [Tidligere releaser](releasenotes/Releaselist)
-
-### Søk
-[Søk i dokumentasjonen](/search/)
 
 ### Startguide
 [Hva er ePROM?](Beskrivelse)
