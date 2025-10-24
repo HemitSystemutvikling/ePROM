@@ -26,31 +26,20 @@
         gap: 20px;
       }
       
+      .nav-left-section {
+        flex-shrink: 0;
+      }
+      
       .site-title {
         flex-shrink: 0;
       }
       
-      .site-title a {
+      .site-title span {
         font-size: 24px;
         font-weight: bold;
         color: white;
-        text-decoration: none;
-        transition: opacity 0.2s;
-      }
-      
-      .site-title .brand-name {
-        font-size: 24px;
-      }
-      
-      .site-title .brand-by {
-        font-size: 14px;
-        opacity: 0.8;
-        margin-left: 8px;
-      }
-      
-      .site-title a:hover {
-        opacity: 0.8;
-        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
       }
       
       .nav-search-container {
@@ -58,10 +47,13 @@
         flex: 1;
         max-width: 650px;
         margin: 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
       
       .nav-search-input {
-        width: 100%;
+        flex: 1;
         padding: 10px 16px;
         font-size: 16px;
         border: 2px solid rgba(255, 255, 255, 0.8);
@@ -134,6 +126,26 @@
       
       .nav-actions {
         flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 2px;
+      }
+      
+      .hemit-logo {
+        height: 40px;
+        width: auto;
+      }
+      
+      .hemit-logo svg {
+        height: 100%;
+        width: auto;
+        opacity: 0.9;
+        transition: opacity 0.2s;
+      }
+      
+      .hemit-logo svg:hover {
+        opacity: 1;
       }
       
       .nav-button {
@@ -284,7 +296,14 @@
         
         .nav-actions {
           order: 3;
-          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+        }
+        
+        .hemit-logo {
+          height: 35px;
         }
         
         .nav-search-input {
@@ -309,25 +328,44 @@
     <header class="page-header" role="banner">
       <!-- Top navigation bar with ePROM title and search -->
       <div class="top-nav-bar">
-        <div class="site-title">
-          <a href="{{ '/' | relative_url }}" title="Tilbake til forsiden">
-            <span class="brand-name">ePROM</span><span class="brand-by">Hemit</span>
-          </a>
+        <div class="nav-left-section">
+          <div class="site-title">
+            <span>ePROM</span>
+          </div>
         </div>
         
         <div class="nav-search-container">
           <input id="inline-search-box" type="search" placeholder="Søk i dokumentasjonen…" class="nav-search-input" autocomplete="off" title="Søk i dokumentasjonen" />
-          <div id="inline-search-results" class="nav-search-results"></div>
-          <p id="inline-search-status" class="nav-search-status"></p>
-        </div>
-        
-        <div class="nav-actions">
           <a href="{{ '/' | relative_url }}" class="nav-button home-button" title="Tilbake til forsiden">
             <svg class="nav-icon" viewBox="0 0 24 24">
               <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
             </svg>
             Hjem
           </a>
+          <div id="inline-search-results" class="nav-search-results"></div>
+          <p id="inline-search-status" class="nav-search-status"></p>
+        </div>
+        
+        <div class="nav-actions">
+          <div class="hemit-logo">
+            <svg version="1.1" viewBox="0 0 161 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <style type="text/css">
+                .st0{fill:#6CACE4;}
+                .st1{fill:#FFFFFF;}
+              </style>
+              <path class="st0" d="M36.3,11.2c0,4-3.2,7.2-7.2,7.2s-7.2-3.2-7.2-7.2c0-3.9,3.2-7.2,7.2-7.2S36.3,7.2,36.3,11.2z"/>
+              <path class="st1" d="M36.3,33c0,3.9-3.2,7.2-7.2,7.2s-7.2-3.2-7.2-7.2c0-4,3.2-7.2,7.2-7.2S36.3,29,36.3,33z"/>
+              <path class="st0" d="M14.4,33c0,3.9-3.2,7.2-7.2,7.2c-3.9,0-7.2-3.2-7.2-7.2c0-4,3.2-7.2,7.2-7.2C11.2,25.8,14.4,29,14.4,33z"/>
+              <path class="st0" d="M58.1,33c0,3.9-3.2,7.2-7.2,7.2c-4,0-7.2-3.2-7.2-7.2c0-4,3.2-7.2,7.2-7.2C54.9,25.8,58.1,29,58.1,33z"/>
+              <path class="st0" d="M36.3,54.8c0,3.9-3.2,7.2-7.2,7.2s-7.2-3.2-7.2-7.2c0-3.9,3.2-7.2,7.2-7.2S36.3,50.9,36.3,54.8z"/>
+              <path class="st1" d="M86.7,40.1v-8.3h-9.9v8.3h-3.7V20.8h3.7v7.7h9.9v-7.7h3.7v19.4H86.7z"/>
+              <path class="st1" d="M95.7,40.1V20.8h11.8v3.1h-8.1v4.8h6.6v3.1h-6.6V37h8.5v3.1H95.7z"/>
+              <path class="st1" d="M128.3,40.1V25.9c-0.1,1-0.1,1.1-0.7,2.8l-4.4,11.4h-3.3l-4-11.2c-0.4-1.1-0.4-1.4-0.7-3.1v14.3h-3.3V20.8h4.4
+                l5.2,13.8c0.2,0.6,0.3,0.8,0.4,1.5c0.1-0.9,0.2-1,0.4-1.5l5.4-13.8h4.4v19.4H128.3z"/>
+              <path class="st1" d="M137.2,20.8h3.7v19.4h-3.7V20.8z"/>
+              <path class="st1" d="M153.2,23.9v16.2h-3.7V23.9h-5.8v-3.1H159v3.1H153.2z"/>
+            </svg>
+          </div>
         </div>
       </div>
       
