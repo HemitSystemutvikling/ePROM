@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "no" }}">
+  <head>
+    <meta charset="UTF-8">
+
+{% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+    
+    <!-- Search functionality CSS -->
+    <style>
+      /* Top navigation bar */
+      .top-nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        margin-bottom: 30px;
+        gap: 20px;
+      }
+      
+      .nav-left-section {
+        flex-shrink: 0;
+      }
+      
+      .site-title {
+        flex-shrink: 0;
+      }
+      
+      .site-title span {
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+      }
+      
+      .nav-search-container {
+        position: relative;
+        flex: 1;
+        max-width: 650px;
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .nav-search-input {
+        flex: 1;
+        padding: 10px 16px;
+        font-size: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        outline: none;
+        transition: all 0.2s;
+        box-sizing: border-box;
+      }
+      
+      .nav-search-input:focus {
+        background: rgba(255, 255, 255, 1);
+        border-color: #155799;
+        box-shadow: 0 0 0 3px rgba(21, 87, 153, 0.1);
+      }
+      
+      .nav-search-results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 12px 12px;
+        max-height: 450px;
+        overflow-y: auto;
+        z-index: 1001;
+        display: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-top: 2px;
+      }
+      
+      .nav-search-results.has-results {
+        display: block;
+      }
+      
+      .nav-search-results li {
+        list-style: none;
+        padding: 10px 16px;
+        border-bottom: 1px solid #eee;
+        font-size: 13px;
+        cursor: pointer;
+        line-height: 1.4;
+      }
+      
+      .nav-search-results li:hover {
+        background: #f5f5f5;
+      }
+      
+      .nav-search-results li:last-child {
+        border-bottom: none;
+      }
+      
+      .nav-search-results a {
+        text-decoration: none;
+        color: #155799;
+        display: block;
+      }
+      
+      .nav-search-results a:hover {
+        text-decoration: none;
+      }
+      
+      .nav-search-results mark {
+        background: #ffe89c;
+        padding: 1px 2px;
+      }
+      
+      .nav-actions {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 2px;
+      }
+      
+      .hemit-logo {
+        height: 40px;
+        width: auto;
+      }
+      
+      .hemit-logo svg {
+        height: 100%;
+        width: auto;
+        opacity: 0.9;
+        transition: opacity 0.2s;
+      }
+      
+      .hemit-logo svg:hover {
+        opacity: 1;
+      }
+      
+      .nav-button {
+        background: rgba(76, 175, 80, 0.9);
+        color: white;
+        border: 1px solid #4CAF50;
+        border-radius: 6px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 14px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: background-color 0.2s;
+      }
+      
+      .nav-button:hover {
+        background: rgba(76, 175, 80, 1);
+        text-decoration: none;
+        color: white;
+      }
+      
+      .nav-icon {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+      
+      /* Page header content */
+      .page-header-content {
+        text-align: center;
+      }
+      
+      .search-icon {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+      
+      /* Quick search modal */
+      .quick-search-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+      }
+      
+      .quick-search-content {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        width: 85%;
+        max-width: 500px;
+        max-height: 70vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        box-sizing: border-box;
+      }
+      
+      .quick-search-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      
+      .quick-search-close {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: #666;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .quick-search-input {
+        width: calc(100% - 20px);
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        outline: none;
+      }
+      
+      .quick-search-results {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-height: 50vh;
+        overflow-y: auto;
+      }
+      
+      .quick-search-results li {
+        margin-bottom: 8px;
+        padding: 8px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      
+      .quick-search-results a {
+        text-decoration: none;
+        color: #155799;
+      }
+      
+      .quick-search-results a:hover {
+        text-decoration: underline;
+      }
+      
+      .quick-search-results mark {
+        background: #ffe89c;
+        padding: 1px 2px;
+      }
+      
+      @media (max-width: 768px) {
+        .top-nav-bar {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px;
+        }
+        
+        .nav-search-container {
+          order: 2;
+          margin: 0;
+          max-width: 100%;
+          width: 100%;
+        }
+        
+        .site-title {
+          order: 1;
+          text-align: center;
+        }
+        
+        .nav-actions {
+          order: 3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+        }
+        
+        .hemit-logo {
+          height: 35px;
+        }
+        
+        .nav-search-input {
+          padding: 12px 16px;
+          font-size: 16px;
+        }
+        
+        .nav-search-results {
+          max-height: 350px;
+        }
+        
+        .nav-search-results li {
+          padding: 8px 12px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Hopp til innhold.</a>
+
+    <header class="page-header" role="banner">
+      <!-- Top navigation bar with ePROM title and search -->
+      <div class="top-nav-bar">
+        <div class="nav-left-section">
+          <div class="site-title">
+            <span>ePROM</span>
+          </div>
+        </div>
+        
+        <div class="nav-search-container">
+          <input id="inline-search-box" type="search" placeholder="Søk i dokumentasjonen…" class="nav-search-input" autocomplete="off" title="Søk i dokumentasjonen" />
+          <a href="{{ '/' | relative_url }}" class="nav-button home-button" title="Tilbake til forsiden">
+            <svg class="nav-icon" viewBox="0 0 24 24">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            Hjem
+          </a>
+          <div id="inline-search-results" class="nav-search-results"></div>
+          <p id="inline-search-status" class="nav-search-status"></p>
+        </div>
+        
+        <div class="nav-actions">
+          <div class="hemit-logo">
+            <svg version="1.1" viewBox="0 0 161 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <style type="text/css">
+                .st0{fill:#6CACE4;}
+                .st1{fill:#FFFFFF;}
+              </style>
+              <path class="st0" d="M36.3,11.2c0,4-3.2,7.2-7.2,7.2s-7.2-3.2-7.2-7.2c0-3.9,3.2-7.2,7.2-7.2S36.3,7.2,36.3,11.2z"/>
+              <path class="st1" d="M36.3,33c0,3.9-3.2,7.2-7.2,7.2s-7.2-3.2-7.2-7.2c0-4,3.2-7.2,7.2-7.2S36.3,29,36.3,33z"/>
+              <path class="st0" d="M14.4,33c0,3.9-3.2,7.2-7.2,7.2c-3.9,0-7.2-3.2-7.2-7.2c0-4,3.2-7.2,7.2-7.2C11.2,25.8,14.4,29,14.4,33z"/>
+              <path class="st0" d="M58.1,33c0,3.9-3.2,7.2-7.2,7.2c-4,0-7.2-3.2-7.2-7.2c0-4,3.2-7.2,7.2-7.2C54.9,25.8,58.1,29,58.1,33z"/>
+              <path class="st0" d="M36.3,54.8c0,3.9-3.2,7.2-7.2,7.2s-7.2-3.2-7.2-7.2c0-3.9,3.2-7.2,7.2-7.2S36.3,50.9,36.3,54.8z"/>
+              <path class="st1" d="M86.7,40.1v-8.3h-9.9v8.3h-3.7V20.8h3.7v7.7h9.9v-7.7h3.7v19.4H86.7z"/>
+              <path class="st1" d="M95.7,40.1V20.8h11.8v3.1h-8.1v4.8h6.6v3.1h-6.6V37h8.5v3.1H95.7z"/>
+              <path class="st1" d="M128.3,40.1V25.9c-0.1,1-0.1,1.1-0.7,2.8l-4.4,11.4h-3.3l-4-11.2c-0.4-1.1-0.4-1.4-0.7-3.1v14.3h-3.3V20.8h4.4
+                l5.2,13.8c0.2,0.6,0.3,0.8,0.4,1.5c0.1-0.9,0.2-1,0.4-1.5l5.4-13.8h4.4v19.4H128.3z"/>
+              <path class="st1" d="M137.2,20.8h3.7v19.4h-3.7V20.8z"/>
+              <path class="st1" d="M153.2,23.9v16.2h-3.7V23.9h-5.8v-3.1H159v3.1H153.2z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Page-specific header content -->
+      <div class="page-header-content">
+        <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      </div>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        {% endif %}
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+
+    <!-- Load search functionality on all pages -->
+    <script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/lunr.stemmer.support.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/lunr.no.min.js"></script>
+    <script>
+      window.SEARCH_INDEX_URL = '{{ "/assets/search-index.json" | relative_url }}';
+      
+      // Inline search functionality
+      (function(){
+        const input = document.getElementById('inline-search-box');
+        const results = document.getElementById('inline-search-results');
+        const status = document.getElementById('inline-search-status');
+        
+        if(!input || !results) return;
+
+        const INDEX_URL = window.SEARCH_INDEX_URL || '/assets/search-index.json';
+        let idx = null;
+        let docs = [];
+        let searchTimeout = null;
+
+        function escapeHtml(str){
+          return (str||'').replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+        }
+
+        function highlight(text, terms){
+          if(!terms.length) return escapeHtml(text.slice(0,80));
+          const escaped = terms.map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+          const re = new RegExp('(' + escaped.join('|') + ')','gi');
+          const snippet = text.slice(0,120);
+          return escapeHtml(snippet).replace(re,'<mark>$1</mark>') + (text.length > 120 ? '...' : '');
+        }
+
+        function buildIndex(json){
+          docs = json.docs;
+          idx = lunr(function(){
+            if(lunr.no){ this.use(lunr.no); }
+            this.ref('id');
+            this.field('title', { boost: 3 });
+            this.field('content');
+            
+            // Custom tokenizer that preserves version numbers and technical terms
+            this.tokenizer.separator = /[\s\-\u2013\u2014]+/;
+            
+            docs.forEach(d=>this.add(d));
+          });
+        }
+
+        function ensureIndex(){
+          if(idx) return Promise.resolve();
+          return fetch(INDEX_URL, { cache:'no-store' })
+            .then(r=>r.json())
+            .then(j=>{ buildIndex(j); })
+            .catch(e=>{ console.error(e); });
+        }
+
+        function render(res, terms){
+          results.innerHTML='';
+          
+          // For version searches, filter out false positives and add direct content search
+          if (terms.some(t => /^v?\d+(\.\d+)*$/i.test(t))) {
+            const versionTerms = terms.filter(t => /^v?\d+(\.\d+)*$/i.test(t));
+            
+            // Direct content search for exact version matches
+            const directMatches = docs.filter(doc => {
+              return versionTerms.some(version => {
+                const cleanVersion = version.replace(/^v/i, '');
+                const versionPattern = new RegExp(`\\bv${cleanVersion}\\b`, 'i');
+                const numberPattern = new RegExp(`\\b${cleanVersion}\\b`, 'i');
+                
+                return versionPattern.test(doc.content) || 
+                       versionPattern.test(doc.title) ||
+                       numberPattern.test(doc.content) || 
+                       numberPattern.test(doc.title);
+              });
+            });
+            
+            // Convert direct matches to result format and merge with existing results
+            const directResults = directMatches.map(doc => ({ ref: doc.id, score: 2 }));
+            
+            // Combine and deduplicate results, prioritizing direct matches
+            const allResults = new Map();
+            
+            // Add direct matches first (higher priority)
+            directResults.forEach(result => {
+              allResults.set(result.ref, result);
+            });
+            
+            // Add indexed search results if they don't conflict
+            res.forEach(result => {
+              if (!allResults.has(result.ref)) {
+                allResults.set(result.ref, result);
+              }
+            });
+            
+            res = Array.from(allResults.values()).sort((a, b) => b.score - a.score);
+          }
+          
+          if(!res.length){ 
+            results.classList.remove('has-results');
+            return; 
+          }
+          
+          results.classList.add('has-results');
+          const frag = document.createDocumentFragment();
+          res.slice(0,10).forEach(hit=>{
+            const d = docs.find(dd=>dd.id===hit.ref);
+            if(!d) return;
+            const li = document.createElement('li');
+            li.innerHTML = '<a href="'+d.url+'"><strong>'+escapeHtml(d.title)+'</strong><br><small style="color:#666;">'+highlight(d.content, terms)+'</small></a>';
+            frag.appendChild(li);
+          });
+          results.appendChild(frag);
+        }
+
+        function onInput(){
+          const q = input.value.trim();
+          
+          if(searchTimeout) {
+            clearTimeout(searchTimeout);
+          }
+          
+          if(!q){ 
+            results.innerHTML=''; 
+            results.classList.remove('has-results');
+            return; 
+          }
+          
+          searchTimeout = setTimeout(() => {
+            ensureIndex().then(()=>{
+              const terms = q.split(/\s+/).filter(Boolean);
+              let res = [];
+              try { 
+                // Try multiple search strategies for better results
+                let searchQueries = [];
+                
+                // 1. Exact phrase search
+                searchQueries.push(terms.join(' '));
+                
+                // 2. Individual terms with wildcards
+                searchQueries.push(terms.map(t=>t+'*').join(' '));
+                
+                // 3. OR search with wildcards for broader results
+                if (terms.length > 1) {
+                  searchQueries.push(terms.map(t=>t+'*').join(' OR '));
+                }
+                
+                // 4. Special handling for version numbers (e.g., v13.3, v2.6)
+                const versionTerms = terms.filter(t => /^v?\d+(\.\d+)*$/i.test(t));
+                if (versionTerms.length > 0) {
+                  versionTerms.forEach(version => {
+                    // Search for version with and without 'v' prefix
+                    const cleanVersion = version.replace(/^v/i, '');
+                    
+                    // Exact version searches first
+                    searchQueries.push(`+v${cleanVersion}`); // + means required
+                    searchQueries.push(`+${cleanVersion}`);
+                    
+                    // Field-specific searches to avoid false matches
+                    searchQueries.push(`title:v${cleanVersion}`);
+                    searchQueries.push(`title:${cleanVersion}`);
+                  });
+                }
+                
+                // Execute searches and combine results
+                let allResults = new Map();
+                for (let query of searchQueries) {
+                  try {
+                    let queryResults = idx.search(query);
+                    queryResults.forEach(result => {
+                      if (!allResults.has(result.ref) || allResults.get(result.ref).score < result.score) {
+                        allResults.set(result.ref, result);
+                      }
+                    });
+                  } catch(err) { 
+                    console.warn('Search query failed:', query, err); 
+                  }
+                }
+                
+                // Convert back to array and sort by score
+                res = Array.from(allResults.values()).sort((a, b) => b.score - a.score);
+                
+              } catch(err){ 
+                console.error('Search error:', err); 
+              }
+              render(res, terms);
+            });
+          }, 300); // Debounce search for 300ms
+        }
+
+        // Event listeners
+        input.addEventListener('input', onInput);
+
+        // Hide results when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!input.contains(e.target) && !results.contains(e.target)) {
+            results.classList.remove('has-results');
+          }
+        });
+
+        // Show results again when focusing input if there's content
+        input.addEventListener('focus', function() {
+          if (input.value.trim() && results.innerHTML) {
+            results.classList.add('has-results');
+          }
+        });
+
+        // Hide results when clicking on a link
+        results.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A') {
+            results.classList.remove('has-results');
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

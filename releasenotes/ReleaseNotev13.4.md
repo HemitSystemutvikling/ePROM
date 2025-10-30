@@ -1,5 +1,5 @@
 # Endringer i ePROM v13.4
-*xxxx 2025*
+*16.10.2025*
 
 ### Generelt
 - Ny versjon av `Hemit.ePROM.Integration`: [*Hemit.ePROM.Integration v13.4.0*](https://dev.azure.com/hemit/Hemit%20offentlig/_artifacts/feed/Hemit_public_packages/NuGet/Hemit.ePROM.Integration/overview/13.4.0)
