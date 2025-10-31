@@ -20,6 +20,10 @@ NB!
 ApiKey skal sendes som en `Authorization` parameter og er en del av HTTP header:
 `headers: {"Authorization": "Basic " + apiKey}` 
 
+**Swagger**
+
+[https://proms.hemitdev.org/PromsWebApi/swagger/index.html](https://proms.hemitdev.org/PromsWebApi/swagger/index.html)
+
 ## Sjekk personverninnstilling
 
 ### Klient-side
@@ -90,10 +94,6 @@ function sjekkPersonverninnstilling() {
 **Metode**
 
 POST
-
-**Swagger**
-
-[https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async)
 
 ### Server-side
 
@@ -222,10 +222,6 @@ function oppdaterPersonverninnstilling() {
 **Metode**
 
 POST
-
-**Swagger**
-
-[https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingV2Async](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_SetPersonvernInnstillingV2Async)
 
 ### Server-side
 
@@ -416,29 +412,24 @@ function hentInnbyggereAktivePiForDefinisjon () {
 **Parametere - Inn**
 
 * pagingReference - Start with 0. If the returned pagingReference > 0, new call must be made with the returned pagingReference
-* pvkId - The guid of the PersonvernInnstilling
+* pvkId - The id of the privacy setting for which you want to retrieve the list
 
 **Parametere – Ut**
 
-* id – The guid of the PersonvernInnstilling.
-* name – The name of the PersonvernInnstilling.
-* partKode
-* type - The type of the PersonvernInnstilling. `{ Reservasjon | Samtykke }`.
-* personvernInnstillinger - A list of all the residents who have an active instance (active reservation, consent, or access restriction)
-    * NationalId - the national id of the person to get PersonvernInnstilling for.
-    * SequenceNumber - Sequence number for the resident instance of PersonvernInnstilling.
-    * createdDateTimeOffset – Timestamp for when the first instance of the resident's PersonvernInnstilling was created.
-    * lastChangedDateTimeOffset – Timestamp of the last change of PersonvernInnstilling.
+* id – The id of the privacy setting that was requested.
+* name – The name of the privacy setting that was requested.
+* partKode - a short name that identifies the registry, screening program, or research project that owns the relevant privacy setting.
+* type - The type of the privacy setting. `{ Reservasjon | Samtykke }`.
+* personvernInnstillinger - A privacy setting list of all the residents who have an active instance (active reservation, consent, or access restriction)
+    * NationalId - the resident’s national ID associated with the privacy setting.
+    * SequenceNumber - Sequence number for the resident's instance of privacy setting.
+    * createdDateTimeOffset – Timestamp for when the first instance of the resident's privacy setting was created.
+    * lastChangedDateTimeOffset – Timestamp of the last change of privacy setting.
  
-* 
 
 **Metode**
 
 POST
-
-**Swagger**
-
-TODO TODO [https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async](https://proms.hemitdev.org/PromsWebApi/swagger/ui/index#!/PersonvernInnstilling/PersonvernInnstilling_GetPersonvernInnstillingV2Async)
 
 ### Server-side
 
