@@ -8,8 +8,6 @@ title: Innhold
 ### Endringer
 [Endringer i ePROM v13.5 - (xxxx 2025)](releasenotes/ReleaseNotev13.5)
 
-[Endringer i ePROM v13.4 - (16.10.2025)](releasenotes/ReleaseNotev13.4)
-
 [Tidligere releaser](releasenotes/Releaselist)
 
 ### Startguide

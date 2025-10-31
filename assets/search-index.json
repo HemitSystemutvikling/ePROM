@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-30T14:57:24Z",
+  "generated_at": "2025-10-31T08:17:20Z",
   "doc_count": 84,
   "docs": [
     {
@@ -187,7 +187,7 @@
     {
       "id": "README.md",
       "title": "Innhold",
-      "content": "Innhold Endringer Endringer i ePROM v13.5 - (xxxx 2025) Endringer i ePROM v13.4 - (16.10.2025) Tidligere releaser Startguide Hva er ePROM? Startguide - hvordan komme i gang med å bruke ePROM Selvbetjeningsløsning Brukerdokumentasjon for selvbetjeningsløsning Skjemabygger Flerspråklighet i pasientskjema \"På vegne av\"-funksjonalitet Representasjon/\"På vegne av\" på helsenorge Reservasjon mot forskning Varslingskanaler og utfylling av skjema Varslingskanaler og utfylling av skjema Brukerstøtte Brukerstøtte - hvordan hjelpe pasienten når feil oppstår Integrasjonsguide Integrasjonsguide Integrasjonsguide for skjemautfyller Verifisering av integrasjoner Skisser Overordnet skisse for ePROM Overordnet skisse ePROM på papir Teknisk skisse ePROM helsenorge Teknisk skisse ePROM Digdir Teknisk skisse ePROM Samtykke/Reservasjon Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM Overordnet skisse og flytdiagram ePROM \"på vegne av\"-funksjonalitet Overordnet skisse ePROX Kostnader Kostnader ved bruk av ePROM",
+      "content": "Innhold Endringer Endringer i ePROM v13.5 - (xxxx 2025) Tidligere releaser Startguide Hva er ePROM? Startguide - hvordan komme i gang med å bruke ePROM Selvbetjeningsløsning Brukerdokumentasjon for selvbetjeningsløsning Skjemabygger Flerspråklighet i pasientskjema \"På vegne av\"-funksjonalitet Representasjon/\"På vegne av\" på helsenorge Reservasjon mot forskning Varslingskanaler og utfylling av skjema Varslingskanaler og utfylling av skjema Brukerstøtte Brukerstøtte - hvordan hjelpe pasienten når feil oppstår Integrasjonsguide Integrasjonsguide Integrasjonsguide for skjemautfyller Verifisering av integrasjoner Skisser Overordnet skisse for ePROM Overordnet skisse ePROM på papir Teknisk skisse ePROM helsenorge Teknisk skisse ePROM Digdir Teknisk skisse ePROM Samtykke/Reservasjon Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM Overordnet skisse og flytdiagram ePROM \"på vegne av\"-funksjonalitet Overordnet skisse ePROX Kostnader Kostnader ved bruk av ePROM",
       "url": "/README.html",
       "type": "guide"
     },
