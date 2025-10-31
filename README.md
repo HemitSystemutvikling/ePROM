@@ -1,8 +1,12 @@
+---
+layout: default
+title: Innhold
+---
+
 # Innhold
 
 ### Endringer
-
-[Endringer i ePROM v13.4 - (16.10.2025)](releasenotes/ReleaseNotev13.4)
+[Endringer i ePROM v13.5 - (xxxx 2025)](releasenotes/ReleaseNotev13.5)
 
 [Tidligere releaser](releasenotes/Releaselist)
 
