@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-31T12:07:11Z",
+  "generated_at": "2025-11-05T09:05:31Z",
   "doc_count": 84,
   "docs": [
     {
@@ -481,7 +481,7 @@
     {
       "id": "releasenotes/ReleaseNotev13.5.md",
       "title": "Endringer i ePROM v13.5",
-      "content": "Endringer i ePROM v13.5 xxxx 2025 Generelt - Ny versjon av : [ Hemit.ePROM.Integration v13.5.0 ] --TODO - Ny tjeneste som henter en liste med innbyggere sine personverninnstillinger: - For mer informasjon: Hent en liste over innbyggere med informasjon om personverninnstilling Teknisk - Hangfire jobb for å rydde i HelsenorgeTask-tabellen Feilretting - Rettet opp datoformat på DigiPost",
+      "content": "Endringer i ePROM v13.5 xxxx 2025 Generelt - Ny versjon av : [ Hemit.ePROM.Integration v13.5.0 ] --TODO - Ny tjeneste som henter en liste med innbyggere sine personverninnstillinger: - For mer informasjon: Hent en liste over innbyggere med informasjon om personverninnstilling Feilretting - Rettet opp datoformat på DigiPost",
       "url": "/releasenotes/ReleaseNotev13.5.html",
       "type": "release-note"
     },
