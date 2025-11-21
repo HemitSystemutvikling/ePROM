@@ -50,7 +50,7 @@ Se sekvensdiagram for [bestilling av skjem](img/bestilling_av_pasientskjema_asyn
 Verifisering av integrasjonen er beskrevet [her](IntegrasjonVerifikasjon). Det er et krav at dette utføres for alle nye integrasjoner.
 
 ## nuget-pakke
-Følgende nuget-pakke er tilgjengelig for integrasjon med ePROM: [*Hemit.ePROM.Integration v13.4.0*](https://dev.azure.com/hemit/Hemit%20offentlig/_artifacts/feed/Hemit_public_packages/NuGet/Hemit.ePROM.Integration/overview/13.4.0)
+Følgende nuget-pakke er tilgjengelig for integrasjon med ePROM: [*Hemit.ePROM.Integration v13.5.0*](https://dev.azure.com/hemit/Hemit%20offentlig/_artifacts/feed/Hemit_public_packages/NuGet/Hemit.ePROM.Integration/overview/13.5.0)
 
 ## Distribusjonsregler
 

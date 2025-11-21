@@ -6,7 +6,7 @@ title: Innhold
 # Innhold
 
 ### Endringer
-[Endringer i ePROM v13.5 - (xxxx 2025)](releasenotes/ReleaseNotev13.5)
+[Endringer i ePROM v13.5 - (20.11.2025)](releasenotes/ReleaseNotev13.5)
 
 [Tidligere releaser](releasenotes/Releaselist)
 
