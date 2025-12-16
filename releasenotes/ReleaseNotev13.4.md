@@ -15,3 +15,6 @@
 ### Feilretting
 - Rettet feil som gjorde at skjema enkelte ganger hopper til Levere skjema-knappen før spørsmål over er besvart.
 - Rettet feil som gjorde at den månedlige mail-rapporten ikke viste korrekt statistikk.
+
+
+[Tilbake](./Releaselist) 

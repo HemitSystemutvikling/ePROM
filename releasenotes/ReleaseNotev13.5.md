@@ -8,3 +8,6 @@
 
 ### Feilretting
 - Rettet opp datoformat på DigiPost 
+
+
+[Tilbake](./Releaselist) 
