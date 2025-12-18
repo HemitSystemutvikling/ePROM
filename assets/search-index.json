@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-16T17:02:52Z",
+  "generated_at": "2025-12-18T13:39:52Z",
   "doc_count": 85,
   "docs": [
     {
@@ -313,7 +313,7 @@
     {
       "id": "index.md",
       "title": "ePROM Dokumentasjon",
-      "content": "ePROM Dokumentasjon Velkommen til ePROM dokumentasjon. Se innholdsfortegnelsen for komplett oversikt. Siste endringer Endringer i ePROM v13.5.1 - xx.xx.xxxx Tidligere releaser Kom i gang Startguide - hvordan komme i gang med å bruke ePROM Integrasjon Integrasjonsguide Integrasjonsguide for skjemautfyller Support Brukerstøtte - hvordan hjelpe pasienten når feil oppstår --- For fullstendig innholdsfortegnelse, se innholdsfortegnelsen",
+      "content": "ePROM Dokumentasjon Velkommen til ePROM dokumentasjon. Se innholdsfortegnelsen for komplett oversikt. Siste endringer Endringer i ePROM v13.5.1 - 18.12.2025 Tidligere releaser Kom i gang Startguide - hvordan komme i gang med å bruke ePROM Integrasjon Integrasjonsguide Integrasjonsguide for skjemautfyller Support Brukerstøtte - hvordan hjelpe pasienten når feil oppstår --- For fullstendig innholdsfortegnelse, se innholdsfortegnelsen",
       "url": "/index.html",
       "type": "guide"
     },
@@ -481,7 +481,7 @@
     {
       "id": "releasenotes/ReleaseNotev13.5.1.md",
       "title": "Endringer i ePROM v13.5.1",
-      "content": "Endringer i ePROM v13.5.1 xx.xx.xxxx Feilretting - Fysisk post ble ikke sendt ut til innbyggere som hadde postnummer som startet med . Tilbake",
+      "content": "Endringer i ePROM v13.5.1 18.12.2025 Feilretting - Fysisk post ble ikke sendt ut til innbyggere som hadde postnummer som startet med . Tilbake",
       "url": "/releasenotes/ReleaseNotev13.5.1.html",
       "type": "release-note"
     },
