@@ -11,5 +11,8 @@
 - Forbedret logging.
 - Fjernet simulering av papirsvar for testbestillinger i PROD.
 
+### Feilretting
+- Rettet opp at det blir gjort P-REG-kall ved skjemautfylling via fullmakt.
+
 
 [Tilbake](./Releaselist) 
