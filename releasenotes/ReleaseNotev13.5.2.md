@@ -1,5 +1,5 @@
 # Endringer i ePROM v13.5.2
-*xx.xx.2026*  
+*20.01.2026*  
 
 ### Generelt
 - PVK 
