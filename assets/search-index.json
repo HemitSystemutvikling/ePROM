@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-27T10:16:23Z",
+  "generated_at": "2026-02-02T09:14:22Z",
   "doc_count": 87,
   "docs": [
     {
@@ -502,7 +502,7 @@
     {
       "id": "releasenotes/ReleaseNotev13.6.md",
       "title": "Endringer i ePROM v13.6",
-      "content": "Endringer i ePROM v13.6 xx.xx.2026 Generelt - Går over til å bruke HelseID for konsumering av Helsenorge APIer. Helsenorge dokumentasjon Diverse - Forbedret logging. Tilbake",
+      "content": "Endringer i ePROM v13.6 xx.xx.2026 Generelt - Går over til å bruke HelseID for tilgang til Helsenorge API‑er. Helsenorge dokumentasjon Diverse - Forbedret logging. Tilbake",
       "url": "/releasenotes/ReleaseNotev13.6.html",
       "type": "release-note"
     },
