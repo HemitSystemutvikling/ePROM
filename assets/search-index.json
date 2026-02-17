@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-17T12:46:09Z",
+  "generated_at": "2026-02-17T12:58:25Z",
   "doc_count": 88,
   "docs": [
     {
@@ -502,7 +502,7 @@
     {
       "id": "releasenotes/ReleaseNotev13.6.1.md",
       "title": "Endringer i ePROM v13.6.1",
-      "content": "Endringer i ePROM v13.6.1 xx.02.2026 Feilretting - Utbedret race condition ved kall mot Helsenorge‑API-er, som tidligere førte til feil ved håndtering av samtidige forespørsler. Tilbake",
+      "content": "Endringer i ePROM v13.6.1 xx.02.2026 Feilretting - Utbedret race condition ved kall mot Helsenorge‑API-er, som tidligere kunne føre til feil ved håndtering av samtidige forespørsler. Tilbake",
       "url": "/releasenotes/ReleaseNotev13.6.1.html",
       "type": "release-note"
     },
