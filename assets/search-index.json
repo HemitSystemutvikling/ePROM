@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-17T12:58:25Z",
+  "generated_at": "2026-02-18T12:43:44Z",
   "doc_count": 88,
   "docs": [
     {
@@ -187,7 +187,7 @@
     {
       "id": "README.md",
       "title": "Innhold",
-      "content": "Innhold Endringer Endringer i ePROM v13.6.1 - xx.02.2026 Tidligere releaser Startguide Hva er ePROM? Startguide - hvordan komme i gang med å bruke ePROM Selvbetjeningsløsning Brukerdokumentasjon for selvbetjeningsløsning Skjemabygger Flerspråklighet i pasientskjema \"På vegne av\"-funksjonalitet Representasjon/\"På vegne av\" på helsenorge Reservasjon mot forskning Varslingskanaler og utfylling av skjema Varslingskanaler og utfylling av skjema Brukerstøtte Brukerstøtte - hvordan hjelpe pasienten når feil oppstår Integrasjonsguide Integrasjonsguide Integrasjonsguide for skjemautfyller Verifisering av integrasjoner Skisser Overordnet skisse for ePROM Overordnet skisse ePROM på papir Teknisk skisse ePROM helsenorge Teknisk skisse ePROM Digdir Teknisk skisse ePROM Samtykke/Reservasjon Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM Overordnet skisse og flytdiagram ePROM \"på vegne av\"-funksjonalitet Overordnet skisse ePROX Kostnader Kostnader ved bruk av ePROM",
+      "content": "Innhold Endringer Endringer i ePROM v13.6.1 - 18.02.2026 Tidligere releaser Startguide Hva er ePROM? Startguide - hvordan komme i gang med å bruke ePROM Selvbetjeningsløsning Brukerdokumentasjon for selvbetjeningsløsning Skjemabygger Flerspråklighet i pasientskjema \"På vegne av\"-funksjonalitet Representasjon/\"På vegne av\" på helsenorge Reservasjon mot forskning Varslingskanaler og utfylling av skjema Varslingskanaler og utfylling av skjema Brukerstøtte Brukerstøtte - hvordan hjelpe pasienten når feil oppstår Integrasjonsguide Integrasjonsguide Integrasjonsguide for skjemautfyller Verifisering av integrasjoner Skisser Overordnet skisse for ePROM Overordnet skisse ePROM på papir Teknisk skisse ePROM helsenorge Teknisk skisse ePROM Digdir Teknisk skisse ePROM Samtykke/Reservasjon Overordnet skisse og flytdiagram pasientinitiert/personinitiert ePROM Overordnet skisse og flytdiagram ePROM \"på vegne av\"-funksjonalitet Overordnet skisse ePROX Kostnader Kostnader ved bruk av ePROM",
       "url": "/README.html",
       "type": "guide"
     },
@@ -313,7 +313,7 @@
     {
       "id": "index.md",
       "title": "ePROM Dokumentasjon",
-      "content": "ePROM Dokumentasjon Velkommen til ePROM dokumentasjon. Se innholdsfortegnelsen for komplett oversikt. Siste endringer Endringer i ePROM v13.6.1 - xx.02.2026 Tidligere releaser Kom i gang Startguide - hvordan komme i gang med å bruke ePROM Integrasjon Integrasjonsguide Integrasjonsguide for skjemautfyller Support Brukerstøtte - hvordan hjelpe pasienten når feil oppstår --- For fullstendig innholdsfortegnelse, se innholdsfortegnelsen",
+      "content": "ePROM Dokumentasjon Velkommen til ePROM dokumentasjon. Se innholdsfortegnelsen for komplett oversikt. Siste endringer Endringer i ePROM v13.6.1 - 18.02.2026 Tidligere releaser Kom i gang Startguide - hvordan komme i gang med å bruke ePROM Integrasjon Integrasjonsguide Integrasjonsguide for skjemautfyller Support Brukerstøtte - hvordan hjelpe pasienten når feil oppstår --- For fullstendig innholdsfortegnelse, se innholdsfortegnelsen",
       "url": "/index.html",
       "type": "guide"
     },
@@ -502,7 +502,7 @@
     {
       "id": "releasenotes/ReleaseNotev13.6.1.md",
       "title": "Endringer i ePROM v13.6.1",
-      "content": "Endringer i ePROM v13.6.1 xx.02.2026 Feilretting - Utbedret race condition ved kall mot Helsenorge‑API-er, som tidligere kunne føre til feil ved håndtering av samtidige forespørsler. Tilbake",
+      "content": "Endringer i ePROM v13.6.1 18.02.2026 Feilretting - Utbedret race condition ved kall mot Helsenorge‑API-er, som tidligere kunne føre til feil ved håndtering av samtidige forespørsler. Tilbake",
       "url": "/releasenotes/ReleaseNotev13.6.1.html",
       "type": "release-note"
     },
