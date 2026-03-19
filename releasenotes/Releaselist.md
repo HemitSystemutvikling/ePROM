@@ -1,4 +1,8 @@
-# Tidligere releaser av ePROM
+# Releaseoversikt
+
+[Release Note v13.8 - xx.03.2026](ReleaseNotev13.8)
+
+[Release Note v13.7 - 09.03.2026](ReleaseNotev13.7)
 
 [Release Note v13.6.1 - 18.02.2026](ReleaseNotev13.6.1)
 
