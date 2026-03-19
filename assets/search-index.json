@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T11:56:55Z",
+  "generated_at": "2026-03-19T12:19:15Z",
   "doc_count": 90,
   "docs": [
     {
@@ -313,7 +313,7 @@
     {
       "id": "index.md",
       "title": "ePROM Dokumentasjon",
-      "content": "ePROM Dokumentasjon Velkommen til ePROM dokumentasjon. Se innholdsfortegnelsen for komplett oversikt. Siste endringer Endringer i ePROM v13.7 - 09.03.2026 Tidligere releaser Kom i gang Startguide - hvordan komme i gang med å bruke ePROM Integrasjon Integrasjonsguide Integrasjonsguide for skjemautfyller Support Brukerstøtte - hvordan hjelpe pasienten når feil oppstår --- For fullstendig innholdsfortegnelse, se innholdsfortegnelsen",
+      "content": "ePROM Dokumentasjon Velkommen til ePROM dokumentasjon. Se innholdsfortegnelsen for komplett oversikt. Siste endringer Endringer i ePROM v13.8 - xx.03.2026 Releaseoversikt Kom i gang Startguide - hvordan komme i gang med å bruke ePROM Integrasjon Integrasjonsguide Integrasjonsguide for skjemautfyller Support Brukerstøtte - hvordan hjelpe pasienten når feil oppstår --- For fullstendig innholdsfortegnelse, se innholdsfortegnelsen",
       "url": "/index.html",
       "type": "guide"
     },
