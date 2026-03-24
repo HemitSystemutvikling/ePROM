@@ -6,7 +6,7 @@ title: Innhold
 # Innhold
 
 ### Endringer
-[Endringer i ePROM v13.8 - xx.03.2026](releasenotes/ReleaseNotev13.8)
+[Endringer i ePROM v13.8 - 25.03.2026](releasenotes/ReleaseNotev13.8)
 
 [Releaseoversikt](releasenotes/Releaselist)
 
