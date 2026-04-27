@@ -8,7 +8,7 @@ title: ePROM Dokumentasjon
 Velkommen til ePROM dokumentasjon. Se [innholdsfortegnelsen](README.html) for komplett oversikt.
 
 ## Siste endringer
-[Endringer i ePROM v13.8.1 - x.x.2026](releasenotes/ReleaseNotev13.8.1)
+[Endringer i ePROM v13.8.1 - 27.04.2026](releasenotes/ReleaseNotev13.8.1)
 
 [Releaseoversikt](releasenotes/Releaselist)
 
