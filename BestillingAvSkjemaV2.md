@@ -237,7 +237,7 @@ F.eks: [https://mrsweb.hemit.org/PromsTestregisterServices/api/PromsFormOrder/]
 
 * apiKey – ApiKey of the end user system placing the order
 * formOrderId – The Id of the formOrder
-* notificationChannel – The actual channel used to notify the patient about the form order `{ None | Helsenorge | DigitalMailbox | Unsecure | PhysicalMailbox }` 
+* notificationChannel – The actual channel used to notify the patient about the form order. Integer value: `{ 0 = None | 1 = Helsenorge | 2 = DigitalMailbox | 3 = Unsecure | 4 = PhysicalMailbox }` 
 * timestamp - Timestamp when order was initiated
 * timestampUtc - Timestamp when order was initiated in UTC format
 * formOrderStatus – Status of the formOrder
@@ -263,7 +263,7 @@ Eksempel request fra Proms (JSON)
 {
     "apiKey" : "",
     "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
-    "notificationChannel" : "Helsenorge",
+    "notificationChannel" : 1,
     "timestamp" : "2023-03-29T10:20:10.1804332",
     "timestampUtc" : "2023-03-29T08:20:10.1804332Z",
     "formOrderStatus" : "Ordered",
@@ -272,7 +272,7 @@ Eksempel request fra Proms (JSON)
 {
     "apiKey" : "",
     "formOrderId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
-    "notificationChannel" : "None",
+    "notificationChannel" : 0,
     "formOrderStatus" : "Error",
     "formOrderStatusErrorCode" : "PatientUnreachable"
 }

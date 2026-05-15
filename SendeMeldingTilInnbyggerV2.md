@@ -163,8 +163,8 @@ F.eks: [https://proms.hemitdev.org/PromsTestregisterServices/api/MessageToCitize
 
 * apiKey – ApiKey of the end user system sending the message
 * messageToCitizenId – The Id of the message
-* notificationChannel – The actual channel used to send the document to the citizen `{ None | Helsenorge | DigitalMailbox | PhysicalMailbox | Unsecure }` 
-* sentStatus – Status of the message `{ Sent | Error }` 
+* notificationChannel – The actual channel used to send the document to the citizen. Integer value: `{ 0 = None | 1 = Helsenorge | 2 = DigitalMailbox | 3 = Unsecure | 4 = PhysicalMailbox }` 
+* sentStatus – Status of the message. Integer value: `{ 0 = Sent | 1 = Error }` 
   + Sent – The message was successfully sent
   + Error – The message was not successfully sent. For time being, the only reason for this is when the patient cannot be notified because there is no way to make contact.
 
@@ -184,8 +184,8 @@ Eksempel request fra Proms (JSON)
 {
     "apiKey" : "",
     "messageToCitizenId" : "184738d0-3c39-e611-9c2a-34e6d72e03c7",
-    "notificationChannel" : "Helsenorge",
-    "sentStatus" : "Sent"
+    "notificationChannel" : 1,
+    "sentStatus" : 0
 }
 ```
 
