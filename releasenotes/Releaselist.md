@@ -2,6 +2,9 @@
 
 [Release Note v13.9 - 13.05.2026](ReleaseNotev13.9)
 
+[Release Note v13.8.2 - 19.05.2026](ReleaseNotev13.8.2)
+
+
 [Release Note v13.8.1 - 27.04.2026](ReleaseNotev13.8.1)
 
 [Release Note v13.8 - 25.03.2026](ReleaseNotev13.8)
