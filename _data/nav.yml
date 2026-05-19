@@ -1,0 +1,126 @@
+- section: Endringer
+  icon: "📋"
+  id: endringer
+  links:
+    - title: Releaseoversikt
+      url: /releasenotes/Releaselist
+    - title: Siste endringer (v13.8.1)
+      url: /releasenotes/ReleaseNotev13.8.1
+- section: Kom i gang
+  icon: "🚀"
+  id: komgang
+  links:
+    - title: Hva er ePROM?
+      url: /Beskrivelse
+    - title: Startguide
+      url: /Startguide
+    - title: Testpersoner
+      url: /Testpersoner
+- section: Selvbetjeningsløsning
+  icon: "🖥️"
+  id: selvbetjening
+  links:
+    - title: Brukerdokumentasjon
+      url: /Brukerdokumentasjon%20for%20selvbetjeningsl%C3%B8sning
+    - title: Skjemabygger
+      url: /Skjemabygger
+    - title: Flerspråklighet
+      url: /PasientskjemaFlerspraklighet
+    - title: På vegne av
+      url: /PaVegneAvFlyt
+    - title: Representasjon på Helsenorge
+      url: /RepresentasjonPaaHelsenorge
+    - title: Reservasjon mot forskning
+      url: /ReservasjonMotForskning
+    - title: Tips til pasientskjema
+      url: /PasientskjemaTips
+    - title: Innbyggerinnlogging
+      url: /ePROM-innbyggerinnlogging
+- section: Varsling og utfylling
+  icon: "📨"
+  id: varsling
+  links:
+    - title: Varslingskanaler og utfylling
+      url: /Utfylling%20av%20skjema
+    - title: Pasientskjema via e-post/SMS
+      url: /PasientskjemaViaEpostSms
+- section: Bestillersystemer
+  icon: "🏥"
+  id: bestillersystem
+  links:
+    - title: Bestillersystemer
+      url: /Bestillersystemer
+    - title: Personverninnstillinger
+      url: /Personverninnstillinger
+    - title: Personvernkomponent
+      url: /Personvernkomponent
+    - title: Administrasjon av skjema
+      url: /AdminSkjemainformasjon
+- section: Integrasjon
+  icon: "🔌"
+  id: integrasjon
+  links:
+    - title: Integrasjonsguide
+      url: /Integrasjonsguide
+    - title: Skjemautfyller API
+      url: /IntegrasjonsguideSkjemautfyllerApi
+    - title: Verifisering
+      url: /IntegrasjonVerifikasjon
+    - title: Bruk av ePROX
+      url: /IntegrasjonOgBrukEProx
+- section: API-referanse
+  icon: "📡"
+  id: api
+  links:
+    - title: Bestilling av skjema v2
+      url: /BestillingAvSkjemaV2
+    - title: Bestilling av skjema v1
+      url: /BestillingAvSkjemaV1
+    - title: Sende melding v2
+      url: /SendeMeldingTilInnbyggerV2
+    - title: Sende melding v1
+      url: /SendeMeldingTilInnbyggerV1
+    - title: Sende SMS/e-post
+      url: /SendeMeldingSomSmsEpost
+    - title: Retur av utfylt skjema
+      url: /ReturAvUtfyltSkjema
+    - title: Pasientinitiert bestilling
+      url: /PasientinitiertBestillingAvSkjema
+    - title: Skjema med signatur
+      url: /SkjemaSomKreverSignatur
+    - title: Skjemapakke
+      url: /Skjemapakke
+- section: Skisser og arkitektur
+  icon: "📐"
+  id: skisser
+  links:
+    - title: Overordnet skisse
+      url: /Overordnetskisse
+    - title: Overordnet skisse – papir
+      url: /Overordnetskisse%20papir
+    - title: Teknisk skisse Helsenorge
+      url: /TekniskSkisseHelsenorge
+    - title: Teknisk skisse Digdir
+      url: /TekniskSkisseDigdir
+    - title: Teknisk skisse Samtykke/PVK
+      url: /TekniskSkissePvk
+    - title: Pasientinitiert flyt
+      url: /Overordnetskisse%20pasientinitiert
+    - title: Overordnet skisse ePROX
+      url: /Overordnet%20skisse%20eprox
+- section: Brukerstøtte
+  icon: "🆘"
+  id: support
+  links:
+    - title: Hjelp til pasienter
+      url: /UserSupport
+    - title: Aktører
+      url: /Personer
+    - title: Språk
+      url: /Language
+- section: Kostnader
+  icon: "💰"
+  id: kostnader
+  links:
+    - title: Kostnader ved bruk
+      url: /kostnader
