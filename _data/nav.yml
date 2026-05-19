@@ -4,8 +4,8 @@
   links:
     - title: Releaseoversikt
       url: /releasenotes/Releaselist
-    - title: Siste endringer (v13.8.1)
-      url: /releasenotes/ReleaseNotev13.8.1
+    - title: Siste endringer (v13.9)
+      url: /releasenotes/ReleaseNotev13.9
 - section: Kom i gang
   icon: "🚀"
   id: komgang
