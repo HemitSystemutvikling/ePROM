@@ -375,6 +375,16 @@
                   });
                 } catch(e) {}
               });
+              // Fallback: plain indexOf for numbers/version strings Lunr misses
+              var qLower = q.toLowerCase();
+              docs.forEach(function(d) {
+                if (!allResults.has(d.id)) {
+                  var text = ((d.title || '') + ' ' + (d.content || '')).toLowerCase();
+                  if (text.indexOf(qLower) !== -1) {
+                    allResults.set(d.id, { ref: d.id, score: 0.1 });
+                  }
+                }
+              });
               render(Array.from(allResults.values()).sort(function(a, b) { return b.score - a.score; }), terms);
             });
           }, 280);
