@@ -1,0 +1,177 @@
+---
+layout: default
+hide_sidebar: true
+---
+<style>
+  .hero { background: #2c436b; color: white; padding: 80px 24px 72px; text-align: center; }
+  .hero-inner { max-width: 760px; margin: 0 auto; }
+  .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; padding: 5px 14px; border-radius: 20px; margin-bottom: 24px; text-transform: uppercase; }
+  .hero h1 { font-size: clamp(2rem,5vw,2.8rem); font-weight: 700; line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.5px; }
+  .hero h1 .subtitle { display: block; font-size: 0.65em; opacity: 0.85; font-weight: 500; margin-top: 6px; }
+  .hero-lead { font-size: 1.05rem; line-height: 1.75; opacity: 0.88; max-width: 600px; margin: 0 auto 36px; }
+  .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 13px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; transition: opacity 0.15s, transform 0.1s; color: white !important; }
+  .btn:hover { opacity: 0.88; transform: translateY(-1px); text-decoration: none; }
+  .btn-primary { background: #12a891; color: #0d2b4e !important; }
+  .btn-outline { background: #ffffff; color: #2c436b !important; border: none; }
+  .btn-blue { background: #1a5fa8; }
+  .btn-teal { background: #0a6858; }
+  .home-section { padding: 64px 24px; }
+  .home-section-alt { background: #f4f6f9; }
+  .section-inner { max-width: 1080px; margin: 0 auto; }
+  .section-header { text-align: center; margin-bottom: 48px; }
+  .section-label { font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1a5fa8; margin-bottom: 10px; }
+  .section-header h2 { font-size: 1.85rem; font-weight: 700; color: #0d2b4e; margin-bottom: 10px; }
+  .section-header p { color: #5a6474; font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+  .card { background: white; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(13,43,78,0.08); border: 1px solid #dee2ea; transition: box-shadow 0.2s, transform 0.2s; }
+  .card:hover { box-shadow: 0 6px 24px rgba(13,43,78,0.13); transform: translateY(-2px); }
+  .card-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+  .card h3 { font-size: 1.05rem; font-weight: 700; color: #0d2b4e; margin-bottom: 8px; }
+  .card p { font-size: 0.92rem; color: #5a6474; line-height: 1.65; }
+  .card-link { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600; color: #1a5fa8; }
+  .card-link:hover { text-decoration: underline; }
+  .doc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+  .doc-card { background: white; border-radius: 10px; padding: 22px 24px; box-shadow: 0 2px 10px rgba(13,43,78,0.07); border: 1px solid #dee2ea; display: flex; flex-direction: column; gap: 8px; }
+  .doc-card-icon { font-size: 24px; }
+  .doc-card h3 { font-size: 0.95rem; font-weight: 700; color: #0d2b4e; margin: 0; }
+  .doc-card ul { list-style: none; padding: 0; margin: 0; }
+  .doc-card ul li { margin-bottom: 4px; }
+  .doc-card ul li a { font-size: 13px; color: #5a6474; text-decoration: none; transition: color 0.15s; }
+  .doc-card ul li a:hover { color: #1a5fa8; text-decoration: none; }
+  @media (max-width: 640px) { .hero { padding: 56px 20px 48px; } .home-section { padding: 48px 20px; } .card-grid, .doc-grid { grid-template-columns: 1fr; } }
+</style>
+
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div class="hero-badge lang-no">Hemit</div>
+    <div class="hero-badge lang-en">Hemit</div>
+    <h1 id="hero-heading">
+      <span style="display:flex; align-items:center; justify-content:center; gap:14px; margin-bottom:4px;">
+        <svg width="52" height="52" aria-hidden="true" focusable="false"><use href="#eprom-icon"/></svg>
+        ePROM
+      </span>
+      <span class="subtitle lang-no">Elektronisk pasientrapporterte utfallsmål</span>
+      <span class="subtitle lang-en">Electronic Patient-Reported Outcome Measures</span>
+    </h1>
+    <p class="hero-lead lang-no">Sikker og skalerbar plattform for utsending og innsamling av pasientskjemaer via Helsenorge, e-post, SMS, Digipost, e-Boks, engangskode og papirpost.</p>
+    <p class="hero-lead lang-en">A secure and scalable platform for distributing and collecting patient questionnaires via Helsenorge, email, SMS, and postal mail.</p>
+    <div class="hero-actions">
+      <a href="{{ '/Startguide' | relative_url }}" class="btn btn-primary">
+        <span class="lang-no">Kom i gang</span><span class="lang-en">Get started</span>
+      </a>
+      <a href="{{ '/Integrasjonsguide' | relative_url }}" class="btn btn-outline">
+        <span class="lang-no">Integrasjonsguide</span><span class="lang-en">Integration guide</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section home-section-alt" id="funksjoner" aria-labelledby="funksjoner-heading">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label lang-no">Funksjonalitet</div>
+      <div class="section-label lang-en">Features</div>
+      <h2 id="funksjoner-heading" class="lang-no">Alt du trenger for pasientskjemaer</h2>
+      <h2 class="lang-en">Everything you need for patient forms</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">📋</span>
+        <h3 class="lang-no">Skjemabygger</h3><h3 class="lang-en">Form builder</h3>
+        <p class="lang-no">Bygg pasientskjemaer intuitivt med støtte for flerspråklighet og validering.</p>
+        <p class="lang-en">Build patient forms intuitively with multilingual support and validation.</p>
+        <a href="{{ '/Skjemabygger' | relative_url }}" class="card-link lang-no" aria-label="Les mer om Skjemabygger">Les mer</a>
+        <a href="{{ '/Skjemabygger' | relative_url }}" class="card-link lang-en">Learn more</a>
+      </div>
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">📡</span>
+        <h3 class="lang-no">Fleksibel distribusjon</h3><h3 class="lang-en">Flexible distribution</h3>
+        <p class="lang-no">Send via Helsenorge, e-post, SMS, Digipost, e-Boks, engangskode eller papirpost. Pasientinitiert bestilling støttes.</p>
+        <p class="lang-en">Send via Helsenorge, email, SMS, or postal mail. Patient-initiated ordering supported.</p>
+        <a href="{{ '/Utfylling%20av%20skjema' | relative_url }}" class="card-link lang-no" aria-label="Les mer om fleksibel distribusjon">Les mer</a>
+        <a href="{{ '/Utfylling%20av%20skjema' | relative_url }}" class="card-link lang-en">Learn more</a>
+      </div>
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">🔌</span>
+        <h3 class="lang-no">Enkel integrasjon</h3><h3 class="lang-en">Simple integration</h3>
+        <p class="lang-no">REST API med veldokumenterte endepunkter. Integrer ePROM i ditt bestillersystem raskt.</p>
+        <p class="lang-en">REST API with well-documented endpoints. Integrate ePROM into your system quickly.</p>
+        <a href="{{ '/Integrasjonsguide' | relative_url }}" class="card-link lang-no" aria-label="Les mer om enkel integrasjon">Les mer</a>
+        <a href="{{ '/Integrasjonsguide' | relative_url }}" class="card-link lang-en">Learn more</a>
+      </div>
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">🔒</span>
+        <h3 class="lang-no">Sikkerhet og personvern</h3><h3 class="lang-en">Security and privacy</h3>
+        <p class="lang-no">HelseID, kryptering og personvernkomponenter i tråd med Normen og GDPR.</p>
+        <p class="lang-en">HelseID, encryption, and privacy components compliant with Normen and GDPR.</p>
+        <a href="{{ '/Personvernkomponent' | relative_url }}" class="card-link lang-no" aria-label="Les mer om sikkerhet og personvern">Les mer</a>
+        <a href="{{ '/Personvernkomponent' | relative_url }}" class="card-link lang-en">Learn more</a>
+      </div>
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">🌐</span>
+        <h3 class="lang-no">Flerspråklighet</h3><h3 class="lang-en">Multilingual</h3>
+        <p class="lang-no">Pasientskjemaer på flere språk med automatisk språkvalg basert på pasientens preferanse.</p>
+        <p class="lang-en">Patient forms in multiple languages with automatic language selection.</p>
+        <a href="{{ '/PasientskjemaFlerspraklighet' | relative_url }}" class="card-link lang-no" aria-label="Les mer om flerspråklighet">Les mer</a>
+        <a href="{{ '/PasientskjemaFlerspraklighet' | relative_url }}" class="card-link lang-en">Learn more</a>
+      </div>
+      <div class="card">
+        <span class="card-icon" aria-hidden="true">👨‍👩‍👧</span>
+        <h3 class="lang-no">På vegne av</h3><h3 class="lang-en">On behalf of</h3>
+        <p class="lang-no">Pårørende og verger kan fylle ut skjema på vegne av pasienten via Helsenorge.</p>
+        <p class="lang-en">Relatives and guardians can complete forms on behalf of the patient via Helsenorge.</p>
+        <a href="{{ '/PaVegneAvFlyt' | relative_url }}" class="card-link lang-no" aria-label="Les mer om på vegne av">Les mer</a>
+        <a href="{{ '/PaVegneAvFlyt' | relative_url }}" class="card-link lang-en">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section" id="dokumentasjon" aria-labelledby="dokumentasjon-heading">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label lang-no">Dokumentasjon</div>
+      <div class="section-label lang-en">Documentation</div>
+      <h2 id="dokumentasjon-heading" class="lang-no">Finn det du trenger</h2>
+      <h2 class="lang-en">Find what you need</h2>
+    </div>
+    <div class="doc-grid">
+      <div class="doc-card">
+        <div class="doc-card-icon" aria-hidden="true">🚀</div>
+        <h3 class="lang-no">Kom i gang</h3><h3 class="lang-en">Getting started</h3>
+        <ul>
+          <li><a href="{{ '/Beskrivelse' | relative_url }}" class="lang-no">Hva er ePROM?</a><a href="{{ '/Beskrivelse' | relative_url }}" class="lang-en">What is ePROM?</a></li>
+          <li><a href="{{ '/Startguide' | relative_url }}" class="lang-no">Startguide</a><a href="{{ '/Startguide' | relative_url }}" class="lang-en">Quick start</a></li>
+        </ul>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-icon" aria-hidden="true">🔌</div>
+        <h3>Integrasjon</h3>
+        <ul>
+          <li><a href="{{ '/Integrasjonsguide' | relative_url }}">Integrasjonsguide</a></li>
+          <li><a href="{{ '/IntegrasjonVerifikasjon' | relative_url }}" class="lang-no">Verifisering</a><a href="{{ '/IntegrasjonVerifikasjon' | relative_url }}" class="lang-en">Verification</a></li>
+          <li><a href="{{ '/IntegrasjonOgBrukEProx' | relative_url }}">ePROX</a></li>
+        </ul>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-icon" aria-hidden="true">📡</div>
+        <h3>API</h3>
+        <ul>
+          <li><a href="{{ '/BestillingAvSkjemaV2' | relative_url }}" class="lang-no">Bestilling v2</a><a href="{{ '/BestillingAvSkjemaV2' | relative_url }}" class="lang-en">Order form v2</a></li>
+          <li><a href="{{ '/SendeMeldingTilInnbyggerV2' | relative_url }}" class="lang-no">Sende melding v2</a><a href="{{ '/SendeMeldingTilInnbyggerV2' | relative_url }}" class="lang-en">Send message v2</a></li>
+          <li><a href="{{ '/ReturAvUtfyltSkjema' | relative_url }}" class="lang-no">Retur av utfylt skjema</a><a href="{{ '/ReturAvUtfyltSkjema' | relative_url }}" class="lang-en">Return of completed form</a></li>
+        </ul>
+      </div>
+      <div class="doc-card">
+        <div class="doc-card-icon" aria-hidden="true">📋</div>
+        <h3 class="lang-no">Endringer</h3><h3 class="lang-en">Release notes</h3>
+        <ul>
+          <li><a href="{{ '/releasenotes/Releaselist' | relative_url }}" class="lang-no">Releaseoversikt</a><a href="{{ '/releasenotes/Releaselist' | relative_url }}" class="lang-en">Release overview</a></li>
+          <li><a href="{{ '/releasenotes/ReleaseNotev13.9' | relative_url }}">v13.9 (mai 2026)</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+

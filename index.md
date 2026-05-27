@@ -1,28 +1,5 @@
 ---
-layout: default
-title: ePROM Dokumentasjon
+layout: home
+hide_hero: true
+hide_sidebar: true
 ---
-
-# ePROM Dokumentasjon
-
-Velkommen til ePROM dokumentasjon. Se [innholdsfortegnelsen](README.html) for komplett oversikt.
-
-## Siste endringer
-[Endringer i ePROM v13.8.2 - 19.05.2026](releasenotes/ReleaseNotev13.8.2)
-
-[Releaseoversikt](releasenotes/Releaselist)
-
-## Kom i gang
-[Startguide - hvordan komme i gang med å bruke ePROM](Startguide)
-
-## Integrasjon
-[Integrasjonsguide](Integrasjonsguide)
-
-[Integrasjonsguide for skjemautfyller](IntegrasjonsguideSkjemautfyllerApi)
-
-## Support
-[Brukerstøtte - hvordan hjelpe pasienten når feil oppstår](UserSupport)
-
----
-
-**For fullstendig innholdsfortegnelse, se [innholdsfortegnelsen](README.html)**

@@ -13,6 +13,7 @@ __Følgende informasjon må alltid oppgis:__
 - API base URL for mottakstjenesten
 - En kort beskrivelse av bruksområde, inkl: 
   - skjemautsending og/eller brevutsending 
+- Teknisk kontaktinformasjon (navn og/eller e-post til teknisk kontaktperson, til bruk ved feilsøking og integrasjonsspørsmål)
 
 __Følgende informasjon må oppgis i henvendelsen dersom bestillersystemet skal gjøre skjemabestillinger:__
 - Telefonnummeret til kontaktperson for bestillersystemet (til bruk av mottaker av skjema, dvs pasienten)
