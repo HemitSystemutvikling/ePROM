@@ -5,10 +5,8 @@ title: Innhold
 
 # Innhold
 
-### Endringer
-[Endringer i ePROM v13.8.2 - 19.05.2026](releasenotes/ReleaseNotev13.8.2)
 
-[Releaseoversikt](releasenotes/Releaselist)
+### [Releaseoversikt](releasenotes/Releaselist)
 
 ### Startguide
 [Hva er ePROM?](Beskrivelse)
