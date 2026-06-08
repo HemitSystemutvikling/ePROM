@@ -15,7 +15,7 @@ __NB:__ Følgende punkter __skal__ verifiseres i testmiljø for alle nye integra
 - logg inn som testperson på helsenorge og besvar skjema 
   - verifiser at skjema vises som forventet og har forventet oppførsel   
   - verifiser at følgebrev vises som forventet
-  - verifiser at ev metadata fungerer etter hensikten
+  - verifiser at evt metadata fungerer etter hensikten
   - verifiser at skjemaoppgave vises som forventet
   - verifiser at kopi av skjema blir lagret/ikke lagret som forventet avhengig av spesifikasjonen (etter levering)
 - Mål: skjema, følgebrev og skjemaoppgave fungerer etter spesifikasjonene
@@ -50,13 +50,12 @@ Helsenorge QA: [https://tjenester.hn.qa.nhn.no/](https://tjenester.hn.qa.nhn.no/
 
 ### Testpersoner Helsenorge (test og QA)
 
-**Testperson som kan benyttes til verifikasjon: 01039494104**
+**Testperson som kan benyttes til verifikasjon: 26670271527**
 
-Pnr over brukes med BankID i IdPorten med følgende innloggingsdetaljer:
+Pnr over brukes med TestID på nivå høyt i IdPorten med følgende innloggingsdetaljer:
 
-Engangspassord: otp
-
-Personlig kode: qwer1234
+TestId
+Personidentifikator (syntetisk): 26670271527
 
 Denne har samtykket på helsenorge i test og QA, men kan også være i bruk av andre bestillersystemer.
 
