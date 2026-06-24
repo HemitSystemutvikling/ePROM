@@ -1,6 +1,6 @@
 # Releaseoversikt
 
-[Release Note v13.9 - xx.xx.2026](ReleaseNotev13.9)
+[Release Note v13.9 - 24.06.2026](ReleaseNotev13.9)
 
 [Release Note v13.8.2 - 19.05.2026](ReleaseNotev13.8.2)
 

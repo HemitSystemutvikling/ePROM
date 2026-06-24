@@ -1,5 +1,5 @@
 # Endringer i ePROM v13.9
-*xx.xx.2026*  
+*24.06.2026*  
 
 ### Nytt
 - Påkrevd felt for teknisk kontaktinformasjon er lagt til på bestillersystem. Feltet brukes av Hemit ved feilsøking og integrasjonsspørsmål. Eksisterende bestillersystemer må fylle inn dette feltet ved neste endring.
